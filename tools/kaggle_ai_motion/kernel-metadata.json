@@ -1,0 +1,16 @@
+{
+ "id": "ironindiarat/kang-ai-motion",
+ "title": "kang-ai-motion",
+ "code_file": "ai_motion_run.py",
+ "language": "python",
+ "kernel_type": "script",
+ "is_private": true,
+ "enable_gpu": true,
+ "enable_internet": true,
+ "dataset_sources": [
+  "ironindiarat/kang-ai-motion-input"
+ ],
+ "competition_sources": [],
+ "kernel_sources": [],
+ "machine_shape": "NvidiaTeslaT4"
+}

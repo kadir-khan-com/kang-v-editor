@@ -1,0 +1,46 @@
+{
+  "_about": "Licences of the geographic data used by the v13 map clips (core/map_route.py). Created 2026-11-04 (v13b). Every map clip shows the credit line 'Map data: Natural Earth (public domain) · © OpenStreetMap contributors'. Not a legal review; rights clearance for publishing is deferred (user decision 2026-11-04).",
+  "sources": [
+    {
+      "id": "natural_earth",
+      "name": "Natural Earth 1:10m physical land + admin-1 state lines + admin-0 boundary lines",
+      "url": "https://www.naturalearthdata.com/",
+      "licence": "Public domain",
+      "licence_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+      "credit": "Made with Natural Earth (credit optional)",
+      "used_in": ["assets/map_data/ne_10m_gujarat_clip.json (clipped by tools/prep_map_data.py)"],
+      "attribution_required": false
+    },
+    {
+      "id": "openstreetmap",
+      "name": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/",
+      "licence": "Open Database License (ODbL) 1.0",
+      "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "copyright_url": "https://www.openstreetmap.org/copyright",
+      "credit": "© OpenStreetMap contributors",
+      "attribution_required": true,
+      "elements": [
+        {"type": "relation", "id": 8259845, "name": "Devbhumi Dwaraka district (coast-following admin polygon)", "url": "https://www.openstreetmap.org/relation/8259845",
+         "used_in": "assets/map_data/osm_dwarka_gulf_coast.json"},
+        {"type": "relation", "id": 8271162, "name": "Jamnagar district (coast-following admin polygon)", "url": "https://www.openstreetmap.org/relation/8271162",
+         "used_in": "assets/map_data/osm_dwarka_gulf_coast.json"},
+        {"type": "way", "id": 1161175444, "name": "Gopi Talav (point via Nominatim)", "url": "https://www.openstreetmap.org/way/1161175444",
+         "used_in": "config/map_places.json (gopi_talav)"}
+      ],
+      "share_alike_note": "ODbL: the derived coast file (osm_dwarka_gulf_coast.json) is a derivative database; if it is published on its own it must stay under ODbL. Rendered video frames are a 'produced work' and need the credit only.",
+      "tiles_used": false
+    },
+    {
+      "id": "wikidata",
+      "name": "Wikidata coordinates (P625)",
+      "url": "https://www.wikidata.org/",
+      "licence": "CC0 1.0 (public domain dedication)",
+      "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Wikidata (credit optional)",
+      "attribution_required": false,
+      "items": ["Q817247 Dwarka", "Q1595059 Jamnagar Airport", "Q1089275 Nageshwar Jyotirlinga", "Q19882291 Bet Dwarka", "Q114856436 Sudarshan Setu", "Q105636989 Shivrajpur Beach"],
+      "used_in": ["config/map_places.json"]
+    }
+  ]
+}

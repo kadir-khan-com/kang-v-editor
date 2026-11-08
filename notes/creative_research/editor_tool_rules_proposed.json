@@ -1,0 +1,977 @@
+[
+ {
+  "id": "T-001",
+  "part_ids": [],
+  "name": "Finished graphic holds at least 2 s before it leaves",
+  "layer": "rhythm",
+  "when": "Any card, label, lower third or pop graphic that animates in and then out",
+  "action": "After the entrance settles, keep the graphic fully still and readable for at least 2 s before its exit starts. Entrance 0.3–0.6 s ease-out, exit 0.2–0.4 s ease-in (exit shorter).",
+  "why": "A graphic that starts leaving as soon as it lands is never read; the hold is what the viewer actually uses.",
+  "frequency": "Every animated graphic",
+  "evidence": "🟠",
+  "evidence_note": "One tool's motion-graphics skill (FableCut) states these as house defaults; no measured study.",
+  "sources": [
+   "https://github.com/ronak-create/FableCut"
+  ],
+  "source_files": [
+   "skills/motion-graphics/SKILL.md"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": {
+   "kind": "duration_min_s",
+   "what": "graphic_static_hold",
+   "min": 2.0
+  },
+  "confirms": [
+   "R-202",
+   "G-033",
+   "R-305"
+  ],
+  "conflict_note": "Entrance/exit bands only confirm R-202/G-033. The new part is the ≥2 s settled hold. For reading-heavy cards G-012/G-026 (word-count holds) are stricter and win."
+ },
+ {
+  "id": "T-002",
+  "part_ids": [],
+  "name": "Exposure check on every rendered still/scene: median luma 0.35–0.50",
+  "layer": "style",
+  "when": "QC pass on the rendered video (one sampled frame per beat/scene)",
+  "action": "Measure luma (Rec.709, 0–1) on a mid-scene frame. Flag: median outside 0.35–0.50 (unless the scene is meant to be night/dark), more than ~1% of pixels at pure white (clipped highlights), more than ~2% at pure black (crushed shadows). Flag only — do not auto-correct.",
+  "why": "Gives KANG a numeric exposure guard for mixed stock/phone/AI stills that today pass unchecked; the numbers are cheap to compute with FFmpeg signalstats.",
+  "frequency": "Every beat (sampled frame)",
+  "evidence": "🟠",
+  "evidence_note": "Thresholds are the reading guide of FableCut's built-in scopes tool, not a broadcast standard. Treat as starting values; dark temple interiors and night shots need an exemption tag.",
+  "sources": [
+   "https://github.com/ronak-create/FableCut"
+  ],
+  "source_files": [
+   "CLAUDE.md#Color"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": {
+   "kind": "luma_stats",
+   "what": "median_luma",
+   "min": 0.35,
+   "max": 0.5,
+   "white_clip_pct_max": 1.0,
+   "black_crush_pct_max": 2.0
+  },
+  "confirms": [
+   "R-213",
+   "R-267"
+  ],
+  "conflict_note": "R-213/R-267 say set exposure with scopes and match to a hero shot but give no numbers; T-002 supplies them."
+ },
+ {
+  "id": "T-003",
+  "part_ids": [],
+  "name": "Colour-cast check on neutral scenes (cast strength ≤ 0.03)",
+  "layer": "style",
+  "when": "QC pass on scenes that should look neutral (white walls, overcast sky, marble)",
+  "action": "Compute the midtone colour cast (mean chroma direction of mid-luma pixels). If its strength is above ~0.03 on a scene tagged neutral, flag it and suggest moving temperature against the cast (orange/yellow → cooler, blue/cyan → warmer) and tint against green/magenta. Leave skin-led and golden-hour scenes warm on purpose.",
+  "why": "Mixed sources (phone, stock, AI) arrive with different white balance; a cast jump between consecutive stills reads as a continuity error.",
+  "frequency": "Every scene tagged neutral",
+  "evidence": "🟠",
+  "evidence_note": "FableCut gives the 0.03 cast threshold; samuelgursky's pre-balance tool gives the 'leave midtones warm' caution. Both tool docs, no study.",
+  "sources": [
+   "https://github.com/ronak-create/FableCut",
+   "https://github.com/samuelgursky/davinci-resolve-mcp"
+  ],
+  "source_files": [
+   "FableCut CLAUDE.md#Color",
+   "davinci-resolve-mcp docs/SKILL.md (plan_prebalance)"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": {
+   "kind": "max_value",
+   "what": "midtone_cast_strength",
+   "max": 0.03
+  },
+  "confirms": [
+   "R-213",
+   "R-454"
+  ],
+  "conflict_note": "Keep T-012 (midtones warm) in mind: do not neutralise skin or sunset beats."
+ },
+ {
+  "id": "T-004",
+  "part_ids": [],
+  "name": "Caption tail ≈ 0.25 s, never into the next caption; new block at a ≥0.6 s pause",
+  "layer": "comprehension",
+  "when": "Building caption cues from word timings (captions_hindi.srt and pop words)",
+  "action": "Start a new caption block when: a pause of ≥0.6 s occurs, a sentence ends, or a comma appears after the block already has ≥3 words, or the block would exceed its line/second limit. Let each caption stay ~0.25 s after its last spoken word, but end it before the next cue starts; snap starts and ends to whole frames. Re-make captions after the cut is final (a later cut shortens a cue without re-timing its words).",
+  "why": "A small tail lets slow readers finish; snapping and no-overlap avoid one-frame flashes; regenerating after the cut keeps words in sync.",
+  "frequency": "Every caption cue",
+  "evidence": "🟠",
+  "evidence_note": "FableCut caption generator defaults (documented behaviour). No reading study behind the 0.25 s / 0.6 s numbers.",
+  "sources": [
+   "https://github.com/ronak-create/FableCut"
+  ],
+  "source_files": [
+   "CLAUDE.md#Captions"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": {
+   "kind": "caption_tail_s",
+   "what": "caption_end_minus_last_word",
+   "min": 0.0,
+   "max": 0.35
+  },
+  "confirms": [
+   "G-014",
+   "R-379",
+   "R-093"
+  ],
+  "conflict_note": "R-247 breaks a word-level subtitle line at a 0.7 s pause; T-004 uses 0.6 s for phrase captions. Suggest 0.6 s for long-form phrase captions, keep R-247's 0.7 s for word-by-word reels. G-014 (min duration / 2-frame gap) still wins when the tail would create a <2-frame gap."
+ },
+ {
+  "id": "T-005",
+  "part_ids": [],
+  "name": "Music duck starts before the voice and bridges short gaps",
+  "layer": "rhythm",
+  "when": "Music bed under narration",
+  "action": "Begin the duck ~0.3 s before each spoken phrase, hold it through the phrase, release over ~0.6 s after. Treat speech gaps shorter than ~0.5–1 s as still speaking so the music does not pump up between words. Typical depth −10 to −12 dB; detect speech above about −40 dBFS.",
+  "why": "Ducking that reacts after the first syllable makes the first word fight the music; un-bridged gaps cause audible pumping.",
+  "frequency": "Every music bed under voice",
+  "evidence": "🟠",
+  "evidence_note": "Two tool defaults agree on depth (FableCut −10/−12 dB; VectCut 7.5–10 dB). Pre-roll and gap bridging are tool behaviour, not studies.",
+  "sources": [
+   "https://github.com/ronak-create/FableCut",
+   "https://github.com/sun-guannan/VectCutAPI"
+  ],
+  "source_files": [
+   "FableCut CLAUDE.md#Audio mix",
+   "VectCutAPI .agents/skills/capcut-director/SKILL.md"
+  ],
+  "licence": "MIT (FableCut) / Apache-2.0 (VectCutAPI repo; its skill folder MIT)",
+  "idea_only": false,
+  "check": {
+   "kind": "duck_preroll_s",
+   "what": "music_duck_start_before_speech",
+   "min": 0.1,
+   "max": 0.5
+  },
+  "confirms": [
+   "R-103"
+  ],
+  "conflict_note": "R-103 gives 10–50 ms attack; that is the compressor's attack once triggered. T-005 is about *when* the duck starts (look-ahead) — both can hold."
+ },
+ {
+  "id": "T-006",
+  "part_ids": [],
+  "name": "Long-form YouTube master: H.264 CRF ~18, keyframe every 0.5 s, AAC 384 kbps 48 kHz",
+  "layer": "style",
+  "when": "Final 16:9 YouTube export from the FFmpeg renderer",
+  "action": "Encode 1920×1080 H.264 at CRF ~18 (constant quality, not a fixed low bitrate), force a keyframe at least every 0.5 s, audio AAC-LC 384 kbps at 48 kHz. For 9:16 reels: CRF ~19 with a maxrate cap of ~20–25 Mb/s, AAC 256 kbps; warn when a reel exceeds the platform's length.",
+  "why": "YouTube re-encodes everything; a high-quality, seek-friendly upload with dense keyframes keeps the re-encode clean and makes chapter seeking fast.",
+  "frequency": "Every final render",
+  "evidence": "🟠",
+  "evidence_note": "Tool export-preset table (FableCut). YouTube's own published upload guidance should be checked before treating as 🟡.",
+  "sources": [
+   "https://github.com/ronak-create/FableCut"
+  ],
+  "source_files": [
+   "CLAUDE.md#Delivery presets"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": {
+   "kind": "export_profile",
+   "what": "youtube_master",
+   "crf_max": 20,
+   "gop_max_s": 0.5,
+   "audio_kbps_min": 320,
+   "audio_hz": 48000
+  },
+  "confirms": [
+   "R-272"
+  ],
+  "conflict_note": "R-272 gives VBR 2-pass bitrate bands (10–24 Mbps 1080p). Either is fine; CRF 18 usually lands inside that band for travel footage. Pick one method per profile, not both."
+ },
+ {
+  "id": "T-007",
+  "part_ids": [],
+  "name": "One entrance family per video; ≤2 fonts, ≤3 transition types, 1–2 highlight colours",
+  "layer": "style",
+  "when": "Planning text animations, fonts, transitions and caption accent colours for a whole video",
+  "action": "Choose one entrance style for titles and one for small pop graphics and keep them for the whole video. Use at most 2 typefaces, at most 3 transition types, and 1–2 accent/highlight colours used consistently (a colour may map to a meaning, e.g. one per time of day).",
+  "why": "A different animation, font or colour on every element is the clearest 'auto-generated' signal and makes the video feel noisy.",
+  "frequency": "Whole video",
+  "evidence": "🟠",
+  "evidence_note": "Three tool skills agree (FableCut presets advice, cli-anything-capcut anti-slop list, cutcli TikTok rules). Opinion, not measured.",
+  "sources": [
+   "https://github.com/ronak-create/FableCut",
+   "https://github.com/juliang8507/cli-anything-capcut",
+   "https://github.com/xuliang2024/cutcli-cookbook"
+  ],
+  "source_files": [
+   "FableCut skills/motion-graphics/SKILL.md",
+   "cli-anything-capcut claude-skill/references/anti-slop-video.md",
+   "cutcli-cookbook docs/cookbook/tiktok-style.md"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": {
+   "kind": "max_count",
+   "what": "distinct_fonts_per_video",
+   "max": 2
+  },
+  "confirms": [
+   "R-252",
+   "R-422"
+  ],
+  "conflict_note": "FableCut's edit-video skill also says 'vary the font per title' to avoid a machine look — that contradicts its own motion-graphics advice and the other two sources. Propose: max 2 fonts (one display, one caption), variety comes from size/weight, not new typefaces."
+ },
+ {
+  "id": "T-008",
+  "part_ids": [],
+  "name": "Lower-third build order: plate → text → accent line",
+  "layer": "style",
+  "when": "Place-name or person lower third",
+  "action": "Animate in layers: the backing bar grows to full width in ~0.5 s ease-out; the text rises in ~0.2 s after the bar starts; a thin accent rule draws on from ~0.3 s to ~1.0 s. Exit everything together with a ~0.4 s fade. Use 2–3 colours: one accent, one neutral, one translucent backing (~60–65% opaque).",
+  "why": "Layered entrance reads as designed; text appearing before its plate looks broken.",
+  "frequency": "Every lower third",
+  "evidence": "🟠",
+  "evidence_note": "Worked example in FableCut's motion-graphics skill; numbers are that example's, not a standard.",
+  "sources": [
+   "https://github.com/ronak-create/FableCut"
+  ],
+  "source_files": [
+   "skills/motion-graphics/SKILL.md"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": null,
+  "confirms": [
+   "R-385",
+   "R-100"
+  ],
+  "conflict_note": "R-385 gives a ~12-frame slide-in for the whole lower third; T-008 adds the inner order and offsets."
+ },
+ {
+  "id": "T-009",
+  "part_ids": [],
+  "name": "Motion blur only on fast moves; off on slow Ken Burns drifts",
+  "layer": "style",
+  "when": "Deciding motion blur for moving elements (renderer or AE/Premiere package)",
+  "action": "Add motion blur (shutter ~180°, ~8 samples; 12–16 only for very fast spins; 360° for a deliberate smear) to whip moves, fly-ins and fast spins. Leave it off on slow drifts and Ken Burns moves where it is invisible but costs render time.",
+  "why": "On an i5 CPU render, blur on every layer multiplies render time for no visible gain.",
+  "frequency": "Every moving element",
+  "evidence": "🟠",
+  "evidence_note": "FableCut motion-graphics skill.",
+  "sources": [
+   "https://github.com/ronak-create/FableCut"
+  ],
+  "source_files": [
+   "skills/motion-graphics/SKILL.md"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": null,
+  "confirms": [
+   "R-304"
+  ],
+  "conflict_note": "CONFLICT with R-304 (blur ON on every moving layer). Proposed resolution for KANG: R-304 for fast moves, T-009 exemption for slow drifts (<~2% frame width per frame), because of CPU budget."
+ },
+ {
+  "id": "T-010",
+  "part_ids": [],
+  "name": "Transition ≤ 1/3 of the shorter neighbouring clip, hard cap 2 s",
+  "layer": "rhythm",
+  "when": "Any dissolve, wipe or other transition between two clips/stills",
+  "action": "Default length ~0.5 s. Never longer than one third of the shorter of the two clips it joins, and never over 2 s. The clips must abut (no gap) and have enough handle media under the transition (see T-011).",
+  "why": "A long transition on a short clip means the viewer never sees the clip clean; gaps break transitions in NLE import.",
+  "frequency": "Every transition",
+  "evidence": "🟠",
+  "evidence_note": "cutcli cookbook (1/3 rule), editly default 0.5 s, and the Premiere guidance that premiere-pro-mcp quotes from adb-mcp (≤2 s, no gaps). Tool conventions.",
+  "sources": [
+   "https://github.com/xuliang2024/cutcli-cookbook",
+   "https://github.com/mifi/editly",
+   "https://github.com/leancoderkavy/premiere-pro-mcp"
+  ],
+  "source_files": [
+   "cutcli-cookbook examples/02-image-slideshow-bgm/README.md",
+   "editly README",
+   "premiere-pro-mcp RESEARCH.md"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": {
+   "kind": "ratio_max",
+   "what": "transition_len_over_shorter_clip",
+   "max": 0.333,
+   "abs_max_s": 2.0
+  },
+  "confirms": [
+   "R-251",
+   "R-354"
+  ],
+  "conflict_note": "R-354 allows transitions 0.5–1.5 s; T-010 adds the per-clip ratio cap, which binds first on short beats."
+ },
+ {
+  "id": "T-011",
+  "part_ids": [],
+  "name": "Leave handles: ≥8 frames picture, ≥48 frames audio beyond every used range",
+  "layer": "style",
+  "when": "Writing source in/out points into the Premiere xmeml package",
+  "action": "When a clip is trimmed from longer media, check there are at least 8 frames of unused picture and 48 frames of unused audio past each in/out point. Report (do not block) any join that lacks them, because a dissolve, slip, audio crossfade or room-tone fill there will fail or need a freeze.",
+  "why": "Audio needs far more handle than picture because crossfades and ambience reach past the picture cut; the editor finds missing handles too late otherwise.",
+  "frequency": "Every trimmed clip in the package",
+  "evidence": "🟠",
+  "evidence_note": "Handle floors from a Resolve turnover/handle-report tool; industry convention, not a study.",
+  "sources": [
+   "https://github.com/samuelgursky/davinci-resolve-mcp"
+  ],
+  "source_files": [
+   "docs/SKILL.md (plan_turnover, handle_report)"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": {
+   "kind": "handle_frames_min",
+   "what": "source_handles",
+   "video_min": 8,
+   "audio_min": 48
+  },
+  "confirms": [
+   "R-292"
+  ],
+  "conflict_note": null
+ },
+ {
+  "id": "T-012",
+  "part_ids": [],
+  "name": "Neutral balance first; midtones stay warm; flag clipping, never auto-fix",
+  "layer": "style",
+  "when": "Automatic colour pre-balance of mixed stills/clips",
+  "action": "Balance black point first, then white point, per channel, from a mid-scene frame; group shots by setup/source and pick a hero per group. Do not neutralise midtones (skin should stay on the warm skin line). Automatic steps may only do this neutral balance — no curves, vignettes, saturation pushes or secondaries. Clipped highlights or crushed shadows are flagged for the human, not 'fixed'.",
+  "why": "Neutralising midtones turns faces grey; an automatic step that also stylises cannot know a dark shot was dark on purpose.",
+  "frequency": "Any auto-grade step",
+  "evidence": "🟠",
+  "evidence_note": "Assistant-colourist practice as encoded in a Resolve MCP tool; not measured.",
+  "sources": [
+   "https://github.com/samuelgursky/davinci-resolve-mcp"
+  ],
+  "source_files": [
+   "docs/SKILL.md (plan_prebalance)"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": null,
+  "confirms": [
+   "R-213",
+   "R-266",
+   "R-454"
+  ],
+  "conflict_note": "Fits ORDER.md (engine flags, human decides)."
+ },
+ {
+  "id": "T-013",
+  "part_ids": [],
+  "name": "At most ~2.5 competing sound streams",
+  "layer": "rhythm",
+  "when": "Mixing voice, music, ambience and SFX at any moment",
+  "action": "Count as competing any stream within 12 dB of the loudest one at that moment; streams further down are a bed/texture. Flag moments with more than 2–3 competing streams (e.g. voice + loud SFX + music not ducked).",
+  "why": "Listeners follow about two and a half sound streams; beyond that everything becomes mush and the narration is lost.",
+  "frequency": "Every audio window (e.g. 1 s steps)",
+  "evidence": "🟠",
+  "evidence_note": "Murch's long-standing 'two-and-a-half' observation as implemented by a Resolve audit; the tool itself says it is an observation, not a measured constant.",
+  "sources": [
+   "https://github.com/samuelgursky/davinci-resolve-mcp"
+  ],
+  "source_files": [
+   "docs/SKILL.md (sound_density_audit)"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": {
+   "kind": "max_count",
+   "what": "competing_streams_within_12db",
+   "max": 2.5
+  },
+  "confirms": [],
+  "conflict_note": "Complements R-212/R-222 (SFX budget) and R-449 (scenic audio policy)."
+ },
+ {
+  "id": "T-014",
+  "part_ids": [],
+  "name": "Flag a timeline with zero split edits",
+  "layer": "rhythm",
+  "when": "QC of the assembled package (narration + visuals) at scene changes",
+  "action": "Classify each scene join as J-cut (next sound early), L-cut (previous sound lingers), straight, or unpaired (picture cut with continuous sound). If every join is straight, flag it. No target ratio — just require that place changes use at least some split edits (ambience lead-ins).",
+  "why": "An all-straight timeline is usually one nobody has listened to; sound leading picture makes place changes feel natural.",
+  "frequency": "Per video",
+  "evidence": "🟠",
+  "evidence_note": "Resolve MCP split-edit audit; craft convention.",
+  "sources": [
+   "https://github.com/samuelgursky/davinci-resolve-mcp"
+  ],
+  "source_files": [
+   "docs/SKILL.md (split_edit_audit)"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": {
+   "kind": "min_count",
+   "what": "split_edits_at_scene_changes",
+   "min": 1
+  },
+  "confirms": [
+   "R-262"
+  ],
+  "conflict_note": "R-262 sets the 6–12 frame offset; T-014 is only the 'not zero' audit."
+ },
+ {
+  "id": "T-015",
+  "part_ids": [],
+  "name": "Critic reports what it cannot see; no single composite score",
+  "layer": "meta",
+  "when": "Designing the rules-engine critic output (step_4 engine report)",
+  "action": "Always list emotion and story as NOT_ASSESSED (Murch's Rule of Six weights them ~51% and ~23%), list unimplemented checks as NOT_IMPLEMENTED (never as passes), and state coverage ('n of 6 criteria, covering x% of the decision'). Order findings by scope (whole video → scene → moment) and weight, not by count. Avoid publishing one averaged percentage as if it described the cut.",
+  "why": "A single score built only from the measurable ~26% looks like a quality verdict it cannot give.",
+  "frequency": "Every engine report",
+  "evidence": "🟠",
+  "evidence_note": "Design stance of the Resolve MCP 'rule_of_six_audit'; weights are Murch's (already in package science files).",
+  "sources": [
+   "https://github.com/samuelgursky/davinci-resolve-mcp"
+  ],
+  "source_files": [
+   "docs/SKILL.md (rule_of_six_audit)"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": null,
+  "confirms": [
+   "ORDER.md emotion decision"
+  ],
+  "conflict_note": "PLAN-RELEVANT: step_4 engine currently prints one % score (e.g. Dwarika 36.4%). Proposal: keep per-layer pass/fail + coverage line, drop or demote the single %."
+ },
+ {
+  "id": "T-016",
+  "part_ids": [],
+  "name": "Cutaways sit inside one beat, never straddle two",
+  "layer": "comprehension",
+  "when": "Placing B-roll/stock/stills against narration beats (visuals_beats CSV)",
+  "action": "Every inserted visual starts and ends inside a single narration beat; a beat marked protected (e.g. on-camera moment, deity frame) is never covered; if a visual has an explicit beat index, place it there or not at all — never silently move it to another beat.",
+  "why": "A cutaway that crosses a beat boundary illustrates two ideas at once and breaks S-007 timing.",
+  "frequency": "Every inserted visual",
+  "evidence": "🟠",
+  "evidence_note": "Placement contract of the Resolve MCP B-roll planner.",
+  "sources": [
+   "https://github.com/samuelgursky/davinci-resolve-mcp"
+  ],
+  "source_files": [
+   "docs/SKILL.md (plan_broll)"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": {
+   "kind": "boolean",
+   "what": "visual_crosses_beat_boundary",
+   "must_be": false
+  },
+  "confirms": [
+   "S-007",
+   "R-088"
+  ],
+  "conflict_note": null
+ },
+ {
+  "id": "T-017",
+  "part_ids": [],
+  "name": "Music-cut montage: cut on phrases by default, every 2 beats when retiming",
+  "layer": "rhythm",
+  "when": "Montage sections without narration (intro/outro, travel montage, reels)",
+  "action": "Default cut points = musical phrase boundaries; for a faster section use bars, every beat only for a deliberate 'relentless' moment. When retiming shots to the beat: 2 beats per shot as default, 1 for fast reels, 4 for calm sections. Shots under ~0.6 s read as flashes. If all cuts feel one beat early, check the downbeat offset (pickup bar).",
+  "why": "Cuts that resolve with the music feel inevitable rather than merely synced.",
+  "frequency": "Montage sections",
+  "evidence": "🟠",
+  "evidence_note": "Two tool docs (Resolve MCP beat-cut planner; FableCut beats/retime).",
+  "sources": [
+   "https://github.com/samuelgursky/davinci-resolve-mcp",
+   "https://github.com/ronak-create/FableCut"
+  ],
+  "source_files": [
+   "davinci-resolve-mcp docs/SKILL.md (plan_beat_cuts)",
+   "FableCut skills/remake-reel/SKILL.md"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": {
+   "kind": "duration_min_s",
+   "what": "montage_shot",
+   "min": 0.6
+  },
+  "confirms": [
+   "R-414",
+   "R-418"
+  ],
+  "conflict_note": "Long-form narrated sections follow Q-001/Q-003 instead."
+ },
+ {
+  "id": "T-018",
+  "part_ids": [],
+  "name": "Don't place cuts on raw Whisper word times",
+  "layer": "comprehension",
+  "when": "Cutting or syncing narration/captions from ASR word timestamps",
+  "action": "Use ASR word times to know *which* words exist, but not *where* to cut: they can be off by about ±0.3 s and pad word ends. Refine edges to the waveform/speech onset before cutting. Treat a silence ≥0.25 s inside a sentence as a possible restart. Gaps <0.6 s between blocks of one thought may be joined into one clip.",
+  "why": "Cutting on padded ASR times leaves breaths and clipped syllables.",
+  "frequency": "Every narration cut",
+  "evidence": "🟠",
+  "evidence_note": "Idea and numbers from AdamGarceau/resolve-toolkit (no LICENSE file); written fully in own words, no text/code copied.",
+  "sources": [
+   "https://github.com/AdamGarceau/resolve-toolkit"
+  ],
+  "source_files": [
+   "skills/perfect-cuts/SKILL.md"
+  ],
+  "licence": "NO LICENCE → IDEA_ONLY",
+  "idea_only": true,
+  "check": null,
+  "confirms": [
+   "R-195",
+   "R-403"
+  ],
+  "conflict_note": "AdamGarceau also uses zero in-pad for tight talking-head cuts; that conflicts with R-346 (0.25 s pre-pad) and is NOT proposed for KANG narration."
+ },
+ {
+  "id": "T-019",
+  "part_ids": [],
+  "name": "Presenter/talking clips: min 1.5 s per framing, re-frame by 10 s",
+  "layer": "rhythm",
+  "when": "Clips of a person talking (presenter, local guide) where KANG adds punch-in/out framing",
+  "action": "16:9: no framing change faster than 1.5 s (anti-flicker); force a new framing or cutaway by ~10 s. 9:16: min 1.0 s, max ~5 s. For calm personal stories hold each framing ≥4 s. A new shot needs ~3–5 s to be taken in.",
+  "why": "Switching too fast feels dizzy; holding a static framing too long loses attention.",
+  "frequency": "Talking clips",
+  "evidence": "🟠",
+  "evidence_note": "Numbers from a podcast punch-in skill (AdamGarceau/resolve-toolkit, no licence). Own words only.",
+  "sources": [
+   "https://github.com/AdamGarceau/resolve-toolkit"
+  ],
+  "source_files": [
+   "skills/podcast-punch-in/SKILL.md",
+   "skills/dr-tighten/SKILL.md"
+  ],
+  "licence": "NO LICENCE → IDEA_ONLY",
+  "idea_only": true,
+  "check": {
+   "kind": "duration_range_s",
+   "what": "presenter_framing_hold",
+   "min": 1.5,
+   "max": 10
+  },
+  "confirms": [
+   "R-145"
+  ],
+  "conflict_note": "Q-001 (no shot over ~7 s in narrated pieces) is stricter for narration-over-visuals; T-019 is only for on-camera talking clips."
+ },
+ {
+  "id": "T-020",
+  "part_ids": [],
+  "name": "Noise/voice isolation at 30–50%, not full strength",
+  "layer": "style",
+  "when": "Cleaning location audio or noisy narration",
+  "action": "Apply AI voice isolation / noise reduction at roughly 30–50% wet; full strength creates watery artefacts. Then level and limit (VO peak target per R-451).",
+  "why": "Partial isolation removes room noise while keeping a natural voice.",
+  "frequency": "Noisy voice clips",
+  "evidence": "🟠",
+  "evidence_note": "Resolve Fairlight chain notes in AdamGarceau/resolve-toolkit; own words.",
+  "sources": [
+   "https://github.com/AdamGarceau/resolve-toolkit"
+  ],
+  "source_files": [
+   "skills/resolve-vo-finish/references/fairlight-native-chain.md"
+  ],
+  "licence": "NO LICENCE → IDEA_ONLY",
+  "idea_only": true,
+  "check": {
+   "kind": "percent_range",
+   "what": "voice_isolation_amount",
+   "min": 30,
+   "max": 50
+  },
+  "confirms": [
+   "R-438"
+  ],
+  "conflict_note": "R-438 uses 80% dry/wet for manual NR — different tool, different scale; keep both as starting points per tool."
+ },
+ {
+  "id": "T-021",
+  "part_ids": [],
+  "name": "Humanise TTS narration: room tone ≈ −45 dB, varied pauses 300–600 ms",
+  "layer": "rhythm",
+  "when": "Any synthetic (TTS) narration",
+  "action": "Lay a very low room-tone bed (~−45 dB) under TTS, vary the gaps between sentences inside ~300–600 ms instead of a fixed pause, and soften the top end slightly (high shelf about −2 dB).",
+  "why": "Dead-silent gaps and identical pauses are a recognisable synthetic-voice signature.",
+  "frequency": "Every TTS narration",
+  "evidence": "🟠",
+  "evidence_note": "Anti-'AI slop' checklist in cli-anything-capcut (Korean); opinion.",
+  "sources": [
+   "https://github.com/juliang8507/cli-anything-capcut"
+  ],
+  "source_files": [
+   "claude-skill/references/anti-slop-video.md"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": {
+   "kind": "duration_range_s",
+   "what": "tts_sentence_gap",
+   "min": 0.3,
+   "max": 0.6
+  },
+  "confirms": [
+   "R-106",
+   "R-344"
+  ],
+  "conflict_note": "Only applies if KANG narration is TTS; recorded human narration follows R-106."
+ },
+ {
+  "id": "T-022",
+  "part_ids": [],
+  "name": "Dissolves are rare: keep them for time/place change",
+  "layer": "rhythm",
+  "when": "Choosing transitions across a video",
+  "action": "Do not put a dissolve on every cut. Reserve dissolves for real time or place changes; vary cut lengths around the average shot length by roughly ±30% instead of equal lengths; plan 1–2 deliberate 2–3 s quiet/still moments per video for breath and emphasis.",
+  "why": "Dissolve-on-everything, equal cut lengths and zero silence are typical auto-edit fingerprints.",
+  "frequency": "Whole video",
+  "evidence": "🟠",
+  "evidence_note": "Anti-slop checklist (cli-anything-capcut); it caps dissolves at ≤5% of transitions — opinion.",
+  "sources": [
+   "https://github.com/juliang8507/cli-anything-capcut"
+  ],
+  "source_files": [
+   "claude-skill/references/anti-slop-video.md"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": {
+   "kind": "percent_max",
+   "what": "dissolve_share_of_transitions",
+   "max": 30
+  },
+  "confirms": [
+   "R-214",
+   "R-174",
+   "Q-002"
+  ],
+  "conflict_note": "CONFLICT on the number: source says ≤5% dissolves; R-422 (travel/POV) allows 15–30% 'physical bridge or short dissolve'. Proposed: keep R-422's 30% ceiling for travel, adopt only the 'time/place change only' purpose test and the ±30% length variation."
+ },
+ {
+  "id": "T-023",
+  "part_ids": [],
+  "name": "Grade intensity caps: LUT/filter 30–50%, saturation boost ≤ +30%",
+  "layer": "style",
+  "when": "Applying a look/filter or saturation push",
+  "action": "Run creative LUTs/filters at 30–50% intensity, cap any saturation boost at about +30% (beyond that reds turn hot pink, a problem for saffron flags and temple paint), keep film grain light, and use vignettes only on dramatic scenes, not every shot.",
+  "why": "Full-strength looks crush colour and are a template signature.",
+  "frequency": "Every look/filter",
+  "evidence": "🟠",
+  "evidence_note": "CapCut-oriented anti-slop list + mood recipes; opinion, CapCut −1..+1 scale.",
+  "sources": [
+   "https://github.com/juliang8507/cli-anything-capcut"
+  ],
+  "source_files": [
+   "claude-skill/references/anti-slop-video.md",
+   "claude-skill/references/video-design.md"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": {
+   "kind": "percent_max",
+   "what": "saturation_boost",
+   "max": 30
+  },
+  "confirms": [
+   "R-250",
+   "R-331"
+  ],
+  "conflict_note": "R-266 says LUT intensity 50–70% (blend ≤55% on Rec709). Overlap is ~50%; propose 40–55% for KANG as the common band."
+ },
+ {
+  "id": "T-024",
+  "part_ids": [],
+  "name": "Golden-hour / warm travel look as a named starting preset",
+  "layer": "style",
+  "when": "Sunset, ghat, beach or evening temple beats",
+  "action": "Starting point (CapCut-style −1..+1 sliders, translate to FFmpeg eq/colortemperature): temperature about +0.25, highlights −0.20, shadows +0.15, contrast +0.12, saturation +0.10, brightness +0.08; optionally warm highlights / cool shadows split. A softer 'warm/café' variant: temp +0.20, contrast +0.10, sat +0.05.",
+  "why": "Gives the renderer a reproducible warm look instead of ad-hoc tweaks; keeps scenes in a family.",
+  "frequency": "Opt-in per scene tag",
+  "evidence": "🟠",
+  "evidence_note": "Mood recipe table in cli-anything-capcut video-design.md. Slider scale is CapCut's; mapping to FFmpeg values must be calibrated on KANG test frames.",
+  "sources": [
+   "https://github.com/juliang8507/cli-anything-capcut"
+  ],
+  "source_files": [
+   "claude-skill/references/video-design.md"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": null,
+  "confirms": [
+   "R-213"
+  ],
+  "conflict_note": "Subject to T-002/T-003 checks and T-023 caps."
+ },
+ {
+  "id": "T-025",
+  "part_ids": [],
+  "name": "Pull-out reveal may travel further than a push-in",
+  "layer": "style",
+  "when": "Choosing Ken Burns amplitude by direction",
+  "action": "Push-in on dwell/payoff stills: about 1.0→1.2 over the whole slot. Pull-out to open an act or reveal a place: start tighter (up to ~1.5) and end at 1.0 — a reveal needs more travel than an emphasis push. Let the move finish at the cut. Always within the pixel limit (G-003) and the Q-005 range.",
+  "why": "A reveal reads only if enough of the frame is newly uncovered; a matching small amplitude looks like a mistake.",
+  "frequency": "Ken Burns stills",
+  "evidence": "🟠",
+  "evidence_note": "capcut-cli examples (zoom recipe) and cutcli cookbook (1.0→1.3 over 5 s). Tool recipes.",
+  "sources": [
+   "https://github.com/renezander030/capcut-cli",
+   "https://github.com/xuliang2024/cutcli-cookbook"
+  ],
+  "source_files": [
+   "capcut-cli examples/keyframe-zoom.md",
+   "cutcli-cookbook examples/05-keyframe-zoom-in/README.md"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": null,
+  "confirms": [
+   "G-001",
+   "G-004"
+  ],
+  "conflict_note": "CONFLICT 1: amplitudes exceed G-002 (10–20%). Proposed: G-002 stays default for push-ins; allow pull-out reveals up to 1.35–1.5 only on act/chapter openers. CONFLICT 2: both sources use LINEAR interpolation (cutcli: 'linear feels most natural for Ken Burns'); G-005 says ease every move. Keep G-005 (ease) but note linear is acceptable for very slow full-slot drifts."
+ },
+ {
+  "id": "T-026",
+  "part_ids": [],
+  "name": "'Unfinished pan' on the last 1–2 stills",
+  "layer": "style",
+  "when": "Epilogue/closing stills before the end card",
+  "action": "Scale the still to ~1.2 for headroom and pan horizontally about 13% of frame width, timed so the pan would finish ~1.6× the slot length — the cut arrives while the frame is still moving. Use only on the last 1–2 stills; not on hooks, not on clips under ~2 s, not on faces/action, never combined with a zoom on the same still.",
+  "why": "Cutting mid-motion leaves the viewer with a 'still travelling' feeling at the end of a travel story.",
+  "frequency": "1–2 per video",
+  "evidence": "🟠",
+  "evidence_note": "Recipe from capcut-cli examples (keyframe-pan); craft trick, not tested.",
+  "sources": [
+   "https://github.com/renezander030/capcut-cli"
+  ],
+  "source_files": [
+   "examples/keyframe-pan.md"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": {
+   "kind": "max_count",
+   "what": "unfinished_pan_stills",
+   "max": 2
+  },
+  "confirms": [],
+  "conflict_note": "Breaks G-005 'ease every move' on purpose (linear constant pan). Also check R-435 (ending: slow zoom-out + fade) — use one or the other on the last still, not both."
+ },
+ {
+  "id": "T-027",
+  "part_ids": [],
+  "name": "Segment entrance length by intent",
+  "layer": "style",
+  "when": "Choosing an intro/outro animation for a still or clip",
+  "action": "Fade in/out ≈ 0.5 s (default); bright flash-in ≈ 0.4 s only for reveal beats; scroll/translate-up ≈ 1.2 s for location reveals; slow zoom-out ≈ 2 s for a contextual pull-back; breathing/pulsing zoom ≈ 3 s for establishing shots; dreamy blur-out ≈ 1 s exit. Never stack two animations of the same type (two intros) on one segment, and never longer than the segment.",
+  "why": "Matching animation length to purpose keeps reveals readable and avoids effect pile-ups.",
+  "frequency": "Per animated segment",
+  "evidence": "🟠",
+  "evidence_note": "capcut-cli animation catalogue defaults.",
+  "sources": [
+   "https://github.com/renezander030/capcut-cli"
+  ],
+  "source_files": [
+   "skills/capcut-edit/references/workflows.md"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": {
+   "kind": "boolean",
+   "what": "two_intros_on_one_segment",
+   "must_be": false
+  },
+  "confirms": [
+   "R-354"
+  ],
+  "conflict_note": "Flash-in must respect G-011 (≤3 flashes/s) and G-020 (no flash on deity frames)."
+ },
+ {
+  "id": "T-028",
+  "part_ids": [],
+  "name": "Time-of-day labels for day-structured vlogs",
+  "layer": "comprehension",
+  "when": "Travel day vlog sections that follow a clock (morning darshan, noon, evening aarti)",
+  "action": "Open each part of the day with a short label 'time · activity' (e.g. 'सुबह 6:00 · मंगला आरती'), give each part its own accent colour (e.g. morning yellow, noon orange, evening pink) used consistently, start the first scene with a Ken Burns so the opening is not static, and prefer wipes over dissolves between the day parts (reads like turning a page).",
+  "why": "Clock labels give the viewer a timeline map for free and make day-structured travel easy to follow.",
+  "frequency": "Once per day-part",
+  "evidence": "🟠",
+  "evidence_note": "cutcli cookbook 'make a vlog' template; opinion.",
+  "sources": [
+   "https://github.com/xuliang2024/cutcli-cookbook"
+  ],
+  "source_files": [
+   "docs/cookbook/make-a-vlog.md"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": null,
+  "confirms": [
+   "R-422"
+  ],
+  "conflict_note": "Wipes are a 'motion accent' under R-422's budget; keep them to the day-part boundaries only."
+ },
+ {
+  "id": "T-029",
+  "part_ids": [],
+  "name": "Caption backing plate over busy footage",
+  "layer": "comprehension",
+  "when": "Captions or labels over busy or bright backgrounds",
+  "action": "Use a semi-transparent dark rounded plate behind the text (black at ~35–55% opacity, small corner radius, ~16 px padding at 1080p) or a soft drop shadow (offset ~4–6 px, near-opaque). Choose plate for long caption lines, shadow for short pop words.",
+  "why": "Plain text on variable footage fails contrast on some frames even when it passes on others.",
+  "frequency": "Captions/labels over non-uniform backgrounds",
+  "evidence": "🟠",
+  "evidence_note": "Two tool recipes (cutcli knowledge-card, VectCut capcut-director).",
+  "sources": [
+   "https://github.com/xuliang2024/cutcli-cookbook",
+   "https://github.com/sun-guannan/VectCutAPI"
+  ],
+  "source_files": [
+   "cutcli docs/cookbook/knowledge-card.md",
+   "VectCutAPI .agents/skills/capcut-director/SKILL.md"
+  ],
+  "licence": "MIT / Apache-2.0",
+  "idea_only": false,
+  "check": {
+   "kind": "percent_range",
+   "what": "caption_plate_opacity",
+   "min": 35,
+   "max": 55
+  },
+  "confirms": [
+   "R-096",
+   "G-018",
+   "R-094"
+  ],
+  "conflict_note": "G-018 contrast ratio remains the pass/fail test; the plate is the default way to meet it."
+ },
+ {
+  "id": "T-030",
+  "part_ids": [],
+  "name": "9:16 type scale and line spacing",
+  "layer": "comprehension",
+  "when": "Text sizes for 1080×1920 reels",
+  "action": "Hero/hook title ~80–135 px cap height-equivalent (pt in FFmpeg drawtext), secondary lines ~68–85, subtitles 56–64 (minimum for comfortable phone reading), micro labels 42–48 only for metadata. Multi-line text: line spacing ~0.25–0.32 em (not a tight default); separate independent text blocks by ≥115–140 px vertically.",
+  "why": "Desktop-size defaults are unreadable on phones; tight leading makes Devanagari matras collide.",
+  "frequency": "Every reel text element",
+  "evidence": "🟠",
+  "evidence_note": "VectCutAPI capcut-director skill typography table.",
+  "sources": [
+   "https://github.com/sun-guannan/VectCutAPI"
+  ],
+  "source_files": [
+   ".agents/skills/capcut-director/SKILL.md"
+  ],
+  "licence": "Apache-2.0 repo (skill folder MIT)",
+  "idea_only": false,
+  "check": {
+   "kind": "min_value",
+   "what": "reel_subtitle_font_px",
+   "min": 56
+  },
+  "confirms": [
+   "R-096"
+  ],
+  "conflict_note": "Devanagari needs the upper end of the line-spacing band (matras/conjuncts)."
+ },
+ {
+  "id": "T-031",
+  "part_ids": [],
+  "name": "Check text on a still at every scene boundary before delivery",
+  "layer": "comprehension",
+  "when": "Final QC of a render",
+  "action": "Extract one frame just after every scene boundary (and mid-sentence for captions) and inspect centring, safe zone and legibility before calling the render done.",
+  "why": "Text collisions and off-safe-area labels show up at boundaries where elements overlap.",
+  "frequency": "Every scene boundary",
+  "evidence": "🟠",
+  "evidence_note": "Two tool workflows recommend it.",
+  "sources": [
+   "https://github.com/sun-guannan/VectCutAPI",
+   "https://github.com/ronak-create/FableCut"
+  ],
+  "source_files": [
+   "VectCutAPI capcut-director SKILL.md",
+   "FableCut skills/edit-video/SKILL.md"
+  ],
+  "licence": "Apache-2.0 / MIT",
+  "idea_only": false,
+  "check": null,
+  "confirms": [
+   "R-133",
+   "R-380"
+  ],
+  "conflict_note": null
+ },
+ {
+  "id": "T-032",
+  "part_ids": [],
+  "name": "Ease the transition itself, not only the motion",
+  "layer": "style",
+  "when": "FFmpeg xfade transitions in the KANG renderer",
+  "action": "FFmpeg's xfade progresses linearly by default. Apply an easing curve to transition progress (e.g. cubic or sine in-out) — possible on stock FFmpeg through custom expressions. Avoid back/elastic easings on xfade (their overshoot is clipped or swaps the inputs).",
+  "why": "Linear transitions start and stop abruptly; eased progress makes a dissolve or wipe feel smooth.",
+  "frequency": "Every non-cut transition",
+  "evidence": "🟠",
+  "evidence_note": "xfade-easing README (documented behaviour of FFmpeg xfade).",
+  "sources": [
+   "https://github.com/scriptituk/xfade-easing"
+  ],
+  "source_files": [
+   "README.md"
+  ],
+  "licence": "MIT",
+  "idea_only": false,
+  "check": null,
+  "confirms": [
+   "G-005",
+   "R-261"
+  ],
+  "conflict_note": "G-005/R-261 talk about moves and reveals; T-032 extends easing to transitions."
+ },
+ {
+  "id": "T-033",
+  "part_ids": [],
+  "name": "Music fade-out at the end: 0.8–1.2 s for reels, ~3 s for long-form",
+  "layer": "rhythm",
+  "when": "Ending of the music bed",
+  "action": "Reels: smooth fade of about 0.8–1.2 s. Long-form endings: ~3 s fade with an exponential/natural curve on the final music tail.",
+  "why": "An abrupt music stop sounds like a render error.",
+  "frequency": "Every video end",
+  "evidence": "🟠",
+  "evidence_note": "Two tool defaults.",
+  "sources": [
+   "https://github.com/sun-guannan/VectCutAPI",
+   "https://github.com/ronak-create/FableCut"
+  ],
+  "source_files": [
+   "VectCutAPI capcut-director SKILL.md",
+   "FableCut CLAUDE.md#Recipes"
+  ],
+  "licence": "Apache-2.0 / MIT",
+  "idea_only": false,
+  "check": {
+   "kind": "duration_range_s",
+   "what": "music_end_fade",
+   "min": 0.8,
+   "max": 4.0
+  },
+  "confirms": [
+   "R-435"
+  ],
+  "conflict_note": null
+ }
+]

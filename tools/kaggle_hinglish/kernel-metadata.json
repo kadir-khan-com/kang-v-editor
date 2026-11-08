@@ -1,0 +1,16 @@
+{
+ "id": "ironindiarat/kang-hinglish-ab",
+ "title": "kang-hinglish-ab",
+ "code_file": "hinglish_run.py",
+ "language": "python",
+ "kernel_type": "script",
+ "is_private": true,
+ "enable_gpu": true,
+ "enable_internet": true,
+ "dataset_sources": [
+  "ironindiarat/kang-project"
+ ],
+ "competition_sources": [],
+ "kernel_sources": [],
+ "machine_shape": "NvidiaTeslaT4"
+}

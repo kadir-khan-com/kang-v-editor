@@ -1,0 +1,1010 @@
+{
+ "checked": "2026-11-06 IST (repo pages for stars/forks; shallow clone HEAD date for last commit; LICENSE read from clone)",
+ "repos": [
+  {
+   "repo": "ishu86/after-effects-mcp",
+   "url": "https://github.com/ishu86/after-effects-mcp",
+   "editor": "AE",
+   "listed_in": "package",
+   "stars": 46,
+   "forks": 11,
+   "last_commit": "2026-10-08",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "MCP server (70+ tools) driving AE via a bridge panel: comps, text, keyframes, expressions, lower-third/title presets; ships a Claude skill.",
+   "windows_cpu_fit": "Windows OK; AE must be open with panel",
+   "needs_paid_app_or_api": "After Effects (user has 24.6)",
+   "kang_use": "b (already harvested → R-rules); a only if we later automate AE live",
+   "t_rules": [],
+   "confirms": [
+    "package harvest"
+   ],
+   "risks": "Needs AE running + panel; user must run it; small (46★)."
+  },
+  {
+   "repo": "justajazz/ae-mcp-bridge",
+   "url": "https://github.com/justajazz/ae-mcp-bridge",
+   "editor": "AE",
+   "listed_in": "package",
+   "stars": 1,
+   "forks": 0,
+   "last_commit": "2026-10-09",
+   "licence_file": "MIT (ports Dakkshin, MIT)",
+   "verdict": "OK",
+   "what": "Small AE MCP bridge fork.",
+   "windows_cpu_fit": "Windows OK",
+   "needs_paid_app_or_api": "After Effects",
+   "kang_use": "c",
+   "t_rules": [],
+   "confirms": [
+    "package harvest"
+   ],
+   "risks": "1★, tiny; prefer upstream Dakkshin."
+  },
+  {
+   "repo": "aedev-tools/adobe-agent-skills",
+   "url": "https://github.com/aedev-tools/adobe-agent-skills",
+   "editor": "AE/Pr",
+   "listed_in": "package",
+   "stars": 116,
+   "forks": 7,
+   "last_commit": "2026-03-02",
+   "licence_file": "Apache-2.0",
+   "verdict": "OK",
+   "what": "Agent skills for AE/Premiere scripting (ExtendScript API knowledge).",
+   "windows_cpu_fit": "n/a (docs)",
+   "needs_paid_app_or_api": "Adobe apps",
+   "kang_use": "b (already harvested)",
+   "t_rules": [],
+   "confirms": [
+    "package harvest"
+   ],
+   "risks": "Last commit 2026-03; API notes, not craft."
+  },
+  {
+   "repo": "chvndler/aeft.jsx",
+   "url": "https://github.com/chvndler/aeft.jsx",
+   "editor": "AE",
+   "listed_in": "package",
+   "stars": 4,
+   "forks": 0,
+   "last_commit": "2026-07-27",
+   "licence_file": "MIT (README says ISC; LICENSE file MIT)",
+   "verdict": "OK",
+   "what": "ExtendScript helper library for AE.",
+   "windows_cpu_fit": "Windows OK",
+   "needs_paid_app_or_api": "After Effects",
+   "kang_use": "c",
+   "t_rules": [],
+   "confirms": [
+    "package harvest"
+   ],
+   "risks": "4★."
+  },
+  {
+   "repo": "yumehiko/ae-agent-skills",
+   "url": "https://github.com/yumehiko/ae-agent-skills",
+   "editor": "AE",
+   "listed_in": "package",
+   "stars": 38,
+   "forks": 3,
+   "last_commit": "2026-08-13",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Declarative JSON→AE scene CLI + skills (Japanese). Safe margins action 10% / title 20%; ease = [speed, influence 0.1–100].",
+   "windows_cpu_fit": "Windows OK, needs AE",
+   "needs_paid_app_or_api": "After Effects",
+   "kang_use": "c for now; a later if KANG emits AE scenes",
+   "t_rules": [],
+   "confirms": [
+    "G-009 (safe margins, older 10/20% convention)"
+   ],
+   "risks": "Schema is author-specific."
+  },
+  {
+   "repo": "iart-ai/motion-design-skills",
+   "url": "https://github.com/iart-ai/motion-design-skills",
+   "editor": "AE/web",
+   "listed_in": "package",
+   "stars": 201,
+   "forks": 35,
+   "last_commit": "2026-06-22",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Motion-design principles skills (easing curves, stagger, overshoot expressions).",
+   "windows_cpu_fit": "docs",
+   "needs_paid_app_or_api": "none",
+   "kang_use": "b (already harvested; numbers in R-3xx)",
+   "t_rules": [],
+   "confirms": [
+    "R-261",
+    "R-305",
+    "R-322"
+   ],
+   "risks": "-"
+  },
+  {
+   "repo": "LobzyJay/motion-design-with-claude (renamed …-and-codex)",
+   "url": "https://github.com/LobzyJay/motion-design-with-claude",
+   "editor": "AE",
+   "listed_in": "package",
+   "stars": 37,
+   "forks": 9,
+   "last_commit": "2026-09-23",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "AE motion skills incl. expression references (inertial bounce etc.).",
+   "windows_cpu_fit": "docs",
+   "needs_paid_app_or_api": "none",
+   "kang_use": "b (already harvested)",
+   "t_rules": [],
+   "confirms": [
+    "R-321",
+    "R-324",
+    "R-326"
+   ],
+   "risks": "Repo renamed (redirect works)."
+  },
+  {
+   "repo": "SebastianBoehler/autoresearch_after_effects_finetune",
+   "url": "https://github.com/SebastianBoehler/autoresearch_after_effects_finetune",
+   "editor": "AE",
+   "listed_in": "package",
+   "stars": 0,
+   "forks": 0,
+   "last_commit": "2026-06-11",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Experiment to fine-tune a model on AE motion; includes motion-piece rules.",
+   "windows_cpu_fit": "docs",
+   "needs_paid_app_or_api": "none",
+   "kang_use": "b (already harvested)",
+   "t_rules": [],
+   "confirms": [
+    "R-308",
+    "R-310"
+   ],
+   "risks": "0★."
+  },
+  {
+   "repo": "dvschultz/adobe-hut",
+   "url": "https://github.com/dvschultz/adobe-hut",
+   "editor": "AE/Pr",
+   "listed_in": "package",
+   "stars": 24,
+   "forks": 0,
+   "last_commit": "2026-07-12",
+   "licence_file": "NONE",
+   "verdict": "IDEA_ONLY",
+   "what": "~50 skill files of UXP/ExtendScript API reference + agents.",
+   "windows_cpu_fit": "docs",
+   "needs_paid_app_or_api": "Adobe apps",
+   "kang_use": "b ideas only (API facts); notes_ file exists",
+   "t_rules": [],
+   "confirms": [
+    "notes_dvschultz_adobe-hut.md"
+   ],
+   "risks": "No licence: no copying."
+  },
+  {
+   "repo": "koptsev63/premiere-claude-bridge",
+   "url": "https://github.com/koptsev63/premiere-claude-bridge",
+   "editor": "Pr",
+   "listed_in": "package",
+   "stars": 2,
+   "forks": 0,
+   "last_commit": "2026-11-05",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Premiere bridge + skills (end cards, room tone under black, watch skill).",
+   "windows_cpu_fit": "Windows OK, CEP",
+   "needs_paid_app_or_api": "Premiere",
+   "kang_use": "b (already harvested)",
+   "t_rules": [],
+   "confirms": [
+    "R-344",
+    "R-345"
+   ],
+   "risks": "2★; one sub-skill self-labelled paid pack (MIT in repo)."
+  },
+  {
+   "repo": "ZeusSheen/ppro-agent-bridge",
+   "url": "https://github.com/ZeusSheen/ppro-agent-bridge",
+   "editor": "Pr",
+   "listed_in": "package",
+   "stars": 2,
+   "forks": 0,
+   "last_commit": "2026-11-03",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Experimental Premiere agent bridge.",
+   "windows_cpu_fit": "Windows OK",
+   "needs_paid_app_or_api": "Premiere",
+   "kang_use": "b (already harvested)",
+   "t_rules": [],
+   "confirms": [
+    "package harvest"
+   ],
+   "risks": "Experimental, 2★."
+  },
+  {
+   "repo": "leancoderkavy/premiere-pro-mcp",
+   "url": "https://github.com/leancoderkavy/premiere-pro-mcp",
+   "editor": "Pr",
+   "listed_in": "package",
+   "stars": 489,
+   "forks": 89,
+   "last_commit": "2026-11-05",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Large Premiere MCP (CEP + UXP), interchange loss reports (OTIO/FCP7 xmeml/EDL/AAF), caption timing previews, music-remix plans.",
+   "windows_cpu_fit": "Windows OK; CEP works on Pr 24.6 (UXP needs 25.6+)",
+   "needs_paid_app_or_api": "Premiere",
+   "kang_use": "a (optional post-import automation) + b",
+   "t_rules": [
+    "T-010"
+   ],
+   "confirms": [
+    "R-251"
+   ],
+   "risks": "CEP panel install (unsigned/debug); CEP support planned to end ~Dec 2028; host validation 'not_run' per its own docs."
+  },
+  {
+   "repo": "hetpatel-11/Adobe_Premiere_Pro_MCP",
+   "url": "https://github.com/hetpatel-11/Adobe_Premiere_Pro_MCP",
+   "editor": "Pr",
+   "listed_in": "package",
+   "stars": 824,
+   "forks": 153,
+   "last_commit": "2026-10-24",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Most-starred Premiere MCP (283 tools via search_tools/invoke_tool); CEP bridge; MOGRT import + text fields, captions, markers, export.",
+   "windows_cpu_fit": "Windows OK; Premiere 2020+ (CEP) → fits 24.6.1",
+   "needs_paid_app_or_api": "Premiere (user has)",
+   "kang_use": "a (optional): post-import step to drop MOGRT titles/markers into KANG's sequence",
+   "t_rules": [],
+   "confirms": [
+    "-"
+   ],
+   "risks": "Needs CEP panel install + Node; agent-driven (user must run Premiere); design still depends on real MOGRT files."
+  },
+  {
+   "repo": "vamshicreates/premiere-editing-dna",
+   "url": "https://github.com/vamshicreates/premiere-editing-dna",
+   "editor": "Pr",
+   "listed_in": "package",
+   "stars": 0,
+   "forks": 0,
+   "last_commit": "2026-09-29",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Measure an editor's 'DNA' (ASL, cuts/min) from past edits.",
+   "windows_cpu_fit": "Python",
+   "needs_paid_app_or_api": "none",
+   "kang_use": "b (already harvested)",
+   "t_rules": [],
+   "confirms": [
+    "R-293",
+    "R-295"
+   ],
+   "risks": "0★."
+  },
+  {
+   "repo": "eacp1991/premiere-agent",
+   "url": "https://github.com/eacp1991/premiere-agent",
+   "editor": "Pr",
+   "listed_in": "package",
+   "stars": 0,
+   "forks": 0,
+   "last_commit": "2026-07-07",
+   "licence_file": "NONE (fork of Kemerd/premiere-agent = PolyForm NC)",
+   "verdict": "IDEA_ONLY",
+   "what": "Large Premiere agent SKILL (pacing presets, word-boundary cuts).",
+   "windows_cpu_fit": "Windows OK",
+   "needs_paid_app_or_api": "Premiere; Florence-2 captions (non-commercial model)",
+   "kang_use": "b ideas only; notes_ file exists",
+   "t_rules": [],
+   "confirms": [
+    "R-273 (via notes)"
+   ],
+   "risks": "NC licence family."
+  },
+  {
+   "repo": "ChaiWithJai/davinci-resolve-claude-skills",
+   "url": "https://github.com/ChaiWithJai/davinci-resolve-claude-skills",
+   "editor": "Resolve",
+   "listed_in": "package",
+   "stars": 32,
+   "forks": 4,
+   "last_commit": "2026-05-17",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Resolve craft skills built from BMD training PDFs (audio chain, skin saturation, crossfades).",
+   "windows_cpu_fit": "docs",
+   "needs_paid_app_or_api": "Resolve",
+   "kang_use": "b (already harvested)",
+   "t_rules": [],
+   "confirms": [
+    "R-431",
+    "R-438",
+    "R-439",
+    "R-441",
+    "R-454"
+   ],
+   "risks": "2 commits."
+  },
+  {
+   "repo": "samuelgursky/davinci-resolve-mcp",
+   "url": "https://github.com/samuelgursky/davinci-resolve-mcp",
+   "editor": "Resolve",
+   "listed_in": "package",
+   "stars": 3953,
+   "forks": 455,
+   "last_commit": "2026-11-04",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Most-starred Resolve MCP (3.9k★): full scripting API + audits (rule of six, split edits, sound density, handles, pre-balance, beat cuts, B-roll placement). Free edition reachable only via in-app Workspace▸Scripts bridge (external scripting is Studio-only).",
+   "windows_cpu_fit": "Windows OK; Resolve not installed on user PC",
+   "needs_paid_app_or_api": "Resolve (free OK via bridge; Studio for external)",
+   "kang_use": "b (strong ideas); a only if user installs Resolve",
+   "t_rules": [
+    "T-003",
+    "T-011",
+    "T-012",
+    "T-013",
+    "T-014",
+    "T-015",
+    "T-016",
+    "T-017"
+   ],
+   "confirms": [
+    "R-262",
+    "R-292"
+   ],
+   "risks": "Free-edition bridge stated as measured on 21.0.x only."
+  },
+  {
+   "repo": "AdamGarceau/resolve-toolkit",
+   "url": "https://github.com/AdamGarceau/resolve-toolkit",
+   "editor": "Resolve",
+   "listed_in": "package",
+   "stars": 1,
+   "forks": 0,
+   "last_commit": "2026-08-31",
+   "licence_file": "NONE",
+   "verdict": "IDEA_ONLY",
+   "what": "Resolve+Claude skills: perfect-cuts, tighten profiles, punch-in, VO finish, snap captions, Fusion title pack.",
+   "windows_cpu_fit": "macOS paths",
+   "needs_paid_app_or_api": "Resolve",
+   "kang_use": "b ideas only (own words)",
+   "t_rules": [
+    "T-018",
+    "T-019",
+    "T-020"
+   ],
+   "confirms": [
+    "R-269",
+    "R-451"
+   ],
+   "risks": "No licence; macOS-centric."
+  },
+  {
+   "repo": "tashisleepy/capcut-ai-director",
+   "url": "https://github.com/tashisleepy/capcut-ai-director",
+   "editor": "CapCut",
+   "listed_in": "package",
+   "stars": 3,
+   "forks": 1,
+   "last_commit": "2026-04-04",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "CapCut 'director' knowledge (beat drops, speed ramps, endings).",
+   "windows_cpu_fit": "docs",
+   "needs_paid_app_or_api": "CapCut",
+   "kang_use": "b (already harvested)",
+   "t_rules": [],
+   "confirms": [
+    "R-414",
+    "R-418",
+    "R-435"
+   ],
+   "risks": "CapCut blocked in India."
+  },
+  {
+   "repo": "GuanYixuan/pyJianYingDraft",
+   "url": "https://github.com/GuanYixuan/pyJianYingDraft",
+   "editor": "CapCut/JianYing",
+   "listed_in": "package",
+   "stars": 4815,
+   "forks": 726,
+   "last_commit": "2026-10-14",
+   "licence_file": "Apache-2.0",
+   "verdict": "OK (code)",
+   "what": "Python draft generator for JianYing (China CapCut) — 4.8k★.",
+   "windows_cpu_fit": "Windows OK; CPU",
+   "needs_paid_app_or_api": "JianYing desktop for render",
+   "kang_use": "c for KANG",
+   "t_rules": [],
+   "confirms": [
+    "-"
+   ],
+   "risks": "JianYing ≠ CapCut; newer JianYing drafts encrypted; CapCut blocked in India."
+  },
+  {
+   "repo": "GuanYixuan/pyCapCut",
+   "url": "https://github.com/GuanYixuan/pyCapCut",
+   "editor": "CapCut",
+   "listed_in": "new",
+   "stars": 735,
+   "forks": 107,
+   "last_commit": "2026-10-16",
+   "licence_file": "NO LICENSE FILE",
+   "verdict": "IDEA_ONLY",
+   "what": "CapCut-flavoured sibling of pyJianYingDraft (735★); export must be manual in CapCut.",
+   "windows_cpu_fit": "Windows OK",
+   "needs_paid_app_or_api": "CapCut",
+   "kang_use": "c",
+   "t_rules": [],
+   "confirms": [
+    "-"
+   ],
+   "risks": "No licence + CapCut blocked in India."
+  },
+  {
+   "repo": "notinmood/JianyingDraft.PY",
+   "url": "https://github.com/notinmood/JianyingDraft.PY",
+   "editor": "JianYing",
+   "listed_in": "package",
+   "stars": 213,
+   "forks": 44,
+   "last_commit": "2024-05-11",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Older JianYing draft writer (last commit 2024-05).",
+   "windows_cpu_fit": "Windows",
+   "needs_paid_app_or_api": "JianYing",
+   "kang_use": "c",
+   "t_rules": [],
+   "confirms": [
+    "-"
+   ],
+   "risks": "Stale; format drift."
+  },
+  {
+   "repo": "tamedpanda/CapCutAPI",
+   "url": "https://github.com/tamedpanda/CapCutAPI",
+   "editor": "CapCut",
+   "listed_in": "package",
+   "stars": null,
+   "forks": null,
+   "last_commit": "CLONE_FAIL",
+   "licence_file": "—",
+   "verdict": "GONE (HTTP 404)",
+   "what": "—",
+   "windows_cpu_fit": "—",
+   "needs_paid_app_or_api": "—",
+   "kang_use": "c",
+   "t_rules": [],
+   "confirms": [
+    "-"
+   ],
+   "risks": "Repo not found 2026-11-06."
+  },
+  {
+   "repo": "luhailiang98/CapCutAPI-YYZC",
+   "url": "https://github.com/luhailiang98/CapCutAPI-YYZC",
+   "editor": "CapCut",
+   "listed_in": "package",
+   "stars": 32,
+   "forks": 1,
+   "last_commit": "2025-09-11",
+   "licence_file": "NONE",
+   "verdict": "IDEA_ONLY",
+   "what": "FastAPI+Redis CapCut/JianYing service with Windows UI automation.",
+   "windows_cpu_fit": "Windows",
+   "needs_paid_app_or_api": "JianYing",
+   "kang_use": "c",
+   "t_rules": [],
+   "confirms": [
+    "-"
+   ],
+   "risks": "No licence."
+  },
+  {
+   "repo": "fancyboi999/capcut-mcp",
+   "url": "https://github.com/fancyboi999/capcut-mcp",
+   "editor": "CapCut",
+   "listed_in": "package",
+   "stars": 96,
+   "forks": 26,
+   "last_commit": "2025-08-21",
+   "licence_file": "NONE (README only)",
+   "verdict": "IDEA_ONLY",
+   "what": "CapCutAPI fork (HTTP API to build drafts); last commit 2025-08.",
+   "windows_cpu_fit": "Python",
+   "needs_paid_app_or_api": "CapCut",
+   "kang_use": "c",
+   "t_rules": [],
+   "confirms": [
+    "-"
+   ],
+   "risks": "No licence; stale."
+  },
+  {
+   "repo": "renezander030/capcut-cli",
+   "url": "https://github.com/renezander030/capcut-cli",
+   "editor": "CapCut/JianYing",
+   "listed_in": "package",
+   "stars": 1115,
+   "forks": 144,
+   "last_commit": "2026-11-04",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Zero-dep Node CLI editing local CapCut/JianYing drafts (1.1k★); recipes for Ken Burns, unfinished pan, intro/outro animation catalogue, retake detection.",
+   "windows_cpu_fit": "Windows OK",
+   "needs_paid_app_or_api": "CapCut/JianYing app to render",
+   "kang_use": "b (recipes); code c",
+   "t_rules": [
+    "T-025",
+    "T-026",
+    "T-027"
+   ],
+   "confirms": [
+    "G-001"
+   ],
+   "risks": "CapCut blocked in India."
+  },
+  {
+   "repo": "cooperka/capcut-export",
+   "url": "https://github.com/cooperka/capcut-export",
+   "editor": "CapCut",
+   "listed_in": "package",
+   "stars": null,
+   "forks": null,
+   "last_commit": "CLONE_FAIL",
+   "licence_file": "—",
+   "verdict": "GONE (HTTP 404)",
+   "what": "—",
+   "windows_cpu_fit": "—",
+   "needs_paid_app_or_api": "—",
+   "kang_use": "c",
+   "t_rules": [],
+   "confirms": [
+    "-"
+   ],
+   "risks": "Not found; similar: emosheeep/capcut-export (not checked)."
+  },
+  {
+   "repo": "yanghoxom/capcut-project-exporter",
+   "url": "https://github.com/yanghoxom/capcut-project-exporter",
+   "editor": "CapCut",
+   "listed_in": "package",
+   "stars": 9,
+   "forks": 8,
+   "last_commit": "2026-05-28",
+   "licence_file": "NONE",
+   "verdict": "IDEA_ONLY",
+   "what": "Go GUI batch-exporting CapCut draft segments to MP4 via FFmpeg (NVENC).",
+   "windows_cpu_fit": "Windows",
+   "needs_paid_app_or_api": "CapCut drafts",
+   "kang_use": "c",
+   "t_rules": [],
+   "confirms": [
+    "-"
+   ],
+   "risks": "No licence."
+  },
+  {
+   "repo": "juliang8507/cli-anything-capcut",
+   "url": "https://github.com/juliang8507/cli-anything-capcut",
+   "editor": "CapCut",
+   "listed_in": "package",
+   "stars": 7,
+   "forks": 3,
+   "last_commit": "2026-09-21",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Windows-only CLI over pyCapCut (50+ commands, --json); Korean skill with anti-'AI slop' checklist and colour mood recipes.",
+   "windows_cpu_fit": "Windows only",
+   "needs_paid_app_or_api": "CapCut",
+   "kang_use": "b (checklist numbers)",
+   "t_rules": [
+    "T-007",
+    "T-021",
+    "T-022",
+    "T-023",
+    "T-024"
+   ],
+   "confirms": [
+    "R-222",
+    "Q-002",
+    "R-174"
+   ],
+   "risks": "Built on unlicensed pyCapCut; CapCut blocked in India."
+  },
+  {
+   "repo": "mrbuslov/capcut-ai-editor",
+   "url": "https://github.com/mrbuslov/capcut-ai-editor",
+   "editor": "CapCut",
+   "listed_in": "package",
+   "stars": 123,
+   "forks": 27,
+   "last_commit": "2026-10-27",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "MCP that cuts silences (>1 s gaps between CapCut auto-captions) and duplicate takes (keeps last).",
+   "windows_cpu_fit": "Python",
+   "needs_paid_app_or_api": "CapCut (+ optional OpenAI)",
+   "kang_use": "c",
+   "t_rules": [],
+   "confirms": [
+    "R-162"
+   ],
+   "risks": "CapCut blocked in India."
+  },
+  {
+   "repo": "xuliang2024/cutcli-cookbook",
+   "url": "https://github.com/xuliang2024/cutcli-cookbook",
+   "editor": "CapCut/JianYing",
+   "listed_in": "package",
+   "stars": 201,
+   "forks": 11,
+   "last_commit": "2026-05-26",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Cookbook/templates/prompts for the cutcli draft CLI (cutcli itself is a separate closed tool + cloud render).",
+   "windows_cpu_fit": "bash examples",
+   "needs_paid_app_or_api": "cutcli (closed) + CapCut",
+   "kang_use": "b (template ideas)",
+   "t_rules": [
+    "T-007",
+    "T-010",
+    "T-025",
+    "T-028",
+    "T-029"
+   ],
+   "confirms": [
+    "R-378"
+   ],
+   "risks": "cutcli binary not open source; cloud render."
+  },
+  {
+   "repo": "junwen853/travel-video-studio-skill",
+   "url": "https://github.com/junwen853/travel-video-studio-skill",
+   "editor": "generic",
+   "listed_in": "package",
+   "stars": 2,
+   "forks": 0,
+   "last_commit": "2026-08-09",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Actively released travel-video skill (route honesty, transition budgets, scenic audio).",
+   "windows_cpu_fit": "docs",
+   "needs_paid_app_or_api": "none",
+   "kang_use": "b (already harvested; most KANG-relevant)",
+   "t_rules": [],
+   "confirms": [
+    "R-361",
+    "R-422",
+    "R-423",
+    "R-424",
+    "R-425",
+    "R-434",
+    "R-449"
+   ],
+   "risks": "2★ but 200+ releases."
+  },
+  {
+   "repo": "NandhaKishorM/laya",
+   "url": "https://github.com/NandhaKishorM/laya",
+   "editor": "—",
+   "listed_in": "package",
+   "stars": 35069,
+   "forks": 3134,
+   "last_commit": "2026-11-06",
+   "licence_file": "Apache-2.0",
+   "verdict": "OK but OFF-TOPIC",
+   "what": "Multilingual 'System 1' decision/classification engine (35k★) — not a video tool.",
+   "windows_cpu_fit": "Python",
+   "needs_paid_app_or_api": "—",
+   "kang_use": "c",
+   "t_rules": [],
+   "confirms": [
+    "-"
+   ],
+   "risks": "Mislisted in package."
+  },
+  {
+   "repo": "ronak-create/FableCut",
+   "url": "https://github.com/ronak-create/FableCut",
+   "editor": "generic NLE",
+   "listed_in": "package",
+   "stars": 780,
+   "forks": 98,
+   "last_commit": "2026-10-30",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Browser NLE whose timeline is one JSON file; MCP/REST; captions, auto-duck, silence cut, scopes, beat retime, export presets, motion-graphics skill (780★).",
+   "windows_cpu_fit": "Node, zero deps; Windows OK; CPU",
+   "needs_paid_app_or_api": "none (ffmpeg)",
+   "kang_use": "b (richest new knowledge); a optional preview/edit UI for KANG output",
+   "t_rules": [
+    "T-001",
+    "T-002",
+    "T-003",
+    "T-004",
+    "T-005",
+    "T-006",
+    "T-007",
+    "T-008",
+    "T-009",
+    "T-017",
+    "T-031",
+    "T-033"
+   ],
+   "confirms": [
+    "R-202",
+    "R-213",
+    "R-326",
+    "R-418"
+   ],
+   "risks": "Sponsored README; young project."
+  },
+  {
+   "repo": "bradautomates/claude-video",
+   "url": "https://github.com/bradautomates/claude-video",
+   "editor": "generic",
+   "listed_in": "package",
+   "stars": 19950,
+   "forks": 2100,
+   "last_commit": "2026-09-25",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "'/watch' skill: URL/local video → timestamped frames (≤2 fps cap, near-duplicate dedupe) + transcript for an agent (19.9k★).",
+   "windows_cpu_fit": "Python+ffmpeg; Windows OK",
+   "needs_paid_app_or_api": "optional Groq/OpenAI Whisper; local WhisperX",
+   "kang_use": "a (QA: let an agent look at KANG renders)",
+   "t_rules": [],
+   "confirms": [
+    "R-133"
+   ],
+   "risks": "Cloud ASR optional; for Hindi prefer local."
+  },
+  {
+   "repo": "yunpeng1998/Qwen-Video-Edit",
+   "url": "https://github.com/yunpeng1998/Qwen-Video-Edit",
+   "editor": "model",
+   "listed_in": "package",
+   "stars": 131,
+   "forks": 3,
+   "last_commit": "2026-09-01",
+   "licence_file": "NO OWN LICENSE (vendored deps only)",
+   "verdict": "IDEA_ONLY",
+   "what": "Instruction-based video editing model (diffusion).",
+   "windows_cpu_fit": "needs big GPU",
+   "needs_paid_app_or_api": "—",
+   "kang_use": "c",
+   "t_rules": [],
+   "confirms": [
+    "-"
+   ],
+   "risks": "Heavy model; out of scope."
+  },
+  {
+   "repo": "inlife/nexrender",
+   "url": "https://github.com/inlife/nexrender",
+   "editor": "AE",
+   "listed_in": "new",
+   "stars": 1862,
+   "forks": 350,
+   "last_commit": "2026-06-03",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Data-driven AE template rendering via aerender from JSON jobs (1.9k★); replaces text/images/audio in .aep templates; no AE GUI.",
+   "windows_cpu_fit": "Windows OK; needs AE installed (user has 24.6)",
+   "needs_paid_app_or_api": "After Effects (user has)",
+   "kang_use": "a (best AE path): render title/map/chapter cards from AE templates headlessly",
+   "t_rules": [],
+   "confirms": [
+    "-"
+   ],
+   "risks": "Templates must be designed by a human; aerender is heavy on 8 GB RAM; AE 2023+ needs explicit output module."
+  },
+  {
+   "repo": "OpenTimelineIO/otio-fcp-adapter",
+   "url": "https://github.com/OpenTimelineIO/otio-fcp-adapter",
+   "editor": "interchange",
+   "listed_in": "new",
+   "stars": 11,
+   "forks": 9,
+   "last_commit": "2026-04-08",
+   "licence_file": "Apache-2.0",
+   "verdict": "OK",
+   "what": "Official OTIO adapter reading/writing FCP7 XML (Premiere's interchange). No transitions support.",
+   "windows_cpu_fit": "Python, CPU",
+   "needs_paid_app_or_api": "none",
+   "kang_use": "a (validator: re-read KANG xmeml, emit EDL/OTIO)",
+   "t_rules": [],
+   "confirms": [
+    "-"
+   ],
+   "risks": "Writer drops transitions/effects → keep KANG's own xmeml writer."
+  },
+  {
+   "repo": "scriptituk/xfade-easing",
+   "url": "https://github.com/scriptituk/xfade-easing",
+   "editor": "FFmpeg",
+   "listed_in": "new",
+   "stars": 126,
+   "forks": 21,
+   "last_commit": "2026-09-09",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Easing curves + ported GL transitions for FFmpeg xfade, usable as plain expressions on stock FFmpeg.",
+   "windows_cpu_fit": "CPU, Windows OK",
+   "needs_paid_app_or_api": "none",
+   "kang_use": "a (drop into KANG renderer)",
+   "t_rules": [
+    "T-032"
+   ],
+   "confirms": [
+    "G-005",
+    "R-261"
+   ],
+   "risks": "Expression mode slower than custom build; avoid back/elastic."
+  },
+  {
+   "repo": "mifi/editly",
+   "url": "https://github.com/mifi/editly",
+   "editor": "FFmpeg",
+   "listed_in": "new",
+   "stars": 5583,
+   "forks": 386,
+   "last_commit": "2025-02-20",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Declarative Node/FFmpeg editor (5.6k★); Ken Burns default zoom 0.1, transition 0.5 s, clip 4 s.",
+   "windows_cpu_fit": "Node + headless-gl (painful on Windows)",
+   "needs_paid_app_or_api": "none",
+   "kang_use": "b (defaults confirm G-002/G-004)",
+   "t_rules": [
+    "T-010"
+   ],
+   "confirms": [
+    "G-002",
+    "G-004"
+   ],
+   "risks": "Last commit 2025-02."
+  },
+  {
+   "repo": "sun-guannan/VectCutAPI",
+   "url": "https://github.com/sun-guannan/VectCutAPI",
+   "editor": "CapCut/JianYing",
+   "listed_in": "new",
+   "stars": 2361,
+   "forks": 496,
+   "last_commit": "2026-10-24",
+   "licence_file": "Apache-2.0 (vectcut-skill/ MIT)",
+   "verdict": "OK",
+   "what": "CapCut/JianYing draft API + MCP (2.4k★) with 'capcut-director' skill (9:16 type scale, safe zones, ducking).",
+   "windows_cpu_fit": "Python; Windows OK",
+   "needs_paid_app_or_api": "CapCut/JianYing; optional cloud",
+   "kang_use": "b",
+   "t_rules": [
+    "T-005",
+    "T-029",
+    "T-030",
+    "T-031",
+    "T-033"
+   ],
+   "confirms": [
+    "R-103",
+    "G-010"
+   ],
+   "risks": "CapCut blocked in India; its 9:16 caption y 75–80% conflicts with G-010."
+  },
+  {
+   "repo": "Hommy-master/capcut-mate",
+   "url": "https://github.com/Hommy-master/capcut-mate",
+   "editor": "CapCut/JianYing",
+   "listed_in": "new",
+   "stars": 2106,
+   "forks": 310,
+   "last_commit": "2026-11-01",
+   "licence_file": "Apache-2.0",
+   "verdict": "OK",
+   "what": "FastAPI service generating JianYing/CapCut drafts (2.1k★); cloud render only for JianYing.",
+   "windows_cpu_fit": "Python 3.11; Windows OK",
+   "needs_paid_app_or_api": "JianYing/CapCut",
+   "kang_use": "c",
+   "t_rules": [],
+   "confirms": [
+    "-"
+   ],
+   "risks": "CapCut blocked in India."
+  },
+  {
+   "repo": "mikechambers/adb-mcp",
+   "url": "https://github.com/mikechambers/adb-mcp",
+   "editor": "Pr/PS/ID",
+   "listed_in": "new",
+   "stars": 739,
+   "forks": 102,
+   "last_commit": "2026-07-08",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Adobe dev's MCP for Photoshop/Premiere/InDesign via UXP (739★).",
+   "windows_cpu_fit": "Windows OK",
+   "needs_paid_app_or_api": "Premiere 25.6+ (UXP)",
+   "kang_use": "c (user's Pr 24.6 has no UXP)",
+   "t_rules": [
+    "T-010"
+   ],
+   "confirms": [
+    "-"
+   ],
+   "risks": "Not usable until Premiere ≥25.6."
+  },
+  {
+   "repo": "Dakkshin/after-effects-mcp",
+   "url": "https://github.com/Dakkshin/after-effects-mcp",
+   "editor": "AE",
+   "listed_in": "new",
+   "stars": 854,
+   "forks": 150,
+   "last_commit": "2026-04-01",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Original popular AE MCP (854★) that many forks build on.",
+   "windows_cpu_fit": "Windows OK; AE open",
+   "needs_paid_app_or_api": "After Effects",
+   "kang_use": "c (nexrender better for batch)",
+   "t_rules": [],
+   "confirms": [
+    "-"
+   ],
+   "risks": "Last commit 2026-04."
+  },
+  {
+   "repo": "qmasingarbe/pymiere",
+   "url": "https://github.com/qmasingarbe/pymiere",
+   "editor": "Pr",
+   "listed_in": "new",
+   "stars": 474,
+   "forks": 64,
+   "last_commit": "2025-03-05",
+   "licence_file": "GPL-3.0",
+   "verdict": "IDEA_ONLY",
+   "what": "Python↔Premiere via ExtendScript link panel; unmaintained.",
+   "windows_cpu_fit": "Windows OK",
+   "needs_paid_app_or_api": "Premiere",
+   "kang_use": "c",
+   "t_rules": [],
+   "confirms": [
+    "-"
+   ],
+   "risks": "GPL + unmaintained; its own README says use XML/OTIO to just create a timeline."
+  },
+  {
+   "repo": "mateo-khalil/davinci-resolve-mcp",
+   "url": "https://github.com/mateo-khalil/davinci-resolve-mcp",
+   "editor": "Resolve",
+   "listed_in": "new",
+   "stars": 0,
+   "forks": 2,
+   "last_commit": "2026-06-19",
+   "licence_file": "MIT",
+   "verdict": "OK",
+   "what": "Free-edition Resolve MCP via Lua file bridge inside Resolve.",
+   "windows_cpu_fit": "Windows OK",
+   "needs_paid_app_or_api": "Resolve free",
+   "kang_use": "c (Resolve not installed)",
+   "t_rules": [],
+   "confirms": [
+    "-"
+   ],
+   "risks": "0★."
+  }
+ ]
+}

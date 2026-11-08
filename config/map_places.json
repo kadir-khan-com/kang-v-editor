@@ -1,0 +1,20 @@
+{
+  "_about": "Map points for core/map_route.py. A point is only labelled on a map when the narration names it (word ids checked against the Hinglish layer). Coordinates: Wikidata P625 (CC0) unless noted; Gopi Talav from one OpenStreetMap Nominatim lookup (ODbL, credit '© OpenStreetMap contributors'). Looked up 2026-11-03.",
+  "places": {
+    "dwarka": {"label": "Dwarka", "lat": 22.240278, "lon": 68.968611, "source": "wikidata:Q817247", "licence": "CC0", "expect": "Dwarka"},
+    "jamnagar": {"label": "Jamnagar (airport)", "lat": 22.465556, "lon": 70.0125, "source": "wikidata:Q1595059 (Jamnagar Airport)", "licence": "CC0", "expect": "Jamnagar"},
+    "nageshwar": {"label": "Nageshwar Jyotirlinga", "lat": 22.3359, "lon": 69.0869, "source": "wikidata:Q1089275", "licence": "CC0", "expect": "Nageshwar"},
+    "gopi_talav": {"label": "Gopi Talav", "lat": 22.36993, "lon": 69.1089313, "source": "osm:way/1161175444 via nominatim.openstreetmap.org (name 'Gopi Talav', Okhamandal Taluka)", "licence": "ODbL 1.0", "expect": "Gopi Talab", "note": "narration says 'Gopi Talab' (Hinglish); label uses the OSM/v9 spelling 'Gopi Talav'"},
+    "bet_dwarka": {"label": "Bet Dwarka", "lat": 22.4494, "lon": 69.1172, "source": "wikidata:Q19882291", "licence": "CC0", "expect": "Bet Dwarka"},
+    "sudarshan_setu": {"label": "Sudarshan Setu", "lat": 22.451944, "lon": 69.084722, "source": "wikidata:Q114856436", "licence": "CC0", "expect": "Sudarshan setu"},
+    "shivrajpur": {"label": "Shivrajpur Beach", "lat": 22.33, "lon": 68.95, "source": "wikidata:Q105636989 (2-decimal precision)", "licence": "CC0", "expect": "Shivrajpur"}
+  },
+  "not_in_narration": {
+    "ahmedabad": "Checked 2026-11-03: no 'Ahmedabad' in words.json (Hindi) or the accepted Hinglish layer -> not drawn",
+    "okha": "Checked 2026-11-03: no 'Okha' in the narration (only in a v9 photo file name, a train name) -> not labelled; the Sudarshan Setu point is used instead"
+  },
+  "region_labels": {
+    "gujarat": {"text": "GUJARAT", "lat": 22.9, "lon": 71.6, "expect": "Gujarat", "word_ids": [156]},
+    "arabian_sea": {"text": "Arabian Sea", "lat": 21.9, "lon": 68.35, "expect": "Arab Sagar", "word_ids": [164, 165]}
+  }
+}

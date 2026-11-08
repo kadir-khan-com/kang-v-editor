@@ -1,0 +1,584 @@
+{
+  "_about": "External free sources (v12): Openverse (CC images, no key) and Pixabay (Pixabay Content License, key injected on the wire). User rules 2026-11-03: free only; no repeated photo/clip; never another place's media as exact; Pixabay / generic stock = representative only; Openverse licences by, by-sa, cc0, pdm only (no NC/ND).",
+  "openverse": {
+    "api": "https://api.openverse.org/v1/images/",
+    "licences": [
+      "by",
+      "by-sa",
+      "cc0",
+      "pdm"
+    ],
+    "min_width": 1600,
+    "page_size": 20,
+    "size": "large",
+    "pause_s": 3.0,
+    "cache_ttl_s": 86400,
+    "queries": [
+      {
+        "scene": "S10",
+        "query": "bhadkeshwar",
+        "count": 4
+      },
+      {
+        "scene": "S18",
+        "query": "shivrajpur",
+        "count": 2
+      },
+      {
+        "scene": "S08",
+        "query": "dwarka",
+        "count": 6
+      }
+    ],
+    "require_any": [
+      "dwarka",
+      "dwaraka",
+      "dwarika",
+      "dwarkadhish",
+      "dwarkadheesh",
+      "dwarakadheesh",
+      "dwarakadhish",
+      "nageshwar",
+      "nageshvar",
+      "shivrajpur",
+      "gomti",
+      "gomati",
+      "okha",
+      "bhadkeshwar",
+      "rukmini",
+      "beyt",
+      "bet dwarka"
+    ],
+    "wikimedia_thumb_width": 1920,
+    "_about_seed": "assets/<out>/_seed/openverse_<query>.json = API responses fetched outside the sandbox (Hark web fetcher) when api.openverse.org answers 429 to the sandbox IP; used only when the live call fails, and the run records http=[<code>, 'seed_webfetch']."
+  },
+  "pixabay": {
+    "api_images": "https://pixabay.com/api/",
+    "api_videos": "https://pixabay.com/api/videos/",
+    "key_placeholder": "__SAVED_KEY__",
+    "_about_key": "connect_service 'pixabay' (host pixabay.com): the proxy swaps __SAVED_KEY__ in the connected URL for the real key. The key is never in code, logs or caches (cache keys/URLs store the placeholder). Images endpoint: proxy answered 400 'keep the connected URL as given up to and including __SAVED_KEY__' on 2 tries (2026-11-03) = connected URL covers /api/videos/ only.",
+    "max_requests_per_60s": 100,
+    "cache_ttl_s": 86400,
+    "per_page": 20,
+    "video_min_width": 1920,
+    "video_pref_duration": [
+      4,
+      15
+    ],
+    "video_max_duration": 30,
+    "image_min_width": 1600,
+    "safesearch": true,
+    "download_per_query": 3,
+    "queries": [
+      {
+        "theme": "sea_waves",
+        "query": "sea waves",
+        "kind": "video"
+      },
+      {
+        "theme": "sea_waves",
+        "query": "ocean waves rocks",
+        "kind": "video"
+      },
+      {
+        "theme": "boat_sea",
+        "query": "speed boat sea",
+        "kind": "video"
+      },
+      {
+        "theme": "beach_fun",
+        "query": "parasailing",
+        "kind": "video"
+      },
+      {
+        "theme": "sunset_sea",
+        "query": "sunset sea",
+        "kind": "video"
+      },
+      {
+        "theme": "sky_clouds",
+        "query": "sky clouds timelapse",
+        "kind": "video"
+      },
+      {
+        "theme": "road_india",
+        "query": "road travel india",
+        "kind": "video"
+      },
+      {
+        "theme": "road_india",
+        "query": "auto rickshaw india",
+        "kind": "video"
+      },
+      {
+        "theme": "train_india",
+        "query": "train india",
+        "kind": "video"
+      },
+      {
+        "theme": "money_india",
+        "query": "indian rupee",
+        "kind": "video"
+      },
+      {
+        "theme": "temple_diya",
+        "query": "diya lamp",
+        "kind": "video"
+      },
+      {
+        "theme": "train_india",
+        "query": "railway tracks",
+        "kind": "video"
+      },
+      {
+        "theme": "road_india",
+        "query": "highway driving",
+        "kind": "video"
+      },
+      {
+        "theme": "money_india",
+        "query": "coins money",
+        "kind": "video"
+      },
+      {
+        "theme": "temple_diya",
+        "query": "temple bell",
+        "kind": "video"
+      }
+    ],
+    "require_eye_ok": true,
+    "_about_eye_ok": "Download mode only takes candidates listed in eye_ok (agent looked at the thumbnail contact sheet first); nothing un-looked-at is ever downloaded.",
+    "theme_override": {
+      "pixabay:99350": "subscribe",
+      "pixabay:119843": "road_india",
+      "pixabay:338904": "beach_fun",
+      "pixabay:186070": "sunset_sea",
+      "pixabay:197994": "sky_clouds"
+    }
+  },
+  "themes": {
+    "_about": "Generic beat themes for representative stock: keyword (Hindi/Hinglish, in the beat text) -> theme. First match wins per keyword order; a beat may get several themes.",
+    "keywords": [
+      [
+        "सब्सक्राइब",
+        "subscribe"
+      ],
+      [
+        "सागर",
+        "sea_waves"
+      ],
+      [
+        "समुद्र",
+        "sea_waves"
+      ],
+      [
+        "बीचो बीच",
+        "sea_waves"
+      ],
+      [
+        "स्पीड बोट",
+        "boat_sea"
+      ],
+      [
+        "बोट",
+        "boat_sea"
+      ],
+      [
+        "वाटर एक्टिविटीज",
+        "beach_fun"
+      ],
+      [
+        "पैरा ग्लाइडिंग",
+        "beach_fun"
+      ],
+      [
+        "बीच",
+        "beach_fun"
+      ],
+      [
+        "फोटोशूट",
+        "sea_waves"
+      ],
+      [
+        "शाम",
+        "sunset_sea"
+      ],
+      [
+        "शांति",
+        "sunset_sea"
+      ],
+      [
+        "शान्ती",
+        "sunset_sea"
+      ],
+      [
+        "ट्रेन",
+        "train_india"
+      ],
+      [
+        "budget",
+        "money_india"
+      ],
+      [
+        "बजट",
+        "money_india"
+      ],
+      [
+        "10,000",
+        "money_india"
+      ],
+      [
+        "चलेंगे",
+        "road_india"
+      ],
+      [
+        "दूरी",
+        "road_india"
+      ],
+      [
+        "पहुँचेंगे",
+        "road_india"
+      ],
+      [
+        "आगे बढ़ते",
+        "road_india"
+      ],
+      [
+        "यात्रा",
+        "road_india"
+      ],
+      [
+        "प्रमुख स्थान",
+        "road_india"
+      ],
+      [
+        "दर्शन",
+        "temple_diya"
+      ],
+      [
+        "कमेंट",
+        "sky_clouds"
+      ],
+      [
+        "लाइक",
+        "sky_clouds"
+      ],
+      [
+        "शेयर",
+        "sky_clouds"
+      ],
+      [
+        "सब्सक्राइब",
+        "sunset_sea"
+      ],
+      [
+        "वीडियो",
+        "sky_clouds"
+      ],
+      [
+        "जानकारी",
+        "sky_clouds"
+      ],
+      [
+        "कोशिश",
+        "sky_clouds"
+      ]
+    ],
+    "default": [
+      "sky_clouds",
+      "sea_waves",
+      "sunset_sea"
+    ]
+  },
+  "assign": {
+    "_about": "Representative stock only replaces continued_with_motion beats. Exact same-place Openverse photos (title/tags name the shot's own place, eye-checked) may replace any continued beat of an exact shot. Stock starts only after the held photo (or its parallax clip) already ran hold_cap_s; from then on every remaining continued beat of that hold gets stock (the photo may not come back = no repeat).",
+    "hold_cap_exact_s": 7.0,
+    "hold_cap_other_s": 4.5,
+    "video_fps": 25,
+    "video_size": [
+      1920,
+      1080
+    ]
+  },
+  "wrong_places": [
+    "mathura",
+    "vrindavan",
+    "vrindaban",
+    "delhi",
+    "new delhi",
+    "dwarka sector",
+    "dss academy",
+    "noida",
+    "gurgaon",
+    "gurugram",
+    "mumbai",
+    "bombay",
+    "alibaug",
+    "alibag",
+    "goa",
+    "kerala",
+    "bangalore",
+    "bengaluru",
+    "chennai",
+    "kolkata",
+    "varanasi",
+    "benaras",
+    "jaipur",
+    "udaipur",
+    "agra",
+    "taj mahal",
+    "amritsar",
+    "golden temple",
+    "puri",
+    "rishikesh",
+    "haridwar",
+    "pushkar",
+    "hampi",
+    "mysore",
+    "madurai",
+    "kuwait",
+    "souq",
+    "dubai",
+    "abu dhabi",
+    "qatar",
+    "oman",
+    "saudi",
+    "kyoto",
+    "japan",
+    "tokyo",
+    "china",
+    "bali",
+    "indonesia",
+    "thailand",
+    "bangkok",
+    "vietnam",
+    "cambodia",
+    "nepal",
+    "kathmandu",
+    "sri lanka",
+    "maldives",
+    "bangladesh",
+    "pakistan",
+    "italy",
+    "venice",
+    "greece",
+    "santorini",
+    "spain",
+    "france",
+    "paris",
+    "usa",
+    "america",
+    "california",
+    "hawaii",
+    "australia",
+    "mexico",
+    "brazil",
+    "turkey",
+    "istanbul",
+    "egypt",
+    "morocco",
+    "iskcon bangalore",
+    "surat",
+    "visavada",
+    "ahmedabad",
+    "vadodara",
+    "kutch",
+    "patan",
+    "somnath",
+    "porbandar",
+    "diu",
+    "london",
+    "germany",
+    "netherlands",
+    "portugal",
+    "croatia",
+    "norway",
+    "iceland",
+    "canada",
+    "new york",
+    "singapore",
+    "malaysia",
+    "philippines",
+    "korea",
+    "taiwan",
+    "hong kong",
+    "russia",
+    "ukraine",
+    "poland",
+    "switzerland",
+    "austria",
+    "scotland",
+    "ireland",
+    "chile",
+    "peru",
+    "cuba",
+    "caribbean",
+    "florida",
+    "jamaica",
+    "fiji",
+    "new zealand",
+    "africa",
+    "kenya",
+    "tanzania",
+    "zanzibar",
+    "seychelles",
+    "mauritius",
+    "phuket",
+    "krabi",
+    "ladakh",
+    "kashmir",
+    "shimla",
+    "manali",
+    "darjeeling",
+    "sikkim",
+    "andaman",
+    "lakshadweep",
+    "pondicherry",
+    "kanyakumari",
+    "rameswaram",
+    "allahabad",
+    "prayagraj",
+    "uttar pradesh",
+    "kanpur",
+    "shankargarh",
+    "metro",
+    "expressway",
+    "yashobhoomi",
+    "bardia",
+    "oregon",
+    "tajmahal",
+    "bosnia",
+    "bengal",
+    "west bengal",
+    "himachal",
+    "himalayas",
+    "tinos",
+    "drenthe",
+    "dwingeloo",
+    "osaka"
+  ],
+  "_about_wrong_places": "A candidate whose title/tags/description names any of these is rejected (word-boundary match). Gujarat towns outside Dwarka are rejected too: they are real but other places.",
+  "landmark_words": [
+    "mosque",
+    "minaret",
+    "church",
+    "cathedral",
+    "pagoda",
+    "shrine torii",
+    "torii",
+    "buddha",
+    "skyscraper",
+    "skyline",
+    "eiffel",
+    "statue of liberty",
+    "big ben",
+    "burj",
+    "camel desert",
+    "snow",
+    "mountain snow",
+    "christmas",
+    "halloween",
+    "flag usa"
+  ],
+  "_about_landmark_words": "Recognisable non-Dwarka landmarks / foreign cues -> reject (generic stock must not show a place).",
+  "people_words": [
+    "portrait",
+    "selfie",
+    "model",
+    "woman posing",
+    "man posing",
+    "face",
+    "closeup portrait",
+    "wedding",
+    "bride",
+    "girl",
+    "boy",
+    "child",
+    "kid"
+  ],
+  "_about_people_words": "Identifiable-person cues in tags/title -> reject for stock (no releases; never imply a real person was there).",
+  "eye_rejects": {
+    "openverse:3dc82887-fa36-4149-aed3-083acd445d5d": "Gurudwara at Bet Dwarka: real Dwarka-area place but never narrated (off-topic)",
+    "openverse:2184fff9-4f04-455d-9d7b-2e805d3c5c2d": "near-duplicate viewpoint of OV_S10_001 (same causeway path to Bhadkeshwar, night vs dusk)",
+    "openverse:fb549301-1758-4fb3-aa72-dde6b9832559": "near-duplicate of v9 S10_1_guj21_dwarka_lighthouse (same tetrapods + lighthouse view; dHash missed it)",
+    "pixabay:36609": "aerial of many surfers (surf crowd; not Dwarka, people)",
+    "pixabay:79684": "green cliffs aerial: foreign coastline look, not Dwarka",
+    "pixabay:2987": "rock-stack cliffs aerial: recognisable foreign coast type",
+    "pixabay:28268": "Oregon coast (tags) - wrong place",
+    "pixabay:213026": "forested rocky cove: foreign coast look",
+    "pixabay:1193": "kayak + Mediterranean-style cliffs: foreign coast look",
+    "pixabay:9112": "lake with conifer forest: not the sea / not Dwarka",
+    "pixabay:199856": "storm clouds: dark mood, off-tone for the narration",
+    "pixabay:190335": "sunset over an unknown town (buildings visible): could read as a place",
+    "pixabay:190332": "clouds over mountains: Dwarka is flat coast",
+    "pixabay:190331": "lightning storm: off-tone",
+    "pixabay:1643": "crowded Indian market street: identifiable people + recognisable other city",
+    "pixabay:161071": "Bosnia river road (tags) - wrong place",
+    "pixabay:149934": "Taj Mahal (Agra) - wrong place, recognisable landmark",
+    "pixabay:200818": "hill road in Bengal tea hills - wrong place",
+    "pixabay:23232": "Hong Kong cable-stayed bridge/port - wrong place",
+    "pixabay:24882": "chai cup close-up: off-topic",
+    "pixabay:158316": "3D-rendered car: off-topic / CGI",
+    "pixabay:36656": "tyre shop: off-topic",
+    "pixabay:3175": "busy city street with cycle rickshaws: identifiable people, other city",
+    "pixabay:47023": "auto-rickshaw driver close-up: identifiable person",
+    "pixabay:151008": "snowy train bridge: wrong climate/place",
+    "pixabay:209494": "train along alpine lake coast: foreign landscape",
+    "pixabay:128741": "Indian flag: off-topic for budget/travel beats",
+    "pixabay:128734": "Indian flag (CGI): off-topic",
+    "pixabay:11186": "kerosene lantern: off-topic",
+    "pixabay:11414": "plasma ball: off-topic",
+    "pixabay:200756": "Ramadan lantern: another festival, off-topic",
+    "pixabay:2818": "lava lamp: off-topic",
+    "pixabay:110238": "street lamp in winter: off-topic",
+    "pixabay:197993": "clouds over mountains + town: could read as a place",
+    "pixabay:198547": "storm clouds: off-tone",
+    "pixabay:197911": "rain clouds: off-tone",
+    "pixabay:266987": "vertical/pillarboxed forest road",
+    "pixabay:155218": "desert mountain road (US look): wrong place",
+    "pixabay:132501": "night freight train (CSX, US): wrong place, too dark",
+    "pixabay:40815": "near-duplicate of 40582 (same highway series)",
+    "pixabay:200941": "torch in darkness: off-topic",
+    "pixabay:7805": "green bokeh: off-topic",
+    "pixabay:7809": "foreign railway station (B/W): wrong place look",
+    "pixabay:218494": "European passenger train: foreign livery",
+    "pixabay:132313": "cyclist by Dutch railway: foreign, person",
+    "pixabay:70856": "Monument Valley road: recognisable US landmark",
+    "pixabay:19055": "line drawing animation: off-style",
+    "pixabay:42479": "drift race track: off-topic",
+    "pixabay:215609": "Western freeway with trucks: foreign look",
+    "pixabay:2342": "reeds: off-topic",
+    "pixabay:34616": "bitcoin coins: crypto, misleading",
+    "pixabay:13460": "bitcoin stacks: crypto, misleading",
+    "pixabay:64093": "3D clown with bitcoins: off-topic",
+    "pixabay:65642": "bitcoin coins: crypto, misleading",
+    "pixabay:122530": "bell icon on green screen (needs keying)",
+    "pixabay:5657": "post-download frames: green-cliff foreign coastline + yacht mid-clip (thumbnail showed only the deck)",
+    "pixabay:218495": "post-download frames: British-livery passenger train enters at the end (foreign, recognisable)"
+  },
+  "_about_eye_rejects": "Agent eye check (contact sheets, 2026-11-03): candidate id -> reason. Not human-reviewed.",
+  "eye_ok": {
+    "pixabay:42543": "turquoise wave, generic sea",
+    "pixabay:304019": "calm dark sea surface",
+    "pixabay:353078": "waves on rocks at sunset",
+    "pixabay:233867": "golden sunset on waves",
+    "pixabay:5331": "aerial waves on low rocks",
+    "pixabay:26629": "small fishing boat on open sea (person tiny)",
+    "pixabay:119743": "parasailing over open sea, generic",
+    "pixabay:135658": "sunset sea, calm",
+    "pixabay:21175": "sunset horizon over sea",
+    "pixabay:132932": "sun + sailboat silhouette",
+    "pixabay:140111": "seagulls at sunset over sea",
+    "pixabay:153976": "sunset over sea, low hills far",
+    "pixabay:92442": "white cumulus clouds, blue sky",
+    "pixabay:338904": "aerial turquoise sea over sand/rock, generic",
+    "pixabay:186070": "waves on rocks at dawn, generic",
+    "pixabay:31377": "aerial waves on rocks, generic",
+    "pixabay:197994": "dusk clouds, generic sky",
+    "pixabay:119843": "animated map of India (generic graphic, not a place shot)",
+    "pixabay:40582": "aerial straight highway through fields, generic",
+    "pixabay:3639": "moving view along railway rails, generic",
+    "pixabay:119": "single spinning coin, generic money",
+    "pixabay:99350": "generic animated Subscribe button on black (outro call to action)"
+  }
+}

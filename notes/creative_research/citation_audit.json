@@ -1,0 +1,282 @@
+[
+ {
+  "rule_id": "R-055",
+  "evidence_tag": "🟢",
+  "verdict": "MISLABELLED_EVIDENCE",
+  "note": "Finding is real: Zacks et al. 2010 (n=24, The Red Balloon) — boundary fMRI responses \"mediated by changes in the observed activity\" (Abstract; Results \"Brain response at situation changes\"). But the rule is a prescription (\"engineer a situation change to reset attention\") that the paper never tests; same inference step the harvester itself tagged 🟡 for Cutting rules. Should be 🟡.",
+  "source_url": "https://www.frontiersin.org/articles/10.3389/fnhum.2010.00168/full"
+ },
+ {
+  "rule_id": "R-057",
+  "evidence_tag": "🟢",
+  "verdict": "MISLABELLED_EVIDENCE",
+  "note": "Memory link is stated only in the harvest/2007 review summary (\"boundaries predict what is later remembered\"); not tested in the 2010 paper I opened. \"Make each chunk exactly one event\" is a design inference. Should be 🟡.",
+  "source_url": "https://www.frontiersin.org/articles/10.3389/fnhum.2010.00168/full"
+ },
+ {
+  "rule_id": "R-088",
+  "evidence_tag": "🟢",
+  "verdict": "MISLABELLED_EVIDENCE",
+  "note": "kmilo (references/pacing-and-cuts.md, B-roll section) only says b-roll should illustrate the phrase, citing Mayer coherence. The strict part (literal noun phrase, no same-category fallback, else stay on speaker) is mktkit owner rule 2026-09-07 (cut-video SKILL.md step 4) = house opinion. evidence_note admits this but the rule keeps 🟢. Split or tag 🟡/🟠.",
+  "source_url": "https://github.com/kmilo93sd/agent-video-editor/blob/HEAD/skills/editing-videos/references/pacing-and-cuts.md"
+ },
+ {
+  "rule_id": "R-089",
+  "evidence_tag": "🟢",
+  "verdict": "SUPPORTED",
+  "note": "kmilo graphics-and-text.md \"When to use a graphic\" items 1–4 cite Mayer (2008) coherence/redundancy/multimedia exactly as the rule says. Mayer 2008 itself not opened by me; caveat: evidence is from instructional-learning experiments, not entertainment retention.",
+  "source_url": "https://github.com/kmilo93sd/agent-video-editor/blob/HEAD/skills/editing-videos/references/graphics-and-text.md"
+ },
+ {
+  "rule_id": "R-126",
+  "evidence_tag": "🟢",
+  "verdict": "MISLABELLED_EVIDENCE",
+  "note": "Smith chapter (Birkbeck PDF) confirms motion-onset capture and attentional synchrony, and that complex shots gave less synchrony (Results, Alexander Nevsky). \"One magnet per shot; two magnets break synchrony\" is an editorial extrapolation, not a tested result. 🟡.",
+  "source_url": "https://eprints.bbk.ac.uk/id/eprint/12587/1/Alex_Nev_CogMediaTheory_2014_timjsmith_figs.pdf"
+ },
+ {
+  "rule_id": "R-135",
+  "evidence_tag": "🟢",
+  "verdict": "PARTIAL",
+  "note": "\"Film ASL ≈4–5 s [Cutting 2011]\" is in kmilo pacing-and-cuts.md §Shot length, but kmilo says \"It is a reference, not a target\" and next line says talking-head YouTube runs faster (2–5 s). Rule adds \"don't cut much faster than this\" — not in source and contradicted by it. Also conflicts with science_james_cutting.md figure (≈3.5 s per Smith citing Cutting).",
+  "source_url": "https://github.com/kmilo93sd/agent-video-editor/blob/HEAD/skills/editing-videos/references/pacing-and-cuts.md"
+ },
+ {
+  "rule_id": "R-140",
+  "evidence_tag": "🟢",
+  "verdict": "MISLABELLED_EVIDENCE",
+  "note": "Smith chapter p.~2: AToCC argues match-on-action uses motion onsets, BUT Smith himself writes such analyses \"are observational and based on hypotheses ... derived from post-hoc analysis\" and that a stronger test is still needed. The replicated result is gaze clustering in general, not match-on-action. The evidence_note claim \"measured and replicated\" is overstated -> 🟡.",
+  "source_url": "https://eprints.bbk.ac.uk/id/eprint/12587/1/Alex_Nev_CogMediaTheory_2014_timjsmith_figs.pdf"
+ },
+ {
+  "rule_id": "R-177",
+  "evidence_tag": "🟢",
+  "verdict": "MISLABELLED_EVIDENCE",
+  "note": "n=24 / Red Balloon / situation-change mediation all confirmed (Methods \"Participants\"; Results). The \"cut there feels invisible\" claim is not tested in this paper (it did not measure cut noticeability). 🟡.",
+  "source_url": "https://www.frontiersin.org/articles/10.3389/fnhum.2010.00168/full"
+ },
+ {
+  "rule_id": "R-178",
+  "evidence_tag": "🟢",
+  "verdict": "PARTIAL",
+  "note": "Automatic segmentation during passive viewing is confirmed. But the mechanism \"a mid-event cut forces a model update / reads as a jolt\" is not shown; the paper reports the opposite direction for cuts per se: \"cuts in and of themselves were not associated with increases in segmentation\" (Appendix, cut analysis). Keep as craft rule at 🟡/🟠, drop the 🟢 mechanism claim.",
+  "source_url": "https://www.frontiersin.org/articles/10.3389/fnhum.2010.00168/full"
+ },
+ {
+  "rule_id": "R-232",
+  "evidence_tag": "🟢",
+  "verdict": "MISLABELLED_EVIDENCE",
+  "note": "Eye-trace matching across cuts is AToCC theory; Smith states continuity analyses are observational/post-hoc. \"Kai studies me replicated\" applies to gaze clustering, not to eye-trace placement across cuts. 🟡.",
+  "source_url": "https://eprints.bbk.ac.uk/id/eprint/12587/1/Alex_Nev_CogMediaTheory_2014_timjsmith_figs.pdf"
+ },
+ {
+  "rule_id": "R-001",
+  "evidence_tag": "🟡",
+  "verdict": "PARTIAL",
+  "note": "Promise-in-first-seconds present: kmilo thumbnail-title-description.md (\"title must reflect what the first 30 s show\" [YT-moments]) and review-checklist; ExpoCut playbook \"3 to 5 s: state the explicit promise\" (short-form). check value 5 s is applied universally while the YouTube-sourced guidance is about the first 30 s for long-form; frequency text (5–30 s) and check (5 s) disagree.",
+  "source_url": "https://github.com/kmilo93sd/agent-video-editor/blob/HEAD/skills/editing-videos/references/thumbnail-title-description.md"
+ },
+ {
+  "rule_id": "R-011",
+  "evidence_tag": "🟡",
+  "verdict": "SUPPORTED",
+  "note": "Melvynx studio-script/references/viral.md rule 4 \"Proof by 4 to 7 s\"; script-rules.md trigger table \"Proof | before 8 s\". Caveat: \"measured on every account studied\" is the vendor's own unpublished outlier analysis (n not stated) — 🟡 is generous.",
+  "source_url": "https://github.com/Melvynx/video-agent-skills/blob/HEAD/skills/studio-script/references/viral.md"
+ },
+ {
+  "rule_id": "R-032",
+  "evidence_tag": "🟡",
+  "verdict": "SUPPORTED",
+  "note": "slopstudio retention-editing SKILL.md, Long-form bullet 1: \"Measured first-30s: 65–98 words, 2–7 cuts, zero throat-clearing\"; \"hi, I'm X\" at 0:15–1:00. Caveat: n=5 videos; the SYNTHESIS.md with the data is outside the public repo.",
+  "source_url": "https://github.com/Francesco149/slopstudio/blob/HEAD/.claude/skills/retention-editing/SKILL.md"
+ },
+ {
+  "rule_id": "R-035",
+  "evidence_tag": "🟡",
+  "verdict": "MISLABELLED_EVIDENCE",
+  "note": "\"payoff in the last 15–25%?\" appears only in the SKILL review checklist; its origin is the desk-research doc (docs/research/llm-video-tooling-2026-07.md, rec. 6 and critique row: \"YouTube-official + MrBeast/Paddy\"), NOT the 5-video measured corpus that the evidence_note cites. Should be 🟠.",
+  "source_url": "https://github.com/Francesco149/slopstudio/blob/HEAD/.claude/skills/retention-editing/SKILL.md"
+ },
+ {
+  "rule_id": "R-062",
+  "evidence_tag": "🟡",
+  "verdict": "SUPPORTED",
+  "note": "yt-script/hookscore.py docstring: five properties, verdict = 60% mean + 40% weakest; calibrated on 74 hooks (top-8/bottom-8, five channels); author: \"separates a creator's own hits from their own misses barely at all\". Rule and note faithful. Weights are a design choice, not measured — 🟡 borderline.",
+  "source_url": "https://github.com/Jakeschincariol/youtube-agent-skill/blob/HEAD/skills/yt-script/hookscore.py"
+ },
+ {
+  "rule_id": "R-091",
+  "evidence_tag": "🟡",
+  "verdict": "SUPPORTED",
+  "note": "kmilo graphics-and-text.md: \"0.33 s per word (160–180 wpm) [BBC]\" and formula max(1.5 s; words×0.33 s+0.5 s) \"[derived from BBC; the extra is house]\". Note kmilo read BBC via a third-party page (clevercast) because the BBC page did not load.",
+  "source_url": "https://github.com/kmilo93sd/agent-video-editor/blob/HEAD/skills/editing-videos/references/graphics-and-text.md"
+ },
+ {
+  "rule_id": "R-092",
+  "evidence_tag": "🟡",
+  "verdict": "SUPPORTED",
+  "note": "kmilo graphics-and-text.md timing table: 42 chars/line, 2 lines, ≤20 cps (17 children), 20 frames min [Netflix]; mktkit platform-specs.md cites Netflix guide URLs. FYI mktkit itself uses 32 chars/line as its house limit.",
+  "source_url": "https://github.com/kmilo93sd/agent-video-editor/blob/HEAD/skills/editing-videos/references/graphics-and-text.md"
+ },
+ {
+  "rule_id": "R-105",
+  "evidence_tag": "🟡",
+  "verdict": "SUPPORTED",
+  "note": "kmilo audio table: YouTube -14 LUFS / ≤-1 dBTP (measured via Stats for nerds, creator sources), Apple Podcasts -16 LKFS ±1 [official]; mktkit pipeline -16 LUFS/-1.5 dBTP/LRA 11. All numbers present.",
+  "source_url": "https://github.com/kmilo93sd/agent-video-editor/blob/HEAD/skills/editing-videos/references/audio-and-sfx.md"
+ },
+ {
+  "rule_id": "R-153",
+  "evidence_tag": "🟡",
+  "verdict": "SUPPORTED",
+  "note": "kmilo: \"In 6.9 million edX sessions, videos under 6 minutes retained much better [Guo 2014, study]\" (pacing-and-cuts.md). Guo et al. L@S 2014 is a real measured study; domain = MOOC lectures, generalisation to YouTube is inference.",
+  "source_url": "https://github.com/kmilo93sd/agent-video-editor/blob/HEAD/skills/editing-videos/references/pacing-and-cuts.md"
+ },
+ {
+  "rule_id": "R-159",
+  "evidence_tag": "🟡",
+  "verdict": "SUPPORTED",
+  "note": "slopstudio SKILL.md: \"Measured first-30s: ... 2–7 cuts\". Same n=5 / non-public-data caveat as R-032.",
+  "source_url": "https://github.com/Francesco149/slopstudio/blob/HEAD/.claude/skills/retention-editing/SKILL.md"
+ },
+ {
+  "rule_id": "R-163",
+  "evidence_tag": "🟡",
+  "verdict": "SUPPORTED",
+  "note": "slopstudio SKILL.md: \"Narration 160–195 WPM measured across all five references\"; \"old 130–150 default too slow; reserve <150 for dense math beats\". Note the same repo's research doc cites VO-industry advice that >160 WPM degrades comprehension; the band is genre-specific (English explainers) — relevant to the Dwarika (Hindi) test that failed on WPM 200.1.",
+  "source_url": "https://github.com/Francesco149/slopstudio/blob/HEAD/.claude/skills/retention-editing/SKILL.md"
+ },
+ {
+  "rule_id": "R-171",
+  "evidence_tag": "🟡",
+  "verdict": "MISLABELLED_EVIDENCE",
+  "note": "filnik experts/youtube/international/mrbeast.md: bare bullet \"End screen with 70-80% retention: the video must maintain high attention until the very last second\" — an unsourced, third-party-written creator profile (no data, no citation). Not a measured claim -> 🟠. The rule also turns a retention target into an end-screen placement rule (PARTIAL).",
+  "source_url": "https://github.com/filnik/social-media-manager-AI/blob/HEAD/experts/youtube/international/mrbeast.md"
+ },
+ {
+  "rule_id": "R-173",
+  "evidence_tag": "🟡",
+  "verdict": "PARTIAL",
+  "note": "science_james_cutting.md R-CUT-1 gives \"≈3–6 s\" as the harvester's own band (tagged 🟡). Rule's why conflates two corpora: the 150-film 1935–2005 set (Cutting, DeLong & Nothelfer 2010) vs the \"≈15 s → ≈3.5 s, 160 films 1935–2010\" figure (Cutting et al. 2011, as reported second-hand by Smith; paper not opened). 3–6 s is not a Cutting number.",
+  "source_url": "https://jordandelong.com/pubs/2010/AttentionEvolution.pdf"
+ },
+ {
+  "rule_id": "R-248",
+  "evidence_tag": "🟡",
+  "verdict": "SUPPORTED",
+  "note": "blazerior ffmpeg-cookbook.md: \"loudnorm=I=-14:TP=-1.5:LRA=11\"; \"The standard for Reels/TikTok is −14 LUFS\"; \"mean around −18 dB after loudnorm\". Caveat: Reels/TikTok do not publish a −14 target; this is practitioner convention, not a measured study.",
+  "source_url": "https://github.com/blazerior/videoediting-claude-skill/blob/HEAD/skill/videoediting/references/ffmpeg-cookbook.md"
+ },
+ {
+  "rule_id": "R-422",
+  "evidence_tag": "🟡",
+  "verdict": "MISLABELLED_EVIDENCE",
+  "note": "junwen references/homeward-flight-pov-style.md: 55–70% / 15–30% / ≤18% / ≥5 stable boundaries all present verbatim, and \"About 27 of 35 boundaries used the repeated 向上 transition\". But the percentages are a house budget invented as a reaction to ONE film (n=1); only the weakness is observed. 🟠.",
+  "source_url": "https://github.com/junwen853/travel-video-studio-skill/blob/HEAD/references/homeward-flight-pov-style.md"
+ },
+ {
+  "rule_id": "R-102",
+  "evidence_tag": "🟠",
+  "verdict": "SUPPORTED",
+  "note": "kmilo audio table: \"18–25 dB under the voice (voice at -16: music at -34/-41 LUFS) [Pure Audio Insight, creator]\".",
+  "source_url": "https://github.com/kmilo93sd/agent-video-editor/blob/HEAD/skills/editing-videos/references/audio-and-sfx.md"
+ },
+ {
+  "rule_id": "R-110",
+  "evidence_tag": "🟠",
+  "verdict": "SUPPORTED",
+  "note": "mktkit cut-video REFERENCE.md flag table: \"--join-fade SEC | Audio fade at every kept segment boundary (0.05 to 0.08)\".",
+  "source_url": "https://github.com/1610-advisory/mktkit/blob/HEAD/.claude/skills/cut-video/REFERENCE.md"
+ },
+ {
+  "rule_id": "R-138",
+  "evidence_tag": "🟠",
+  "verdict": "SUPPORTED",
+  "note": "kmilo pacing table: talking head 200–400 ms, Short 200–300 ms, screen tutorial ≥0.4 s (house); narrated-screen-tutorial recipe: warning at 3 s, \"more than 6 s without voice\" cap.",
+  "source_url": "https://github.com/kmilo93sd/agent-video-editor/blob/HEAD/skills/editing-videos/references/pacing-and-cuts.md"
+ },
+ {
+  "rule_id": "R-145",
+  "evidence_tag": "🟠",
+  "verdict": "SUPPORTED",
+  "note": "mktkit platform-specs.md table: clip punch <3.0 s, still 3.5 s, super 3.5–4.0 s, A-roll ≥3.0 s or butt, 10 punches/min max (\"derived ... soft ceiling\"); stills ≤2 per reel. All owner/reviewer house rules, correctly 🟠.",
+  "source_url": "https://github.com/1610-advisory/mktkit/blob/HEAD/.claude/skills/cut-video/resources/platform-specs.md"
+ },
+ {
+  "rule_id": "R-162",
+  "evidence_tag": "🟠",
+  "verdict": "SUPPORTED",
+  "note": "TheCraigHewitt retention-editing SKILL.md principle 6 (\"silence longer than 1 second ... costs you viewers\") + checklist (\"Total dead air under 5 seconds\"); classicchins \"Silence >1 second = cut it\"; humbertobellor youtube-producer: later \"some breathing room is worth keeping\".",
+  "source_url": "https://github.com/TheCraigHewitt/skills/blob/HEAD/youtube/retention-editing/SKILL.md"
+ },
+ {
+  "rule_id": "R-196",
+  "evidence_tag": "🟠",
+  "verdict": "SUPPORTED",
+  "note": "Verified against the LIVE original browser-use/video-use SKILL.md (MIT): Hard Rule 7 \"Pad every cut edge. Working window: 30–200ms. Scribe timestamps drift 50–100ms\"; line ~113 \"50ms before the first kept word, 80ms after the last\". Cited harvest (pifferologo) repo is 404 — re-cite to browser-use/video-use.",
+  "source_url": "https://github.com/browser-use/video-use/blob/HEAD/SKILL.md"
+ },
+ {
+  "rule_id": "R-225",
+  "evidence_tag": "🟠",
+  "verdict": "SUPPORTED",
+  "note": "classicchins video-marketing SKILL.md \"Edit for Retention\": \"Background track at -20dB to -25dB. Voice at -6dB to -10dB.\" (no reference level stated — ambiguous dB scale).",
+  "source_url": "https://github.com/classicchins/compounding-marketing/blob/HEAD/skills/video-marketing/SKILL.md"
+ },
+ {
+  "rule_id": "R-262",
+  "evidence_tag": "🟠",
+  "verdict": "SUPPORTED",
+  "note": "IDEA_ONLY source. Upstream video-editing-master SKILL.md: \"Offset audio by 6-12 frames\"; \"In dialogue editing, 80% of your cuts should be split edits\". Check widens 80% to 70–100 (tolerance, fine).",
+  "source_url": "https://github.com/ADAM-0S/wayland-m3ta-0s/blob/HEAD/src/process/resources/skills-library/bodies/skills/design-creative/video-editing-master/SKILL.md"
+ },
+ {
+  "rule_id": "R-274",
+  "evidence_tag": "🟠",
+  "verdict": "SUPPORTED",
+  "note": "IDEA_ONLY source (fork of PolyForm-NC Kemerd/premiere-agent). eacp SKILL.md pacing presets: Jumpy floor 250 ms, \"Why the first column bottoms out at 250ms ... 30–200ms articulation gaps\".",
+  "source_url": "https://github.com/eacp1991/premiere-agent/blob/HEAD/SKILL.md"
+ },
+ {
+  "rule_id": "R-277",
+  "evidence_tag": "🟠",
+  "verdict": "SUPPORTED",
+  "note": "IDEA_ONLY source. mmmnhat skills/comedy-timing/SKILL.md table (Vietnamese): Premise/Setup 2.0–3.5 s (max 4.0) etc.; note gives 8–14 s total.",
+  "source_url": "https://github.com/mmmnhat/agent-skills/blob/HEAD/skills/comedy-timing/SKILL.md"
+ },
+ {
+  "rule_id": "R-296",
+  "evidence_tag": "🟠",
+  "verdict": "SUPPORTED",
+  "note": "vamshicreates SKILL.md: \"punch_in_zoom_scale_pct\": 112.0 and --zoom-scale 112 alternating 100/112. It is one creator's learned \"Editing DNA\" — universalising it is a choice, correctly 🟠.",
+  "source_url": "https://github.com/vamshicreates/premiere-editing-dna/blob/HEAD/SKILL.md"
+ },
+ {
+  "rule_id": "R-338",
+  "evidence_tag": "🟠",
+  "verdict": "PARTIAL",
+  "note": "koptsev63 skills/film-editing/SKILL.md: \"Ratio rule: the longest shot in a TEASER should be 2–4× the shortest\"; checklist items on 4 consecutive equal lengths and 3 emotional beats = 3 longest shots. Rule drops the teaser scope and applies it to every sequence.",
+  "source_url": "https://github.com/koptsev63/premiere-claude-bridge/blob/HEAD/skills/film-editing/SKILL.md"
+ },
+ {
+  "rule_id": "R-346",
+  "evidence_tag": "🟠",
+  "verdict": "SUPPORTED",
+  "note": "ZeusSheen SKILL.md: \"~0.25 s before the first word and end ~0.35 s after the last ... 60 % to the outgoing tail ... Treat timestamps as ±0.2 s\".",
+  "source_url": "https://github.com/ZeusSheen/ppro-agent-bridge/blob/HEAD/SKILL.md"
+ },
+ {
+  "rule_id": "R-428",
+  "evidence_tag": "🟠",
+  "verdict": "SUPPORTED",
+  "note": "tashisleepy brain/capcut-ai-director-brain.md: \"Zoom (105-110%)\" and \"Zoom duration: 00:00:00:06 to 00:00:00:15 (6-15 frames) with ease-out\".",
+  "source_url": "https://github.com/tashisleepy/capcut-ai-director/blob/HEAD/brain/capcut-ai-director-brain.md"
+ },
+ {
+  "rule_id": "R-440",
+  "evidence_tag": "🟠",
+  "verdict": "SUPPORTED",
+  "note": "ChaiWithJai davinci-resolve-audio-cleanup-podcast SKILL.md: \"Duck Level: start at 2.7 dB (the default)\"; \"Fairlight Audio Post pp. 552-558 ... Duck Level > 5 dB sounds amateurish\". Sourced to Blackmagic's official manual — could be 🟡 (vendor official), so 🟠 is conservative.",
+  "source_url": "https://github.com/ChaiWithJai/davinci-resolve-claude-skills/blob/HEAD/skills/davinci-resolve-audio-cleanup-podcast/SKILL.md"
+ }
+]

@@ -1,0 +1,8 @@
+{
+  "client": "Kang",
+  "colors": {"primary": "#0F172A", "accent": "#2563EB", "highlight": "#FACC15", "text": "#FFFFFF", "outline": "#000000"},
+  "fonts": {"heading": "Montserrat-Black.ttf", "body": "Mukta-ExtraBold.ttf", "hindi": "Mukta-ExtraBold.ttf"},
+  "logo_path": "assets/logo.png",
+  "safe_margin_px": 60,
+  "safe_zones": {"9:16": {"subtitle_bottom_px": 480}, "16:9": {"subtitle_bottom_px": 60}, "1:1": {"subtitle_bottom_px": 80}, "4:5": {"subtitle_bottom_px": 100}}
+}

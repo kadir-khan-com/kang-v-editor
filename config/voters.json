@@ -1,0 +1,6 @@
+{
+  "_doc": "Spelling voter (core/voter.py), ON by default when the models are set up. Setup: python tools/setup_voters.py --out <dir> (GPU/large disk; ~10 GB download). Dir = env KANG_VOTER_DIR or models/voters. Off: kang.py --no-vote or ENGINE_VOTE=0. Missing models = warning + skip, never a failure.",
+  "default_dir": "models/voters",
+  "wordlist": "hi_IN.dic",
+  "voters": {"vaani": "vaani", "medium": "medium", "indic": "indic", "indic_large": "indic_large"}
+}

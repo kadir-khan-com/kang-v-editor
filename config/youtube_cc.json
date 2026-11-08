@@ -1,0 +1,248 @@
+{
+  "_about": "v15 YouTube Creative Commons (CC BY) clips of Dwarka (core/youtube_cc.py). Free only: yt-dlp (Unlicense), no API key. Licence gate = per-video metadata field `license` read by yt-dlp from the watch page; the search filter (sp=EgIwAQ%3D%3D, YouTube 'Creative Commons') only PRE-filters and never accepts a video by itself. Place gate reuses config/stock_sources.json (openverse.require_any, wrong_places, landmark_words) + the extra terms below. YouTube ToS on downloading is a grey area: recorded, not cleared (user 2026-11-04: no publishing for now).",
+  "licence_required": "Creative Commons Attribution license (reuse allowed)",
+  "credit_licence": "CC BY 3.0",
+  "search_filter_sp": "EgIwAQ%3D%3D",
+  "per_query": 20,
+  "queries": [
+    {
+      "place": "dwarkadhish",
+      "query": "Dwarkadhish temple Dwarka"
+    },
+    {
+      "place": "gomti",
+      "query": "Gomti ghat Dwarka"
+    },
+    {
+      "place": "bet dwarka",
+      "query": "Bet Dwarka"
+    },
+    {
+      "place": "sudarshan setu",
+      "query": "Sudarshan Setu Okha"
+    },
+    {
+      "place": "nageshwar",
+      "query": "Nageshwar Jyotirlinga Dwarka"
+    },
+    {
+      "place": "shivrajpur",
+      "query": "Shivrajpur beach Dwarka"
+    },
+    {
+      "place": "rukmini",
+      "query": "Rukmini temple Dwarka"
+    },
+    {
+      "place": "lighthouse",
+      "query": "Dwarka lighthouse"
+    }
+  ],
+  "place_terms": {
+    "dwarkadhish": [
+      "dwarkadhish",
+      "dwarkadheesh",
+      "dwarakadhish",
+      "dwarikadhish",
+      "jagat mandir",
+      "द्वारकाधीश",
+      "dwarikadish",
+      "dwarkadish",
+      "dwarkadeesh",
+      "દ્વારકાધીશ"
+    ],
+    "gomti": [
+      "gomti",
+      "gomati",
+      "gomti ghat",
+      "ગોમતી"
+    ],
+    "bet dwarka": [
+      "bet dwarka",
+      "beyt dwarka",
+      "bet dwaraka",
+      "bhent dwarka",
+      "બેટ દ્વારકા",
+      "bet dawarka"
+    ],
+    "sudarshan setu": [
+      "sudarshan setu",
+      "signature bridge"
+    ],
+    "nageshwar": [
+      "nageshwar",
+      "nageshvar",
+      "nageswar",
+      "nageshwer",
+      "નાગેશ્વર"
+    ],
+    "shivrajpur": [
+      "shivrajpur",
+      "શિવરાજપુર"
+    ],
+    "rukmini": [
+      "rukmini",
+      "rukmani"
+    ],
+    "lighthouse": [
+      "lighthouse",
+      "light house"
+    ]
+  },
+  "require_any_extra": [
+    "द्वारका",
+    "द्वारिका",
+    "દ્વારકા",
+    "દ્વારિકા",
+    "શિવરાજપુર",
+    "ગોમતી",
+    "નાગેશ્વર",
+    "devbhumi dwarka",
+    "okha",
+    "sudarshan setu",
+    "dawarka",
+    "dwarikadish",
+    "dwarkadish",
+    "dwarkadeesh"
+  ],
+  "wrong_places_extra": [
+    "dwarka expressway",
+    "dwarka mor",
+    "dwarka more",
+    "sector 21",
+    "uer ii",
+    "igi airport"
+  ],
+  "_about_wrong_places_extra": "Delhi's Dwarka (sub-city, expressway, metro) -> reject. Base list: stock_sources.json wrong_places (delhi, dwarka sector, metro, expressway, somnath, ...).",
+  "download": {
+    "format": "bv*[height<=1080][ext=mp4][vcodec^=avc1]/bv*[height<=1080][ext=mp4]/bv*[height<=1080]",
+    "section_s": 20,
+    "max_sections_per_video": 3,
+    "skip_head_frac": 0.12,
+    "skip_tail_frac": 0.12,
+    "cap_bytes": 1000000000,
+    "max_video_duration_s": 3600
+  },
+  "shots": {
+    "scene_threshold": 0.3,
+    "min_shot_s": 2.5,
+    "max_shake_px": 6.0,
+    "max_face_area_frac": 0.02,
+    "static_overlay_frac": 0.0015,
+    "analyse_fps": 4
+  },
+  "block_markers": [
+    "HTTP Error 429",
+    "Too Many Requests",
+    "Sign in to confirm",
+    "not a bot",
+    "HTTP Error 403",
+    "Failed to extract any player response"
+  ],
+  "probe_ways": [
+    {
+      "name": "default_web",
+      "args": [
+        "--js-runtimes",
+        "node"
+      ]
+    },
+    {
+      "name": "alt_clients",
+      "args": [
+        "--js-runtimes",
+        "node",
+        "--extractor-args",
+        "youtube:player_client=tv_simply,android_vr,mweb"
+      ]
+    }
+  ],
+  "_about_probe_ways": "At most 2 ways to read watch metadata. If both answer a bot check / 429 / 403 the run stops with status blocked (no third workaround, no cookies, no proxies).",
+  "eye_rejects": {
+    "_qIsz-cucvo@1": "burned-in title text (static overlay check missed it)",
+    "_qIsz-cucvo@2": "burned-in title text (static overlay check missed it)",
+    "0mHRDNcnInQ@6": "politician (PM) is the subject, event footage, not place footage",
+    "3YVQe5MYyhE@3": "politician (PM) is the subject, event footage, not place footage",
+    "3YVQe5MYyhE@6": "politician (PM) is the subject, event footage, not place footage",
+    "vONk9ANANrM@4": "politician (PM) is the subject, event footage, not place footage",
+    "vONk9ANANrM@9": "politician (PM) is the subject, event footage, not place footage",
+    "yCFMF12GhVM@2": "politician (PM) is the subject, event footage, not place footage",
+    "yCFMF12GhVM@5": "politician (PM) is the subject, event footage, not place footage",
+    "3YVQe5MYyhE@4": "VIP motorcade on the bridge (event footage)",
+    "3YVQe5MYyhE@7": "inauguration boat rally with flags/crowd (event footage)",
+    "0mHRDNcnInQ@10": "sanctum puja set-up close-up, not a place view",
+    "FyHJoEe9F-k@3": "diorama / model, not real place",
+    "FyHJoEe9F-k@5": "drawing / cartoon animation",
+    "37NjPvIxyr0@4": "drawing / cartoon animation",
+    "37NjPvIxyr0@5": "drawing / cartoon animation",
+    "LGstwA3-M0E@1": "deity close-up with burned-in lyrics + social bar (static camera: overlay check cannot see it)",
+    "LGstwA3-M0E@2": "deity close-up with burned-in lyrics + social bar (static camera: overlay check cannot see it)",
+    "LGstwA3-M0E@3": "deity close-up with burned-in lyrics + social bar (static camera: overlay check cannot see it)",
+    "2G6aOF2kscY@1": "channel logo watermark (ESSENET) + low quality",
+    "2G6aOF2kscY@2": "channel logo watermark (ESSENET) + low quality",
+    "2G6aOF2kscY@3": "channel logo watermark (ESSENET) + low quality",
+    "HGSn3yfKfog@2": "burned-in Gujarati title + channel logo + crowd",
+    "Q6uAkdpenYI@6": "talking head (actor presenter); face check missed it",
+    "Q6uAkdpenYI@7": "talking head (actor presenter); face check missed it",
+    "58XlQQJS1Lg@3": "dashcam road, place not identifiable",
+    "qan150S2dpI@4": "TV news graphics / ticker / logo (re-upload of others' footage)",
+    "uG5FkpgZrJQ@1": "TV news graphics / ticker / logo (re-upload of others' footage)",
+    "wUmG5cRQqtU@2": "news-channel logo watermark (Mango News), re-upload of PMO footage",
+    "wUmG5cRQqtU@5": "news-channel logo watermark (Mango News), re-upload of PMO footage",
+    "37NjPvIxyr0@1": "letterboxed (black bars top/bottom) + small corner watermark; would need crop-to-fill",
+    "BPENmTR-o08@2": "person close in sanctum",
+    "BPENmTR-o08@3": "near-duplicate of BPENmTR-o08@1 (same fixed live-cam view)",
+    "rweFLdueEss@3": "tent camping with a person at sunset, 2.7 s; not a place view (and shorter than any open beat)",
+    "qSvEzJXYkfo@3": "burned-in Gujarati captions over ~85 % of the shot (only the first ~2 s clean Shivrajpur aerial)",
+    "qSvEzJXYkfo@6": "burned-in Gujarati captions + dark sunset",
+    "qSvEzJXYkfo@7": "burned-in Gujarati captions",
+    "53y4VjHJIOs@1": "letterboxed, filmed through a vehicle window (hand/frame edge in shot), rain road + boats",
+    "53y4VjHJIOs@4": "train at a platform with people close; not a Dwarka place view",
+    "53y4VjHJIOs@5": "painted station wall, place not identifiable",
+    "53y4VjHJIOs@6": "station platform shelter, place not identifiable",
+    "53y4VjHJIOs@7": "mostly sky/clouds after a short boats view",
+    "HPEnbEpFZM0@1": "wrong place: Rukmini temple in Amravati, Maharashtra (title), not Dwarka",
+    "HPEnbEpFZM0@2": "wrong place (Amravati, Maharashtra) + food close-up",
+    "HPEnbEpFZM0@4": "wrong place (Amravati, Maharashtra) + jeep in fog",
+    "HPEnbEpFZM0@6": "wrong place (Amravati, Maharashtra) forest aerial",
+    "HPEnbEpFZM0@7": "wrong place (Amravati, Maharashtra) + food close-up",
+    "HPEnbEpFZM0@9": "wrong place (Amravati, Maharashtra) ruin aerial"
+  },
+  "eye_exact": {
+    "7E1uvEdpz_A@1": "sudarshan setu",
+    "mt_xdx4S_Ok@1": "sudarshan setu",
+    "mt_xdx4S_Ok@2": "sudarshan setu",
+    "mt_xdx4S_Ok@3": "sudarshan setu",
+    "mt_xdx4S_Ok@4": "sudarshan setu",
+    "mt_xdx4S_Ok@5": "sudarshan setu",
+    "3YVQe5MYyhE@1": "sudarshan setu",
+    "3YVQe5MYyhE@8": "sudarshan setu",
+    "3YVQe5MYyhE@9": "sudarshan setu",
+    "0mHRDNcnInQ@5": "dwarkadhish",
+    "FyHJoEe9F-k@2": "dwarkadhish"
+  },
+  "_about_eye": "eye_rejects: '<video_id>@<shot_no>' -> reason (agent contact-sheet check). eye_exact: '<video_id>@<shot_no>' -> place key, only when the shot clearly shows that place; every other accepted shot is representative.",
+  "_about_eye_2026_11_04": "Agent contact-sheet check of run 2026-11-04_KANG_008 (Kaggle fetch), 47 shots: 33 rejected, 11 exact (Sudarshan Setu 9 drone/aerial shots, Dwarkadhish spire 2), 3 representative (TgEnExGJhgs@3 temple gate, 1fO8Pz6bWsY@2 temple courtyard, BPENmTR-o08@1 Nageshwar sanctum live-cam). Not human-reviewed. Applied at beats-youtube-cc time (core.youtube_cc.apply_eye); the Kaggle pool CREDITS.json is left as fetched.",
+  "v16_rules": {
+    "_about": "Agent decisions 2026-11-04 under user's delegation (beats-youtube-cc --v16-rules). A: an EXACT YouTube CC clip may replace (1) the archival Sudarshan Setu under-construction hold when its narration names a place below (real finished bridge > archival still) and (2) a REPRESENTATIVE still/stock shot whose own narration names the clip's place. Cards, maps, exact shots stay protected; no repeats; the replaced archival still is not reused elsewhere (only map beats S14_b06/b07 also talk about the bridge, and maps are protected) -> dropped. C: `force` beats take any eye-passed clip (no stock animation). `prefer`: eye-picked clip per unit (first beat).",
+    "archival_replace_places": [
+      "sudarshan setu"
+    ],
+    "named_representative": true,
+    "force": {
+      "S22_b06": {
+        "reason": "decision C: Pixabay 'subscribe/like button' animation removed from the outro; replace with a real Dwarka shot"
+      }
+    },
+    "prefer": {
+      "S17_b03": "yt:YT_7E1uvEdpz_A_01.mp4",
+      "S22_b06": "yt:YT_3YVQe5MYyhE_09.mp4"
+    },
+    "offsets": {
+      "yt:YT_7E1uvEdpz_A_01.mp4": 2.5,
+      "yt:YT_3YVQe5MYyhE_09.mp4": 0.0
+    },
+    "_about_offsets": "pool key -> trim start (s). YT_7E1uvEdpz_A_01 has a dissolve to a dusk view at ~13 s that the scene filter missed; 2.5 s start keeps the S17 10.04 s hold on the single daytime aerial. YT_3YVQe5MYyhE_09 (sunset Setu aerial) dissolves to night at ~2.9 s; start 0.0 keeps S22_b06 (2.72 s) on the sunset view, matching the S22 sunset run."
+  },
+  "_about_eye_2026_11_04_v2": "Agent contact-sheet check of run 2026-11-04_KANG_011 (Kaggle kernel v3 = second fetch, queries Shivrajpur/Rukmini/lighthouse/Gomti), 15 auto-passed shots: all 15 rejected (burned-in captions, letterbox/vehicle window, station/train, sky, and 6 shots of a Rukmini temple in Amravati, Maharashtra that passed the place check because the description names Dwarka/Rukmini). 0 exact, 0 representative. Not human-reviewed."
+}

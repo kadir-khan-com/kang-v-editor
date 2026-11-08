@@ -1,0 +1,1833 @@
+[
+  {
+    "id": "D2-001",
+    "name": "Chapter ka 5-beat spine",
+    "layer": "kahani",
+    "when": "Har chapter (travel/long-form) ki planning aur review par",
+    "action": "Har chapter me paanchon beat hon: context, movement, lived-in texture, destination payoff, aftertaste/handoff. Jo beat gayab ho, use pehle footage se repair karo — effects ya BGM hit se kabhi nahi",
+    "why": "Chapter sirf jagah ki list ban jata hai to viewer ko safar mehsoos nahi hota; movement aur texture hi kahani ko aage badhate hain",
+    "frequency": "Har chapter = 5/5 beats; missing beat = structure kaam, effect ka kaam nahi",
+    "evidence": "🟠",
+    "evidence_note": "Ek travel-studio skill ka house structure contract; koi measured corpus nahi",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-002",
+    "name": "Opening: 40s me vaada, 60s me saboot",
+    "layer": "kahani",
+    "when": "Video ke pehle minute me, khaas taur par travel/long-form opening me",
+    "action": "Pehle 40 second me asli destination/route footage par viewer promise rakho; pehle 60 second ke andar readable destination proof do (aerial, skyline, coast ya landmark)",
+    "why": "Pehla minute hi decide karta hai ki viewer rukega ya jayega; vaada bina saboot ke clickbait lagta hai",
+    "frequency": "Promise ≤40s; destination proof ≤60s",
+    "evidence": "🟠",
+    "evidence_note": "House opening contract; koi platform data nahi",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": {
+      "kind": "hook_within_s",
+      "max_s": 60,
+      "what": "destination proof"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-003",
+    "name": "Pehle 3 minute: arrival aur texture, payoff se pehle",
+    "layer": "kahani",
+    "when": "Opening ke baad pehle chapter tak ke hisse me",
+    "action": "Minute 3 se pehle practical arrival dikhao (station, hotel, street) aur pehle chapter payoff se pehle lived-in texture rakho; pehla handoff movement/street/hotel/food/weather/signage bridge se ho, hard reset se nahi",
+    "why": "Viewer ko pehle jagah par 'pahuncha' hua mehsoos hona chahiye, tabhi payoff ka matlab banta hai",
+    "frequency": "Arrival <3:00; texture hamesha pehle payoff se pehle",
+    "evidence": "🟠",
+    "evidence_note": "House opening contract",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-004",
+    "name": "Long-form ki ghadi: 20-minute wali shape",
+    "layer": "kahani",
+    "when": "Long-form travel film (target ~20 min) ki structure planning me",
+    "action": "Shape rakho: opening route promise 35–60s, 4–6 main chapters har ek 2.5–5 minute, transitions 15–45s, ending 45–75s callback/aftertaste ke saath. 1–2 minute ki short-video pacing long-form par default nahi",
+    "why": "Lambi film ko saans aur route chahiye; short pacing se 20 minute ki film thaka deti hai",
+    "frequency": "Opening 35–60s; chapter 2.5–5 min; transition 15–45s; ending 45–75s",
+    "evidence": "🟠",
+    "evidence_note": "Ek reference-style (Bilibili long-form travel) se liya house target; measured nahi",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-005",
+    "name": "Har chapter ko barabar time nahi",
+    "layer": "kahani",
+    "when": "Chapter durations tay karte waqt",
+    "action": "Jis chapter ke paas strong footage, rich human moments, saaf local texture ya zyada route-matlab hai, use zyada time do; kamzor chapter sirf bridge ki bhumika me chhota rahe",
+    "why": "Barabar time dene se film calendar jaisi lagti hai, kahani jaisi nahi",
+    "frequency": "koi fixed ratio nahi; strong chapter > bridge chapter hamesha",
+    "evidence": "🟠",
+    "evidence_note": "House structure niyam",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-006",
+    "name": "Payoff-se-payoff jump = slideshow",
+    "layer": "kahani",
+    "when": "Chapter boundaries aur bade jagah-badal par",
+    "action": "Ek payoff shot ke seedha dusre payoff shot par mat jao — beech me movement/texture support rakho. Aftertaste hamesha chapter ke AAKHIR me rakho, shuru me nahi",
+    "why": "Sirf 'best shots' jodne se tourist slideshow banta hai; beech ka safar hi film hai",
+    "frequency": "Har chapter boundary par ≥1 movement/texture support shot",
+    "evidence": "🟠",
+    "evidence_note": "House scene-flow contract",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-007",
+    "name": "Route task-chain hamesha samajh aaye",
+    "layer": "kahani",
+    "when": "Departure/arrival jaise practical chapters (hotel→airport→flight) me",
+    "action": "Chain ko padhne layak rakho: leave → handoff → travel → arrive → process → threshold → new state. Viewer ko har pal current jagah, current action aur agli manzil pata ho. Action continuity (haath, samaan, darwaze, signs, chalne ki disha) effect continuity se zyada mazboot join hai",
+    "why": "Practical safar ki kahani kaam ke steps se banti hai; ek step gayab ho to viewer kho jata hai",
+    "frequency": "Har phase ke paas ≥1 pehchan wala anchor shot",
+    "evidence": "🟠",
+    "evidence_note": "Ek 6:13 homeward film ki poori review se nikali grammar (non-copying profile)",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-008",
+    "name": "Ending nayi state par, 3–6s thehrao ke saath",
+    "layer": "kahani",
+    "when": "Video/chapter ke aakhiri shot par",
+    "action": "Ending wahan rakho jahan traveller kisi nayi state me pahunch jaye (seat, window, arrival); uske baad suitable footage ho to 3–6 second stable aftertaste hold rakho. Chalte hue movement ke beech abrupt cut se khatam mat karo",
+    "why": "Badli hui halat par rukna hi band hone ka ehsaas deta hai",
+    "frequency": "Final hold 3–6s (footage ho to)",
+    "evidence": "🟠",
+    "evidence_note": "Usi homeward review se; house niyam",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": {
+      "kind": "duration_range_s",
+      "min_s": 3,
+      "max_s": 6,
+      "what": "ending aftertaste hold"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-009",
+    "name": "Story plan cutting se pehle; beech-idea cut kabhi nahi",
+    "layer": "kahani",
+    "when": "Koi bhi talking-head/social edit shuru karne se pehle",
+    "action": "Pehle story plan likho: hook/agenda → body beats → recap/CTA ('jo bologe wo batao, batao, phir bataya hua dohrao'). Duration ghataane ke liye idea ko beech se kabhi mat kaato; word-boundary edits ki jagah lambe coherent blocks ko tarjeeh do",
+    "why": "Plan bina kaatne se achhe hisse kat jate hain aur baat adhoori reh jati hai",
+    "frequency": "Har video = 1 story plan pehle; mid-idea cut = 0",
+    "evidence": "🟠",
+    "evidence_note": "Editor ke production standard se",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-010",
+    "name": "Narration sparse rakho, khamoshi ko kaam karne do",
+    "layer": "kahani",
+    "when": "Long-form travel narration likhte waqt",
+    "action": "Spoken paragraphs sparse rakho; 20-minute film me voiceover kul chand minute hi ho sakta hai. 20–60 second ke hisse aise chhodo jahan sirf source audio, BGM aur visuals film ko aage le jayein. Jo dikh raha hai use bolkar mat samjhao",
+    "why": "Har cheez bol dene se film lecture ban jati hai; nazara khud bhi bolta hai",
+    "frequency": "Quiet stretches 20–60s; narration kabhi wall-to-wall nahi",
+    "evidence": "🟠",
+    "evidence_note": "House narration style",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-011",
+    "name": "Reference se seekho, copy nahi; route par imaandari",
+    "layer": "kahani",
+    "when": "Kisi reference film ko style guide banate waqt",
+    "action": "Reference se pacing, structure aur rhythm seekho — uske titles, narration lines, music ya footage copy kabhi nahi. Location pakka na ho to narration/plan me confidence bhasa rakho: confirmed / visually likely / route scaffold only / needs human review",
+    "why": "Copy ki hui pehchan pakdi jati hai aur galat location film ki sachchai tod deta hai",
+    "frequency": "Copy = 0; har uncertain location par confidence label",
+    "evidence": "🟠",
+    "evidence_note": "House non-copying + route-honesty contract",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-012",
+    "name": "Footage selection selective rakho, local pehle",
+    "layer": "kahani",
+    "when": "Pehli assembly se pehle footage chunte waqt",
+    "action": "Clip sirf isliye timeline me nahi aata ki woh exist karta hai. Pehle local footage, stock baad me. Kisi clip ko final reject karne se pehle full-duration, in-motion review karo — filename/metadata sirf review ke hints hain, faisla nahi",
+    "why": "Sab kuch daal dene se film bhari ho jati hai; aur bina dekhe reject karne se best moment haath se jata hai",
+    "frequency": "Har final reject = full in-motion review ke baad hi",
+    "evidence": "🟠",
+    "evidence_note": "House footage-select contract (temporal scan ka ~99.5% coverage bar usi skill ke acceptance criteria me hai)",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-013",
+    "name": "Kharaab-par-unique clip, saaf generic scenic se upar",
+    "layer": "kahani",
+    "when": "Do clips me se ek chunna pade to",
+    "action": "Technically imperfect lekin unique story/emotion wala clip saaf lekin generic scenic shot se upar rank karo",
+    "why": "Viewer ko perfection nahi, pal yaad rehta hai",
+    "frequency": "Tie-break rule: story/emotion > technical saafai",
+    "evidence": "🟠",
+    "evidence_note": "House selection niyam",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-014",
+    "name": "Shot tiers aur function ka badlav",
+    "layer": "kahani",
+    "when": "Creator cut / clip classification me",
+    "action": "Har clip ko tier do: Hero / Main / Texture-bridge / Utility / Reject. Ek hi function wale do adjacent clips ke beech alag function wala clip daalo",
+    "why": "Ek hi kaam ke shots lagatar aane se film ek-ras (monotone) ho jati hai",
+    "frequency": "Adjacent same-function pair = 0 (beech me alag function)",
+    "evidence": "🟠",
+    "evidence_note": "House creator-cut contract",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-015",
+    "name": "B-roll = saboot, sajawat nahi",
+    "layer": "kahani",
+    "when": "Cutaway/B-roll lagate waqt",
+    "action": "Har B-roll ke saath uska claim/beat/problem note karo — woh kis baat ka saboot hai ya kis cut ko dhak raha hai. B-roll pehle dhoondo aur WATCH karo, phir action/story ke hisaab se kaato; filler ke liye kabhi nahi",
+    "why": "Bina-kaam ka B-roll viewer ko turant 'stock' lagta hai aur bharosa todta hai",
+    "frequency": "Har cutaway = 1 documented purpose",
+    "evidence": "🟠",
+    "evidence_note": "Do alag editor sources ka ek hi niyam (production standard + vlog workflow note)",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md",
+      "notes_appariciojunior_video-editor-skills.md (note)"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-016",
+    "name": "Rough cut me editor-notes aur punchlines bachaao",
+    "layer": "kahani",
+    "when": "Rough cut me retakes/dead air saaf karte waqt",
+    "action": "Speaker ki khud ki 'notes-to-editor' wali baatein aur punchlines ko galti se mat kaato — ye hamesha protect list me rakho",
+    "why": "Ye woh hisse hain jo creator ne jaan-bujh kar rakhe hain; kaatna = kahani ka nuksaan",
+    "frequency": "Protect list = har rough cut se pehle tay",
+    "evidence": "🟠",
+    "evidence_note": "Note source: editor workflow apne shabdon me",
+    "sources": [
+      "notes_appariciojunior_video-editor-skills.md (note)"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-017",
+    "name": "Screencast: shuru 15–30s 'kya aur kyun', aakhir me uplabdhi",
+    "layer": "kahani",
+    "when": "Screen-recording/tutorial videos me",
+    "action": "Pehle 15–30 second me batao kya bana rahe hain aur kyun. Aakhir me accomplishment/diff summary do — video beech safar me khatam mat karo",
+    "why": "Viewer ko manzil pehle pata ho to beech ke steps sehne layak ho jate hain",
+    "frequency": "Opening context 15–30s; closing summary hamesha",
+    "evidence": "🟠",
+    "evidence_note": "Ek screencast editor ki house style",
+    "sources": [
+      "github_matthull_my-skills.md"
+    ],
+    "check": {
+      "kind": "duration_range_s",
+      "min_s": 15,
+      "max_s": 30,
+      "what": "screencast opening context"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-018",
+    "name": "Captions sirf darshak ke liye",
+    "layer": "samajh",
+    "when": "Final SRT/TXT narration lines likhte waqt",
+    "action": "Har caption line audience ke liye ho: travel narration, route context, emotion ya visual observation. Workflow state wali baatein captions me KABHI nahi — 'QA pass', 'V14', 'Resolve', 'SRT', 'ye fix ho gaya' jaisi editor-bhasha block hai",
+    "why": "Ek bhi andar-ki-baat wala caption poori film ko machine-bani hui ghoshit kar deta hai",
+    "frequency": "Editor-facing caption = 0",
+    "evidence": "🟠",
+    "evidence_note": "House caption contract",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-019",
+    "name": "Title zones me subtitles band",
+    "layer": "samajh",
+    "when": "Opening/chapter/ending title windows me",
+    "action": "Title chal raha ho to us window me rendered subtitle overlay suppress ya trim karo, jab tak user khaas taur par captions-over-title na maange. Scenic/title windows BGM-led rakho",
+    "why": "Title aur caption ek saath ladte hain — dono padhne mushkil ho jate hain",
+    "frequency": "Title-zone subtitle overlap = 0",
+    "evidence": "🟠",
+    "evidence_note": "House subtitle-overlay contract",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-020",
+    "name": "Bina-voiceover film me captions hi kahani",
+    "layer": "samajh",
+    "when": "Jab voiceover na ho aur TXT/SRT hi narrative layer ho",
+    "action": "Captions itne dense rakho ki route, emotion aur visual imaandari carry kar sakein — planning target kam se kam 4 cues/minute rakho (slow reference profile justify kare to hi kam)",
+    "why": "Awaaz na ho to kam captions wala hissa khaali aur khoya hua lagta hai",
+    "frequency": "≥4 cues/minute planning target",
+    "evidence": "🟠",
+    "evidence_note": "House caption-density target",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": {
+      "kind": "min_per_min",
+      "min": 4,
+      "what": "caption cues (no-VO film)"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-021",
+    "name": "Caption highlight: line me sirf 1–3 shabd",
+    "layer": "samajh",
+    "when": "Word-highlight/karaoke style captions banate waqt",
+    "action": "Har caption line me sirf 1–3 important shabd highlight karo. Hierarchy: action verbs > numbers > emotional words. Filler/modifier shabd ('this', 'my', 'completely') kabhi highlight nahi",
+    "why": "Sab kuch highlight = kuch bhi highlight nahi; aankh ko ek hi jagah rukna chahiye",
+    "frequency": "1–3 highlighted words per line",
+    "evidence": "🟠",
+    "evidence_note": "CapCut director brain ki caption intelligence",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": {
+      "kind": "count_range",
+      "min": 1,
+      "max": 3,
+      "what": "highlighted words per caption line"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-022",
+    "name": "Captions: pehle proofread, aakhir me finishing pass",
+    "layer": "samajh",
+    "when": "Caption workflow ke dono sire par",
+    "action": "Captions ko import karne se PEHLE saaf aur proofread karo (single-line default). Caption-only finishing pass sirf approved cut par chalao — word-level timing check karo aur sirf high-confidence domain terms fix karo",
+    "why": "Gande captions import karke theek karna doguna kaam hai; aur cut badalne ke baad caption pass bekaar ho jata hai",
+    "frequency": "Proofread = import se pehle; finishing pass = sirf approved cut par",
+    "evidence": "🟠",
+    "evidence_note": "Do sources: vlog workflow note + Resolve production standard",
+    "sources": [
+      "notes_appariciojunior_video-editor-skills.md (note)",
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-023",
+    "name": "Burned-in captions dikhne wala layer ho",
+    "layer": "samajh",
+    "when": "Caption delivery check par",
+    "action": "Sirf SRT file deliverable nahi hai — burned-in captions timeline me ek visible layer ke roop me hone chahiye aur final render me dikhne ka saboot ho",
+    "why": "File hai lekin render me caption nahi — ye sabse chhupa hua delivery fail hai",
+    "frequency": "Har delivery = rendered caption ka visual saboot",
+    "evidence": "🟠",
+    "evidence_note": "Production standard ki QA shart",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-024",
+    "name": "Vertical: aankhein upar-wale third me, captions surakshit jagah",
+    "layer": "samajh",
+    "when": "Vertical (9:16) framing aur caption placement me",
+    "action": "Speaker ki aankhein frame ke upper third ke aas-paas rakho. Captions ko chehra/munh aur platform UI ke danger zones se bahar rakho; key lines proofread karo",
+    "why": "UI ke neeche daba caption = na padha gaya caption",
+    "frequency": "Caption kabhi face/mouth/UI-safe-zone ke bahar nahi",
+    "evidence": "🟠",
+    "evidence_note": "Do sources: Resolve social editor + CapCut mobile workflow",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md",
+      "github_pockebot_openpocket.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-025",
+    "name": "Bolne wala dikhe; B-roll emotion ko na dhake",
+    "layer": "samajh",
+    "when": "Talking-head par B-roll lagate waqt",
+    "action": "Spoken sections ke dauran speaker visible rakho. Crucial face/emotion beats par B-roll mat lagao — cutaway phrase land hone ke baad, saans par ya naye idea par rakho",
+    "why": "Jazbaat chehre par hote hain; galat jagah cutaway usi pal ko chura leta hai",
+    "frequency": "Emotion beats par B-roll = 0",
+    "evidence": "🟠",
+    "evidence_note": "Production standard se",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-026",
+    "name": "Screencast samajh: intent bolo, action nahi",
+    "layer": "samajh",
+    "when": "Screen-recording narration aur annotations me",
+    "action": "Har interaction se pehle context do; fast-forward hisse me khaas taur par narration rakho. Jo prompt text screen par poora na dikhe, use caption karo. Annotations phase ka label dein. Narration 'main ye click kar raha hoon' ki jagah intent bataye",
+    "why": "Bina intent ke screen sirf harkat hai; viewer ko 'kyun' chahiye",
+    "frequency": "Har interaction = pehle intent line",
+    "evidence": "🟠",
+    "evidence_note": "Screencast editor ki house style",
+    "sources": [
+      "github_matthull_my-skills.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-027",
+    "name": "Narration ka har daava saboot se bandha ho",
+    "layer": "samajh",
+    "when": "Narration/caption lines likhte waqt",
+    "action": "Har claim actual route evidence ya user-confirmed context se bandha ho. Jo cheez screen par khud dikh rahi hai use bolkar repeat mat karo",
+    "why": "Bina saboot ke daave aur dikhi cheez ki commentary — dono bharosa ghataate hain",
+    "frequency": "Unverified claim = 0",
+    "evidence": "🟠",
+    "evidence_note": "House narration niyam",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-028",
+    "name": "Title/lower-third: timing aur font ki discipline",
+    "layer": "samajh",
+    "when": "Animated titles aur lower-thirds banate waqt",
+    "action": "Lower-third slide-in ~12 frames rakho (~0.5s @24fps); typewriter follower delay 2 frames per character. Font medium-to-bold sans rakho (Open Sans Extrabold jaisa default). Timing perfect hone ke baad hi use macro/template me save karo. Animated title ke liye Text+ istemaal karo, basic Text nahi",
+    "why": "Dheere-dheere ghusne wala lower-third purana lagta hai; halka font mobile par ghul jata hai",
+    "frequency": "Slide-in 12 frames; follower delay 2 frames/char",
+    "evidence": "🟠",
+    "evidence_note": "Resolve titles workflow se",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-029",
+    "name": "Marker discipline: EDL se, rang-tiers ke saath",
+    "layer": "samajh",
+    "when": "Resolve me review markers lagate waqt",
+    "action": "Markers EDL ke through lagao (Resolve FCP7 XML ke clip colours ignore karta hai). Colour tiers fixed rakho: A = Red, flash frames = Fuchsia, B = Yellow, C = Blue, notes/re-record = Green",
+    "why": "Marker ka rang hi team ki bhasha hai; rang badla to matlab badla",
+    "frequency": "5 tiers, hamesha yahi mapping",
+    "evidence": "🟠",
+    "evidence_note": "Note source: dusre editor ke workflow apne shabdon me",
+    "sources": [
+      "notes_SamuelAde001_second-brain.md (note)"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-030",
+    "name": "Pehle mapo (measure), phir raay do",
+    "layer": "samajh",
+    "when": "Kisi bhi editorial faisle se pehle",
+    "action": "Pacing/audio/structure par pehle scripts se numbers nikalo, editorial opinion uske baad do",
+    "why": "Bina map ke raाय andaz hai; numbers behes khatam karte hain",
+    "frequency": "Har bada faisla = pehle ek measured report",
+    "evidence": "🟠",
+    "evidence_note": "Note source",
+    "sources": [
+      "notes_SamuelAde001_second-brain.md (note)"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-031",
+    "name": "HOW aur WHAT alag rakho: preset pehle padho",
+    "layer": "samajh",
+    "when": "Koi bhi edit lane chalane se pehle",
+    "action": "Pehle WHAT padho — preset: look, numbers, done ki definition. Phir HOW chalao — lane ke steps. Dono ko mix mat karo",
+    "why": "Bina 'done kya hai' jaane steps chalana = ghumte rehna",
+    "frequency": "Har kaam = pehle preset read, phir execution",
+    "evidence": "🟠",
+    "evidence_note": "Note source",
+    "sources": [
+      "notes_edwinponcious12_video.md (note)"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-032",
+    "name": "Do-stage soch: pehle creative, phir tool",
+    "layer": "samajh",
+    "when": "AI/editor se edit plan banwate waqt",
+    "action": "Stage 1 me tool/catalog ka zikr kiye bina pure creative analysis karo (pacing, emotion, energy, weak spots). Stage 2 me hi suggestions ko asal tool/asset names se ground karo",
+    "why": "Catalog pehle dikha do to soch catalog ke andar hi band ho jati hai; aur bina grounding ke plan chalaya nahi ja sakta",
+    "frequency": "Har plan = 2 stages, isi kram me",
+    "evidence": "🟠",
+    "evidence_note": "CapCut director ka core design niyam",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-033",
+    "name": "Har edit ka 'kyun' aur weak spots saaf likho",
+    "layer": "samajh",
+    "when": "Edit plan/review dete waqt",
+    "action": "Har action ke saath uski wajah likho. Dead air, pacing drops jaise weak spots chhupao mat — explicitly flag karo. Subjective choices par 2–3 alternatives do taaki editor control me rahe",
+    "why": "'Kyun' bina ka plan order hai; kyun ke saath woh direction hai",
+    "frequency": "Actions bina why = 0; weak spots sab flag",
+    "evidence": "🟠",
+    "evidence_note": "CapCut director ke output niyam",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-034",
+    "name": "Handoff ke liye layered timeline",
+    "layer": "samajh",
+    "when": "Timeline kisi insaan ko saumpte waqt",
+    "action": "Timeline layered rakho: disabled/backup tracks ka naam 'DISABLED' rakho, taaki agla editor bina puche samajh jaye ki kya live hai aur kya rakha hua hai",
+    "why": "Gandi timeline dusre ke liye band kamra hai",
+    "frequency": "Har handoff = naam-daar layers",
+    "evidence": "🟠",
+    "evidence_note": "Production standard se",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-035",
+    "name": "Pehli-pass ki taqseem: insaan = taste, agent = mazdoori",
+    "layer": "samajh",
+    "when": "AI agent ke saath edit ka kaam baant-te waqt",
+    "action": "Insaan taste aur film-sense ke faisle rakhe; agent transcribe/log/detect jaise labour kare. Agent raw footage kabhi modify nahi karta — woh sirf ADD karta hai",
+    "why": "Taste machine ko dena aur mazdoori insaan karna — ulta batenwara kaam kharab karta hai",
+    "frequency": "Division = har project ki shuruaat me tay",
+    "evidence": "🟠",
+    "evidence_note": "Note source",
+    "sources": [
+      "notes_appariciojunior_video-editor-skills.md (note)"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-036",
+    "name": "Creative azadi: template nahi, video ki energy",
+    "layer": "samajh",
+    "when": "Har naye video ki analysis par",
+    "action": "Har video ko independently analyze karo. Rigid genre rules ('funny hai to X karo') default mat banao. Video ki unique energy hai to usi par lean karo, safe defaults par nahi",
+    "why": "Template-har-video ek jaisi film banata hai; energy har video ki alag hoti hai",
+    "frequency": "Genre-template default = 0",
+    "evidence": "🟠",
+    "evidence_note": "CapCut director ka creative-freedom rule",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-037",
+    "name": "Travel shot-lengths: reference se calibrate",
+    "layer": "rhythm",
+    "when": "Long-form travel pacing set karte waqt",
+    "action": "Ek poori tarah review ki hui homeward travel film ke measured numbers ko calibration anchor rakho: average shot ~10.4s, median ~10.1s, p10 ~3.1s, p90 ~17.9s. Apni film ke avg/median shot lengths in reference-calibrated ranges ke andar rakho",
+    "why": "Long-form travel ki saans short-video se bilkul alag hai; bina anchor ke pacing ya to sust ya to bechain ho jati hai",
+    "frequency": "Anchor: avg ≈10.4s, median ≈10.1s, p90 ≈17.9s (ek film ka map)",
+    "evidence": "🟡",
+    "evidence_note": "Ek asli film ke 36 shots/35 boundaries ka poora human-reviewed map — measured, par sirf 1 film",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-038",
+    "name": "Pacing ki marammat footage se, effects se nahi",
+    "layer": "rhythm",
+    "when": "Rhythm recut / pacing repair me",
+    "action": "Do galtiyan block karo: recut ke baad bache lambe non-scenic raw holds, aur micro-clips ki accidental flicker runs. Dono ki marammat footage badal/chun kar karo — effect daal kar kabhi nahi",
+    "why": "Effect pacing ki bimari ko dhakta hai, theek nahi karta; viewer ko dhokha mehsoos hota hai",
+    "frequency": "Long raw holds = 0; flicker runs = 0",
+    "evidence": "🟠",
+    "evidence_note": "House pacing-watchability contract",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-039",
+    "name": "Har bade chapter me kam se kam ek saans-wala shot",
+    "layer": "rhythm",
+    "when": "Chapter rhythm review par",
+    "action": "Har substantial chapter me kam se kam ek breathing/payoff/aftertaste shot rakho",
+    "why": "Bina saans ke chapter ghutan hai; ek thehra shot poore chapter ko wazan deta hai",
+    "frequency": "≥1 breathing shot per substantial chapter",
+    "evidence": "🟠",
+    "evidence_note": "House pacing contract",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": {
+      "kind": "count_range",
+      "min": 1,
+      "what": "breathing/payoff shot per chapter"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-040",
+    "name": "Visual rhythm ka pattern: establish → detail → reaction → widen",
+    "layer": "rhythm",
+    "when": "Long-form ke andar shot sequence banate waqt",
+    "action": "Pattern dohrao: jagah ko establish karo (aerial/skyline/map/title) → street-level detail me ghuso → human reaction/food/transit/weather/waiting dikhao → jaane se pehle phir widen karo → geography, awaaz ya motion se transition karo",
+    "why": "Ye upar-neeche ki lehar hi documentary-vlog rhythm hai; sirf beauty shots se film so jati hai",
+    "frequency": "Har place-block = kam se kam ek poora pattern cycle",
+    "evidence": "🟠",
+    "evidence_note": "House visual-rhythm style",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-041",
+    "name": "Visual change gap 3s se zyada (short-form) = pattern interrupt",
+    "layer": "rhythm",
+    "when": "Short-form/social edit me jahan 3 second se zyada koi visual change nahi",
+    "action": "Pattern interrupt lagao — bareek se mote kram me: zoom (105–110%) → cut → caption overlay → motion (pan/shake) → effect overlay. Sabse halka kaam kare wahi chuno",
+    "why": "3 second bina badlav ke short-form me dhyaan marr jata hai",
+    "frequency": "Max visual gap 3s (short-form profile)",
+    "evidence": "🟠",
+    "evidence_note": "CapCut director ke attention niyam",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": {
+      "kind": "max_visual_gap_s",
+      "value": 3,
+      "scope": "short-form"
+    },
+    "conflict_note": "TAKRAAV: purane ORDER default me long-form max visual gap 5s hai (Shorts 3s). Ye 3s wala niyam short-form/social ke liye hai — long-form par 5s wala hi rahe; profile se lagu karo, dono ko ek mat samjho."
+  },
+  {
+    "id": "D2-042",
+    "name": "Platform ke hisaab se pacing table",
+    "layer": "rhythm",
+    "when": "Platform tay hote hi edit shuru karne se pehle",
+    "action": "Pacing platform se lo: TikTok/Reels/Shorts — change har 1–3s, hook 1s me; YouTube short-form — change 2–3s, hook 3s; YouTube long-form — change 3–5s; LinkedIn — change 4–6s, saaf aur minimal",
+    "why": "Ek hi pacing har platform par ya to sust hai ya bechain",
+    "frequency": "Table upar wali; hook: TikTok 1s / YT-SF 3s",
+    "evidence": "🟠",
+    "evidence_note": "CapCut director ke platform-optimization niyam",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-043",
+    "name": "Hook me dead air = retention ki maut",
+    "layer": "rhythm",
+    "when": "Video ki shuruaat (khaas taur par hook section ~pehle 4s) me",
+    "action": "Shuru ki silence/dead air kaato — hook action ya baat se shuru ho, khaamoshi se nahi",
+    "why": "Pehle 2 second ki dead air sabse zyada viewers girati hai",
+    "frequency": "Initial dead air = 0; hook window ~4s",
+    "evidence": "🟠",
+    "evidence_note": "CapCut director ke hook niyam; purane Shorts hook ≤2.5s niyam se milta-julta",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": {
+      "kind": "hook_within_s",
+      "max_s": 2,
+      "what": "shuru ki dead air"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-044",
+    "name": "Pause ke niyam (talking head): 0.5s / 1.0s / dramatic chhoot",
+    "layer": "rhythm",
+    "when": "Talking-head edit me pauses dekhte waqt",
+    "action": "Pause >0.5s ho to jump cut ka sujhav do; pause >1.0s ho to weak spot flag karo. Lekin 0.3–0.5s ke brief pauses dramatic maksad ke liye reh sakte hain",
+    "why": "Har pause kaat dene se boli robot jaisi ho jati hai; lambe pause rakhe to viewer bore hota hai",
+    "frequency": ">0.5s = cut sujhav; >1.0s = flag; 0.3–0.5s dramatic = rakho",
+    "evidence": "🟠",
+    "evidence_note": "CapCut director ke silence-detection niyam",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": null,
+    "conflict_note": "TAKRAAV: purana unified pause model ≥400ms ko cut zone, 150–400ms ko usable aur <150ms ko unsafe kehta hai. Ye source 500ms threshold rakhta hai aur 300–500ms dramatic pause ko surakshit maanta hai. Merge par faisla: threshold 400ms vs 500ms — profile (talking-head social = 0.5s wala; Kang pipeline = purana model) se tay karna bacha hai."
+  },
+  {
+    "id": "D2-045",
+    "name": "Smart-cut: >1s silence aur duplicate takes pehle pass me bahar",
+    "layer": "rhythm",
+    "when": "Auto/smart-cut pehla pass chalate waqt",
+    "action": "Subtitle gaps >1s wali silences aur duplicate takes auto-remove karo. Chalane se PEHLE project ka duplicate/backup zaroor banao (auto-backup nahi hota)",
+    "why": "Pehla pass haath se karna sabse dheema kaam hai; machine ko wahi do jo bina taste ke ho sakta hai",
+    "frequency": "Threshold: silence gap >1s; duplicates = sab bahar",
+    "evidence": "🟠",
+    "evidence_note": "CapCut smart-cut + note source ke retake-removal workflow ka sangam",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md",
+      "notes_AdamGarceau_resolve-toolkit.md (note)"
+    ],
+    "check": null,
+    "conflict_note": "TAKRAAV: purana pause model ≥400ms ko hi cut zone kehta hai — >1s wala threshold usse zyada conservative hai. Ye sirf AUTO pehle pass ke liye hai (haath ka fine pass purane model par hi rahe), isliye takraav pass-wise sulajh sakta hai."
+  },
+  {
+    "id": "D2-046",
+    "name": "Cut sirf silence ya word-boundary par; mid-sentence kabhi nahi",
+    "layer": "rhythm",
+    "when": "Tighten/cut pass me har cut lagate waqt",
+    "action": "Cut hamesha silence ke andar ya word boundary par rakho — sentence ke beech me kabhi nahi. Shorts aur longform ke liye alag tighten profiles rakho",
+    "why": "Beech-vaakya cut boli ko kaatta hai aur viewer ko jhatka lagta hai",
+    "frequency": "Mid-sentence cuts = 0",
+    "evidence": "🟠",
+    "evidence_note": "Note source (dr-tighten) + production standard ke coherent-block niyam",
+    "sources": [
+      "notes_AdamGarceau_resolve-toolkit.md (note)",
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-047",
+    "name": "Do-phase discipline: CUT pass → re-cut → TRANSCRIPT pass",
+    "layer": "rhythm",
+    "when": "Poore edit ka kram tay karte waqt",
+    "action": "Pehle CUT pass (picture lock ki taraf), phir editor ka re-cut, uske BAAD transcript pass. Purani subtitles ke upar transcript pass chalana bekaar hai — transcript hamesha final cut ke baad bane",
+    "why": "Galat kram = do baar kaam; transcript pehle banaya to har cut use tod dega",
+    "frequency": "Kram fixed: cut → re-cut → transcript",
+    "evidence": "🟠",
+    "evidence_note": "Note source",
+    "sources": [
+      "notes_SamuelAde001_second-brain.md (note)"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-048",
+    "name": "Phase-1 ki shikar-list",
+    "layer": "rhythm",
+    "when": "Pehle (hunt) pass me footage dekhte waqt",
+    "action": "Sirf ye cheezen dhoondo aur mark karo: duplicate takes, misspeaks, garbled audio, flash frames, redundancy, aur script ke missing sections",
+    "why": "Pehla pass sab kuch ek saath theek karne nikle to kuch theek nahi hota",
+    "frequency": "6 item ki list; is se bahar ka kaam phase-2 ka",
+    "evidence": "🟠",
+    "evidence_note": "Note source",
+    "sources": [
+      "notes_SamuelAde001_second-brain.md (note)"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-049",
+    "name": "Screen-recording cut workflow: transcript pehle, rough 2x, 1.5x par galti-pass",
+    "layer": "rhythm",
+    "when": "Screen-recording/talking video ka rough cut banate waqt",
+    "action": "Transcript-first kaato: AI transcription + silent-portion removal ~80% kaam kar deta hai. Rough cut ka target final length ka ~2x rakho (8 min final → ~16 min rough). Refine pass me snapping OFF, audio scrubbing ON, 5-frame nudges. Aakhiri mistake pass 1.5x playback par ripple-delete ke saath chalao (aur 1–3 minute nikalta hai). Verify: koi audible cut edit na sune, saare ums/pauses gaye hon",
+    "why": "Dekh-dekh kar kaatna sabse dheema hai; transcript se kaatna tez aur pakka hai",
+    "frequency": "Rough ≈ 2x final; mistake pass 1.5x playback",
+    "evidence": "🟠",
+    "evidence_note": "Resolve screen-recording workflow se",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-050",
+    "name": "Silence detection ki shart: room noise pehle theek karo",
+    "layer": "rhythm",
+    "when": "Auto silence removal chalane se pehle",
+    "action": "Room noise −30 dB se upar ho to silence detection toot jata hai — pehle noise reduction karo ya haath se kaato",
+    "why": "Shor ko tool khaamoshi samajh nahi pata; galat detection = galat cuts",
+    "frequency": "Room noise >−30 dB = pehle NR/manual",
+    "evidence": "🟠",
+    "evidence_note": "Workflow ki vyavharik shart",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-051",
+    "name": "Screencast speed map: sust hissa delete nahi, tez karo",
+    "layer": "rhythm",
+    "when": "Screencast ke boring hisse handle karte waqt",
+    "action": "Boring hisse ko delete karne ki jagah speed up karo taaki poora workflow dikhta rahe. Normal speed = prompts, output review, test results, key decisions. 4x–8x = generation, lambe reads, scrolling. Poora cut = false starts, re-prompts, apni typos. Speed% = (original duration / target audio duration) x 100",
+    "why": "Delete karne se viewer ko 'beech me kya hua' ka shaq rehta hai; tez karne se poora safar dikhta hai",
+    "frequency": "4x–8x sust hisso par; key moments hamesha 1x",
+    "evidence": "🟠",
+    "evidence_note": "Screencast editor ki house style",
+    "sources": [
+      "github_matthull_my-skills.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-052",
+    "name": "Talking speed 1.1x (samajh bani rahe to)",
+    "layer": "rhythm",
+    "when": "Speaker-led short-form me",
+    "action": "Speaker ki speed 1.1x rakho — sirf tab jab intelligibility poori bani rahe",
+    "why": "Halki tez boli energy deti hai bina nakli lage",
+    "frequency": "1.1x; samajh ghate to wapas 1.0x",
+    "evidence": "🟠",
+    "evidence_note": "Production standard se",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-053",
+    "name": "A-roll reset: 6–9s se zyada bina reset ke nahi (talking-head social)",
+    "layer": "rhythm",
+    "when": "Talking-head social edit (Deya-style retention) me",
+    "action": "6–9 second se zyada uninterrupted A-roll mat chalne do — beech me visual reset do (B-roll, punch-in, angle ya title)",
+    "why": "Ek hi frame par thahri boli dhyaan ko sust kar deti hai",
+    "frequency": "A-roll bina reset ≤6–9s",
+    "evidence": "🟠",
+    "evidence_note": "Ek retention creator (Deya) ki style ko production standard ne apnaya",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": null,
+    "conflict_note": "TAKRAAV (halka): purana max visual gap default 5s hai. Ye 6–9s wala window sirf 'A-roll reset' ki had hai (speaker frame par lagatar rehne ki), aam visual-change gap se alag mapna — dono ek saath chal sakte hain: visual change 5s ke andar, A-roll reset 9s ke andar."
+  },
+  {
+    "id": "D2-054",
+    "name": "BPM ke hisaab se cut frequency",
+    "layer": "rhythm",
+    "when": "Music-led edit me cut rhythm tay karte waqt",
+    "action": "Cut frequency BPM se lo: 60 BPM → har 4 beats (~4s, ~8 cuts/30s, cinematic); 100 BPM → har 2 beats (~17 cuts/30s); 120 BPM → har 1–2 beats (20–30 cuts/30s); 140 BPM → har beat (~35 cuts/30s). Ambient/bina-BPM music par beat-cut bilkul nahi — cuts visual narrative se motivate hon, 5–15s ke holds aam hain",
+    "why": "Music ki gati aur cut ki gati alag chale to video do hisso me tootta lagta hai",
+    "frequency": "Upar wali table; formula: beat frames = 1800/BPM @30fps",
+    "evidence": "🟠",
+    "evidence_note": "CapCut KF-07 ka BPM-to-cut map (house table, measured nahi)",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-055",
+    "name": "Cuts beat par; 2–3 frame aage-peeche ka khel",
+    "layer": "rhythm",
+    "when": "Beat-synced cuts lagate waqt",
+    "action": "Default: cut theek beat par (kick/snare). Aage ki kheench (anticipation) chahiye to cut beat se 2–3 frames PEHLE; wazan chahiye to 2–3 frames BAAD. Off-beat cuts sirf syncopated/groovy feel ke liye jaan-bujh kar",
+    "why": "Beat par cut 'lock' mehsoos hota hai; jaan-bujh kar off-beat usi lock ko tod kar jaan deta hai — galti se off-beat sirf galti lagta hai",
+    "frequency": "Offset sirf ±2–3 frames, jaan-bujh kar",
+    "evidence": "🟠",
+    "evidence_note": "KF-07 beat-sync guide",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-056",
+    "name": "Bade phase-change cuts BGM phrase par; har beat par nahi",
+    "layer": "rhythm",
+    "when": "Route/phase badlav ke cuts par (travel film)",
+    "action": "Ahem route-phase badlav phrase boundary ya saaf BGM hit par kaato. Har beat par cut mat karo — beat grid sirf bade palon ke liye hai",
+    "why": "Har beat kaatne se film gana ban jati hai, safar nahi",
+    "frequency": "Phrase-level cuts sirf bade badlav par",
+    "evidence": "🟠",
+    "evidence_note": "Homeward profile + BGM phrase system",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-057",
+    "name": "Build-up → drop: edit ka accelerator",
+    "layer": "rhythm",
+    "when": "Music me build-up/riser aur drop wale hisse me",
+    "action": "Pre-drop/riser par cut frequency tez karo, visual density har 2 beats badhao, speed ramps se time sikodo. Drop par sabse sakht cuts, hero shot/reveal rakho. Breakdown par dheere ho jao — lambe holds, viewer ko saans",
+    "why": "Sangeet jo chadhaw-utaw deta hai, edit use follow na kare to drop fizool jata hai",
+    "frequency": "Har drop = 1 hero pal; breakdown = jaan-bujh kar dheema",
+    "evidence": "🟠",
+    "evidence_note": "KF-07 ki song-structure map",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-058",
+    "name": "Music entry chorus/drop se; climax drop par sync",
+    "layer": "rhythm",
+    "when": "Video ke liye music ka hissa chunte waqt",
+    "action": "Cold open/hook par music chorus ya drop se shuru karo — track ke intro se kabhi nahi. Value-delivery hisse me instrumental/low-vocal section rakho taaki narration saans le. Climax/reveal ko drop ya chorus peak se sync karo",
+    "why": "Track ka intro sabse sust hissa hota hai; hook wahan rakha = video shuru hote hi marr gaya",
+    "frequency": "Frame 1 = chorus/drop; climax = drop peak par",
+    "evidence": "🟠",
+    "evidence_note": "KF-07 music entry points",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-059",
+    "name": "BGM variety: 35% unique, 6 cues me repeat nahi",
+    "layer": "rhythm",
+    "when": "Lambe film ke BGM cues (≥20) plan karte waqt",
+    "action": "Unique songs kam se kam max(12, cue_count x 0.35) rakho; koi gaana pichhle 6 cues ke andar repeat nahi. Lambe hero passages ko calm → lift → climax wala arc do",
+    "why": "Wahi dhun baar-baar sunai de to film chhoti aur sasti lagti hai",
+    "frequency": "Unique ≥ max(12, 35%); repeat window = 6 cues",
+    "evidence": "🟠",
+    "evidence_note": "Travel-studio ka BGM catalog niyam",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": {
+      "kind": "percent_range",
+      "min_pct": 35,
+      "what": "unique BGM songs (≥20 cues par)"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-060",
+    "name": "Muted-audio desert 18s se zyada nahi; scenic BGM coverage poora",
+    "layer": "rhythm",
+    "when": "Scenic/BGM-led windows ki audio planning me",
+    "action": "Bina awaaz ke hisse (muted desert) ~18s se zyada na rakho. Drone/pure-scenic windows me BGM coverage ratio ~0.995 rakho",
+    "why": "Lambi khaamoshi scenic hisse ko 'rendering adhoori' jaisa bana deti hai",
+    "frequency": "Muted desert ≤~18s; scenic coverage ≈99.5%",
+    "evidence": "🟠",
+    "evidence_note": "House scenic audio policy",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-061",
+    "name": "Speed-ramp ko beat se baandho",
+    "layer": "rhythm",
+    "when": "Speed ramps lagate waqt",
+    "action": "Riser ke dauran 30–50% slow-mo rakho aur drop wale frame par 100% par snap karo. Whip-pan ke liye 400% speed sirf 6 frames, beat ke theek center me",
+    "why": "Ramp bina beat ke geli-geli lagti hai; beat par wahi ramp prahar (hit) ban jata hai",
+    "frequency": "Slow-mo 30–50% riser par; whip 400% x 6 frames",
+    "evidence": "🟠",
+    "evidence_note": "KF-07 ramp-sync table",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-062",
+    "name": "Vlog silence cuts me chhote pads (saans) rakho",
+    "layer": "rhythm",
+    "when": "Vlog ke silence cuts par",
+    "action": "Silences kaato lekin cut edges par chhote pads chhodo taaki boli saans leti lage; scene edges par bhi thodi room rakho. Jump cut ko naram karne ke liye halka zoom punch-in kaam aata hai",
+    "why": "Zero-pad cuts vlog ko machine-gun bana dete hain; saans hi asli-boli ka saboot hai",
+    "frequency": "Har silence cut = chhota pad; scene edge = halki room",
+    "evidence": "🟠",
+    "evidence_note": "Note source; purane remainder 0.2–0.45s model se bhavna milta hai, numbers yahan qualitative",
+    "sources": [
+      "notes_appariciojunior_video-editor-skills.md (note)"
+    ],
+    "check": null,
+    "conflict_note": "Purane unified pause model ka remainder 0.2–0.45s is niyam se takrata nahi — ye usi 'saans' ko vlog context me kehta hai, par exact ms nahi deta."
+  },
+  {
+    "id": "D2-063",
+    "name": "CapCut edit ka kram: ratio → structure → timing → transitions → text",
+    "layer": "rhythm",
+    "when": "CapCut mobile edit shuru karte waqt",
+    "action": "Pehle aspect ratio confirm karo. Structural edit (trim/split/delete) speed/timing se pehle. Transitions tab jab boundaries stable ho jayein. Text/stickers timing fix hone ke baad",
+    "why": "Galat kram me har baad wala step pehle wale ko tod deta hai",
+    "frequency": "5 steps, yahi kram",
+    "evidence": "🟠",
+    "evidence_note": "CapCut mobile workflow (openpocket) se",
+    "sources": [
+      "github_pockebot_openpocket.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-064",
+    "name": "AutoCut tabhi kabul jab intent se mile",
+    "layer": "rhythm",
+    "when": "Auto-generated cut ka result dekhte waqt",
+    "action": "AutoCut ka output sirf tab accept karo jab pacing/cuts tumhare intent se milte hon. Na mile to baar-baar regenerate karne ki jagah manual edit par switch karo",
+    "why": "Baar-baar regeneration samay khaata hai aur result waisa ka waisa rehta hai",
+    "frequency": "Intent-match nahi = manual, dobara generate nahi",
+    "evidence": "🟠",
+    "evidence_note": "CapCut mobile workflow",
+    "sources": [
+      "github_pockebot_openpocket.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-065",
+    "name": "Transition mix ka budget (travel/POV)",
+    "layer": "style",
+    "when": "Poore film ke transition mix ki yojna/review par",
+    "action": "Mix rakho: clean cut / action match / direction match / hidden cut = 55–70%; physical bridge ya short dissolve = 15–30%; motion accent = zyada se zyada 18%, kabhi do adjacent nahi, ek family ko dohrane se pehle kam se kam 5 stable boundaries",
+    "why": "Ek hi effect ki 77% repetition (reference film ki asli kamzori) poore film ko template bana deti hai",
+    "frequency": "Motion accent ≤18%; adjacent = 0; family repeat gap ≥5 boundaries",
+    "evidence": "🟡",
+    "evidence_note": "Reference film ke map par 27/35 boundaries ek hi transition the — usi kamzori ke ulta banaya house budget; percentages house hain, kamzori measured hai",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": {
+      "kind": "percent_range",
+      "max_pct": 18,
+      "what": "motion accent transitions ka hissa"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-066",
+    "name": "Motion accent ki 4 shartein, warna downgrade",
+    "layer": "style",
+    "when": "Koi motion transition (whip/zoom/slice type) lagane se pehle",
+    "action": "Accent tabhi jab: dono taraf real movement ho, route-phase ki wajah ho, BGM hit saath ho, aur kam se kam 0.8s ki stable landing footage ho. Ek bhi shart kamzor ho to clean match cut ya dissolve par downgrade karo. Accent ko hero title, subtitle collision ya voice-leak ke upar kabhi mat rakho",
+    "why": "Bina zameen ke accent girta hai — viewer ko effect nahi, jhatka dikhta hai",
+    "frequency": "4/4 shartein; landing ≥0.8s stable",
+    "evidence": "🟠",
+    "evidence_note": "Homeward transition policy",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": {
+      "kind": "duration_range_s",
+      "min_s": 0.8,
+      "what": "motion accent ke baad stable landing"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-067",
+    "name": "Hard-reject transitions ki list",
+    "layer": "style",
+    "when": "Transition chunne ke har pal",
+    "action": "Ye kabhi nahi: bina story-purpose ke random spin, flash, glitch, shake ya template transition; route jump ko sirf title card se dhakna; do static shots ke beech whip. Spin/zoom/flash/slice ko do kamzor unrelated shots chhupane ke liye kabhi nahi",
+    "why": "Chhupane wala effect sabse pehle pakda jata hai",
+    "frequency": "Reject list = 0 exceptions",
+    "evidence": "🟠",
+    "evidence_note": "Transition grammar ke hard rejections",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-068",
+    "name": "Pair grammar: har jodi ka apna transition",
+    "layer": "style",
+    "when": "Har adjacent clip-pair ke liye transition tay karte waqt",
+    "action": "Pair ke hisaab se chuno: action continuity = straight cut; shape/direction/water/road/window/skyline ka mel = match cut; time/weather/day-night/aftertaste = short dissolve; whip/rotation sirf jab dono taraf route-motion energy ho (rotation durlabh); speed-ramp sirf real movement par. Agar pair ke paas physical bridge evidence nahi hai to faisla 'pehle bridge insert karo' hai — effect-ready nahi",
+    "why": "Har jodi ki fiziks alag hai; ek formula sab par lagana hi template-bazi hai",
+    "frequency": "Har pair = 1 grammar-based faisla + fallback",
+    "evidence": "🟠",
+    "evidence_note": "Transition grammar engine",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-069",
+    "name": "Cadence: sajawati runs 4 se kam, koi style raja nahi",
+    "layer": "style",
+    "when": "Poore film ki transition cadence dekhte waqt",
+    "action": "Decorative transitions ki lagatar runs 4 se kam rakho; koi ek transition style poore film par dominate na kare",
+    "why": "Ek style ka raaj = dekhne wale ko pattern dikhne lagta hai, kahani nahi",
+    "frequency": "Decorative run <4; dominance = kisi ek style ka varchasva nahi",
+    "evidence": "🟠",
+    "evidence_note": "Transition cadence/motif niyam",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": {
+      "kind": "count_range",
+      "max": 3,
+      "what": "lagatar decorative transitions ki run"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-070",
+    "name": "Effects ki haden (CapCut director)",
+    "layer": "style",
+    "when": "Kisi bhi social edit me effects lagate waqt",
+    "action": "Haden: transitions zyada se zyada 2 per 10s; video effects 2 per 5s; zooms 1 per 5s; caption changes 1 per 3s; screen par ek saath stickers zyada se zyada 2",
+    "why": "Had bina ke effects ek dusre ko kha jate hain — asar sab ka, yaad koi nahi",
+    "frequency": "2 transitions/10s; 2 effects/5s; 1 zoom/5s; 1 caption change/3s; ≤2 stickers",
+    "evidence": "🟠",
+    "evidence_note": "CapCut director ke maximum effect limits",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": {
+      "kind": "max_per_min",
+      "value": 12,
+      "what": "transitions (2 per 10s)"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-071",
+    "name": "Emphasis zoom: 105–110%, 6–15 frames, ease-out",
+    "layer": "style",
+    "when": "Speaker kisi baat par zor de to",
+    "action": "Zoom 105–110% tak rakho, duration 6–15 frames, easing ease-out. Zoom hamesha bolne wale ke stress point par lage",
+    "why": "Chhota, tez-nikalne wala zoom aankh ko 'sunno!' kehta hai; bada dheema zoom natak ban jata hai",
+    "frequency": "105–110%; 6–15 frames; ease-out",
+    "evidence": "🟠",
+    "evidence_note": "CapCut director ke zoom niyam (hook examples me 108–110% bhi aaya hai)",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": {
+      "kind": "percent_range",
+      "min_pct": 105,
+      "max_pct": 110,
+      "what": "emphasis zoom scale"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-072",
+    "name": "Ek video, zyada se zyada 2 visual styles",
+    "layer": "style",
+    "when": "Style tay karte waqt aur poore edit ke dauran",
+    "action": "Ek video me 2 se zyada visual styles mix mat karo. Transition ek hi family se rakho. Filter/color grade poori film me consistent rakho",
+    "why": "Har scene alag duniya lage to film bikhar jati hai",
+    "frequency": "≤2 styles; 1 transition family; 1 grade",
+    "evidence": "🟠",
+    "evidence_note": "Style consistency niyam",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": {
+      "kind": "count_range",
+      "max": 2,
+      "what": "visual styles per video"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-073",
+    "name": "Cuts > transitions; har cut ka rationale",
+    "layer": "style",
+    "when": "Har edit decision par",
+    "action": "Clean editing ko effects par tarjeeh do — cut invisible hota hai, transition dhyaan kheenchta hai. Har hard cut ke paas rationale ho: nayi beat, angle change, gesture, B-roll, title card ya stylistic hit. Har effect ko apni jagah kamani hogi",
+    "why": "'Bas aise hi' wala cut viewer ko turant mehsoos hota hai",
+    "frequency": "Rationale-less cuts/effects = 0",
+    "evidence": "🟠",
+    "evidence_note": "Do sources ka sangam: director philosophy + production standard",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md",
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-074",
+    "name": "Dikhne wala jump cut dhako; talking-head par video crossfade nahi",
+    "layer": "style",
+    "when": "Same camera + same crop ke dono taraf jump cut dikhe to",
+    "action": "Use B-roll, punch-in ya dissolve se dhako. Talking-head video par crossfade kabhi nahi (ghosting hota hai) — picture par hard cut, aur audio par crossfade / J-cut / L-cut ka naram-pan do",
+    "why": "Ghosting sabse sasta lagta hai; awaaz ka naram-pan cut ko chhupa deta hai",
+    "frequency": "Video crossfade on talking head = 0",
+    "evidence": "🟠",
+    "evidence_note": "Production standard se",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-075",
+    "name": "B-roll grammar: wide → medium → close-up; hold 1.2–3.0s",
+    "layer": "style",
+    "when": "B-roll sequence banate waqt",
+    "action": "Sequence grammar rakho: wide → medium → close-up. Har B-roll shot 1.2–3.0s hold karo (mobile par padhne layak). Cutaway complete semantic beat par rakho — phrase land hone ke baad, saans par, ya naye idea par",
+    "why": "Chhota B-roll jhalak hai, bada B-roll rukawat; kram bina sequence random hai",
+    "frequency": "Hold 1.2–3.0s",
+    "evidence": "🟠",
+    "evidence_note": "Production standard se",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": {
+      "kind": "duration_range_s",
+      "min_s": 1.2,
+      "max_s": 3.0,
+      "what": "B-roll hold"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-076",
+    "name": "Punch-in graphics/captions se pehle",
+    "layer": "style",
+    "when": "Punch-in zoom aur graphics dono ek hi edit me hon to",
+    "action": "Punch-ins graphics/captions compositing se PEHLE lagao — warna text bhi zoom ke saath hilta hai",
+    "why": "Kram ulta ho to saaf dikhne wala technical nishan reh jata hai",
+    "frequency": "Kram fixed: punch-in → graphics/captions",
+    "evidence": "🟠",
+    "evidence_note": "Production standard se",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-077",
+    "name": "Title reveal shant rakho",
+    "layer": "style",
+    "when": "Title/place-card reveals par",
+    "action": "Reveal sirf: short fade, tiny scale settle, ya gentle dissolve. Glitch, random spin, flash, shake, particle, logo-reveal ya generic template-pack effects reject karo. Route transitions understated rakho — map line, ambient street insert, station/vehicle movement, ya colour/motion match cut",
+    "why": "Shor machane wala title saste pack ki pehchan hai",
+    "frequency": "Allowed reveals = 3 qismein hi",
+    "evidence": "🟠",
+    "evidence_note": "Effect-motion plan ke niyam",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-078",
+    "name": "Ending ka ilaaj: music-tail fade, thehra hua aakhir",
+    "layer": "style",
+    "when": "Video ke aakhiri seconds me",
+    "action": "Ending par music-tail fade aur scenic breathing room do; slow zoom-out + fade (~15 frames) se band karo. Abrupt end kabhi nahi",
+    "why": "Achanak khatam hua video adhoora lagta hai, khatam hua nahi",
+    "frequency": "Outro fade ~15 frames; abrupt end = 0",
+    "evidence": "🟠",
+    "evidence_note": "Do sources: travel effect plan + CapCut director ending niyam",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md",
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-079",
+    "name": "Ek hi hero title, asli footage par, 6–12s ke andar",
+    "layer": "style",
+    "when": "Opening title lagate waqt",
+    "action": "Sirf EK saaf hero title, high-recognition asli footage ke upar, pehle 6–12 second ke andar. Dusra title, date, route/debug text ya ghosted duplicate kabhi nahi. Title ko kam se kam 1.2s tak bina competing viewer-text ke rehne do",
+    "why": "Do title = koi title nahi; khaali card par title = footage par bharosa nahi",
+    "frequency": "Titles = 1; window 6–12s; clean hold ≥1.2s",
+    "evidence": "🟠",
+    "evidence_note": "Opening + homeward title contracts",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": {
+      "kind": "duration_range_s",
+      "min_s": 1.2,
+      "what": "hero title ka clean (bina competing text) hold"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-080",
+    "name": "Cover/hero-title formula: 1–5 shabd, pehchan wali background",
+    "layer": "style",
+    "when": "Cover/hero title design karte waqt",
+    "action": "High-recognition scenic background + oversized destination title (1–5 shabd) + neeche chhota designed subtitle + high-contrast (yellow/orange/white) type. Route/date/project clutter kabhi nahi",
+    "why": "Cover ka kaam ek nazar me jagah bechna hai, itinerary batana nahi",
+    "frequency": "Title 1–5 shabd",
+    "evidence": "🟠",
+    "evidence_note": "Ek reference channel (Parallel World) ke cover formula se",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": {
+      "kind": "count_range",
+      "min": 1,
+      "max": 5,
+      "what": "cover title ke shabd"
+    },
+    "conflict_note": "TAKRAAV: purana thumbnail niyam target ≤3 shabd, hard cap 4 kehta hai. Ye source 1–5 shabd deta hai. Cover (video hero title) aur thumbnail ko alag maanna sulah ho sakti hai; merge par user/engine faisla kare."
+  },
+  {
+    "id": "D2-081",
+    "name": "Dialogue chain ka kram: EQ → de-hum → gate → NR → level → duck",
+    "layer": "style",
+    "when": "Dialogue/podcast audio saaf karte waqt",
+    "action": "Chain is kram me chalao: EQ → de-hummer → gate → noise reduction → level → ducking. Frequency ki problems dynamics se pehle; noise reduction destructive hai isliye der se. Manual NR ka dry/wet default 80% rakho. Hot external mic (0 dBFS ke paas) ho to use source rakho aur processed duplicate conservative limiting ke saath banao",
+    "why": "Galat kram me har step pichhle step ki galti ko bada karta hai",
+    "frequency": "6 steps, yahi kram; NR dry/wet ≈80%",
+    "evidence": "🟠",
+    "evidence_note": "Resolve audio-cleanup (podcast) workflow",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-082",
+    "name": "Dialogue EQ/de-hum/gate ke starting numbers",
+    "layer": "style",
+    "when": "Dialogue cleanup ki shuruaat par",
+    "action": "Har dialogue clip par 80 Hz se neeche kaato (shelf jo 80–100 Hz tak −70 dB chhoo jaye). De-hummer 50/60 Hz par, amount −20 se −30 dB. Gate ke starting values: threshold −35 dB, range −18 dB, attack 1.4 ms, hold 0, release 93 ms — gate sirf sentences ke beech kaam kare",
+    "why": "Neeche ka shor (rumble/hum) har dialogue ki saafai kha jata hai; ye numbers surakshit shuruaat hain",
+    "frequency": "HPF <80 Hz; de-hum −20..−30 dB; gate −35/−18 dB, 1.4 ms / 93 ms",
+    "evidence": "🟠",
+    "evidence_note": "Usi cleanup workflow ke diye starting values",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": {
+      "kind": "db_range",
+      "min_db": -30,
+      "max_db": -20,
+      "what": "de-hum amount"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-083",
+    "name": "Ducker: shuruaat 2.7 dB, 5 dB se zyada = amateur",
+    "layer": "style",
+    "when": "Music ko voice ke neeche duck karte waqt (dialogue chain)",
+    "action": "Ducker 2.7 dB se shuru karo. 5 dB se zyada ducking amateurish lagti hai — audience ko dip sunai dene lagta hai",
+    "why": "Ducking mehsoos nahi honi chahiye, sirf voice saaf honi chahiye",
+    "frequency": "Start 2.7 dB; hard had 5 dB",
+    "evidence": "🟠",
+    "evidence_note": "Podcast cleanup workflow",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": {
+      "kind": "db_range",
+      "max_db": 5,
+      "what": "ducker depth (dialogue chain)"
+    },
+    "conflict_note": "TAKRAAV: purana ORDER default 'music voice se 18–25 dB neeche' bed-LEVEL ki baat hai; ye 2.7 dB DUCKER ki depth hai (kitna ghatao) — donon alag map hain, takraav asal me map ka hai. Lekin isi cluster ka KF-07 duck −12 dB (D2 style rule 'Narration duck landmarks') is 2.7–5 dB se sach me takrata hai — context farq: ye podcast dialogue-chain ka ducker hai, woh CapCut music-bed duck hai. Merge par profile-wise chuna jaye."
+  },
+  {
+    "id": "D2-084",
+    "name": "Podcast loudness verify: −16..−20 LUFS, peaks −9..−3 dBFS",
+    "layer": "style",
+    "when": "Podcast/dialogue delivery se pehle verify karte waqt",
+    "action": "Integrated loudness −16 se −20 LUFS ke beech rakho; voice peaks −9 se −3 dBFS; clip kabhi nahi",
+    "why": "Podcast sunne wala lamba sunta hai — thakane wali loudness ya clipping turant chhod deta hai",
+    "frequency": "−16..−20 LUFS; peaks −9..−3 dBFS; clips = 0",
+    "evidence": "🟠",
+    "evidence_note": "Podcast verification checklist",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": {
+      "kind": "lufs_target",
+      "min_lufs": -20,
+      "max_lufs": -16,
+      "profile": "podcast dialogue"
+    },
+    "conflict_note": "Note: purana podcast profile −16 LUFS deta hai. Ye range −16..−20 hai — dialogue-only podcast ke liye neeche tak ijazat deta hai. Takraav halka; profile me range likh kar sulajh sakta hai."
+  },
+  {
+    "id": "D2-085",
+    "name": "Short-form dialogue: −14..−16 LUFS, true peak <−1 dBTP",
+    "layer": "style",
+    "when": "Talking-head short-form ke final mix par",
+    "action": "Dialogue target −14 se −16 LUFS integrated rakho; true peak −1 dBTP se neeche. Music hamesha ducked/conservative — fixed loud bed kabhi nahi; dialogue edits par 2–4 frame constant-power audio fades rakho",
+    "why": "Platform normalization is range ko inaam deta hai; zyada loud = neeche daba diya jayega",
+    "frequency": "−14..−16 LUFS; TP <−1 dBTP",
+    "evidence": "🟠",
+    "evidence_note": "Social-editor ke audio targets (usi source ke QA gate me Reels −15..−13 LUFS bhi aaya hai — range overlap hai, platform profile se final ho)",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": {
+      "kind": "lufs_target",
+      "min_lufs": -16,
+      "max_lufs": -14,
+      "profile": "talking-head short-form"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-086",
+    "name": "Narration duck landmarks: −12 dB, 10f/15f fades",
+    "layer": "style",
+    "when": "Narration ke aane-jaane par music automation me",
+    "action": "Narration shuru ho to music −12 dB tak duck karo (~10 frame fade me); narration khatam ho to 0 dB par wapas lao (~15 frame fade me). Documentary me music hamesha speech ke neeche −12 dB. End card par music 2s me −inf tak fade karo",
+    "why": "Achanak ghata-badha music dhyaan khinchta hai; landmark fades use invisible karte hain",
+    "frequency": "Duck −12 dB; in-fade ~10f; out-fade ~15f; end fade 2s",
+    "evidence": "🟠",
+    "evidence_note": "KF-07 volume automation landmarks",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": null,
+    "conflict_note": "TAKRAAV: purana default bed music ko voice se 18–25 dB neeche rakhta hai; −12 dB usse kam gehra hai. Aur ChaiWithJai ke ducker (2.7 dB start, >5 dB amateur) se bhi takrata hai. Teeno alag contexts ke numbers hain (bed level / CapCut duck / podcast ducker) — merge par har profile ka ek number tay karna hoga."
+  },
+  {
+    "id": "D2-087",
+    "name": "Music bed narration ke neeche: −24..−18 LUFS relative",
+    "layer": "style",
+    "when": "Travel film me voiceover ke neeche music bed rakhte waqt",
+    "action": "Music ko narration ke neeche lagbhag −24 se −18 LUFS relative bed par rakho; clipping kabhi nahi; chapter badlav ke aas-paas chhote fades do",
+    "why": "Bed mehsoos ho, sune nahi — voice hamesha aage",
+    "frequency": "Bed −24..−18 LUFS relative",
+    "evidence": "🟠",
+    "evidence_note": "Travel-studio audio QA target",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": {
+      "kind": "db_range",
+      "min_db": -24,
+      "max_db": -18,
+      "what": "music bed narration ke relative (LUFS)"
+    },
+    "conflict_note": "Purane 18–25 dB under-voice default ke qareeb hai, lekin ye LUFS-relative me mapta hai (dB me nahi) — map farq note karo. Isi cluster ke −12 dB duck (KF-07) se takraav upar wale rule me darj hai."
+  },
+  {
+    "id": "D2-088",
+    "name": "SFX volume ki seedhi (hierarchy)",
+    "layer": "style",
+    "when": "SFX aur music ka balance set karte waqt",
+    "action": "Seedhi rakho (music = 0 dB reference): voice/dialogue music se +3..+6 dB upar; primary SFX 0..+3 dB upar; ambient bed −12..−18 dB neeche; UI sounds (click/pop/ding) −6..−3 dB neeche",
+    "why": "Har layer ki apni aukaat fix ho to mix kabhi keechad (mud) nahi banta",
+    "frequency": "Voice +3..+6; SFX 0..+3; ambient −12..−18; UI −6..−3 (music ke relative dB)",
+    "evidence": "🟠",
+    "evidence_note": "KF-07 SFX layering rules",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": {
+      "kind": "db_range",
+      "min_db": 3,
+      "max_db": 6,
+      "what": "voice music se upar (dB)"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-089",
+    "name": "SFX ki haden: 3 stack, duration-match, comedy sirf meme/viral",
+    "layer": "style",
+    "when": "SFX lagate waqt",
+    "action": "Ek frame par 3 se zyada SFX stack mat karo (primary + tail + ambient hi kaafi). SFX ki duration transition ki duration se match kare — peak transition ke beech me, tail aakhir me. Comedy SFX (vine boom, fail horn, airhorn) sirf Meme/Viral modes me; Cinematic/Documentary/Aesthetic/Minimal me inki jagah zero hai",
+    "why": "Teen se zyada awaazein ek saath = shor; galat mode ka comedy SFX poore mood ko maar deta hai",
+    "frequency": "Stack ≤3; comedy SFX sirf 2 modes me",
+    "evidence": "🟠",
+    "evidence_note": "KF-07 SFX rules",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": {
+      "kind": "count_range",
+      "max": 3,
+      "what": "ek frame par stacked SFX"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-090",
+    "name": "Audio edges hamesha fade; hard start/stop kabhi nahi",
+    "layer": "style",
+    "when": "Har audio clip ke sire par",
+    "action": "Har audio clip ke edges par fade lagao — kabhi hard start/stop nahi. Dissolve/fade par SFX ki jagah kuch nahi ya halka swell; music use carry karta hai",
+    "why": "Hard audio edges click/pop dete hain jo sabse saste lagte hain",
+    "frequency": "Bina-fade audio edges = 0",
+    "evidence": "🟠",
+    "evidence_note": "KF-07 audio workflow + director niyam",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-091",
+    "name": "SFX density mode ke hisaab se; foley sirf motivated",
+    "layer": "style",
+    "when": "Sound design ki ghanata (density) tay karte waqt",
+    "action": "Density mode se lo: Viral — SFX har 1–2s; Cinematic — har 5–15s; Documentary — sirf functional; Meme — maximum. Foley sirf tab jab motivated ho — random SFX khaamoshi se bhi bura hai",
+    "why": "Har mode ki apni awaaz ki bhasha hai; ek density sab par = koi pehchan nahi",
+    "frequency": "Viral 1–2s; Cinematic 5–15s; Documentary functional only",
+    "evidence": "🟠",
+    "evidence_note": "KF-07 mode blueprints + production standard ka foley niyam",
+    "sources": [
+      "github_tashisleepy_capcut-ai-director.md",
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-092",
+    "name": "Scenic audio policy: loud BGM sirf muted picture par",
+    "layer": "style",
+    "when": "Scenic/BGM-led windows ki audio policy me",
+    "action": "Loud BGM sirf muted picture ke upar chalao. Jahan audible speech hai (face-to-camera ya transcript-backed) woh hamesha sunai de. Frustration/conflict/sensitive/dry windows par BGM forbidden rakho. TTS sirf muted-picture windows par chalao",
+    "why": "Jazbaati pal par bajta khush music ya bolne par chadha BGM — dono film ko jhootha bana dete hain",
+    "frequency": "Speech windows me BGM-over-voice = 0; sensitive windows me BGM = 0",
+    "evidence": "🟠",
+    "evidence_note": "House audio-scene policy",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-093",
+    "name": "BGM asli named music ho; hum/tone/placeholder = block",
+    "layer": "style",
+    "when": "BGM select/final karne se pehle",
+    "action": "Final bed hamesha asal, named aur traceable music ho — sine tone, hum, buzz, silence ya procedural placeholder kabhi final nahi. Har asset ki license ledger me verify ho aur Content-ID risk check ho; bina verify kiye 'usable' kabhi mat kaho",
+    "why": "Tone-bed technical pass ho sakta hai lekin film ko marr deta hai; license bina ka asset baad me claim laata hai",
+    "frequency": "Placeholder beds = 0; har asset = verified license row",
+    "evidence": "🟠",
+    "evidence_note": "BGM musicality + asset ledger contracts",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-094",
+    "name": "VO finish master peak −6 dBFS",
+    "layer": "style",
+    "when": "Voiceover finish/master karte waqt",
+    "action": "VO finish master ka peak −6 dBFS rakho",
+    "why": "Neeche rakha peak aage ke processing ke liye headroom deta hai",
+    "frequency": "Peak = −6 dBFS",
+    "evidence": "🟠",
+    "evidence_note": "Note source ke VO-finish preset se",
+    "sources": [
+      "notes_AdamGarceau_resolve-toolkit.md (note)"
+    ],
+    "check": null,
+    "conflict_note": "TAKRAAV (map ka): purane targets LUFS-integrated me hain (−14/−16 LUFS). Ye −6 dBFS PEAK hai, integrated loudness nahi — dono ek saath lagu nahi hote. Ye VO production-stage ka number hai, delivery loudness purane LUFS rules se hi tay ho."
+  },
+  {
+    "id": "D2-095",
+    "name": "Quiet sections ko haath se +3..+6 dB boost",
+    "layer": "style",
+    "when": "Cleanup chain ke baad bache dhime hisso par",
+    "action": "Jo hisse gate/NR ke baad bhi dhime reh jayein, unhe haath se +3..+6 dB boost karo",
+    "why": "Auto chain ausat ko theek karta hai; sabse dhime pal haath se hi uthte hain",
+    "frequency": "Boost +3..+6 dB sirf quiet sections par",
+    "evidence": "🟠",
+    "evidence_note": "Podcast cleanup workflow",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": {
+      "kind": "db_range",
+      "min_db": 3,
+      "max_db": 6,
+      "what": "quiet section manual boost"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-096",
+    "name": "Rang ka kram: normalize pehle, creative grade baad me",
+    "layer": "style",
+    "when": "Webcam/talking-head colour grade karte waqt",
+    "action": "Waveform scope padho, laptop screen ko nahi. Node kram: (1) Normalize — blacks ~5–10% (1023 scale par ~64), highlights ~768, contrast 1.1–1.2, pivot 0.3; (2) Balance — neutrals par RGB overlap; (3) Contrast; (4) Skin — HSL qualifier + power window. Creative grade hamesha normalize ke BAAD",
+    "why": "Galat base par bani grade har nayi roshni me toot jati hai",
+    "frequency": "4 nodes, yahi kram",
+    "evidence": "🟠",
+    "evidence_note": "Resolve color-grade (webcam) workflow",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-097",
+    "name": "Skin saturation ~60, 70+ kabhi nahi",
+    "layer": "style",
+    "when": "Skin tone theek karte waqt",
+    "action": "Skin saturation ~60 ke aas-paas rakho — 70 ya usse upar kabhi nahi. Skin ko warm gain do aur qualifier + power window se alag sambhalo",
+    "why": "70+ saturation par chehra narangi-pakoda ho jata hai",
+    "frequency": "Skin sat ≈60; >70 = block",
+    "evidence": "🟠",
+    "evidence_note": "Usi colour workflow se",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": {
+      "kind": "percent_range",
+      "target": 60,
+      "max_pct": 70,
+      "what": "skin saturation"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-098",
+    "name": "Grade ko PowerGrade bana kar rakho; har roshni ka alag grade",
+    "layer": "style",
+    "when": "Grade mukammal hote hi",
+    "action": "Final grade ko PowerGrade/preset bana kar save karo taaki reuse ho. Har nayi lighting setup ke liye phir se grade karo — purana grade nayi roshni par zabardasti mat lagao",
+    "why": "Roshni badli to rang ke sawaal badle; copy-paste grade aadhi jagah galat hota hai",
+    "frequency": "Har setup = apna grade; save hamesha",
+    "evidence": "🟠",
+    "evidence_note": "Colour workflow",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-099",
+    "name": "Audio track layout: A1–A4 aur stack ka kram",
+    "layer": "style",
+    "when": "Multicam/podcast ya bade edit ki timeline sajate waqt",
+    "action": "Tracks aise rakho: A1 selected dialogue, A2 processed dialogue, A3 music/ambience, A4 SFX/bumpers. Aam stack ka kram neeche se upar: ambient/room tone → music → SFX → voice sabse upar",
+    "why": "Bikhre tracks par mix kabhi dobara nahi milta; sajawat hi aadha mix hai",
+    "frequency": "4 tracks fixed bhumika; stack kram fixed",
+    "evidence": "🟠",
+    "evidence_note": "Do sources: podcast track layout + KF-07 stacking order",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md",
+      "github_tashisleepy_capcut-ai-director.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-100",
+    "name": "Delivery verify bahari meter se; platform exports tay",
+    "layer": "style",
+    "when": "Final export aur delivery check par",
+    "action": "Loudness ko bahari meter se verify karo: YouTube −14 ±1 LUFS. Platform exports: YouTube 1920x1080 −14 LUFS; LinkedIn 1080x1080 −16 LUFS; vertical 1080x1920 −16 LUFS. Manual position keyframes ki jagah AI Smart Reframe ko tarjeeh do (vertical ke liye)",
+    "why": "Editor ke andar ka meter jhooth bol sakta hai; bahari map hi saboot hai",
+    "frequency": "YT −14 ±1 LUFS verified",
+    "evidence": "🟡",
+    "evidence_note": "YouTube ka −14 LUFS platform normalization spec maana gaya number hai; baaki platform numbers source ke house targets hain",
+    "sources": [
+      "github_ChaiWithJai_davinci-resolve-claude-skills.md"
+    ],
+    "check": {
+      "kind": "lufs_target",
+      "value": -14,
+      "tolerance": 1,
+      "platform": "YouTube"
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-101",
+    "name": "Share se pehle silent-track check",
+    "layer": "style",
+    "when": "Koi bhi video share/export se pehle",
+    "action": "Audio ka mean_volume check karo: −80 dB se neeche matlab track silent/muted hai — share mat karo, pehle theek karo",
+    "why": "Muted track wala export sabse sharminda karne wali galti hai aur sabse aasan pakdi jati hai",
+    "frequency": "Mean volume ≤−80 dB = block",
+    "evidence": "🟠",
+    "evidence_note": "Screencast workflow ki pre-share check",
+    "sources": [
+      "github_matthull_my-skills.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-102",
+    "name": "Export: quality rakho, file size par nazar (25 GB trap)",
+    "layer": "style",
+    "when": "Final export settings tay karte waqt",
+    "action": "Quality barkarar rakho lekin file size hamesha dekho — bina dekhe export 25 GB jaise trap me phans sakta hai",
+    "why": "Upload/share par size hi sabse pehli rukawat banta hai",
+    "frequency": "Har export = size check ke saath",
+    "evidence": "🟠",
+    "evidence_note": "Note source",
+    "sources": [
+      "notes_appariciojunior_video-editor-skills.md (note)"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-103",
+    "name": "Podcast punch-in active speaker par switch kare",
+    "layer": "style",
+    "when": "Multicam podcast edit me",
+    "action": "Punch-in/camera switch hamesha us speaker par ho jo bol raha hai (pitch-based speaker pehchan se madad lo)",
+    "why": "Galat chehre par kata hua jawaab viewer ko gumrah karta hai",
+    "frequency": "Switch = active speaker par hi",
+    "evidence": "🟠",
+    "evidence_note": "Note source",
+    "sources": [
+      "notes_AdamGarceau_resolve-toolkit.md (note)"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-104",
+    "name": "Filters/retouch mamuli (moderate) rakho",
+    "layer": "style",
+    "when": "CapCut mobile me filters/effects/retouch lagate waqt",
+    "action": "Filters aur effects conservative rakho; portrait retouch moderate aur natural rakho — chehra plastic na lage",
+    "why": "Zyada retouch pehle frame me pakda jata hai aur bharosa todta hai",
+    "frequency": "Retouch = moderate/natural hamesha",
+    "evidence": "🟠",
+    "evidence_note": "CapCut mobile workflow",
+    "sources": [
+      "github_pockebot_openpocket.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-105",
+    "name": "Motion overlays bole gaye shabdon ke saath timed",
+    "layer": "style",
+    "when": "Motion graphics/overlays lagate waqt",
+    "action": "Overlays ko un shabdon ke saath time karo jinke baare me woh hain. Face aur caption wale hisse hamesha clear rakho",
+    "why": "Der se aaya overlay purani khabar hai; chehre par aaya overlay rukawat",
+    "frequency": "Overlay timing = shabd ke saath; face/caption zone clear",
+    "evidence": "🟠",
+    "evidence_note": "Note source",
+    "sources": [
+      "notes_appariciojunior_video-editor-skills.md (note)"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "D2-106",
+    "name": "Travel delivery master: 4K 60fps, ≥60 Mbps",
+    "layer": "style",
+    "when": "Travel footage (DJI/action/phone) ki master delivery par",
+    "action": "Master target rakho: 4K, 59.94/60fps, kam se kam 60 Mbps — jab source footage is kabil ho",
+    "why": "Neeche ka master baad me har platform par kamzor padta hai",
+    "frequency": "4K 60fps ≥60 Mbps (source allow kare to)",
+    "evidence": "🟠",
+    "evidence_note": "Travel-studio ka Definition of Done",
+    "sources": [
+      "github_junwen853_travel-video-studio-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  }
+]

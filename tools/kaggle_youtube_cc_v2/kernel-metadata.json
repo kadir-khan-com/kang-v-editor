@@ -1,0 +1,15 @@
+{
+ "id": "ironindiarat/kang-youtube-cc",
+ "title": "kang-youtube-cc",
+ "code_file": "youtube_cc_run.py",
+ "language": "python",
+ "kernel_type": "script",
+ "is_private": true,
+ "enable_gpu": false,
+ "enable_internet": true,
+ "dataset_sources": [
+  "ironindiarat/kang-youtube-cc-input"
+ ],
+ "competition_sources": [],
+ "kernel_sources": []
+}

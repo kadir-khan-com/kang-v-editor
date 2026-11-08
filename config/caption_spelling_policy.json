@@ -1,0 +1,18 @@
+{
+ "_note": "Editorial caption spelling policy for this video (user, 2026-10-30). NOT a claim that every occurrence was listened to. Rows filled from it carry decided_by=editorial-policy.",
+ "video": "dwarika",
+ "decided": "2026-10-30",
+ "by": "project owner (user)",
+ "replace": {
+  "बेट द्वारका": "बेट द्वारिका",
+  "द्वारकाधीश": "द्वारिकाधीश",
+  "द्वारका": "द्वारिका"
+ },
+ "keep": [
+  "रुक्मिणी"
+ ],
+ "never": {
+  "रुक्मिणी": "रुक्मणी"
+ },
+ "island": "बेट द्वारिका (user 2026-10-30 20:37). बेड/भेड़/भेट द्वारका = mishearings of this name."
+}

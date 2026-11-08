@@ -1,0 +1,13 @@
+{
+ "id": "ironindiarat/kang-reels-pycaps",
+ "title": "kang-reels-pycaps",
+ "code_file": "reels_pycaps_run.py",
+ "language": "python",
+ "kernel_type": "script",
+ "is_private": true,
+ "enable_gpu": false,
+ "enable_internet": true,
+ "dataset_sources": ["ironindiarat/kang-reels-input"],
+ "competition_sources": [],
+ "kernel_sources": []
+}

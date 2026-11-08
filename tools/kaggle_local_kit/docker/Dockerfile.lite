@@ -1,0 +1,15 @@
+# Kaggle-jaisa LITE image (chhota, jaldi build). Kaggle ke exact image ke liye README me "EXACT mode" dekho.
+FROM python:3.11-slim-bookworm
+ENV DEBIAN_FRONTEND=noninteractive PYTHONUNBUFFERED=1 PYTHONUTF8=1 \
+    KAGGLE_KERNEL_RUN_TYPE=Interactive KAGGLE_URL_BASE=https://www.kaggle.com
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      ffmpeg fonts-noto-core fonts-noto-extra fontconfig libsndfile1 libgl1 libglib2.0-0 tesseract-ocr tesseract-ocr-hin \
+    && fc-cache -f && rm -rf /var/lib/apt/lists/*
+COPY requirements-kaggle.txt /tmp/requirements-kaggle.txt
+RUN pip install --no-cache-dir -r /tmp/requirements-kaggle.txt
+COPY kaggle_preflight.py /kit/kaggle_preflight.py
+COPY docker/entrypoint.sh /kit/entrypoint.sh
+RUN chmod +x /kit/entrypoint.sh && mkdir -p /kaggle/input /kaggle/working
+WORKDIR /kaggle/working
+ENTRYPOINT ["/kit/entrypoint.sh"]
+CMD ["python", "test_offline.py"]

@@ -1,0 +1,1 @@
+{"id": "ironindiarat/kang-gpu-full-test", "title": "kang-gpu-full-test", "code_file": "kang_gpu_run.py", "language": "python", "kernel_type": "script", "is_private": true, "enable_gpu": true, "enable_internet": true, "dataset_sources": ["ironindiarat/kang-project"], "competition_sources": [], "kernel_sources": ["ironindiarat/kang-voter-models"], "machine_shape": "NvidiaTeslaT4"}

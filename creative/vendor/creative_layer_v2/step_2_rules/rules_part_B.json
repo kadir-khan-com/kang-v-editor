@@ -1,0 +1,1311 @@
+[
+  {
+    "id": "B-001",
+    "name": "Packaging pehle, production baad me",
+    "layer": "kahani",
+    "when": "Har naye video idea par, script/shoot se pehle",
+    "action": "Title aur thumbnail pehle design karo — ye idea ka test hai; agar compelling package na bane to idea kamzor hai, pehle wahi fix karo",
+    "why": "Jo video click hi nahi hoga uski retention curve hi nahi banti; kamzori sabse saste stage par pakdi jati hai",
+    "frequency": "Har video par 1 baar, pre-production me; Henterprise: har idea ke 3 packaging options bana kar best chuno",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_classicchins_compounding-marketing.md",
+      "github_humbertobellor_henterprise.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-002",
+    "name": "Title/thumbnail ka vaada video me sach me pura karo",
+    "layer": "kahani",
+    "when": "Opening aur payoff planning ke time",
+    "action": "Thumbnail/title ne jo promise kiya hai use video me literally pay karo; curiosity sirf wahan rakho jahan video use sach me resolve kare",
+    "why": "Unpaid promise turant drop karata hai aur unresolved curiosity viewer ko next time click na karne ki training deti hai",
+    "frequency": "Har video, har vaade par; long-form hook payoff ≤15s (shorts ≤2.5s) — dekho B-006/B-017",
+    "evidence": "🟡",
+    "evidence_note": "measured reference corpus (5 top explainers, 246k–1M views) se nikale gaye numbers + producer practice",
+    "sources": [
+      "github_Francesco149_slopstudio_retention-editing.md",
+      "github_humbertobellor_henterprise.md",
+      "github_classicchins_compounding-marketing.md"
+    ],
+    "check": {
+      "kind": "hook_within_s",
+      "value": 15
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-003",
+    "name": "Hook ke 3 variants — category mix karke",
+    "layer": "kahani",
+    "when": "Short-form script ke liye hook chunne se pehle",
+    "action": "100 hook formulas ke 10 categories (appendix) se 3 candidate hooks banao: 1 stop-scroll category (negation / specificity / question) + 1 retention category (story / confession / emotional) + 1 free pick; har ek ke saath category label aur 'best for' note do",
+    "why": "Pehla hook thumb rokta hai, dusra viewer ko 3 second ke aage rakhta hai; alag categories ke hooks aam taur par sabse strong hote hain",
+    "frequency": "Har script par 3 variants; A/B test ya strongest fit ke liye",
+    "evidence": "🟠",
+    "evidence_note": "curated hook library / creator practice — creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_rediumvex_viral-hooks-skill.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-004",
+    "name": "Filled hook 12 shabdon se chhota rakho",
+    "layer": "kahani",
+    "when": "Hook variant ko final karte waqt",
+    "action": "Bracket bhara hua hook <12 words me rakho aur platform ke hisaab se native banao (TikTok/IG casual, LinkedIn punchy-declarative, YouTube title-style search-friendly, X short-contrarian)",
+    "why": "Lamba hook pehle seconds me samajh nahi aata; chhota hook turant land karta hai",
+    "frequency": "Har hook, har baar",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_rediumvex_viral-hooks-skill.md"
+    ],
+    "check": {
+      "kind": "max_words_exclusive",
+      "what": "filled_hook",
+      "value": 12
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-005",
+    "name": "First-5-seconds checklist pass karo",
+    "layer": "kahani",
+    "when": "Har video ke opening par, publish se pehle",
+    "action": "Check: visual interesting/unexpected ≤1s; hook line boli gayi ≤3s; viewer ko milega kya, iska promise ≤5s tak implicit saaf; logo cold-open NAHI; 'Hi, I'm X' preamble NAHI — punch se shuru karo",
+    "why": "Source ke data ke hisaab se aadhe viewers pehle 10 seconds me drop hote hain; hook hi tay karta hai ki baaki video exist karega ya nahi",
+    "frequency": "Har video ke pehle 5 seconds par, bina exception",
+    "evidence": "🟡",
+    "evidence_note": "Wistia/Vidyard platform data par based skill (aadhe viewers pehle 10s me drop)",
+    "sources": [
+      "github_classicchins_compounding-marketing.md",
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": {
+      "kind": "hook_within_s",
+      "value": 5
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-006",
+    "name": "Cold open = hook, branding baad me",
+    "layer": "kahani",
+    "when": "Long-form (10–55 min) video ki shuruaat par",
+    "action": "Mid-content se kholo (threat/countdown, absurd exact number, universal observation, ya question ladder); 'hi, I'm X' 0:15–1:00 par rakho. Pehle 30s measured band: 65–98 words, 2–7 cuts, zero throat-clearing",
+    "why": "Measured corpus me top explainers aise hi khulte hain; branding pehle rakhne se promise late hota hai aur drop badhta hai",
+    "frequency": "Har long-form opening; first-30s words 65–98, cuts 2–7",
+    "evidence": "🟡",
+    "evidence_note": "measured reference corpus (5 top explainers, 246k–1M views) se nikale gaye numbers",
+    "sources": [
+      "github_Francesco149_slopstudio_retention-editing.md"
+    ],
+    "check": {
+      "kind": "count_range",
+      "what": "words_first_30s",
+      "min": 65,
+      "max": 98
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-007",
+    "name": "Promise line jaldi bolo, payoff par verbatim dohrayo",
+    "layer": "kahani",
+    "when": "Long-form script likhne/review karte waqt",
+    "action": "Payoff line ('X because Y') shuru me state karo, video me use earn karo, aur end ke paas use verbatim restate karo",
+    "why": "Viewer ko pehle se pata hota hai ki wo kis cheez ka intezaar kar raha hai; verbatim callback payoff ko band (close) kar deta hai",
+    "frequency": "Har long-form video me 1 promise line; checklist: stated early AND restated at payoff",
+    "evidence": "🟡",
+    "evidence_note": "measured reference corpus (5 top explainers, 246k–1M views) se nikale gaye numbers",
+    "sources": [
+      "github_Francesco149_slopstudio_retention-editing.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-008",
+    "name": "Har waqt ≥1 open loop zinda rakho",
+    "layer": "kahani",
+    "when": "Poore long-form video ke structure me",
+    "action": "Kam se kam ek open loop hamesha live rakho; loop 45 minute tak bhi chal sakta hai agar beech me re-tease ho aur payoff tease se ZYADA detail ke saath mile. Ek measured refrain (same benchmark artifact, har section naya number) permanently open loop ka kaam karta hai",
+    "why": "Khula sawaal viewer ko band hone tak rokta hai; loop band hote hi nikalne ki wajah ban jati hai",
+    "frequency": "Har pal ≥1 loop live; payoff hamesha tease se bada",
+    "evidence": "🟡",
+    "evidence_note": "measured reference corpus (5 top explainers, 246k–1M views) se nikale gaye numbers",
+    "sources": [
+      "github_Francesco149_slopstudio_retention-editing.md"
+    ],
+    "check": {
+      "kind": "min_open_loops_alive",
+      "value": 1
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-009",
+    "name": "Payoff ko aakhri 15–25% me rakho",
+    "layer": "kahani",
+    "when": "Long-form structure plan karte waqt",
+    "action": "Sabse bada payoff video ke last 15–25% hisse me rakho; beech wale loops uski taraf build karein, use jaldi close mat karo",
+    "why": "Jaldi mila payoff baaki video ko dead weight bana deta hai (checklist me yahi violation flag hota hai)",
+    "frequency": "Har long-form video ka main payoff 75–85% position ke aas-paas",
+    "evidence": "🟡",
+    "evidence_note": "measured reference corpus (5 top explainers, 246k–1M views) se nikale gaye numbers",
+    "sources": [
+      "github_Francesco149_slopstudio_retention-editing.md"
+    ],
+    "check": {
+      "kind": "percent_range",
+      "what": "payoff_position_percent",
+      "min": 75,
+      "max": 85
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-010",
+    "name": "Callback close + tez exit",
+    "layer": "kahani",
+    "when": "Long-form video ke end par",
+    "action": "Cold open ko echo karo (phrase/location/metaphor), CTA ko theme me buno (alag se ghusao mat), aur payoff ke ~30s ke andar video khatam kar do; bloopers end card ke baad",
+    "why": "Callback kahani ko gol band karta hai; payoff ke baad lamba kheenchna end drop-off lata hai",
+    "frequency": "Har long-form end; exit payoff ke ~30s ke andar",
+    "evidence": "🟡",
+    "evidence_note": "measured reference corpus (5 top explainers, 246k–1M views) se nikale gaye numbers",
+    "sources": [
+      "github_Francesco149_slopstudio_retention-editing.md"
+    ],
+    "check": {
+      "kind": "max_delay_s",
+      "what": "exit_after_payoff",
+      "value": 30
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-011",
+    "name": "Sponsor/tangent ko container me rakho (20–33%)",
+    "layer": "kahani",
+    "when": "Long-form me sponsor ya tangent aane par",
+    "action": "Sponsor/tangent ko visually distinct container me rakho, joke segue se andar jao aur hard re-entry se bahar aao; placement runtime ke 20–33% hisse me",
+    "why": "Measured corpus me containers aise hi chalte hain — viewer ko pata chalta hai ye alag hissa hai, aur re-entry kahani ko phir pakad leti hai",
+    "frequency": "Har sponsor/tangent par; position 20–33% of runtime",
+    "evidence": "🟡",
+    "evidence_note": "measured reference corpus (5 top explainers, 246k–1M views) se nikale gaye numbers",
+    "sources": [
+      "github_Francesco149_slopstudio_retention-editing.md"
+    ],
+    "check": {
+      "kind": "percent_range",
+      "what": "sponsor_container_position_percent",
+      "min": 20,
+      "max": 33
+    },
+    "conflict_note": "Henterprise ka B-012 kehta hai sponsor read pehle payoff ke BAAD hi aaye. Agar pehla payoff 33% ke baad hai to dono rules ek saath satisfy mushkil honge — Step 3 (Order) me iska faisla hoga."
+  },
+  {
+    "id": "B-012",
+    "name": "Sponsor read pehle payoff ke baad hi",
+    "layer": "kahani",
+    "when": "Long-form me sponsor read place karte waqt",
+    "action": "Sponsor read ko hamesha pehle payoff ke baad rakho, kabhi usse pehle nahi",
+    "why": "Vaada pura hone se pehle ad aana unpaid-promise jaisa lagta hai aur cliff bana sakta hai",
+    "frequency": "Har sponsor read, bina exception",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_humbertobellor_henterprise.md"
+    ],
+    "check": null,
+    "conflict_note": "Slopstudio ka B-011 sponsor ko 20–33% band me rakhta hai (measured). Agar pehla payoff der se hai to dono takra sakte hain — Step 3 (Order) decide karega."
+  },
+  {
+    "id": "B-013",
+    "name": "Har seam par aage dekhne ki wajah do",
+    "layer": "kahani",
+    "when": "Long-form ke har section transition par",
+    "action": "Har transition/seam par explicit reason to continue rakho — ek open question, ek promised payoff, ya ek stated next step",
+    "why": "Retention sections ke beech me nahi, seams (jod) par marti hai; bina wajah ke transition viewer ke liye exit point hai",
+    "frequency": "Har transition par, bina exception",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_humbertobellor_henterprise.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-014",
+    "name": "Chapter standalone + aage ki taraf ishara",
+    "layer": "kahani",
+    "when": "Long-form ko chapters me baant-te waqt",
+    "action": "Har section/chapter ko aisa banao ki wo akela bhi samajh aaye, aur uska end hamesha aage ki taraf point kare",
+    "why": "Standalone chapters beech se ghusne wale viewer ko bhi pakadte hain; forward-pointing end seam ko majboot karta hai",
+    "frequency": "Har chapter par",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_humbertobellor_henterprise.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-015",
+    "name": "Value front-load karo, best part rok ke mat rakho",
+    "layer": "kahani",
+    "when": "Long-form structure/value placement par",
+    "action": "Sabse achhi value jaldi do; 'achha part' end ke liye withhold mat karo",
+    "why": "End tak rokna us viewer ke liye optimize karta hai jo tab tak ja chuka hota hai",
+    "frequency": "Har video; khaas taur par pehle hisse me",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_humbertobellor_henterprise.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-016",
+    "name": "Short-form: ek idea, payoff jaldi, loop wala end",
+    "layer": "kahani",
+    "when": "Short-form script banate waqt",
+    "action": "Ek hi idea rakho, koi setup nahi; opening frame motion jaisa padhe, aur payoff attention decay hone se pehle aa jaye. End wahan rakho jahan se beginning phir sense banaye (loop)",
+    "why": "Short-form me dhyaan sabse tez girta hai; loop wala end rewatch ko badhata hai",
+    "frequency": "Har short; duration = jitna lamba near-100% retention hold ho sake (B-053 dekho)",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_humbertobellor_henterprise.md",
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-017",
+    "name": "Shorts me reverse structure: payoff pehle",
+    "layer": "kahani",
+    "when": "Short banate waqt",
+    "action": "Pehle payoff dikhao, phir explain karo (reverse structure)",
+    "why": "Result pehle dekhne se viewer explanation sunne ke liye rukta hai",
+    "frequency": "Har short ki structure me",
+    "evidence": "🟡",
+    "evidence_note": "measured reference corpus (5 top explainers, 246k–1M views) se nikale gaye numbers",
+    "sources": [
+      "github_Francesco149_slopstudio_retention-editing.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-018",
+    "name": "Short ke pehle 3s + aakhri 3s pehle likho",
+    "layer": "kahani",
+    "when": "Short script/edit shuru karte waqt",
+    "action": "Pehle first 3 seconds aur last 3 seconds author karo, phir beech bharo; end ko start se loop karo",
+    "why": "Short ka faisla uske pehle aur aakhri palon me hota hai; loop rewatch ko support karta hai",
+    "frequency": "Har short par",
+    "evidence": "🟡",
+    "evidence_note": "measured reference corpus (5 top explainers, 246k–1M views) se nikale gaye numbers",
+    "sources": [
+      "github_Francesco149_slopstudio_retention-editing.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-019",
+    "name": "BUTS chain: but = takraav, so = reaction",
+    "layer": "kahani",
+    "when": "Short ki kahani aage badhane ke liye",
+    "action": "Har beat ko 'but' (naya conflict) ya 'so' (uski reaction) se jodo — kahani kabhi rukti hui mehsoos na ho",
+    "why": "Lagatar conflict+reaction narrative tension banaye rakhta hai; viewer ko 'kahani khatam' mehsoos hi nahi hota (Hoyos ki method)",
+    "frequency": "Har short ke har beat par",
+    "evidence": "🟠",
+    "evidence_note": "creator practice (Jenny Hoyos profile) — creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-020",
+    "name": "Foreshadowing hook: pehle second me result ka ishara",
+    "layer": "kahani",
+    "when": "Short ki opening design karte waqt",
+    "action": "Pehle second me final result/comparison ka hint do, lekin reveal end ke liye rakho",
+    "why": "Viewer ko end tak comparison dekhne ke liye rukna padta hai",
+    "frequency": "Har suitable short ki opening me",
+    "evidence": "🟠",
+    "evidence_note": "creator practice (Jenny Hoyos profile) — creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-021",
+    "name": "End sabse tez emotion par rakho",
+    "layer": "kahani",
+    "when": "Short/long video ke end par",
+    "action": "Video ko maximum emotion/climax ke pal par khatam karo; kamzor 'and so…' wala band mat karo",
+    "why": "Viewer poori video ko aakhri pal ki emotion se judge karta hai (Hoyos); weak ending peeche ka saara kaam kharab karti hai",
+    "frequency": "Har video ka aakhri beat",
+    "evidence": "🟠",
+    "evidence_note": "creator practice (Hoyos + MrBeast profiles) — creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-022",
+    "name": "Constant escalation + segment ke beech micro-cliffhanger",
+    "layer": "kahani",
+    "when": "MrBeast-style long/short structure me",
+    "action": "Har segment pichle se intensity me aage badhe; segments ke beech internal cliff-hangers rakho aur sabse bada payoff (prize/challenge/result) shuru me hi visible karo",
+    "why": "Badhti tension aur micro-suspense viewer ko agle segment tak kheenchti hai (MrBeast profile)",
+    "frequency": "Har segment par",
+    "evidence": "🟠",
+    "evidence_note": "creator practice (MrBeast profile) — creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": null,
+    "conflict_note": "Slopstudio ka B-045 kehta hai pacing FLAT rakho, escalation nahi. Farak: ye rule kahani ke stakes/intensity ki escalation hai, B-045 cut/WPM pacing ki. Agar dono ek hi lever (cut speed) par lagu hon to takraav hoga — Step 3 (Order) decide karega."
+  },
+  {
+    "id": "B-023",
+    "name": "Content buckets: pehchan wali recurring series banao",
+    "layer": "kahani",
+    "when": "Channel/shorts series planning me",
+    "action": "3–4 recurring series (buckets) define karo — har bucket ek pehchan wala format; viewer ko pata ho ki use kya milega",
+    "why": "Ek bucket pasand aane par viewer usi series ki baaki videos dekhta hai; pehchan expectation aur wapsi banati hai (Hoyos)",
+    "frequency": "Channel level par; har nayi short kisi bucket me",
+    "evidence": "🟠",
+    "evidence_note": "creator practice (Jenny Hoyos profile) — creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-024",
+    "name": "Ek video = ek job",
+    "layer": "kahani",
+    "when": "Video ka brief tay karte waqt",
+    "action": "Har video ka sirf EK job rakho (awareness / conversion / education / trust aadi); explainer+demo+testimonial+brand ko ek video me merge mat karo",
+    "why": "Sab jobs ek saath karne wala video koi job achhe se nahi karta — wo documentary ban jata hai, asset nahi",
+    "frequency": "Har video, brief stage par",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_classicchins_compounding-marketing.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-025",
+    "name": "Video type ke hisaab se beat template use karo",
+    "layer": "kahani",
+    "when": "Script likhne se pehle type chunne par",
+    "action": "Explainer (60–90s): Problem→Agitate→Solution→How→Proof→CTA. Demo (2–5m): Hook→Use-case setup→Walkthrough (3–5 features)→Result→CTA. Testimonial (60–120s): Result hook→Before→Decision→After→Endorsement. UGC (15–30s): Hook (1s)→Reveal→Result→CTA. Thought leadership: Specific claim→Framework→Examples→Takeaway→CTA",
+    "why": "Har type ki proven structure hoti hai; wing karne se pehle 15 seconds me 80% viewers kho sakte ho (source ka daava)",
+    "frequency": "Har script, type ke hisaab se",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_classicchins_compounding-marketing.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-026",
+    "name": "Short infotainment ka emotional arc (0–30s)",
+    "layer": "kahani",
+    "when": "15–30s infotainment short banate waqt",
+    "action": "Setup 0–5s = frustration/recognition ('ye to main hu'); Development 5–15s = ironic escalation (haal aur bhadke); Payoff 15–25s = smart solution/plot twist; CTA 25–30s = soft CTA",
+    "why": "Pehchan → badhti absurdity → twist ka arc share/save wali reactions (solidarity, 'mujhe ye dikhana hai', 'ye nahi pata tha') ko trigger karta hai",
+    "frequency": "Har infotainment short par",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-027",
+    "name": "Direct-to-camera question hook",
+    "layer": "kahani",
+    "when": "Short ke pehle 3 seconds me",
+    "action": "Camera me dekh kar aisa sawal poochho jo target viewer ko turant engage kare (jaise 'How many X did you read this week?')",
+    "why": "Seedha sawal viewer ko dialogue mode me dalta hai, passive rehne nahi deta",
+    "frequency": "Hook ki ek technique ke roop me, suitable shorts me",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": {
+      "kind": "hook_within_s",
+      "value": 3
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-028",
+    "name": "'If…' scenario hook",
+    "layer": "kahani",
+    "when": "Short ke pehle 3 seconds me",
+    "action": "'If…' se shuru karo jo target audience ignore na kar sake ('If you've also spent 3 weeks on…, this video is for you')",
+    "why": "Apni sthiti ko pehchanne wala viewer turant rukta hai — ye usi ke liye bana lagta hai",
+    "frequency": "Hook ki ek technique ke roop me, suitable shorts me",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": {
+      "kind": "hook_within_s",
+      "value": 3
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-029",
+    "name": "Pehla frame bina awaaz ke samajh aaye (1-second rule)",
+    "layer": "samajh",
+    "when": "Short ki opening/first frame par",
+    "action": "First frame itna saaf rakho ki bina audio ke 1 second me topic samajh aa jaye — clear text overlay, impactful image, ya immediate action; intro/greeting/context pehle nahi",
+    "why": "Viewer 1 second me tay karta hai; mute par samajh na aaya to swipe pakka hai (Hoyos ki 1-second rule)",
+    "frequency": "Har short ke first frame par",
+    "evidence": "🟠",
+    "evidence_note": "creator practice (Jenny Hoyos profile) — creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": {
+      "kind": "hook_within_s",
+      "value": 1
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-030",
+    "name": "Text overlay jaldi + har number/naam screen par",
+    "layer": "samajh",
+    "when": "Edit ke dauraan text overlays lagate waqt",
+    "action": "Pehla text overlay pehle 10 seconds ke andar lao; aur jo bhi numeric ya named cheez boli jaye (number, stat, key term, naam) use screen par text me dikhao",
+    "why": "Bole gaye numbers/naam viewer retain nahi karta; screen text samajh aur yaad dono pakki karta hai",
+    "frequency": "Pehla overlay ≤10s; har key number/stat/term/naam par",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_TheCraigHewitt_skills_retention-editing.md",
+      "github_classicchins_compounding-marketing.md",
+      "github_humbertobellor_henterprise.md"
+    ],
+    "check": {
+      "kind": "max_first_overlay_s",
+      "value": 10
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-031",
+    "name": "Show, then say — footage bole to jumla kato",
+    "layer": "samajh",
+    "when": "Script/edit me jahan footage point carry kar sakti hai",
+    "action": "Jahan footage khud point dikha sakti hai wahan use bolne do aur use samjhane wala jumla kaat do",
+    "why": "Dikhayi gayi baat boli gayi baat se tez samajh aati hai; dohra explanation samay khata hai",
+    "frequency": "Har aisi jagah jahan visual available ho",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_humbertobellor_henterprise.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-032",
+    "name": "B-roll ko apni jagah kamani padegi",
+    "layer": "samajh",
+    "when": "B-roll chunne/lagane par",
+    "action": "B-roll sirf wahi lagao jo wo dikhaye jo shabd nahi dikha sakte; decorative B-roll mat lagao — wo 'dead air with pictures' hai",
+    "why": "Bina kaam ka B-roll samajh nahi badhata, sirf dhyaan ghumata hai aur seam kamzor karta hai",
+    "frequency": "Har B-roll insert par",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_humbertobellor_henterprise.md"
+    ],
+    "check": null,
+    "conflict_note": "Cadence wale rules (B-055 Craig: B-roll har 30–60s; B-056 Classic: har 5–10s) frequency mangte hain, ye rule relevance mangta hai. Takraav par relevance pehle — cadence ke liye sajawati B-roll mat dalo (Step 3 Order bhi yahi kahega: Samajh > Style)."
+  },
+  {
+    "id": "B-033",
+    "name": "Captions hamesha — shorts aur social par lazmi",
+    "layer": "samajh",
+    "when": "Har short/social video, aur bolne wale har hisse par",
+    "action": "Captions hamesha rakho (shorts me captions always); auto-generated captions ko accuracy ke liye review karo",
+    "why": "Zyada tar social video mute par dekha jata hai (source: 80%+ muted); bina captions ke message pahuchta hi nahi",
+    "frequency": "Har video, har spoken section par",
+    "evidence": "🟡",
+    "evidence_note": "platform data (80%+ muted viewing, Wistia/Vidyard hawala) + measured corpus (shorts captions always)",
+    "sources": [
+      "github_Francesco149_slopstudio_retention-editing.md",
+      "github_classicchins_compounding-marketing.md",
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-034",
+    "name": "Script kaan ke liye likho: ek jumla = ek idea",
+    "layer": "samajh",
+    "when": "Script likhte waqt",
+    "action": "Har line bol kar padho; ek jumle me ek hi idea; viewer ke liye second person ('you') use karo; jargon ko concrete bhasha me badlo ('workflow automation platform' → 'tool that does X automatically'); jo line comma ke bina na bache use kato",
+    "why": "Boli gayi bhasha padhi gayi bhasha se alag hoti hai; saaf jumla hi turant samajh aata hai, corporate/press-release awaaz hamesha haarti hai",
+    "frequency": "Har script line par",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_classicchins_compounding-marketing.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-035",
+    "name": "Har line ke saath uska visual jodo",
+    "layer": "samajh",
+    "when": "Script likhte waqt, har line par",
+    "action": "Har voiceover line ke saath uska visual pair karo; jis line ka visual soch na sako wo line zyada abstract hai — use dobara likho",
+    "why": "Bina visual wali line viewer ke dimaag me tikti nahi; visual pairing hi samajh ko anchor karta hai",
+    "frequency": "Har script line par",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_classicchins_compounding-marketing.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-036",
+    "name": "Title front-load + title/thumbnail ek dusre ko dohrayein nahi",
+    "layer": "samajh",
+    "when": "Packaging (title/thumbnail) banate waqt",
+    "action": "Title me distinguishing word aage rakho (titles truncate hote hain), specific rakho clever ke upar; thumbnail ka text ~4 shabdon se kam ya bilkul nahi (B-037 dekho); title aur thumbnail EKK hi baat na kahein — mil kar dono se zyada kahein",
+    "why": "Truncate hone par asal baat kat jati hai; dohra message CTR ka mauka khota hai",
+    "frequency": "Har title/thumbnail pair par",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_humbertobellor_henterprise.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-037",
+    "name": "Thumbnail: ek subject, tez contrast, shabd kam se kam",
+    "layer": "samajh",
+    "when": "Thumbnail design karte waqt",
+    "action": "Ek hi subject rakho jo phone-thumbnail size par padha jaye; high contrast; asli chehra (strong emotion ke saath) aam taur par objects se behtar; text ke liye MrBeast data 0–2 words kehta hai, Henterprise 'about 4 words se kam ya none' — 0–2 ko target rakho, 4 se upar kabhi nahi. Thumbnail ko film karne se pehle test karo",
+    "why": "Thumbnail hi tay karta hai ki video dekha jayega ya nahi; bheed me ek saaf subject hi rukta hai",
+    "frequency": "Har thumbnail par; text ≤4 words (target 0–2)",
+    "evidence": "🟠",
+    "evidence_note": "creator practice (MrBeast profile + producer practice) — creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_humbertobellor_henterprise.md",
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": {
+      "kind": "max_words",
+      "what": "thumbnail_text",
+      "value": 4
+    },
+    "conflict_note": "Sources ke numbers alag hain: MrBeast profile 0–2 words (sabse zyada views wale), Henterprise 'under about four words'. Rule me bada wala hard cap (4) aur chhota wala target (0–2) rakha hai."
+  },
+  {
+    "id": "B-038",
+    "name": "Pre-emptive on-screen text: text pehle, awaaz baad me",
+    "layer": "samajh",
+    "when": "Short ki opening me anticipation banane ke liye",
+    "action": "On-screen text ko speaker ke bolne se PEHLE lao (jaise '200 resumes. 3 hours. Zero candidates lost.')",
+    "why": "Pehle aaya text anticipation banata hai — viewer awaaz ka intezaar karta hai",
+    "frequency": "Suitable shorts ki opening me",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-039",
+    "name": "Power words pehle 3 second / title / overlay me",
+    "layer": "samajh",
+    "when": "Short ki hook aur packaging me",
+    "action": "Power words use karo — Curiosity (secret, hidden, nobody knows), Urgency (banned, last time, before it disappears), Value (free, $1, half price), Exclusivity (for the first time, never seen, sneak peek) — aur ye pehle 3 seconds, title ya text overlay me aayein",
+    "why": "Ye shabd turant click/watch trigger karte hain (Hoyos ka system)",
+    "frequency": "Har suitable short ki shuruaat me",
+    "evidence": "🟠",
+    "evidence_note": "creator practice (Jenny Hoyos profile) — creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": {
+      "kind": "hook_within_s",
+      "value": 3
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-040",
+    "name": "Retention curve ko order me diagnose karo",
+    "layer": "samajh",
+    "when": "Published video ki analytics dekhte waqt",
+    "action": "Is order me check karo: (1) Low CTR → packaging (title/thumbnail). (2) High CTR + pehle 30s me bada drop → hook ne title/thumbnail ka vaada nahi nibhaya, ya start slow hai — opening recut karo, mid-action shuru karo, intro animation/'hey guys' hatao. (3) Steady decline (1–2%/min) → pacing flat hai — visual variety har 15–30s, retention beats har 2–3 min. (4) Beech me 10%+ cliff → exact timestamp pakdo — aam taur par tangent/boring/confusing hissa, transition ya galat jagah sponsor; use kato/restructure karo ya usse pehle re-hook lagao. (5) End drop-off → ending chhota karo, CTA pehle lao. (6) Spikes (retention UPAR) → ye achha hai — wajah pakdo aur use zyada karo. (7) Retention achhi par growth nahi → packaging impressions nahi kama raha ya topic ka audience maujood subscribers se aage nahi",
+    "why": "Har curve pattern ki wajah aur ilaaj alag hai; bina diagnosis ke edit karna andaz hai",
+    "frequency": "Har published video ke review par, isi order me",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_TheCraigHewitt_skills_retention-editing.md",
+      "github_humbertobellor_henterprise.md",
+      "github_classicchins_compounding-marketing.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-041",
+    "name": "Refresh trigger: retention 20%+ gire to restructure/replace",
+    "layer": "samajh",
+    "when": "Purane video ki performance review par",
+    "action": "Agar retention peak se 20%+ gir jaye to video ko restructure ya replace karo; yahi trigger product UI badalne, testimonial customer churn hone, ya nayi positioning aane par bhi lagu hai",
+    "why": "Purana pada video audience ko thaka deta hai aur galat/stale message deta rehta hai",
+    "frequency": "Trigger: retention drop ≥20% from peak",
+    "evidence": "🟠",
+    "evidence_note": "house threshold (skill ki quality bar) — creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_classicchins_compounding-marketing.md"
+    ],
+    "check": {
+      "kind": "min_drop_percent",
+      "what": "retention_from_peak",
+      "value": 20
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-042",
+    "name": "Safe zone + platform ke hisaab se captions ghumao",
+    "layer": "samajh",
+    "when": "Vertical video (Reels/TikTok) edit/export par",
+    "action": "Text/captions safe zone me rakho — Reels: top 250px (username) aur bottom 400px (CTA/comments) se bacho; TikTok par bhi upar-neeche bacho. Cross-post karte waqt subtitles ko har platform ke safe zone ke hisaab se reposition karo aur dusre platform ka watermark kabhi mat rakho (TikTok watermark wali video Reels par nahi)",
+    "why": "UI ke neeche daba text padha nahi jata; watermark wali cross-post dono platforms par penalize/laggy lagti hai",
+    "frequency": "Har vertical video, har platform variant par",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-043",
+    "name": "Distribution + repurposing plan production se pehle",
+    "layer": "samajh",
+    "when": "Har video ke brief stage par",
+    "action": "Pehle tay karo video kahan rahega, kaun dhundhega, aur usse kaun se derivative assets banenge (repurposing matrix: 1 lambi video → clips, quote graphics, blog/transcript aadi). Jo segments akele shorts banke khade hone hain, unhe shoot hi aise karo ki akele khade hon",
+    "why": "Bina plan ke bana video decoration hai; baad me kaate gaye shorts ko wo context nahi milta jo unhe chahiye",
+    "frequency": "Har video, brief stage par hi",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_classicchins_compounding-marketing.md",
+      "github_humbertobellor_henterprise.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-044",
+    "name": "Pattern interrupt har 15–30s (CraigHewitt wala cadence)",
+    "layer": "rhythm",
+    "when": "Long-form main content ke edit par",
+    "action": "Viewer ka dhyaan har 15–30s reset hota hai — itne gap ke andar kuch visual zaroor badlo: cut, angle change, text overlay, B-roll, zoom ya SFX. Koi frame 30s se zyada static na rahe",
+    "why": "Autopilot par gaya viewer chala jata hai; regular pattern interrupt use jagaye rakhta hai (editor ka anubhav)",
+    "frequency": "Har 15–30s kam se kam 1 visual change; static frame max 30s",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_TheCraigHewitt_skills_retention-editing.md"
+    ],
+    "check": {
+      "kind": "max_visual_gap_s",
+      "value": 30
+    },
+    "conflict_note": "⚠️ Seedha takraav slopstudio ke B-045 se: wahan measured corpus me pacing FLAT mili aur pattern interrupt sirf ~1 per ACT hai, per minute nahi. Dono rules rakhe gaye hain — Step 3 (Order) me faisla hoga ki kis format/genre par kaun sa jeetega."
+  },
+  {
+    "id": "B-045",
+    "name": "Pacing FLAT rakho, interrupt ~1 per act (slopstudio wala cadence)",
+    "layer": "rhythm",
+    "when": "Long-form (10–55 min) explainers ke edit par",
+    "action": "Per-minute pacing poori video me flat rakho — words aur cuts kisi minute me decay na hon, beech saggy na ho, end par frantic ramp bhi nahi. Pattern interrupt sirf ~1 per act rakho (skit/prop/gag/location change), per minute wala interrupt mat lagao. Consistency escalation se jeet-ti hai",
+    "why": "Measured corpus (5 top explainers, 54 min tak ki videos) me pacing flat mili — yahi invariant tha, cut count nahi",
+    "frequency": "~1 pattern interrupt per act; har minute ka pacing lagbhag ek jaisa",
+    "evidence": "🟡",
+    "evidence_note": "measured reference corpus (5 top explainers, 246k–1M views) se nikale gaye numbers",
+    "sources": [
+      "github_Francesco149_slopstudio_retention-editing.md"
+    ],
+    "check": {
+      "kind": "max_per_act",
+      "what": "pattern_interrupt",
+      "value": 1
+    },
+    "conflict_note": "⚠️ Seedha takraav CraigHewitt ke B-044 se: wahan interrupt har 15–30s manga gaya hai. Dono rakhe gaye hain — Step 3 (Order) decide karega (genre/format ke hisaab se alag jeet sakte hain)."
+  },
+  {
+    "id": "B-046",
+    "name": "Visual floor = perceived motion, cut count nahi",
+    "layer": "rhythm",
+    "when": "Long-form edit ki review par",
+    "action": "Cut count ka koi fixed number mat rakho (corpus range 2.8–7.5 cuts/min — koi invariant nahi). Asli floor: screen par kuch relevant hamesha MOVING ho — footage/diagram ke neeche floating host, in-shot animation (bars bharna, typewriter), ya bare host ke peeche ambient-motion backdrop. Static host + static frame >~15s = violation; 30–50s ka ek shot sirf tab bachta hai jab in-shot animation ya high narrative tension use uthaye",
+    "why": "Naapa gaya invariant motion hai, cuts ki ginti nahi; ruka hua frame hi asal retention hole hai",
+    "frequency": "Har shot par; static host+frame ~15s se zyada nahi (animation/tension exception ke saath)",
+    "evidence": "🟡",
+    "evidence_note": "measured reference corpus (5 top explainers, 246k–1M views) se nikale gaye numbers",
+    "sources": [
+      "github_Francesco149_slopstudio_retention-editing.md"
+    ],
+    "check": {
+      "kind": "max_visual_gap_s",
+      "value": 15
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-047",
+    "name": "Hook/fast sections me visual change har 3–5s",
+    "layer": "rhythm",
+    "when": "Video ke hook (0:00–0:30) aur fast sections me",
+    "action": "Har 3–5s me cut/B-roll/zoom/angle/text me se kuch badlo; pehle 15s me text overlay, zoom aur B-roll — teeno ki high density rakho. Classicchins ki general rule bhi yahi hai: static talking head har 3–5s me todo",
+    "why": "Shuruaat ki energy spoken hook ke barabar honi chahiye; static head sabse tez viewers khota hai",
+    "frequency": "Hook section me har 3–5s; hook ke pehle 15s me teeno interrupts",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_TheCraigHewitt_skills_retention-editing.md",
+      "github_classicchins_compounding-marketing.md"
+    ],
+    "check": {
+      "kind": "max_visual_gap_s",
+      "value": 5
+    },
+    "conflict_note": "Slopstudio ke measured cold open (B-048) me pehle 30s me sirf 2–7 cuts hain — ye usse tez hai. Aur shorts ke liye B-053 (2–4s) isse bhi tez hai. Format ke hisaab se alag number — Step 3 me saaf hoga."
+  },
+  {
+    "id": "B-048",
+    "name": "Measured cold-open density: pehle 30s me 2–7 cuts",
+    "layer": "rhythm",
+    "when": "Long-form cold open ki review par",
+    "action": "Pehle 30 seconds me 2–7 cuts rakho (aur words 65–98, dekho B-006); isse tez काटना measured corpus ke pattern se bahar hai",
+    "why": "Top explainers ke naape gaye cold opens isi band me hain — tez hona hi retention nahi hai",
+    "frequency": "Har long-form cold open; cuts 2–7 per first 30s",
+    "evidence": "🟡",
+    "evidence_note": "measured reference corpus (5 top explainers, 246k–1M views) se nikale gaye numbers",
+    "sources": [
+      "github_Francesco149_slopstudio_retention-editing.md"
+    ],
+    "check": {
+      "kind": "count_range",
+      "what": "cuts_first_30s",
+      "min": 2,
+      "max": 7
+    },
+    "conflict_note": "CraigHewitt/Classicchins ka B-047 hook me har 3–5s change mangta hai (30s me 6–10 changes) — ye measured band (2–7 cuts) se upar ja sakta hai. Dono rakhe hain; Step 3 faisla karega."
+  },
+  {
+    "id": "B-049",
+    "name": "Section ke hisaab se pace badlo",
+    "layer": "rhythm",
+    "when": "Long-form ke sections (Setup/Main/CTA) par",
+    "action": "Setup (0:30–2:00): medium pace, cut har 5–10s, context ke liye text overlay aur referred situations ke liye B-roll. Main (2:00–8:00): content ki energy ke hisaab se pace. CTA/Outro (aakhri 30–60s): medium-to-slow, winding down, end screen overlay + final text reinforcement",
+    "why": "Har section ka kaam alag hai; ek jaisa pace sab jagah galat hai",
+    "frequency": "Setup me cut har 5–10s; outro aakhri 30–60s medium-slow",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_TheCraigHewitt_skills_retention-editing.md"
+    ],
+    "check": {
+      "kind": "max_visual_gap_s",
+      "value": 10
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-050",
+    "name": "Edit ki energy = content ki energy",
+    "layer": "rhythm",
+    "when": "Poori video ke pacing decisions par",
+    "action": "Edit rhythm ko content ki natural energy se milao — slow reflective pal par tez cuts/zooms mat lagao, high-energy listicle par dheela pace mat rakho. Pace ko deliberately vary karo: uniformly intense video utna hi thakane wala hai jitna flat video",
+    "why": "Contradiction wala edit viewer ko khichta hai; har jagah ek jaisi intensity thakan ban jati hai",
+    "frequency": "Har section/beat par",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_TheCraigHewitt_skills_retention-editing.md",
+      "github_humbertobellor_henterprise.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-051",
+    "name": "Dead air aur filler beherahmi se kato",
+    "layer": "rhythm",
+    "when": "Edit par, khaaskar pehle 30 seconds me",
+    "action": "'Ums', pauses, throat-clearing, repeated points aur tangents kato. Silence >1s kato (exception: intentional dramatic pause + dramatic visual). Pehle 30s me har pause/restart/filler BINA exception kato; baad me thodi breathing room chalegi — relentlessly tight edit thaka deta hai. Poori video ka total unintentional dead air <5s rakho",
+    "why": "Dead air retention ka dushman hai; lekin saans ki jagah marna bhi delivery ko synthetic/thakane wala banata hai",
+    "frequency": "Silence >1s = cut; first 30s zero tolerance; total dead air <5s",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_TheCraigHewitt_skills_retention-editing.md",
+      "github_classicchins_compounding-marketing.md",
+      "github_humbertobellor_henterprise.md"
+    ],
+    "check": {
+      "kind": "max_silence_s",
+      "value": 1
+    },
+    "conflict_note": "Filnik ke performance rule (B-071) me 1–2s ki jaan-boojh wali khamoshi 'extremely powerful' kahi gayi hai. Takraav nahi hai agar pause INTENTIONAL ho aur visual use uthaye (CraigHewitt khud yahi exception deta hai) — bina wajah ki khamoshi hamesha kategi."
+  },
+  {
+    "id": "B-052",
+    "name": "Narration 160–195 WPM band me rakho",
+    "layer": "rhythm",
+    "when": "Long-form narration/voiceover par",
+    "action": "Narration speed 160–195 WPM rakho (energetic, rushed nahi). <150 WPM sirf dense math/technical beats ke liye rakho — purana 130–150 default is genre ke liye zyada dheema hai",
+    "why": "Paanchon measured reference videos isi band me mile; dheemi narration pacing ko saggy banati hai",
+    "frequency": "Har minute 160–195 WPM (flat pacing ke saath, B-045)",
+    "evidence": "🟡",
+    "evidence_note": "measured reference corpus (5 top explainers, 246k–1M views) se nikale gaye numbers",
+    "sources": [
+      "github_Francesco149_slopstudio_retention-editing.md"
+    ],
+    "check": {
+      "kind": "wpm_range",
+      "what": "narration",
+      "min": 160,
+      "max": 195
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-053",
+    "name": "Shorts cadence: cut har 2–4s, VVSA target 70–90%",
+    "layer": "rhythm",
+    "when": "Shorts (portrait, natural-rate speech) par",
+    "action": "Cut har 2–4s rakho; har 20s me 6–12 visual changes; captions hamesha (B-033). Target VVSA (viewed vs swiped-away) 70–90%. Short ki length wo rakho jahan tak near-100% VVSA hold ho — 30s ki cap mat lagao. (Filnik ki post-production checklist bhi fast cuts har 2–4s kehti hai.)",
+    "why": "Shorts ka algorithm swipe-away se darta hai; naapi gayi cadence aur VVSA band top shorts ke pattern hain",
+    "frequency": "Cut har 2–4s; 6–12 visual changes / 20s; VVSA 70–90%",
+    "evidence": "🟡",
+    "evidence_note": "measured reference corpus (5 top explainers, 246k–1M views) se nikale gaye numbers + Filnik practice checklist",
+    "sources": [
+      "github_Francesco149_slopstudio_retention-editing.md",
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": {
+      "kind": "max_visual_gap_s",
+      "value": 4
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-054",
+    "name": "Long-form APV target 40–55%",
+    "layer": "rhythm",
+    "when": "Long-form ki performance target/review par",
+    "action": "Average Percentage Viewed ka target 40–55% rakho (≥50% = A-grade). Raw minutes nahi, percentage + hook ko optimize karo",
+    "why": "Lambi video ka asal score uska dekha gaya hissa hai; percentage hi formats ke beech tulna ke layak hai",
+    "frequency": "Har long-form video ka target APV 40–55%",
+    "evidence": "🟡",
+    "evidence_note": "measured reference corpus (5 top explainers, 246k–1M views) se nikale gaye numbers",
+    "sources": [
+      "github_Francesco149_slopstudio_retention-editing.md"
+    ],
+    "check": {
+      "kind": "percent_range",
+      "what": "average_percentage_viewed",
+      "min": 40,
+      "max": 55
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-055",
+    "name": "Long-form B-roll/screen-share cadence (CraigHewitt)",
+    "layer": "rhythm",
+    "when": "Long-form talking-head edit par",
+    "action": "B-roll insert har 30–60s me kam se kam ek baar aaye; aur har 2 minute me kam se kam ek B-roll segment ya screen share zaroor ho",
+    "why": "Lambi talking-head monotony retention ko dheere-dheere khaati hai; regular visual break use rokta hai",
+    "frequency": "B-roll har 30–60s; ≥1 B-roll/screen-share per 2 min",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_TheCraigHewitt_skills_retention-editing.md"
+    ],
+    "check": {
+      "kind": "max_gap_s",
+      "what": "broll_or_screen_share",
+      "value": 120
+    },
+    "conflict_note": "Classicchins ka B-056 marketing videos ke liye B-roll har 5–10s mangta hai — ye usse kahin dheema hai. Farak format ka hai (lamba talking-head vs chhota marketing video); B-032 ka relevance gate dono par lagu rahega."
+  },
+  {
+    "id": "B-056",
+    "name": "Marketing video me B-roll har 5–10s (Classicchins)",
+    "layer": "rhythm",
+    "when": "Chhote marketing/social videos ke edit par",
+    "action": "Har 5–10s me B-roll lao — screen recording, stock footage, chart/animation/data-viz, ya customer/team photo",
+    "why": "Chhote format me dhyaan ka cycle tez hota hai; regular visual badlav hi pace banata hai",
+    "frequency": "Har 5–10s ek B-roll beat",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_classicchins_compounding-marketing.md"
+    ],
+    "check": {
+      "kind": "max_gap_s",
+      "what": "broll",
+      "value": 10
+    },
+    "conflict_note": "CraigHewitt ka B-055 long-form ke liye 30–60s ka gap deta hai — format ke hisaab se alag number. B-032 (relevance gate) dono par lagu: cadence ke liye bekaar B-roll nahi."
+  },
+  {
+    "id": "B-057",
+    "name": "Music change = tonal shift ka signal",
+    "layer": "rhythm",
+    "when": "Major section transitions par",
+    "action": "Music sirf major section transitions par badlo, taaki wo tonal shift ka signal bane",
+    "why": "Music ka badlav viewer ko bina kahe batata hai ki kahani naye hisse me gayi",
+    "frequency": "Har major section transition par",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_TheCraigHewitt_skills_retention-editing.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-058",
+    "name": "Retention beat par visual punctuation",
+    "layer": "rhythm",
+    "when": "Script ke har retention beat par (aur steady-decline fix me har 2–3 min par)",
+    "action": "Retention beat aate hi visual punctuation lagao: zoom + text overlay + brief pause ka combo",
+    "why": "Beat ka kaam viewer ko phir jodna hai; sirf shabdon se wo jod kamzor padta hai",
+    "frequency": "Har retention beat par; steady decline dikhe to beats har 2–3 min par rakho",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_TheCraigHewitt_skills_retention-editing.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-059",
+    "name": "CTA/Outro ghatao: CTA segment aakhri 5–10s",
+    "layer": "rhythm",
+    "when": "Video ke end par",
+    "action": "Outro ko winding-down rakho — end screen overlay + final text reinforcement. CTA (logo + URL + clear CTA visual) aakhri 5–10s me aaye. Agar end drop-off dikhe to ending aur chhota karo aur CTA ko pehle le aao, aur end screen content ko tease karo ('Before you go — the next video I'd recommend is…')",
+    "why": "Content 'khatam' mehsoos hote hi viewer CTA se pehle nikal jata hai; chhota outro aur specific CTA use rokta hai",
+    "frequency": "CTA aakhri 5–10s; outro total ~30–60s se zyada nahi",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_TheCraigHewitt_skills_retention-editing.md",
+      "github_classicchins_compounding-marketing.md"
+    ],
+    "check": {
+      "kind": "duration_range_s",
+      "what": "cta_segment",
+      "min": 5,
+      "max": 10
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-060",
+    "name": "End screen tab rakho jab retention 70–80% ho",
+    "layer": "rhythm",
+    "when": "MrBeast-style videos ke end par",
+    "action": "Video ko aakhri second tak high attention par rakho aur end screen us point par rakho jahan retention 70–80% ke aas-paas ho",
+    "why": "End screen tabhi kaam karta hai jab viewer wahan tak ruka ho; tez retention wala end next video ka click lata hai (MrBeast profile)",
+    "frequency": "Har aise video ke end par; target retention-at-end-screen 70–80%",
+    "evidence": "🟡",
+    "evidence_note": "creator-reported retention practice (MrBeast profile) — measured claim creator ki taraf se, independent study nahi",
+    "sources": [
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": {
+      "kind": "percent_range",
+      "what": "retention_at_end_screen",
+      "min": 70,
+      "max": 80
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-061",
+    "name": "Platform duration windows (Reels/TikTok)",
+    "layer": "rhythm",
+    "when": "Short-form ka format chunne par",
+    "action": "Reels: optimal 15–30s (reach ka sweet spot), max recommended 60s, 9:16, 1080×1920. TikTok: optimal 15–45s, max recommended 60s (is content type ke liye), 9:16",
+    "why": "Har platform ka dhyaan window alag hai; sweet spot se bahar ki length distribution ko nuksan karti hai (playbook ke numbers)",
+    "frequency": "Har short, platform ke hisaab se",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": {
+      "kind": "duration_range_s",
+      "what": "reels_duration",
+      "min": 15,
+      "max": 30
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-062",
+    "name": "Zoom in = zor, zoom out = naya topic",
+    "layer": "style",
+    "when": "Edit me zoom use karte waqt",
+    "action": "Zoom in (push) key point par zor dene ke liye — important palon me 2–4 per minute. Zoom out (pull) naye topic ke transition par",
+    "why": "Zoom direction ka matlab hota hai: andar = 'ye zaroori hai', bahar = 'hissa badla'",
+    "frequency": "Zoom in 2–4/min (sirf important palon me); zoom out har topic transition par",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_TheCraigHewitt_skills_retention-editing.md"
+    ],
+    "check": {
+      "kind": "per_min_range",
+      "what": "zoom_in",
+      "min": 2,
+      "max": 4
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-063",
+    "name": "Jump cut: dead air hatao, pace tez karo",
+    "layer": "style",
+    "when": "Fast sections ke edit par",
+    "action": "Jump cut ka kaam dead air hatana aur pacing tez karna rakho; fast sections me har 5–10s me jump cut aaye",
+    "why": "Jump cut energy ko banaye rakhta hai bina naye footage ke",
+    "frequency": "Fast sections me har 5–10s",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_TheCraigHewitt_skills_retention-editing.md"
+    ],
+    "check": {
+      "kind": "max_visual_gap_s",
+      "value": 10
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-064",
+    "name": "SFX kam rakho: poori video me 3–5 max",
+    "layer": "style",
+    "when": "Sound effects lagate waqt",
+    "action": "SFX sirf joke ko punctuate karne ya transition par zor dene ke liye; poori video me kul 3–5 se zyada nahi",
+    "why": "Zyada SFX apna asar kho dete hain aur sasta lagne lagte hain",
+    "frequency": "Max 3–5 SFX per video",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_TheCraigHewitt_skills_retention-editing.md"
+    ],
+    "check": {
+      "kind": "max_count",
+      "what": "sound_effects_per_video",
+      "value": 5
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-065",
+    "name": "Split screen sirf comparison/transformation par",
+    "layer": "style",
+    "when": "Split screen use karte waqt",
+    "action": "Split screen sirf before/after ya comparison/transformation wale palon par use karo",
+    "why": "Split screen ka matlab hi tulna hai; bina tulna ke wo sirf shor hai",
+    "frequency": "Sirf comparison/transformation moments par",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_TheCraigHewitt_skills_retention-editing.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-066",
+    "name": "Subtitle emphasis sirf quotable palon par",
+    "layer": "style",
+    "when": "Captions ke upar emphasis style lagate waqt",
+    "action": "Subtitle emphasis (highlight/bold) sirf quotable moments ya key takeaways par lagao — har line par nahi (poori captions wali lazmi rule B-033 alag hai)",
+    "why": "Har jagah zor = kahin zor nahi; chune hue pal hi yaad rehte hain",
+    "frequency": "Sirf quotable/key-takeaway lines par",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_TheCraigHewitt_skills_retention-editing.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-067",
+    "name": "Music awaaz ke neeche, levels me koi jhatka nahi",
+    "layer": "style",
+    "when": "Audio mix karte waqt",
+    "action": "Background track −20 se −25 dB par rakho aur voice −6 se −10 dB par (music kabhi voice se takraye nahi). Audio levels poori video me consistent rakho — jarring volume changes nahi. Music speech ke neeche low, non-speech palon me upar; strategic silence bhi ek tool hai. Trending audio tabhi use karo jab content se relevant ho, force mat karo",
+    "why": "Competing music samajh ko khata hai (Samajh > Style); consistent levels viewer ko bina wajah jhatka nahi dete",
+    "frequency": "Poora mix; music −20..−25 dB, voice −6..−10 dB",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_classicchins_compounding-marketing.md",
+      "github_TheCraigHewitt_skills_retention-editing.md",
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": {
+      "kind": "db_range",
+      "field": "background_music_db",
+      "min": -25,
+      "max": -20
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-068",
+    "name": "Color grade saare clips me ek jaisa",
+    "layer": "style",
+    "when": "Post-production / grade par",
+    "action": "Saare clips ki brightness/contrast match karo aur ek subtle LUT ya color preset lagakar brand consistency rakho",
+    "why": "Badalte rang har cut par dhyaan kheench lete hain — kahani se hata kar technique par",
+    "frequency": "Har video, saare clips par",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_classicchins_compounding-marketing.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-069",
+    "name": "Opening visual pattern interrupt ke 4 roop",
+    "layer": "style",
+    "when": "Short ke pehle 3 seconds me visual hook chahiye to",
+    "action": "In me se koi ek chalao: (1) sudden movement (jump up, turn, desk par kuch patakna), (2) strong facial expression (shock/exasperation/huge smile), (3) out-of-context object (absurd sign, badi pile, countdown), (4) unexpected color/lighting",
+    "why": "Feed scroll ko todne ke liye sabse tez hathiyar visual surprise hai",
+    "frequency": "Suitable shorts ki opening me, koi ek",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": {
+      "kind": "hook_within_s",
+      "value": 3
+    },
+    "conflict_note": ""
+  },
+  {
+    "id": "B-070",
+    "name": "Har beat ka 5-layer storyboard banao",
+    "layer": "style",
+    "when": "Short-form script/storyboard likhte waqt",
+    "action": "Har beat ko 5 layers me likho: (1) VISUAL — framing, expression, props, graphics, transition; (2) AUDIO — word-for-word dialogue, tone, pacing; (3) ON-SCREEN TEXT — text, position (top/center/bottom), timing; (4) DIRECTING — cuts kahan, zoom in/out, editing pace; (5) MUSIC/SFX — music type, SFX, volume (speech ke neeche low, non-speech me high)",
+    "why": "Jo layer script me nahi likhi gayi wo edit me andaze se banti hai; 5-layer format har beat ko pehle se tay karta hai",
+    "frequency": "Har beat, har short-form script me",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  },
+  {
+    "id": "B-071",
+    "name": "Speaker performance: natural, camera se baat, jaan-boojh ke pauses",
+    "layer": "style",
+    "when": "Recording ke dauraan (founder/creator on camera)",
+    "action": "Camera me aise dekho jaise colleague se baat kar rahe ho, audience se nahi; expressions natural, rehearsed nahi; haath dikhai dein (natural gestures); emphasis ke liye 1–2s ke short pauses — ye khamoshi 'extremely powerful' hoti hai; chhoti galtiyan theek hain, imperfection authentic lagta hai. Har segment ke 2–3 takes lo taaki edit ke paas options hon; saaf audio (background noise nahi)",
+    "why": "Natural delivery bharosa banati hai; jaan-boojh ki khamoshi boli gayi line se zyada zor deti hai",
+    "frequency": "Har recording session; har segment 2–3 takes",
+    "evidence": "🟠",
+    "evidence_note": "creator/editor opinion ya house rule — source me measured data nahi diya gaya",
+    "sources": [
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": null,
+    "conflict_note": "Dead-air rule (B-051) se takraav lag sakta hai: wahan bina-kaarann wali khamoshi kat-ti hai, yahan 1–2s ka pause jaan-boojh kar emphasis ke liye hai aur visual use uthata hai. Dono ka faisla intention se hoga — Step 3 me note rahe."
+  },
+  {
+    "id": "B-072",
+    "name": "Production value platform aur job se milao",
+    "layer": "style",
+    "when": "Production tier chunne par",
+    "action": "Polish platform/job ke hisaab se rakho, brand ke ego ke hisaab se nahi: performance ads (Meta/TikTok) par scrappy iPhone/UGC video mehngi animated production ko peeche chhod deta hai (source: 2024 Meta studies me 3:1 tak). MrBeast ka siddhant bhi yahi: goal 'best YOUTUBE video' hai, 'best produced video' nahi",
+    "why": "Galat tier par paisa lagana sabse mehengi galti hai — mehenga hona hi dekha jana nahi hai",
+    "frequency": "Har production decision par",
+    "evidence": "🟡",
+    "evidence_note": "platform study claim skill me cited (Meta creative studies 2024) + creator practice",
+    "sources": [
+      "github_classicchins_compounding-marketing.md",
+      "github_filnik_social-media-manager-AI.md"
+    ],
+    "check": null,
+    "conflict_note": ""
+  }
+]

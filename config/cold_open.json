@@ -1,0 +1,23 @@
+{
+  "_about": "v18 cold open (2026-11-07, agent under user delegation): VISUAL-ONLY teaser over the unchanged opening narration (greeting 0-6.3 s). No time inserted, audio untouched. Ends one lead-rule cut (onset - 0.2 s) before the word at end_word_index ('bhagwan' 6.51 s -> 6.32 s), so 'Shri Krishna ki nagri' lands on the Dwarkadhish temple shot. Title overlay = existing card style (navy gradient panel, gold accent bar, Mukta ExtraBold), Hinglish.",
+  "end_word_index": 15,
+  "words": "runs/2026-10-31_KANG_004/words.json",
+  "drop_assets_note": "S01_b01 (exact S01_1 still) and S01_b02 (representative B10_S01_001 photo) leave the timeline; S01_b03 (S01_2 photo, parallax) starts at the teaser end.",
+  "title": {"kicker": "DWARKA · GUJARAT", "title": "Shri Krishna ki nagri", "enter_at_s": 0.3, "enter_s": 0.5},
+  "shots": [
+    {"id": "S01_t01", "file": "TSR_01_setu_drone_day.mp4", "src": "assets/dwarika_youtube_cc_v1/YT_mt_xdx4S_Ok_01.mp4",
+     "in_s": 0.5, "frames": 40, "label": "exact", "place": "sudarshan setu",
+     "why": "strongest opening image: drone flies through the Sudarshan Setu pylon (eye_exact mt_xdx4S_Ok@1, unused on the timeline)"},
+    {"id": "S01_t02", "file": "TSR_02_setu_night_lasers.mp4", "src": "assets/dwarika_youtube_cc_v1/YT_mt_xdx4S_Ok_04.mp4",
+     "in_s": 15.5, "frames": 38, "label": "exact", "place": "sudarshan setu",
+     "why": "night laser show on the Setu cables ending on the lit pylon (eye_exact mt_xdx4S_Ok@4, unused)"},
+    {"id": "S01_t03", "file": "TSR_03_dwarkadhish_spire.mp4", "src": "assets/dwarika_youtube_cc_v1/YT_0mHRDNcnInQ_05.mp4",
+     "in_s": 0.6, "frames": 40, "label": "exact", "place": "dwarkadhish",
+     "why": "Dwarkadhish spire + flag (eye_exact 0mHRDNcnInQ@5, unused: too short for a narration beat, fine for a 1.6 s teaser shot)"},
+    {"id": "S01_t04", "file": "TSR_04_dwarkadhish_flag_ai.mp4", "src": "runs/2026-11-04_KANG_027/ai_motion_clips/AI_S16_b06.mp4",
+     "in_s": 2.0, "frames": 40, "label": "representative", "place": "dwarkadhish",
+     "credit_from": ["assets/dwarika_beats_pool_v10", "B10_S16_075_dwarkadhish_temple_jagat_mandir_dwarakad.jpg"],
+     "ai_model": "Wan2.2-TI2V-5B", "ai_model_licence": "Apache-2.0",
+     "why": "S16_b06 flag (the one AI clip that passed gate + eye); 'AI animated' label is baked into the clip and stays"}
+  ]
+}

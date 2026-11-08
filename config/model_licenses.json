@@ -1,0 +1,115 @@
+{
+ "_doc": "Licence + provenance for every model weight / data file the pipeline downloads (Roadmap v2 §11.2). setup_voters.py pins these revisions and writes MANIFEST.json (sha256 per file) in the voter dir. Checksums of large weights are recorded there at setup time, not here. Verified 2026-10-29.",
+ "base_asr": {
+  "name": "large-v3-turbo (faster-whisper CT2)",
+  "source": "openai/whisper-large-v3-turbo via Systran/faster-whisper conversion",
+  "licence": "MIT",
+  "commercial_use": "yes"
+ },
+ "voters": {
+  "vaani": {
+   "source": "hf:ARTPARK-IISc/whisper-large-v3-vaani-hindi",
+   "revision": "63b5cc7c542373350b6be1d8f8823291dce54b26",
+   "licence": "Apache-2.0",
+   "commercial_use": "yes"
+  },
+  "medium": {
+   "source": "hf:collabora/whisper-medium-hindi",
+   "revision": "af0b8398ef214823c6c449232d3d15bdd7c53313",
+   "licence": "CC-BY-4.0",
+   "commercial_use": "yes, attribution required (credit Collabora)"
+  },
+  "indic": {
+   "source": "AI4Bharat IndicWhisper (vistaar) hindi_models.zip / whisper-medium-hi_alldata_multigpu",
+   "revision": "zip etag 3af12d7c4fc3ee5046f00526a31aad8a-255, 4262614425 bytes, last-modified 2025-05-01",
+   "licence": "MIT (github.com/AI4Bharat/vistaar)",
+   "commercial_use": "yes"
+  },
+  "indic_large": {
+   "source": "AI4Bharat IndicWhisper (vistaar) hindi_models.zip / whisper-large-hi-noldcil",
+   "revision": "same zip as indic",
+   "licence": "MIT (github.com/AI4Bharat/vistaar)",
+   "commercial_use": "yes"
+  }
+ },
+ "wordlist": {
+  "name": "hi_IN.dic",
+  "source": "LibreOffice/dictionaries hi_IN (from GNU Aspell hi 0.01)",
+  "licence": "GPL",
+  "commercial_use": "used as runtime lookup data only, downloaded at setup, not redistributed in the bundle"
+ },
+ "hinglish_romanizer": {
+  "name": "Yapper Transliterator (map_lipi)",
+  "source": "github.com/ABHISHEKgauti25/yapper_transliterator (clone, --yapper-dir)",
+  "licence": "code Apache-2.0; yapper_map.json + Lipi weights 'license: other' (Dakshina, Xlit-Crowd, L3Cube, Aksharantar terms)",
+  "commercial_use": "WARN: verify upstream data terms before publish; runtime only, not redistributed in the bundle"
+ },
+ "caption_tools": {
+  "karaoke-subs": {
+   "repo": "github.com/DorXmoon/karaoke-subs",
+   "pypi": "karaoke-subs",
+   "licence": "MIT",
+   "commit_tested": "d39082d20e30e5d4c7f0473fa8bcf6f43da5ea5a",
+   "use": "ASS karaoke generation via public API, unmodified (core/captions_adapter.py)",
+   "rejected_alternatives": {
+    "AI-Builder-Club/skills karaoke-captions": "no LICENSE file in repo -> reference only",
+    "zeke/nice-ass-captions": "no LICENSE file in repo -> reference only",
+    "CosLynxAI/ffmpeg-word-captions": "MIT but Node.js runtime; keep as fallback"
+   }
+  }
+ },
+ "depth_parallax": {
+  "name": "Depth Anything V2 Small (transformers)",
+  "source": "hf:depth-anything/Depth-Anything-V2-Small-hf",
+  "revision": "5426e4f0f36572d16453bbda7a8389317b1bef99",
+  "params": "24.8M",
+  "licence": "Apache-2.0",
+  "commercial_use": "yes",
+  "used_by": "core/parallax.py (2.5D parallax, CPU)",
+  "never_use": "Depth-Anything-V2-Base / -Large (CC-BY-NC-4.0, non-commercial)",
+  "renderer_credit": "warp approach (backward remap by depth influence, gradient-weighted depth feather, fold = sampling grid running backwards) studied from longweekendlabs/parallax-studio (MIT) @ 32e4cb451abf117a148594269219691f7144ce88; KANG code is own, no files copied",
+  "verified": "2026-11-03 (HF model card license: apache-2.0)"
+ },
+ "face_detection_crop_reuse": {
+  "name": "YuNet face detector (face_detection_yunet_2023mar.onnx)",
+  "source": "https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet",
+  "file": "tools/models/face_detection_yunet_2023mar.onnx",
+  "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+  "licence": "MIT (Shiqi Yu)",
+  "commercial_use": "yes",
+  "used_by": "core/crop_reuse.py (v14): crops touching a detected face are refused; OpenCV 5 has no CascadeClassifier, so YuNet replaces Haar",
+  "downloaded": "2026-11-04"
+ },
+ "ai_motion_i2v": {
+  "name": "Wan2.2-TI2V-5B (diffusers)",
+  "source": "hf:Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+  "revision": "b8fff7315c768468a5333511427288870b2e9635",
+  "params": "5B dense (Wan2.2-VAE 16x16x4), 720P 24 fps, text+image-to-video",
+  "licence": "Apache-2.0",
+  "licence_evidence": [
+   "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B-Diffusers (model card front matter license: apache-2.0, HF API cardData.license = apache-2.0)",
+   "https://github.com/Wan-Video/Wan2.2/blob/main/LICENSE.txt (Apache License 2.0)"
+  ],
+  "commercial_use": "yes (Apache-2.0); outputs labelled 'AI animated', credited as modified (AI motion)",
+  "used_by": "tools/kaggle_ai_motion (Kaggle T4 GPU) -> core/ai_motion.py masked composite",
+  "verified": "2026-11-04 (HF API + model card)",
+  "alternatives_ok": {
+   "Wan2.1-Fun-1.3B-InP / V1.1": "hf:alibaba-pai/Wan2.1-Fun-V1.1-1.3B-InP, Apache-2.0 (HF API), 1.3B fits T4 easily but 480P and needs the VideoX-Fun code (non-diffusers weights) -> fallback only, not used",
+   "Wan2.1-I2V-14B-480P": "hf:Wan-AI/Wan2.1-I2V-14B-480P-Diffusers, Apache-2.0, 14B (~28 GB fp16) does not fit a 16 GB T4 without heavy offload/quantisation -> not used"
+  },
+  "rejected": {
+   "LTX-Video (Lightricks)": {
+    "verdict": "reject (custom licence)",
+    "evidence": "https://huggingface.co/Lightricks/LTX-Video (license: other; files ltx-video-2b-v0.9.license.txt = RAIL-M with use restrictions, LTX-Video-Open-Weights-License-0.X.txt = commercial entities >= $10M revenue need a paid licence)"
+   },
+   "CogVideoX-5B-I2V": {
+    "verdict": "reject (custom licence)",
+    "evidence": "https://huggingface.co/zai-org/CogVideoX-5b-I2V/blob/main/LICENSE (The CogVideoX License: commercial use needs registration, 1M visits/month cap)"
+   },
+   "Stable Video Diffusion img2vid-xt": {
+    "verdict": "reject (custom licence)",
+    "evidence": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/blob/main/LICENSE.md (Stability AI Community License: revenue cap USD 1M, registration)"
+   }
+  }
+ }
+}

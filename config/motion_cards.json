@@ -1,0 +1,1520 @@
+{
+ "_about": "v13 moving text cards + map routes for Dwarika. Every number, time and place name shown is a value reference {ids: word ids in words.json (Hindi master) == accepted Hinglish layer}; core/narration_values.py parses and cross-checks it. Static text must not contain digits or the rupee sign; a static place name must be spoken within 20 s before / during the clip. 'at' = word id whose onset reveals the line. Beats are from runs/2026-11-03_KANG_033/visuals_beats_v12.csv. Agent-authored under user delegation (2026-11-03), not human-reviewed. v13b 2026-11-04: M1 + S04_b04, M4 + S14_b07 (values spoken after the old clip end). v17b 2026-11-05: no count-up (a value may opt in per value with count_up: true - none does), M4 Good highway chip beside its route, place labels full opacity by their word.",
+ "safe_zone": {
+  "bottom_px": 800,
+  "left_px": 150,
+  "right_px": 1770,
+  "top_px": 60,
+  "note": "1920x1080 frame; captions (Premiere SRT / burned preview) sit below 800 px"
+ },
+ "cards": [
+  {
+   "id": "C01_S03_5000_years",
+   "phases": [
+    {
+     "beats": [
+      "S03_b05"
+     ],
+     "lines": [
+      {
+       "role": "kicker",
+       "fmt": "Dwarka · history"
+      },
+      {
+       "role": "big",
+       "fmt": "{0}",
+       "values": [
+        {
+         "ids": [
+          180
+         ]
+        }
+       ],
+       "at": 180
+      },
+      {
+       "role": "text",
+       "fmt": "years ago",
+       "at": 181
+      },
+      {
+       "role": "small",
+       "fmt": "Shri {0} left {1}",
+       "values": [
+        {
+         "ids": [
+          185
+         ],
+         "kind": "text",
+         "expect": "Krishna"
+        },
+        {
+         "ids": [
+          187
+         ],
+         "kind": "text",
+         "expect": "Mathura"
+        }
+       ],
+       "at": 187
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C02_S04_station_2km",
+   "phases": [
+    {
+     "beats": [
+      "S04_b02"
+     ],
+     "lines": [
+      {
+       "role": "kicker",
+       "fmt": "Getting there"
+      },
+      {
+       "role": "title",
+       "fmt": "Dwarka railway station"
+      },
+      {
+       "role": "big",
+       "fmt": "{0} km",
+       "values": [
+        {
+         "ids": [
+          266
+         ]
+        }
+       ],
+       "at": 266
+      },
+      {
+       "role": "small",
+       "fmt": "to Dwarkadhish Mandir",
+       "at": 262
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C03_S05_hotels_400_500m",
+   "phases": [
+    {
+     "beats": [
+      "S05_b02"
+     ],
+     "lines": [
+      {
+       "role": "kicker",
+       "fmt": "Where to stay",
+       "keep": true
+      },
+      {
+       "role": "title",
+       "fmt": "Hotels & dharamshala",
+       "keep": true
+      },
+      {
+       "role": "big",
+       "fmt": "{0}–{1} m",
+       "values": [
+        {
+         "ids": [
+          341
+         ]
+        },
+        {
+         "ids": [
+          343
+         ]
+        }
+       ],
+       "at": 341,
+       "keep": true
+      },
+      {
+       "role": "small",
+       "fmt": "from Dwarkadhish Mandir",
+       "at": 338,
+       "keep": true
+      }
+     ]
+    },
+    {
+     "beats": [
+      "S05_b03"
+     ],
+     "lines": [
+      {
+       "role": "text",
+       "fmt": "Budget to VIP options",
+       "at": 348
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C04_S05_room_prices",
+   "phases": [
+    {
+     "beats": [
+      "S05_b05"
+     ],
+     "lines": [
+      {
+       "role": "kicker",
+       "fmt": "Where to stay"
+      },
+      {
+       "role": "value",
+       "fmt": "Rooms from ₹{0}",
+       "values": [
+        {
+         "ids": [
+          363
+         ]
+        }
+       ],
+       "at": 363,
+       "currency_id": 372
+      },
+      {
+       "role": "big",
+       "fmt": "₹{0}–{1}",
+       "values": [
+        {
+         "ids": [
+          368
+         ]
+        },
+        {
+         "ids": [
+          370
+         ]
+        }
+       ],
+       "at": 368,
+       "currency_id": 372
+      },
+      {
+       "role": "small",
+       "fmt": "good AC deluxe room",
+       "at": 377
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C05_S06_darshan_timings",
+   "phases": [
+    {
+     "beats": [
+      "S06_b05"
+     ],
+     "lines": [
+      {
+       "role": "kicker",
+       "fmt": "Dwarkadhish Mandir"
+      },
+      {
+       "role": "title",
+       "fmt": "Darshan timings"
+      },
+      {
+       "role": "value",
+       "fmt": "{0} – {1}",
+       "values": [
+        {
+         "ids": [
+          448,
+          449
+         ],
+         "kind": "time",
+         "meridiem_id": 447
+        },
+        {
+         "ids": [
+          453
+         ],
+         "kind": "time",
+         "meridiem_id": 452
+        }
+       ],
+       "at": 448
+      },
+      {
+       "role": "value",
+       "fmt": "{0} – {1}",
+       "values": [
+        {
+         "ids": [
+          463
+         ],
+         "kind": "time",
+         "meridiem_id": 461
+        },
+        {
+         "ids": [
+          467,
+          468
+         ],
+         "kind": "time",
+         "meridiem_id": 466
+        }
+       ],
+       "at": 461
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C06_S08_flag_52ft",
+   "phases": [
+    {
+     "beats": [
+      "S08_b04"
+     ],
+     "lines": [
+      {
+       "role": "kicker",
+       "fmt": "Dwarkadhish Mandir"
+      },
+      {
+       "role": "title",
+       "fmt": "Flag on the shikhar"
+      },
+      {
+       "role": "big",
+       "fmt": "{0} ft",
+       "values": [
+        {
+         "ids": [
+          569
+         ]
+        }
+       ],
+       "at": 569
+      },
+      {
+       "role": "text",
+       "fmt": "changed {0} times a day",
+       "values": [
+        {
+         "ids": [
+          576
+         ]
+        }
+       ],
+       "at": 576
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C07_S09_auto",
+   "phases": [
+    {
+     "beats": [
+      "S09_b02",
+      "S09_b03"
+     ],
+     "lines": [
+      {
+       "role": "kicker",
+       "fmt": "Dwarka local transport"
+      },
+      {
+       "role": "title",
+       "fmt": "Auto rickshaw",
+       "at": 699
+      },
+      {
+       "role": "big",
+       "fmt": "₹{0}–{1}",
+       "values": [
+        {
+         "ids": [
+          705
+         ]
+        },
+        {
+         "ids": [
+          707
+         ]
+        }
+       ],
+       "at": 705,
+       "currency_id": 708
+      },
+      {
+       "role": "small",
+       "fmt": "Dwarka local trip",
+       "at": 701
+      },
+      {
+       "role": "text",
+       "fmt": "covers {0}–{1} places",
+       "values": [
+        {
+         "ids": [
+          715
+         ]
+        },
+        {
+         "ids": [
+          717
+         ]
+        }
+       ],
+       "at": 715
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C08_S09_scooty",
+   "replaces_card": "CARD_S09_transport_prices.jpg",
+   "phases": [
+    {
+     "beats": [
+      "S09_b04"
+     ],
+     "lines": [
+      {
+       "role": "kicker",
+       "fmt": "Dwarka local transport",
+       "keep": true
+      },
+      {
+       "role": "title",
+       "fmt": "Scooty",
+       "keep": true,
+       "at": 730
+      },
+      {
+       "role": "big",
+       "fmt": "₹{0}–{1}",
+       "values": [
+        {
+         "ids": [
+          738
+         ]
+        },
+        {
+         "ids": [
+          740
+         ]
+        }
+       ],
+       "at": 738,
+       "currency_id": 741
+      },
+      {
+       "role": "small",
+       "fmt": "per day · best for {0} people",
+       "values": [
+        {
+         "ids": [
+          726
+         ]
+        }
+       ],
+       "at": 734
+      }
+     ]
+    },
+    {
+     "beats": [
+      "S09_b05",
+      "S09_b06"
+     ],
+     "lines": [
+      {
+       "role": "text",
+       "fmt": "Petrol extra",
+       "at": 746
+      },
+      {
+       "role": "small",
+       "fmt": "Tour offices & hotels arrange scooty",
+       "at": 757
+      }
+     ]
+    },
+    {
+     "beats": [
+      "S09_b07"
+     ],
+     "lines": [
+      {
+       "role": "small",
+       "fmt": "Next stop",
+       "at": 776
+      },
+      {
+       "role": "text",
+       "fmt": "Shri {0} Mandir",
+       "values": [
+        {
+         "ids": [
+          782,
+          783
+         ],
+         "kind": "text",
+         "expect": "Swaminarayan"
+        }
+       ],
+       "at": 781
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C09_S10_swaminarayan",
+   "replaces_card": "CARD_S10_swaminarayan.jpg",
+   "phases": [
+    {
+     "beats": [
+      "S10_b01",
+      "S10_b02"
+     ],
+     "lines": [
+      {
+       "role": "kicker",
+       "fmt": "Darshan stop",
+       "keep": true
+      },
+      {
+       "role": "title",
+       "fmt": "Shri {0} Mandir",
+       "values": [
+        {
+         "ids": [
+          782,
+          783
+         ],
+         "kind": "text",
+         "expect": "Swaminarayan"
+        }
+       ],
+       "keep": true
+      },
+      {
+       "role": "text",
+       "fmt": "Grand, attractive style",
+       "at": 791
+      },
+      {
+       "role": "small",
+       "fmt": "Beautiful craftsmanship",
+       "at": 801
+      }
+     ]
+    },
+    {
+     "beats": [
+      "S10_b03",
+      "S10_b04"
+     ],
+     "lines": [
+      {
+       "role": "text",
+       "fmt": "Inside: Bhagwan {0}",
+       "values": [
+        {
+         "ids": [
+          810
+         ],
+         "kind": "text",
+         "expect": "Vishnu"
+        }
+       ],
+       "at": 810
+      },
+      {
+       "role": "small",
+       "fmt": "A peaceful darshan",
+       "at": 818
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C10_S11_siddheshwar",
+   "replaces_card": "CARD_S11_siddheshwar.jpg",
+   "phases": [
+    {
+     "beats": [
+      "S10_b11",
+      "S11_b01"
+     ],
+     "lines": [
+      {
+       "role": "kicker",
+       "fmt": "Dwarka",
+       "keep": true
+      },
+      {
+       "role": "title",
+       "fmt": "{0} Mahadev",
+       "values": [
+        {
+         "ids": [
+          942
+         ],
+         "kind": "text",
+         "expect": "Siddheshwar",
+         "spoken_id": 916
+        }
+       ],
+       "keep": true,
+       "at": 916
+      },
+      {
+       "role": "text",
+       "fmt": "One of Dwarka's ancient temples",
+       "at": 921
+      }
+     ]
+    },
+    {
+     "beats": [
+      "S11_b02"
+     ],
+     "lines": [
+      {
+       "role": "text",
+       "fmt": "Ancient banyan tree",
+       "at": 933
+      },
+      {
+       "role": "small",
+       "fmt": "Bholenath here as Siddheshwar Mahadev",
+       "at": 941
+      }
+     ]
+    },
+    {
+     "beats": [
+      "S11_b03"
+     ],
+     "lines": [
+      {
+       "role": "text",
+       "fmt": "Enter for Mahadev darshan",
+       "at": 956
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C11_S14_gopi_talav",
+   "replaces_card": "CARD_S14_gopi_talav.jpg",
+   "phases": [
+    {
+     "beats": [
+      "S14_b01"
+     ],
+     "lines": [
+      {
+       "role": "kicker",
+       "fmt": "Darshan stop",
+       "keep": true
+      },
+      {
+       "role": "title",
+       "fmt": "Gopi Talav",
+       "keep": true
+      },
+      {
+       "role": "text",
+       "fmt": "A famous, important place",
+       "at": 1306
+      }
+     ]
+    },
+    {
+     "beats": [
+      "S14_b02"
+     ],
+     "lines": [
+      {
+       "role": "text",
+       "fmt": "Gopis came from {0}",
+       "values": [
+        {
+         "ids": [
+          1323
+         ],
+         "kind": "text",
+         "expect": "Mathura"
+        }
+       ],
+       "at": 1322
+      },
+      {
+       "role": "small",
+       "fmt": "to meet Shri Krishna",
+       "at": 1317
+      }
+     ]
+    },
+    {
+     "beats": [
+      "S14_b03"
+     ],
+     "lines": [
+      {
+       "role": "text",
+       "fmt": "Krishna's last raas leela",
+       "at": 1337
+      },
+      {
+       "role": "small",
+       "fmt": "with the gopis",
+       "at": 1333
+      }
+     ]
+    },
+    {
+     "beats": [
+      "S14_b04"
+     ],
+     "lines": [
+      {
+       "role": "text",
+       "fmt": "Floating stones",
+       "at": 1359
+      },
+      {
+       "role": "small",
+       "fmt": "seen in the water here",
+       "at": 1357
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C12_S15_bet_timings",
+   "phases": [
+    {
+     "beats": [
+      "S15_b06"
+     ],
+     "lines": [
+      {
+       "role": "kicker",
+       "fmt": "{0}",
+       "values": [
+        {
+         "ids": [
+          1428,
+          1429
+         ],
+         "kind": "text",
+         "expect": "Bet Dwarka"
+        }
+       ]
+      },
+      {
+       "role": "title",
+       "fmt": "Darshan timings"
+      },
+      {
+       "role": "value",
+       "fmt": "{0} – {1}",
+       "values": [
+        {
+         "ids": [
+          1506
+         ],
+         "kind": "time",
+         "meridiem_id": 1505
+        },
+        {
+         "ids": [
+          1509
+         ],
+         "kind": "time",
+         "meridiem_id": 1505,
+         "after_hour": 7
+        }
+       ],
+       "at": 1506
+      },
+      {
+       "role": "value",
+       "fmt": "{0} – {1}",
+       "values": [
+        {
+         "ids": [
+          1514
+         ],
+         "kind": "time",
+         "meridiem_id": 1513
+        },
+        {
+         "ids": [
+          1517
+         ],
+         "kind": "time",
+         "meridiem_id": 1513
+        }
+       ],
+       "at": 1513
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C13_S16_entry_40",
+   "phases": [
+    {
+     "beats": [
+      "S16_b03",
+      "S16_b04"
+     ],
+     "lines": [
+      {
+       "role": "kicker",
+       "fmt": "{0}",
+       "values": [
+        {
+         "ids": [
+          1428,
+          1429
+         ],
+         "kind": "text",
+         "expect": "Bet Dwarka"
+        }
+       ]
+      },
+      {
+       "role": "text",
+       "fmt": "{0} m from Dwarkadhish Mandir",
+       "values": [
+        {
+         "ids": [
+          1575
+         ]
+        }
+       ],
+       "at": 1575
+      },
+      {
+       "role": "big",
+       "fmt": "₹{0}",
+       "values": [
+        {
+         "ids": [
+          1602
+         ]
+        }
+       ],
+       "at": 1602,
+       "currency_id": 1603
+      },
+      {
+       "role": "small",
+       "fmt": "entry ticket",
+       "at": 1605
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C14_S18_rukmini_2km",
+   "phases": [
+    {
+     "beats": [
+      "S18_b08"
+     ],
+     "lines": [
+      {
+       "role": "kicker",
+       "fmt": "Next stop"
+      },
+      {
+       "role": "title",
+       "fmt": "{0} Mata Mandir",
+       "values": [
+        {
+         "ids": [
+          1821
+         ],
+         "kind": "text",
+         "expect": "Rukmini"
+        }
+       ],
+       "at": 1821
+      },
+      {
+       "role": "big",
+       "fmt": "{0} km",
+       "values": [
+        {
+         "ids": [
+          1827
+         ]
+        }
+       ],
+       "at": 1827
+      },
+      {
+       "role": "small",
+       "fmt": "from Dwarka",
+       "at": 1825
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C15_S20_best_time",
+   "phases": [
+    {
+     "beats": [
+      "S20_b07",
+      "S20_b08"
+     ],
+     "lines": [
+      {
+       "role": "kicker",
+       "fmt": "When to visit"
+      },
+      {
+       "role": "title",
+       "fmt": "Best time"
+      },
+      {
+       "role": "value",
+       "fmt": "{0} – {1}",
+       "values": [
+        {
+         "ids": [
+          1991
+         ],
+         "kind": "text",
+         "expect": "November"
+        },
+        {
+         "ids": [
+          1993
+         ],
+         "kind": "text",
+         "expect": "April"
+        }
+       ],
+       "at": 1991
+      },
+      {
+       "role": "text",
+       "fmt": "{0} & {1} also possible",
+       "values": [
+        {
+         "ids": [
+          2003
+         ],
+         "kind": "text",
+         "expect": "May"
+        },
+        {
+         "ids": [
+          2005
+         ],
+         "kind": "text",
+         "expect": "June"
+        }
+       ],
+       "at": 2003
+      },
+      {
+       "role": "small",
+       "fmt": "but hotter then",
+       "at": 2019
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C16_S20_days",
+   "phases": [
+    {
+     "beats": [
+      "S20_b09",
+      "S20_b10"
+     ],
+     "lines": [
+      {
+       "role": "kicker",
+       "fmt": "Plan your trip"
+      },
+      {
+       "role": "title",
+       "fmt": "How many days?",
+       "at": 2030
+      },
+      {
+       "role": "small",
+       "fmt": "at least",
+       "at": 2040
+      },
+      {
+       "role": "big",
+       "fmt": "{0} days · {1} night",
+       "values": [
+        {
+         "ids": [
+          2043
+         ]
+        },
+        {
+         "ids": [
+          2046
+         ]
+        }
+       ],
+       "at": 2043
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C17_S21_budget",
+   "phases": [
+    {
+     "beats": [
+      "S21_b02",
+      "S21_b03"
+     ],
+     "lines": [
+      {
+       "role": "kicker",
+       "fmt": "Budget",
+       "keep": true
+      },
+      {
+       "role": "title",
+       "fmt": "How much does the yatra cost?",
+       "keep": true,
+       "at": 2076
+      },
+      {
+       "role": "text",
+       "fmt": "The most important question",
+       "at": 2073
+      },
+      {
+       "role": "small",
+       "fmt": "{0} days / {1} nights is enough",
+       "values": [
+        {
+         "ids": [
+          2054
+         ]
+        },
+        {
+         "ids": [
+          2057
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "beats": [
+      "S21_b04"
+     ],
+     "lines": [
+      {
+       "role": "value",
+       "fmt": "{0} people · {1} days / {2} nights",
+       "values": [
+        {
+         "ids": [
+          2093
+         ]
+        },
+        {
+         "ids": [
+          2097
+         ]
+        },
+        {
+         "ids": [
+          2100
+         ]
+        }
+       ],
+       "at": 2093,
+       "keep": true
+      }
+     ]
+    },
+    {
+     "beats": [
+      "S21_b05",
+      "S21_b06"
+     ],
+     "lines": [
+      {
+       "role": "big",
+       "fmt": "₹{0}–{1}",
+       "values": [
+        {
+         "ids": [
+          2113
+         ]
+        },
+        {
+         "ids": [
+          2115
+         ]
+        }
+       ],
+       "at": 2113,
+       "currency_id": 2120
+      },
+      {
+       "role": "text",
+       "fmt": "+ train ticket",
+       "at": 2116
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "maps": [
+  {
+   "id": "M0_S03_overview",
+   "phases": [
+    {
+     "beats": [
+      "S03_b07"
+     ],
+     "cam_from": {
+      "lon": 70.6,
+      "lat": 22.75,
+      "km": 640
+     },
+     "fly_s": 2.4,
+     "fit": [
+      "dwarka",
+      "bet_dwarka",
+      "nageshwar"
+     ],
+     "min_km": 46,
+     "regions": [
+      "gujarat",
+      "arabian_sea"
+     ],
+     "show": [
+      {
+       "place": "dwarka",
+       "anchor": "l"
+      },
+      {
+       "place": "bet_dwarka",
+       "at": 213,
+       "anchor": "r"
+      }
+     ]
+    },
+    {
+     "beats": [
+      "S03_b08"
+     ],
+     "fit": [
+      "dwarka",
+      "bet_dwarka",
+      "nageshwar"
+     ],
+     "min_km": 46,
+     "show": [
+      {
+       "place": "nageshwar",
+       "at": 223,
+       "anchor": "r"
+      }
+     ],
+     "chips": [
+      {
+       "fmt": "{0} of Shiva's {1} Jyotirlingas",
+       "values": [
+        {
+         "ids": [
+          222
+         ]
+        },
+        {
+         "ids": [
+          219
+         ],
+         "tok": [
+          0,
+          1
+         ]
+        }
+       ],
+       "at": 219
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "M1_S04_jamnagar_dwarka",
+   "phases": [
+    {
+     "beats": [
+      "S04_b03"
+     ],
+     "fit": [
+      "dwarka",
+      "jamnagar"
+     ],
+     "min_km": 60,
+     "regions": [
+      "arabian_sea"
+     ],
+     "show": [
+      {
+       "place": "dwarka",
+       "anchor": "l"
+      },
+      {
+       "place": "jamnagar",
+       "at": 277,
+       "anchor": "t"
+      }
+     ],
+     "routes": [
+      {
+       "path": [
+        "jamnagar",
+        "dwarka"
+       ],
+       "at": 277,
+       "dur": 1.3,
+       "bend": 0.12,
+       "km": {
+        "ids": [
+         284
+        ]
+       },
+       "km_at": 284,
+       "badge_side": -1
+      }
+     ]
+    },
+    {
+     "beats": [
+      "S04_b04"
+     ],
+     "fit": [
+      "dwarka",
+      "jamnagar"
+     ],
+     "min_km": 60,
+     "regions": [
+      "arabian_sea"
+     ],
+     "_why": "v13b: '135' is spoken at 92.47 s, 0.09 s before S04_b03 ends; the map holds through S04_b04 ('km ki doori') so the badge appears <=0.2 s before the word. S04_b04 was representative (Okha train photo), so the priority rule allows it."
+    }
+   ]
+  },
+  {
+   "id": "M2_S12_route_overview",
+   "phases": [
+    {
+     "beats": [
+      "S12_b02"
+     ],
+     "fit": [
+      "dwarka",
+      "nageshwar",
+      "bet_dwarka"
+     ],
+     "min_km": 46,
+     "show": [
+      {
+       "place": "dwarka",
+       "anchor": "l"
+      },
+      {
+       "place": "nageshwar",
+       "at": 1096,
+       "anchor": "r"
+      },
+      {
+       "place": "bet_dwarka",
+       "at": 1099,
+       "anchor": "r"
+      }
+     ],
+     "routes": [
+      {
+       "path": [
+        "dwarka",
+        "nageshwar"
+       ],
+       "at": 1095,
+       "dur": 1.0,
+       "bend": 0.15
+      },
+      {
+       "path": [
+        "nageshwar",
+        "bet_dwarka"
+       ],
+       "at": 1098,
+       "dur": 0.9,
+       "bend": -0.12
+      }
+     ]
+    },
+    {
+     "beats": [
+      "S12_b03",
+      "S12_b04"
+     ],
+     "fit": [
+      "dwarka",
+      "nageshwar",
+      "bet_dwarka"
+     ],
+     "min_km": 46,
+     "chips": [
+      {
+       "fmt": "Rented scooty: best",
+       "at": 1105
+      },
+      {
+       "fmt": "Or by auto",
+       "at": 1116
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "M3_S13_nageshwar_gopi_talav",
+   "phases": [
+    {
+     "beats": [
+      "S13_b09"
+     ],
+     "fit": [
+      "nageshwar",
+      "gopi_talav"
+     ],
+     "min_km": 34,
+     "show": [
+      {
+       "place": "nageshwar",
+       "anchor": "l",
+       "name_ids": [
+        1164
+       ]
+      },
+      {
+       "place": "gopi_talav",
+       "at": 1290,
+       "anchor": "r"
+      }
+     ],
+     "routes": [
+      {
+       "path": [
+        "nageshwar",
+        "gopi_talav"
+       ],
+       "at": 1289,
+       "dur": 1.1,
+       "bend": 0.2,
+       "km": {
+        "ids": [
+         1295
+        ]
+       },
+       "km_at": 1295,
+       "badge_side": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "M4_S14_gopi_talav_bet_dwarka",
+   "phases": [
+    {
+     "beats": [
+      "S14_b05"
+     ],
+     "fit": [
+      "gopi_talav",
+      "bet_dwarka",
+      "sudarshan_setu"
+     ],
+     "min_km": 34,
+     "show": [
+      {
+       "place": "gopi_talav",
+       "anchor": "r"
+      },
+      {
+       "place": "bet_dwarka",
+       "at": 1379,
+       "anchor": "r"
+      }
+     ],
+     "routes": [
+      {
+       "path": [
+        "gopi_talav",
+        "sudarshan_setu",
+        "bet_dwarka"
+       ],
+       "at": 1378,
+       "dur": 1.6,
+       "bend": 0.15,
+       "km": {
+        "ids": [
+         1385
+        ]
+       },
+       "km_at": 1385,
+       "badge_side": -1
+      }
+     ]
+    },
+    {
+     "beats": [
+      "S14_b06"
+     ],
+     "fit": [
+      "sudarshan_setu",
+      "bet_dwarka"
+     ],
+     "min_km": 26,
+     "show": [
+      {
+       "place": "sudarshan_setu",
+       "at": 1410,
+       "anchor": "tl",
+       "pulse_at": 1405
+      }
+     ],
+     "chips": [
+      {
+       "fmt": "Good highway",
+       "at": 1398,
+       "near_route": [0, 0, 0.5],
+       "_why": "v17b: beside the Gopi Talav -> Sudarshan Setu leg (user: label floated top-left far from the route); dropped if no free spot inside the 5 % margin above y=770"
+      },
+      {
+       "fmt": "New bridge over the sea",
+       "at": 1405
+      }
+     ]
+    },
+    {
+     "beats": [
+      "S14_b07"
+     ],
+     "fit": [
+      "sudarshan_setu",
+      "bet_dwarka"
+     ],
+     "min_km": 26,
+     "_why": "v13b: 'Sudarshan setu' is spoken at 436.11 s, after S14_b06 ends (435.92); the map holds through S14_b07 (representative Bet Dwarka photo) so the label appears 0.2 s before the word."
+    }
+   ]
+  },
+  {
+   "id": "M5_S18_shivrajpur",
+   "phases": [
+    {
+     "beats": [
+      "S18_b02"
+     ],
+     "fit": [
+      "bet_dwarka",
+      "shivrajpur",
+      "dwarka"
+     ],
+     "min_km": 46,
+     "show": [
+      {
+       "place": "shivrajpur",
+       "anchor": "l"
+      },
+      {
+       "place": "bet_dwarka",
+       "at": 1729,
+       "anchor": "r"
+      },
+      {
+       "place": "dwarka",
+       "at": 1736,
+       "anchor": "l"
+      }
+     ],
+     "routes": [
+      {
+       "path": [
+        "bet_dwarka",
+        "sudarshan_setu",
+        "shivrajpur"
+       ],
+       "at": 1729,
+       "dur": 1.2,
+       "bend": 0.1,
+       "km": {
+        "ids": [
+         1732
+        ]
+       },
+       "km_at": 1732,
+       "badge_side": 1
+      },
+      {
+       "path": [
+        "dwarka",
+        "shivrajpur"
+       ],
+       "at": 1736,
+       "dur": 0.7,
+       "bend": -0.2,
+       "km": {
+        "ids": [
+         1738
+        ]
+       },
+       "km_at": 1738,
+       "badge_side": 1
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

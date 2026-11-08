@@ -1,0 +1,49 @@
+# AI Video Engine gitignore
+# Audio / Video & binary media (preserve private audio)
+*.mp3
+*.wav
+*.m4a
+*.aac
+*.mp4
+*.mkv
+*.avi
+storage/inputs/
+storage/temp/
+storage/outputs/
+
+# Python cache & environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# Secrets, credentials & cloudflared tunnels
+.env
+*.token
+*.pem
+*.key
+cloudflared
+cloudflared-linux-amd64
+
+
+# Kang run outputs & generated evidence (regenerate with `python build_and_check.py`)
+runs/
+out/
+_kaggle_sandbox/
+build_report.json
+build_out.txt
+*_report.json
+*.log
+
+# Kaggle credentials
+kaggle.json
+access_token
+
+# Model weights (spelling voters live in models/voters, ~10 GB)
+models/
+*.bin
+*.safetensors
+*.pt
+*.onnx

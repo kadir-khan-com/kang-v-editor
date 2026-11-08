@@ -1,0 +1,16 @@
+/* KANG pop_safe: Reels safe zone (text bottom at ~73% of height, 80% width), no sound effects, no AI tagging. */
+@font-face { font-family: 'KangFont'; src: url('Montserrat-Black.ttf') format('truetype'); }
+.word {
+    font-family: KangFont, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 2px 5px;
+    text-shadow: 2px 2px 0px #000000, -2px -2px 0px #000000, 2px -2px 0px #000000, -2px 2px 0px #000000;
+}
+.word-not-narrated-yet { color: #FFFFFF; }
+.word-being-narrated {
+    color: #FFD400;
+    text-shadow: 2px 2px 0px #000000, -2px -2px 0px #000000, 2px -2px 0px #000000, -2px 2px 0px #000000, 0 0 8px #000000;
+}
+.word-already-narrated { color: #FFFFFF; }

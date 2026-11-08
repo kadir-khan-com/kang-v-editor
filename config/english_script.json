@@ -1,0 +1,15 @@
+{
+  "_doc": "Caption-only script style for English words (see core/script_style.py). Add entries freely; latin phrases must keep the same word count.",
+  "to_devanagari": {
+    "well": "वेल", "connected": "कनेक्टेड", "railway": "रेलवे", "station": "स्टेशन",
+    "nearest": "नियरेस्ट", "airport": "एयरपोर्ट", "km": "किमी", "VIP": "वीआईपी", "AC": "एसी",
+    "important": "इम्पॉर्टेंट", "question": "क्वेश्चन", "budget": "बजट"
+  },
+  "to_latin_phrases": [
+    {"dev": "टू डेज", "lat": "two days"},
+    {"dev": "थ्री डेज", "lat": "three days"},
+    {"dev": "वन नाइट", "lat": "one night"},
+    {"dev": "टू नाइट", "lat": "two night"},
+    {"dev": "बजट", "lat": "budget"}
+  ]
+}

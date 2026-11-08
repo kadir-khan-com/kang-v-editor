@@ -1,0 +1,96 @@
+{
+ "_note": "SUGGESTIONS ONLY for the transcript review (never auto-applied). Each entry: heard variants (normalized match on consecutive words) -> suggested correct name. Add a line whenever review confirms a new mishearing; move it to glossary.json only once it is certain for every video.",
+ "names": [
+  {
+   "suggest": "बेट द्वारका",
+   "heard": [
+    "भेड़ द्वारिका",
+    "भेड द्वारिका",
+    "भेट द्वारिका",
+    "भेंट द्वारिका",
+    "बेड द्वारिका",
+    "बेड द्वारका",
+    "भेड़ दौरी",
+    "भेड़दौरी",
+    "बेट द्वारिका"
+   ]
+  },
+  {
+   "suggest": "वज्रनाभ",
+   "heard": [
+    "भज्रनाम",
+    "भज्र नाम",
+    "वज्रनाम",
+    "बज्रनाभ",
+    "भज्रनाभ"
+   ]
+  },
+  {
+   "suggest": "सर्पदोष",
+   "heard": [
+    "शर्पद्रोस",
+    "शरपदोष",
+    "शर्पदोस",
+    "सर्पद्रोस",
+    "शर्प दोष"
+   ]
+  },
+  {
+   "suggest": "द्वारकाधीश",
+   "heard": [
+    "द्वारकादीश",
+    "द्वारिका दीश",
+    "द्वारिका दिश",
+    "द्वारका दीश"
+   ]
+  },
+  {
+   "suggest": "ज्योतिर्लिंग",
+   "heard": [
+    "जो तिरलिंग",
+    "जो तिरिंग",
+    "ज्योति लिंग",
+    "जोतिर्लिंग"
+   ]
+  },
+  {
+   "suggest": "द्वारका",
+   "heard": [
+    "द्वारी का",
+    "द्वारी की",
+    "दौरिका",
+    "दौरी का",
+    "दौरिक"
+   ]
+  },
+  {
+   "suggest": "भड़केश्वर महादेव",
+   "heard": [
+    "वर्केश्वर महादेव",
+    "भड़केश्वर",
+    "बड़केश्वर"
+   ]
+  },
+  {
+   "suggest": "जीवन लीलाओं",
+   "heard": [
+    "जीवन दिलाओ",
+    "जीवन लीलाओ"
+   ]
+  }
+ ],
+ "protected": [
+  "रुक्मिणी",
+  "रुक्मणी",
+  "द्वारका",
+  "द्वारिका",
+  "द्वारकाधीश",
+  "द्वारिकाधीश",
+  "श्रीकृष्ण",
+  "कृष्ण",
+  "गोमती",
+  "वज्रनाभ",
+  "सुदामा"
+ ],
+ "_protected_note": "Proper names that must NEVER be grouped into a bulk all/none pattern (each occurrence reviewed alone). Spelling choice (e.g. रुक्मिणी standard) is a user policy, not an ASR correction."
+}

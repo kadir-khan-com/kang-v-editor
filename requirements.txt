@@ -1,0 +1,20 @@
+# Core (Phase 0-3, offline, CPU)
+numpy>=1.24
+pydantic>=2.5,<3
+pillow>=10.0
+fonttools>=4.40
+# Transcription (Phase 1) - GPU on Kaggle, CPU int8 works for short tests
+faster-whisper>=1.0
+# API service
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.27,<1.0
+python-multipart>=0.0.9
+# Legacy silence cutter (engine.cut_silence); F03 uses FFmpeg silencedetect instead
+auto-editor>=26.0
+# Tests
+pytest>=7.4
+karaoke-subs>=0.1  # MIT, Reels caption adapter (optional: only for kang.py reels)
+# 2.5D parallax (optional: only for kang.py parallax*). CPU torch on Windows: pip install torch --index-url https://download.pytorch.org/whl/cpu
+opencv-python-headless>=4.8
+torch>=2.1
+transformers>=4.45  # loads depth-anything/Depth-Anything-V2-Small-hf (Apache-2.0) at a pinned revision

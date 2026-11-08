@@ -1,0 +1,6 @@
+{
+  "_note": "Editable filler dictionary (F03). 'auto' words are proposed as cuts; 'review' words are only flagged (e.g. 'matlab' can be real content). Nothing is cut until the cut list is approved.",
+  "auto": ["उम्म", "अम्म", "हम्म", "आं", "उह", "um", "umm", "uh", "uhh", "hmm", "erm"],
+  "review": ["मतलब", "तो", "ना", "बस", "वो", "like", "basically", "actually", "matlab", "yaani", "यानी"],
+  "min_probability_for_keep": 0.0
+}

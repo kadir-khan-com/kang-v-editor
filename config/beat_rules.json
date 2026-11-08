@@ -1,0 +1,348 @@
+{
+ "_about": "Beat layer rules (core/beats.py). Clause words = Hindi words that often open a new narration point. Places = place keys found in Commons titles; a new pool photo may only carry places the v9 shot it joins already shows . Rejects = known wrong-place Commons items (user/agent reviews 2026-11-02).",
+ "clause_words": [
+  "और",
+  "तो",
+  "लेकिन",
+  "जो",
+  "वही",
+  "वहीं",
+  "यहाँ",
+  "यहां",
+  "दोस्तों",
+  "दोस्तो",
+  "इसके",
+  "अब",
+  "फिर",
+  "इसलिए",
+  "मंदिर",
+  "साथ",
+  "अगर",
+  "आप",
+  "जहाँ",
+  "जहां"
+ ],
+ "bad_start_words": [
+  "है",
+  "हैं",
+  "की",
+  "का",
+  "के",
+  "को",
+  "से",
+  "में",
+  "पर",
+  "ने",
+  "भी",
+  "ही",
+  "किलोमीटर",
+  "km",
+  "मीटर",
+  "रुपये",
+  "रुपए",
+  "था",
+  "थी",
+  "थे",
+  "गया",
+  "गई",
+  "गए",
+  "सकते",
+  "जाता",
+  "जाती",
+  "होता",
+  "होती",
+  "करते",
+  "करता",
+  "वाले",
+  "तक"
+ ],
+ "places": {
+  "nageshwar": [
+   "nageshwar",
+   "nageshvar",
+   "nageshvara",
+   "nageswar"
+  ],
+  "rukmini": [
+   "rukmini"
+  ],
+  "bet dwarka": [
+   "bet dwarka",
+   "bet dwaraka",
+   "bhent dwarka",
+   "beyt dwarka",
+   "bet dwarika"
+  ],
+  "gomti": [
+   "gomti",
+   "gomati"
+  ],
+  "sudama setu": [
+   "sudama setu",
+   "sudama bridge",
+   "hanging bridge"
+  ],
+  "sudarshan setu": [
+   "sudarshan setu",
+   "signature bridge",
+   "sea bridge"
+  ],
+  "shivrajpur": [
+   "shivrajpur"
+  ],
+  "bhadkeshwar": [
+   "bhadkeshwar",
+   "bhidbhanjan"
+  ],
+  "lighthouse": [
+   "lighthouse",
+   "light house"
+  ],
+  "hanuman": [
+   "hanuman"
+  ],
+  "gopi talav": [
+   "gopi talav",
+   "gopi talab",
+   "gopi tank"
+  ],
+  "surya mandir": [
+   "surya mandir",
+   "sun temple"
+  ],
+  "samudra narayan": [
+   "samudra narayan"
+  ],
+  "iskcon": [
+   "iskcon"
+  ],
+  "gayatri": [
+   "gayatri"
+  ],
+  "swaminarayan": [
+   "swaminarayan"
+  ],
+  "siddheshwar": [
+   "siddheshwar",
+   "siddhnath"
+  ],
+  "okha": [
+   "okha"
+  ],
+  "jamnagar": [
+   "jamnagar"
+  ],
+  "porbandar": [
+   "porbandar"
+  ],
+  "somnath": [
+   "somnath"
+  ],
+  "visavada": [
+   "visavada"
+  ],
+  "surat": [
+   "surat"
+  ],
+  "ahmedabad": [
+   "ahmedabad"
+  ],
+  "vadodara": [
+   "vadodara",
+   "baroda"
+  ],
+  "sgdhp exhibits": [
+   "sgdhp exhibits",
+   "exhibits"
+  ],
+  "excavation": [
+   "excavation",
+   "excavations",
+   "under water"
+  ],
+  "sunset": [
+   "sunset",
+   "setting sun",
+   "dusk"
+  ],
+  "beach": [
+   "beach"
+  ]
+ },
+ "reject_titles": [
+  {
+   "match": "gopi talav",
+   "reason": "Commons Gopi Talav = Surat lake (wrong place, review 2026-11-02)"
+  },
+  {
+   "match": "gopi talab",
+   "reason": "Commons Gopi Talav = Surat lake (wrong place, review 2026-11-02)"
+  },
+  {
+   "match": "surat",
+   "reason": "Surat, not Dwarka"
+  },
+  {
+   "match": "siddheshwar",
+   "reason": "Commons Siddheshwar = Visavada temple (wrong place, review 2026-11-02)"
+  },
+  {
+   "match": "visavada",
+   "reason": "Visavada, not Dwarka"
+  },
+  {
+   "match": "dss academy",
+   "reason": "Dwarka, New Delhi (wrong place)"
+  },
+  {
+   "match": "dwarka sector",
+   "reason": "Dwarka sub-city, New Delhi (wrong place)"
+  },
+  {
+   "match": "delhi",
+   "reason": "Dwarka, New Delhi (wrong place)"
+  },
+  {
+   "match": "wiki loves love",
+   "reason": "people portraits campaign (identifiable persons, off-topic)"
+  },
+  {
+   "match": "pond",
+   "reason": "Nageshwar pond birds, not the temple narrated"
+  }
+ ],
+ "eye_rejects": {
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (67).jpg": "near-duplicate of B10_S02_003 (same dharamshala facade)",
+  "File:Dwarkadhish Temple - Jagat Mandir - Dwarakadheesh and surroundings during Dwaraka DWARASPDB 2015 (71).jpg": "near-duplicate of Dwarka gate B10_S04_006",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (358).jpg": "near-duplicate of B10_S08_020 (same seafront view)",
+  "File:Sunsoked waterskiing seagull.jpg": "seagull over sea, not Bhadkeshwar (wrong subject)",
+  "File:Dwarka shiva.jpg": "Shiva statue = Nageshwar, not the lighthouse/beach narrated (wrong place)",
+  "File:Bet Dwarka during Dwaraka DWARASPDB 2015 (23).jpg": "plain open sea, nothing recognisable",
+  "File:Bet Dwarka during Dwaraka DWARASPDB 2015 (11).jpg": "plain open sea, near-duplicate",
+  "File:Nageshvara colossal Shiva statue.jpg": "near-duplicate of B10_S13_034 (same statue angle)",
+  "File:Bet Dwarka during Dwaraka DWARASPDB 2015 (59).jpg": "near-duplicate of B10_S15_042 (same cargo ship)",
+  "File:Bet Dwarka during Dwaraka DWARASPDB 2015 (19).jpg": "near-duplicate of B10_S15_044 (same fishing boat)",
+  "File:Dwarkadhish Temple - Jagat Mandir - Dwarakadheesh and surroundings during Dwaraka DWARASPDB 2015 (54).jpg": "third view of the same Dwarka gate (near-duplicate of B10_S04_006)",
+  "File:Dwarkadhish Temple - Jagat Mandir - Dwarakadheesh and surroundings during Dwaraka DWARASPDB 2015 (72).jpg": "street wall, irrelevant to narration",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (66).jpg": "near-duplicate of B10_S02_003 (same dharamshala facade)",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (282).jpg": "camel on beach, off-topic for temple history narration",
+  "File:Bet Dwarka during Dwaraka DWARASPDB 2015 (7).jpg": "cargo ship again (near-duplicate of B10_S15_042)",
+  "File:Bet Dwarka during Dwaraka DWARASPDB 2015 (3).jpg": "cargo ships/port again (near-duplicate of B10_S15_042)",
+  "File:Bet Dwarka during Dwaraka DWARASPDB 2015 (36).jpg": "portrait of a person (not a place; identifiable person)",
+  "File:Dwarkadhish Temple - Jagat Mandir - Dwarakadheesh and surroundings during Dwaraka DWARASPDB 2015 (78).jpg": "Dwarka gate again (near-duplicate of B10_S04_006)",
+  "File:Dwarkadhish Temple - Jagat Mandir - Dwarakadheesh and surroundings during Dwaraka DWARASPDB 2015 (18).jpg": "near-duplicate of B10_S16_050 (same shikhar + flag view)",
+  "File:Bet Dwarka during Dwaraka DWARASPDB 2015 (31).jpg": "village street with a child, irrelevant to narration (identifiable person)",
+  "File:Dwarkadhish Temple - Jagat Mandir - Dwarakadheesh and surroundings during Dwaraka DWARASPDB 2015 (74).jpg": "wind turbines, irrelevant to narration",
+  "File:Bet Dwarka during Dwaraka DWARASPDB 2015 (18).jpg": "fishing boat again (near-duplicate of B10_S15_044)",
+  "File:Dwarkadhish Temple - Jagat Mandir - Dwarakadheesh and surroundings during Dwaraka DWARASPDB 2015 (60).jpg": "Dwarka gate again (near-duplicate of B10_S04_006)",
+  "File:A child unknowingly offers her love towards God during Jagannath Rathyatra, Dwarka, India.jpg": "child portrait (identifiable person, off-topic)",
+  "File:Lokendra Singh Rathore @Dwarka beach.jpg": "person posing on beach (identifiable person)",
+  "File:Guj21 Nageshwar pond Great egret.jpg": "bird at Nageshwar pond, not the temple narrated",
+  "File:Guj21 Nageshwar pond Grey heron 1.jpg": "bird at Nageshwar pond, not the temple narrated",
+  "File:Guj21 Nageshwar pond Grey heron 2.jpg": "bird at Nageshwar pond, not the temple narrated",
+  "File:An American Guru distributing love of God among Indians and others in Dwarka, India.jpg": "people/guru portrait, off-topic",
+  "File:An old woman offers her token of love towards God during Jagannath Rathyatra, Dwarka, India.jpg": "portrait of an old woman (identifiable person)",
+  "File:At a temple in dwarka.jpg": "crowd of saints, off-topic for ISKCON/Gayatri narration",
+  "File:CAM06760.jpg": "lighthouse, off-topic for ISKCON/Gayatri narration",
+  "File:DSS Academy DwarkaDSC 1290.jpg": "DSS Academy = Dwarka Sector 7, New Delhi (wrong place)",
+  "File:DSS Academy DwarkaDSC 1327.jpg": "DSS Academy = Dwarka Sector 7, New Delhi (wrong place)",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (1).jpg": "village houses with cattle, off-topic",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (102).jpg": "near-duplicate of B10_S21_098 (women in red walking)",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (104).jpg": "portrait of an old man (identifiable person)",
+  "File:Guj21 Nageshwar pond Grey heron 3.jpg": "bird at Nageshwar pond, not the temple narrated",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (106).jpg": "near-duplicate of B10_S21_098 (women in red walking)",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (107).jpg": "portrait of a man on a scooter (identifiable person)",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (108).jpg": "cows under an ad poster, off-topic",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (109).jpg": "cows under an ad poster, near-duplicate of B10_S20_111",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (11).jpg": "idol shop again (near-duplicate of B10_S21_097)",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (111).jpg": "near-duplicate of B10_S21_114 (same road sign)",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (114).jpg": "Dwarka gate again (near-duplicate of B10_S04_006)",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (320).jpg": "near-duplicate of B10_S08_018 (same seafront view)",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (324).jpg": "near-duplicate of B10_S08_026 (same ghat)",
+  "File:Bet Dwarka during Dwaraka DWARASPDB 2015 (53).jpg": "near-duplicate of B10_S12_033 (island from sea)",
+  "File:Bet Dwarka during Dwaraka DWARASPDB 2015 (4).jpg": "plain sea, nothing recognisable",
+  "File:Nageshvara Jyotirlinga.JPG": "near-duplicate of B10_S13_034 (same statue view)",
+  "File:Nageshwar shiva temple during Dwaraka DWARASPDB 2015 (9).jpg": "near-duplicate of B10_S13_108 (statue from afar)",
+  "File:Bet Dwarka during Dwaraka DWARASPDB 2015 (54).jpg": "near-duplicate of B10_S15_043 (island from sea)",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (10).jpg": "marble idol shop, off-topic",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (12).jpg": "marble idol shop, off-topic",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (105).jpg": "near-duplicate of B10_S21_098 (women in red walking)",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (117).jpg": "near-duplicate of B10_S21_121 (elephant statue)",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (118).jpg": "near-duplicate of B10_S21_121 (elephant statue)",
+  "File:Dwaraka and around - during Dwaraka DWARASPDB 2015 (119).jpg": "near-duplicate of B10_S21_121 (elephant statue)"
+ },
+ "area_keys": [
+  "bet dwarka"
+ ],
+ "_about_eye_rejects": "Agent eye check of downloaded pool stills (2026-11-03, beat layer v10): title -> reason. Not human-reviewed.",
+ "_about_focus": "Per-asset framing focus [x, y] (0-1 of the image) for stills whose subject sits off-centre; motion keeps the frame centred on it as far as the image allows (agent eye check 2026-11-03).",
+ "focus": {
+  "S10_1_guj21_dwarka_lighthouse_and_clear_ar.jpg": [
+   0.9,
+   0.4
+  ]
+ },
+ "_about_crop_reuse": "v14 crop reuse (user decision 2026-11-04 07:37: same photo may come back as a distinctly different crop, e.g. full temple then only the spire). core/crop_reuse.py. Limits: crop area <= max_area_ratio of the first framing, IoU <= max_iou with every earlier framing of that photo, >= min_beats_apart beats from every appearance, <= max_reuses_per_asset, crop >= min_crop_width px. Only continued_with_motion beats and representative beats whose narration (Hinglish words) names a place with an exact photo. extra_places = place keys used only by crop reuse (title aliases / narration aliases). rejects = '<original file>@<beat>': reason (agent eye check of out/dwarika_v14_crop_grid.jpg).",
+ "crop_reuse": {
+  "max_area_ratio": 0.5,
+  "max_iou": 0.3,
+  "min_beats_apart": 4,
+  "max_reuses_per_asset": 2,
+  "min_crop_width": 1280,
+  "aspect": [
+   16,
+   9
+  ],
+  "min_laplacian_var": 40.0,
+  "min_edge_density": 0.03,
+  "max_sky_fraction": 0.55,
+  "min_score": 0.0,
+  "step_px": 32,
+  "width_steps": [
+   1.0,
+   1.1,
+   1.2
+  ],
+  "face_score": 0.75,
+  "require_face_detector": true,
+  "replace_roles": [
+   "continued_with_motion"
+  ],
+  "never_replace_match": [
+   "exact",
+   "text_card",
+   "map",
+   "archival"
+  ],
+  "extra_places": {
+   "dwarkadhish": {
+    "title": [
+     "dwarkadhish",
+     "jagat mandir",
+     "dwarka krishna temple"
+    ],
+    "not_title": [
+     "bet dwarka",
+     "golden",
+     "okha"
+    ],
+    "narration": [
+     "dwarkadhish",
+     "jagat mandir"
+    ]
+   }
+  },
+  "narration_ignore": [],
+  "rejects": {
+   "S06_2_gomti_river_at_dwarka.jpg@S08_b08": "agent eye check 2026-11-04 (grid KANG_003): crop = shore rocks + litter only; river/confluence the narration names is not visible -> meaningless crop",
+   "B10_S11_081_dwarka_beach_jpg.jpg@S18_b06": "agent eye check 2026-11-04 (grid KANG_003): Dwarka promenade + temple (another place, representative) would replace an EXACT Shivrajpur beach hold while the narration still describes Shivrajpur -> worse than the hold"
+  },
+  "continued_exact_needs_exact": true,
+  "eye_accepted": {
+   "S01_2_dwarka_krishna_temple_gujarat_india_.jpg@S07_b04": "temple entrance + pilgrims, second shikhara; people small, no detected face; Dwarkadhish named in narration",
+   "S15_1_guj21_bet_dwaraka_sgdhp_exhibits_shr.jpg@S15_b08": "painted shrine niche + 'जय श्री कृष्णा' ceiling text fully inside the crop; sharp",
+   "S12_1_beautiful_dusk_near_bet_dwarka.jpg@S22_b04": "ferry boat on the water (generic sunset/outro beat); hazy like the original, not blurry",
+   "B10_S06_015_dwarka_temple_gomati_ghat_jpg.jpg@S08_b08": "Gomati ghat steps + pilgrims in the river (grid KANG_004); matches 'Gomti meets the sea here'; a little soft, people small, no detected face"
+  }
+ }
+}

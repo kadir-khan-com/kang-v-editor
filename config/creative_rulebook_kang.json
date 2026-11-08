@@ -1,0 +1,2418 @@
+{
+ "_note": "KANG overlay on vendor creative_layer_v2 rules (vendor untouched). Built 2026-11-06 by Hark from notes/creative_research/ (licence_citation_audit.md, science_verification.md, gap_research.md). Applied by core/creative.py.",
+ "evidence_changes": {
+  "R-055": {
+   "to": "🟡",
+   "why": "science/citation audit 2026-11-06: source real but does not test this editing rule, or Hollywood/lab finding applied to narrated stills vlog"
+  },
+  "R-057": {
+   "to": "🟡",
+   "why": "science/citation audit 2026-11-06: source real but does not test this editing rule, or Hollywood/lab finding applied to narrated stills vlog"
+  },
+  "R-088": {
+   "to": "🟡",
+   "why": "science/citation audit 2026-11-06: source real but does not test this editing rule, or Hollywood/lab finding applied to narrated stills vlog"
+  },
+  "R-126": {
+   "to": "🟡",
+   "why": "science/citation audit 2026-11-06: source real but does not test this editing rule, or Hollywood/lab finding applied to narrated stills vlog"
+  },
+  "R-135": {
+   "to": "🟡",
+   "why": "science/citation audit 2026-11-06: source real but does not test this editing rule, or Hollywood/lab finding applied to narrated stills vlog"
+  },
+  "R-140": {
+   "to": "🟡",
+   "why": "science/citation audit 2026-11-06: source real but does not test this editing rule, or Hollywood/lab finding applied to narrated stills vlog"
+  },
+  "R-177": {
+   "to": "🟡",
+   "why": "science/citation audit 2026-11-06: source real but does not test this editing rule, or Hollywood/lab finding applied to narrated stills vlog"
+  },
+  "R-178": {
+   "to": "🟡",
+   "why": "science/citation audit 2026-11-06: source real but does not test this editing rule, or Hollywood/lab finding applied to narrated stills vlog"
+  },
+  "R-232": {
+   "to": "🟡",
+   "why": "science/citation audit 2026-11-06: source real but does not test this editing rule, or Hollywood/lab finding applied to narrated stills vlog"
+  },
+  "R-174": {
+   "to": "🟠",
+   "why": "audit 2026-11-06: opinion/desk research tagged as measured"
+  },
+  "R-231": {
+   "to": "🟠",
+   "why": "audit 2026-11-06: opinion/desk research tagged as measured"
+  },
+  "R-035": {
+   "to": "🟠",
+   "why": "audit 2026-11-06: opinion/desk research tagged as measured"
+  },
+  "R-171": {
+   "to": "🟠",
+   "why": "audit 2026-11-06: opinion/desk research tagged as measured"
+  },
+  "R-422": {
+   "to": "🟠",
+   "why": "audit 2026-11-06: opinion/desk research tagged as measured"
+  },
+  "R-033": {
+   "to": "🟠",
+   "why": "audit 2026-11-06: likely mislabel (slopstudio marks few numbers as measured), not individually checked"
+  },
+  "R-034": {
+   "to": "🟠",
+   "why": "audit 2026-11-06: likely mislabel (slopstudio marks few numbers as measured), not individually checked"
+  },
+  "R-036": {
+   "to": "🟠",
+   "why": "audit 2026-11-06: likely mislabel (slopstudio marks few numbers as measured), not individually checked"
+  },
+  "R-037": {
+   "to": "🟠",
+   "why": "audit 2026-11-06: likely mislabel (slopstudio marks few numbers as measured), not individually checked"
+  },
+  "R-043": {
+   "to": "🟠",
+   "why": "audit 2026-11-06: likely mislabel (slopstudio marks few numbers as measured), not individually checked"
+  },
+  "R-044": {
+   "to": "🟠",
+   "why": "audit 2026-11-06: likely mislabel (slopstudio marks few numbers as measured), not individually checked"
+  },
+  "R-164": {
+   "to": "🟠",
+   "why": "audit 2026-11-06: likely mislabel (slopstudio marks few numbers as measured), not individually checked"
+  },
+  "R-165": {
+   "to": "🟠",
+   "why": "audit 2026-11-06: likely mislabel (slopstudio marks few numbers as measured), not individually checked"
+  },
+  "R-087": {
+   "to": "🟢",
+   "why": "official platform/accessibility source opened (YouTube chapters; WCAG contrast)"
+  },
+  "R-096": {
+   "to": "🟢",
+   "why": "official platform/accessibility source opened (YouTube chapters; WCAG contrast)"
+  }
+ },
+ "superseded": {
+  "R-095": "G-010",
+  "R-131": "G-013",
+  "R-172": "G-029",
+  "R-254": "G-010",
+  "R-124": "G-010"
+ },
+ "profile_off": {
+  "travel_vlog_hi": {
+   "R-432": "G-004: narrated stills hold 3-10 s (1.2-3 s band is fast-cut b-roll)",
+   "R-136": "G-004 (vertical 2-3 s band is for reels, not long-form)",
+   "R-173": "3-6 s ASL band is opinion; conflicts with travel reference R-394 (~10.4 s)",
+   "R-163": "S-021 replaces: Hindi WPM band unknown, hard limits 115-230 only",
+   "R-236": "Shorts-only 5-7 word overlay band; not for long-form travel vlog"
+  }
+ },
+ "idea_only_sources": {
+  "policy": "User 2026-11-06: we use ideas/numbers only, never their code or text. Ideas and facts are not copyrighted, so these rules stay ACTIVE as own-words rules. Never copy text/code from these repos.",
+  "rules": {
+   "ADAM-0S": [
+    "R-262",
+    "R-263",
+    "R-264",
+    "R-265",
+    "R-267",
+    "R-268",
+    "R-269",
+    "R-270",
+    "R-271"
+   ],
+   "eacp1991": [
+    "R-273",
+    "R-274",
+    "R-275",
+    "R-276"
+   ],
+   "mmmnhat": [
+    "R-277",
+    "R-278",
+    "R-279",
+    "R-280",
+    "R-281",
+    "R-282",
+    "R-283"
+   ],
+   "appariciojunior": [
+    "R-373",
+    "R-392",
+    "R-419",
+    "R-459",
+    "R-462"
+   ],
+   "SamuelAde001": [
+    "R-386",
+    "R-387",
+    "R-404",
+    "R-405"
+   ],
+   "edwinponcious12": [
+    "R-388"
+   ],
+   "AdamGarceau": [
+    "R-451",
+    "R-460"
+   ]
+  },
+  "reword_needed": [
+   "R-405"
+  ]
+ },
+ "recite": {
+  "pifferologo (repo 404)": {
+   "to": "browser-use/video-use (MIT)",
+   "rules": [
+    "R-085",
+    "R-086",
+    "R-133",
+    "R-195",
+    "R-196",
+    "R-197",
+    "R-198",
+    "R-199",
+    "R-256",
+    "R-257",
+    "R-258",
+    "R-259",
+    "R-260",
+    "R-261"
+   ]
+  }
+ },
+ "credit_notes": {
+  "expocut": "17 expocut skill files ask credit to expocut.com if their material is used; R-201 relies only on expocut. Ideas only -> credit optional; add credit line if any wording is reused."
+ },
+ "priority": {
+  "temple_respect": {
+   "rules": [
+    "G-019",
+    "G-020",
+    "G-021",
+    "G-022",
+    "G-023"
+   ],
+   "rank": "kahani-level, overrides style and rhythm; human review (devotee) required before publish",
+   "status": "PROVISIONAL (inferred from BBC + HAF principles; no Indian guideline found)"
+  }
+ },
+ "new_rules": [
+  {
+   "id": "G-001",
+   "part_ids": [],
+   "name": "Every photo move has a reason",
+   "layer": "style",
+   "when": "Any still photo that gets a Ken Burns move",
+   "action": "Move toward what the narration is talking about. Push in = focus on a detail. Pull out = reveal where we are. Pan = follow a direction (a road, a gaze, steps going up). If you cannot say in one line why the frame moves, hold it still.",
+   "why": "Ken Burns and his editors: movement without meaning is noise; motion also decides what the viewer looks at, so it can change the meaning of the photo.",
+   "frequency": "Every still with motion",
+   "evidence": "🟡",
+   "evidence_note": "Ken Burns and documentary editors quoted in Poynter (craft article) + 43frames craft blog agree. No numbers here, so it is a judgement rule.",
+   "sources": [
+    "https://www.poynter.org/reporting-editing/2007/meaning-in-motion-ken-burns-and-his-effect/",
+    "https://www.43frames.com/blog/ken-burns-effect"
+   ],
+   "check": null,
+   "conflict_note": "Extends R-205 (har beat action) and R-220 (zoom in = zor). Does not replace them."
+  },
+  {
+   "id": "G-002",
+   "part_ids": [],
+   "name": "Ken Burns size: 10–20% scale change",
+   "layer": "style",
+   "when": "Ken Burns move on a still",
+   "action": "Change scale by about 10–20% over the whole clip (e.g. 100%→112%). Below ~8% the move is invisible; above ~30% people watch the camera, not the photo. Keep one direction per still.",
+   "why": "Big zooms feel like an effect and expose low resolution.",
+   "frequency": "Every Ken Burns move",
+   "evidence": "🟠",
+   "evidence_note": "One craft blog gives the numbers (43frames); no official source publishes them. Treat as a starting value.",
+   "sources": [
+    "https://www.43frames.com/blog/ken-burns-effect"
+   ],
+   "check": {
+    "kind": "percent_range",
+    "what": "ken_burns_scale_change_pct",
+    "min": 8,
+    "max": 30
+   },
+   "conflict_note": "Different job from R-329 (push-in 2–6% in 1–1.5 s, for UI/product camera moves) and R-428 (105–110% emphasis zoom). G-002 is for a full-length slow move on a narration still. R-296 (100↔112% punch) is a cut, not a move."
+  },
+  {
+   "id": "G-003",
+   "part_ids": [],
+   "name": "Never zoom past the photo's pixels",
+   "layer": "style",
+   "when": "Choosing Ken Burns end frame for any still",
+   "action": "Max zoom = source pixels ÷ output pixels (check width AND height). Example: 3000 px wide photo on a 1920 px timeline allows 1.56×. If the photo is smaller than the frame, do not zoom: use a static hold, a smaller move, or a different photo. Set the crop on the original resolution, not on a pre-scaled copy.",
+   "why": "Past that ratio every frame is upscaled and goes soft exactly where the viewer is looking.",
+   "frequency": "Every Ken Burns still",
+   "evidence": "🟢",
+   "evidence_note": "Plain arithmetic, shown the same way in 43frames and in the PTE AV Studio manual (manual is CC BY-NC-SA: idea only, not copied).",
+   "sources": [
+    "https://www.43frames.com/blog/ken-burns-effect",
+    "https://docs.pteavstudio.com/en-us/9.0/techniques/kenburns"
+   ],
+   "check": {
+    "kind": "min_ratio",
+    "what": "min(src_w/out_w, src_h/out_h) / max_scale_in_move",
+    "value": 1.0
+   },
+   "conflict_note": "No existing rule covers resolution headroom. Note: a 4K master needs ~2× more source pixels than 1080p for the same move."
+  },
+  {
+   "id": "G-004",
+   "part_ids": [],
+   "name": "How long a still can stay on screen",
+   "layer": "rhythm",
+   "when": "Narration-led still photo in long-form",
+   "action": "Give a moving still about 4–8 s. Under ~3 s the move reads as a twitch; past ~8–10 s a single photo drifts. If a still must stay longer, slow the move or split it into two framings of the same photo (wide, then detail).",
+   "why": "The move needs time to register, but one photo cannot hold attention forever.",
+   "frequency": "Every still beat in long-form",
+   "evidence": "🟠",
+   "evidence_note": "From one craft blog (43frames: 6–8 s, <4 hurried, >10 drifts). No official number exists.",
+   "sources": [
+    "https://www.43frames.com/blog/ken-burns-effect"
+   ],
+   "check": {
+    "kind": "duration_range_s",
+    "what": "still_with_motion",
+    "min": 3,
+    "max": 10
+   },
+   "conflict_note": "Conflicts with R-432 (B-roll hold 1.2–3.0 s) and R-136 (verticals 2–3 s). Proposed split: long-form narration stills 4–8 s; Reels/montage stills 2–3 s with a smaller or no move. R-134/R-158 visual-change cadence can be met by a second framing of the same photo."
+  },
+  {
+   "id": "G-005",
+   "part_ids": [],
+   "name": "Ease every move, one axis at a time",
+   "layer": "style",
+   "when": "Any Ken Burns or map camera move",
+   "action": "Always ease in and ease out; never linear. Use one axis per still (push OR pan), not a random diagonal drift.",
+   "why": "Linear start/stop looks robotic and is the most common amateur tell.",
+   "frequency": "Every move",
+   "evidence": "🟡",
+   "evidence_note": "43frames quotes Apple Final Cut docs on automatic ease; PTE manual says linear gives jerky motion. Two sources agree.",
+   "sources": [
+    "https://www.43frames.com/blog/ken-burns-effect",
+    "https://docs.pteavstudio.com/en-us/9.0/techniques/kenburns"
+   ],
+   "check": null,
+   "conflict_note": "Duplicates R-261 (easing never linear) and R-328 (no zoom+pan together). Keep as the still-photo version; can be merged."
+  },
+  {
+   "id": "G-006",
+   "part_ids": [],
+   "name": "Vary moves across a photo run",
+   "layer": "style",
+   "when": "Two or more stills in a row",
+   "action": "Alternate push-in, pull-out and pan; change the start edge; leave some stills completely still. No more than 2 identical moves (same type + same direction) in a row. A shot that ends pushing in cuts well into one that starts wide.",
+   "why": "Twenty photos drifting the same way turn a story into wallpaper; a still frame after moving ones reads as emphasis.",
+   "frequency": "Every still sequence",
+   "evidence": "🟠",
+   "evidence_note": "One craft blog (43frames). Max-2 number is our proposal.",
+   "sources": [
+    "https://www.43frames.com/blog/ken-burns-effect"
+   ],
+   "check": {
+    "kind": "max_consecutive_same",
+    "what": "ken_burns_move_type+direction",
+    "value": 2
+   },
+   "conflict_note": "Overlaps R-244 (alternate zooms in neighbouring segments) and R-426 (decorative runs <4). G-006 is the still-specific, stricter version."
+  },
+  {
+   "id": "G-007",
+   "part_ids": [],
+   "name": "New place: wide first, then detail",
+   "layer": "kahani",
+   "when": "First time a new place (temple, ghat, town) appears",
+   "action": "Open the place with a wide/establishing image (or the map, G-026) before details. Inside a place you may also start tight on one detail and pull out to reveal it — but do that on purpose, once, not as the default.",
+   "why": "Viewer must know where they are before details mean anything; a deliberate reveal is a storytelling device.",
+   "frequency": "Once per new location",
+   "evidence": "🟡",
+   "evidence_note": "Documentary editors in Poynter describe both patterns (start wide and move in / start tight and reveal). Matches R-397.",
+   "sources": [
+    "https://www.poynter.org/reporting-editing/2007/meaning-in-motion-ken-burns-and-his-effect/"
+   ],
+   "check": null,
+   "conflict_note": "Duplicates R-397 (establish → detail → reaction → widen) and R-432 (wide → medium → close). Adds only the \"first mention of a place\" trigger."
+  },
+  {
+   "id": "G-008",
+   "part_ids": [],
+   "name": "Parallax (2.5D) is a spice, not the base",
+   "layer": "style",
+   "when": "Any 2.5D/parallax still",
+   "action": "Use parallax only on hero stills (opening, chapter openers, payoff), keep layer offsets small, never two parallax shots back to back, never on deity images (G-021). Prefer flat Ken Burns for the rest.",
+   "why": "W3C names parallax as a known trigger of dizziness and nausea for people with vestibular disorders; fake depth on cut-out edges also looks cheap.",
+   "frequency": "Hero stills only",
+   "evidence": "🟠",
+   "evidence_note": "W3C WCAG 2.3.3 Understanding doc confirms the health risk (official, permissive licence). The usage limits are our proposal — no source gives numbers.",
+   "sources": [
+    "https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html"
+   ],
+   "check": {
+    "kind": "max_consecutive",
+    "what": "parallax_beats",
+    "value": 1
+   },
+   "conflict_note": "Adds limits on top of R-356 (depth ratios 0.2/0.5/1.0), which says how, not how often."
+  },
+  {
+   "id": "G-009",
+   "part_ids": [],
+   "name": "Graphics inside the 16:9 safe area",
+   "layer": "samajh",
+   "when": "Every text, card, label, logo in the 16:9 master",
+   "action": "Keep all graphics inside a 5% inset from every edge (graphics/title safe). Keep essential action inside a 3.5% inset. At 1920×1080: graphics x 96–1824, y 54–1026.",
+   "why": "Broadcast standard so text is never cut by overscan, rounded TV corners or player chrome.",
+   "frequency": "Every graphic in 16:9",
+   "evidence": "🟢",
+   "evidence_note": "EBU R 95 v1.1 (official broadcast recommendation).",
+   "sources": [
+    "https://tech.ebu.ch/docs/r/r095.pdf"
+   ],
+   "check": {
+    "kind": "safe_zone_pct",
+    "x_min": 5,
+    "x_max": 95,
+    "y_min": 5,
+    "y_max": 95
+   },
+   "conflict_note": "New: existing R-095 only covers 9:16. Also: keep text clear of YouTube end-screen element area in last 5–20 s (R-016)."
+  },
+  {
+   "id": "G-010",
+   "part_ids": [],
+   "name": "9:16 safe zone — use the official numbers",
+   "layer": "samajh",
+   "when": "Every text/graphic in the Reels/Shorts 9:16 export",
+   "action": "Keep text, pop words, captions, logos inside: top 14% clear, bottom 35% clear, 6% each side, and right 10% clear for the YouTube Shorts button rail. Combined box: x 6–90%, y 14–65% (1080×1920: x 65–972, y 269–1248).",
+   "why": "Meta (Reels) and Google (Shorts) both say UI covers these bands; captions placed lower get hidden under the caption/CTA/like buttons.",
+   "frequency": "Every 9:16 element",
+   "evidence": "🟢",
+   "evidence_note": "Meta Ads Guide Reels spec (14/35/6) and Google Shorts ads page (top 10, bottom 25, right 10). Both are ad guidance; applied to organic posts as the safe, conservative choice.",
+   "sources": [
+    "https://www.facebook.com/business/ads-guide/update/video/instagram-reels",
+    "https://www.facebook.com/business/help/980593475366490",
+    "https://business.google.com/us/ad-solutions/youtube-ads/shorts-ads/"
+   ],
+   "check": {
+    "kind": "safe_zone_pct",
+    "x_min": 6,
+    "x_max": 90,
+    "y_min": 14,
+    "y_max": 65
+   },
+   "conflict_note": "CORRECTS R-095 (y_max 79 / captions at y≈78% would sit inside Meta's 35% bottom band) and R-254/R-124 pixel insets. If Meta disclaimer text is used, bottom 40% clear. Organic UI is smaller, so this is stricter than needed — on purpose."
+  },
+  {
+   "id": "G-011",
+   "part_ids": [],
+   "name": "No flashing faster than 3 per second",
+   "layer": "style",
+   "when": "Flash transitions, strobe pop words, lightning/aarti-flame flicker, fast white flashes",
+   "action": "Nothing may flash more than 3 times in any 1 second (large bright or red flashes). Flash transitions: max 1 per cut, never in a chain.",
+   "why": "Flashing above this can trigger seizures; it is the web/TV safety threshold.",
+   "frequency": "Every effect",
+   "evidence": "🟢",
+   "evidence_note": "W3C WCAG 2.3.1 (official). Checkable from effect timings.",
+   "sources": [
+    "https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html"
+   ],
+   "check": {
+    "kind": "max_per_s",
+    "what": "flashes",
+    "value": 3
+   },
+   "conflict_note": "New. R-424 (hard-reject transitions) can list flash chains."
+  },
+  {
+   "id": "G-012",
+   "part_ids": [],
+   "name": "Number cards: count, then hold",
+   "layer": "samajh",
+   "when": "Animated numbers (₹ price, km, steps, timings)",
+   "action": "Count-up ≤ ~1.2 s, then hold the final number at least max(1.5 s, words × 0.3 s). The final value lands on the spoken number (±0.5 s). Keep units with the number (₹, km, min).",
+   "why": "People read the final value, not the rolling digits; BBC minimum reading time is ~0.3 s per word.",
+   "frequency": "Every number card",
+   "evidence": "🟡",
+   "evidence_note": "BBC subtitle guideline gives 0.3 s/word at 160–180 wpm (official). Count duration is from R-303.",
+   "sources": [
+    "https://www.bbc.co.uk/accessibility/forproducts/guides/subtitles/"
+   ],
+   "check": {
+    "kind": "min_hold_s_after_anim",
+    "what": "number_card_final_value",
+    "value": 1.5
+   },
+   "conflict_note": "Builds on R-303 (0.3 s delay, 1.2 s count) and R-091 (reading formula). No conflict."
+  },
+  {
+   "id": "G-013",
+   "part_ids": [],
+   "name": "Hindi/Hinglish caption speed",
+   "layer": "samajh",
+   "when": "Every Hinglish (Roman) caption cue",
+   "action": "Target ≤ 20 characters per second; hard ceiling 22 cps. Max 42 characters per line, max 2 lines, prefer 1 line. If over, split the cue or shorten words — do not paraphrase meaning.",
+   "why": "Netflix sets Hindi adult subtitles at up to 22 cps and 42 chars/line; Roman Hinglish is longer in characters than Devanagari, so a lower target is safer.",
+   "frequency": "Every caption cue",
+   "evidence": "🟢",
+   "evidence_note": "Netflix Hindi Timed Text Style Guide (22 cps, 42 chars, 2 lines). The 20 cps target is our safety margin.",
+   "sources": [
+    "https://partnerhelp.netflixstudios.com/hc/en-us/articles/115003196707-Hindi-Timed-Text-Style-Guide",
+    "https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617-Timed-Text-Style-Guide-General-Requirements"
+   ],
+   "check": {
+    "kind": "max_cps",
+    "what": "caption_cue",
+    "value": 22
+   },
+   "conflict_note": "CONFLICT: R-131 says ≤17 cps (that is a European-language number, e.g. Netflix Brazilian Portuguese = 17). R-092 says ≤20. For Hindi/Hinglish use 20 target / 22 max. Burned-in word-chunk styles (R-247, R-259) are exempt from cps but not from G-014 durations."
+  },
+  {
+   "id": "G-014",
+   "part_ids": [],
+   "name": "Caption timing: Netflix rules",
+   "layer": "samajh",
+   "when": "Every caption cue",
+   "action": "Min 20 frames (5/6 s), max 7 s. Gap between cues is either exactly 2 frames or ≥ 0.5 s — never 3–11 frames (at 24 fps; scale for 25/30). If speech ends and no cue follows, hold 0.5 s more. If an in/out time is within 0.5 s of a cut, snap it to the cut (out = 2 frames before cut). Do not cross a cut unless the speech does.",
+   "why": "Even gaps and cut-aligned captions stop the \"flashy\" blink and make reading effortless.",
+   "frequency": "Every cue",
+   "evidence": "🟢",
+   "evidence_note": "Netflix General Requirements + Subtitle Timing Guidelines (official).",
+   "sources": [
+    "https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617-Timed-Text-Style-Guide-General-Requirements",
+    "https://partnerhelp.netflixstudios.com/hc/en-us/articles/360051554394-Timed-Text-Style-Guide-Subtitle-Timing-Guidelines"
+   ],
+   "check": {
+    "kind": "forbidden_gap_frames",
+    "fps": 24,
+    "min": 3,
+    "max": 11
+   },
+   "conflict_note": "Duplicates R-092 (20 frames, 2-frame gap) and R-131 (1–7 s). Adds the 3–11 frame ban, cut snapping and 0.5 s linger. R-093 (cue does not cross join) agrees."
+  },
+  {
+   "id": "G-015",
+   "part_ids": [],
+   "name": "Line breaks that respect Hindi grammar",
+   "layer": "samajh",
+   "when": "Splitting a Hinglish caption into 2 lines or 2 cues",
+   "action": "Break after punctuation or before a conjunction (aur, lekin, par, ki, to). Never split a noun from its postposition (“Dwarka | me”, “mandir | ke”), a first name from surname, a verb from its helper (“ja | rahe hain”). Prefer bottom-heavy shape but not 1–2 words alone on top.",
+   "why": "Wrong breaks force re-reading; Hindi postpositions come after the noun, so the English article rule maps to postpositions.",
+   "frequency": "Every 2-line cue",
+   "evidence": "🟡",
+   "evidence_note": "Netflix general line-break rules + Netflix Hindi line treatment (official); the postposition mapping is our adaptation.",
+   "sources": [
+    "https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617-Timed-Text-Style-Guide-General-Requirements",
+    "https://partnerhelp.netflixstudios.com/hc/en-us/articles/115003196707-Hindi-Timed-Text-Style-Guide"
+   ],
+   "check": null,
+   "conflict_note": "Refines R-092 (English break rules). No conflict."
+  },
+  {
+   "id": "G-016",
+   "part_ids": [],
+   "name": "One spelling list (glossary) for every place and name",
+   "layer": "samajh",
+   "when": "Any place/deity/ritual name in captions, cards, map labels, chapters, titles",
+   "action": "Keep one Hinglish spelling glossary per video (e.g. Dwarkadhish, Gomti Ghat, Jagat Mandir, darshan, aarti) and use it everywhere. Never translate proper names. Check every text layer against it before export.",
+   "why": "Netflix requires a key-names list for consistency; mixed spellings (Dwarkadheesh / Dwarkadhish) look careless and break search.",
+   "frequency": "Every text event",
+   "evidence": "🟢",
+   "evidence_note": "Netflix General Requirements §6 (KNP consistency) and Hindi guide (do not translate proper names) — official.",
+   "sources": [
+    "https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617-Timed-Text-Style-Guide-General-Requirements",
+    "https://partnerhelp.netflixstudios.com/hc/en-us/articles/115003196707-Hindi-Timed-Text-Style-Guide"
+   ],
+   "check": {
+    "kind": "glossary_match",
+    "what": "all_text_layers",
+    "value": "glossary.json"
+   },
+   "conflict_note": "New. Machine-checkable by string match."
+  },
+  {
+   "id": "G-017",
+   "part_ids": [],
+   "name": "Caption vs on-screen text: no clash, no repeat",
+   "layer": "samajh",
+   "when": "A card, pop word or map label is on screen while captions run",
+   "action": "If a card/label sits in the caption zone, move the caption to the top (centre) for that cue. If the pop word just repeats the caption word, keep the caption and make the pop word the highlighted caption word instead of a second copy. Never put two different texts in the same place at the same time.",
+   "why": "Netflix: position subtitles to avoid on-screen text; delete redundant on-screen-text subtitles. Two texts at once split attention (R-318).",
+   "frequency": "Every overlap",
+   "evidence": "🟡",
+   "evidence_note": "Netflix General Requirements §5 (positioning) and Hindi guide §I.8 (redundant FN deleted) — official, adapted.",
+   "sources": [
+    "https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617-Timed-Text-Style-Guide-General-Requirements",
+    "https://partnerhelp.netflixstudios.com/hc/en-us/articles/115003196707-Hindi-Timed-Text-Style-Guide"
+   ],
+   "check": {
+    "kind": "no_overlap",
+    "what": "caption_box vs card/label/popword boxes"
+   },
+   "conflict_note": "Softer than R-376 (captions OFF in title zones). Proposal: for narration-led video keep captions on but move them; switch them off only for the hero title (R-436)."
+  },
+  {
+   "id": "G-018",
+   "part_ids": [],
+   "name": "Text contrast numbers",
+   "layer": "samajh",
+   "when": "Any text over a photo or video",
+   "action": "Text vs its background ≥ 4.5:1; large text (≥ 24 px-equivalent bold-ish, i.e. ~18 pt) may go to 3:1. Over busy photos always add a scrim/box or outline — measure contrast against the scrim.",
+   "why": "Official minimum for people with weaker vision; also needed for phones in sunlight.",
+   "frequency": "Every text layer",
+   "evidence": "🟢",
+   "evidence_note": "W3C WCAG 2.1 SC 1.4.3 (official).",
+   "sources": [
+    "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html"
+   ],
+   "check": {
+    "kind": "min_contrast_ratio",
+    "what": "text_vs_background",
+    "value": 4.5,
+    "large_text_value": 3.0
+   },
+   "conflict_note": "Upgrades R-096 (already says ≥4.5:1) to 🟢 and adds the 3:1 large-text allowance for pop words/titles."
+  },
+  {
+   "id": "G-019",
+   "part_ids": [],
+   "name": "No inside-sanctum images unless official",
+   "layer": "kahani",
+   "when": "Any temple video, esp. Dwarkadhish",
+   "action": "Do not use photos or clips from inside the Dwarkadhish sanctum/darshan area unless they come from the temple or a source with clear permission. Use exterior, shikhara, Gomti Ghat, courtyard, crowd-from-outside images. Never present an unknown \"inside\" image as ours.",
+   "why": "Phones and photography are not allowed in the sanctum; security checks are enforced and phones can be confiscated. Using such footage invites complaints and takedowns, and it disrespects the rule devotees follow.",
+   "frequency": "Every temple chapter",
+   "evidence": "🟡",
+   "evidence_note": "Independent local guide (devbhumidwarka.in, opened). Other search results said the same and mentioned a district notification and a police case, but those pages were NOT opened — verify with the temple trust before publishing.",
+   "sources": [
+    "https://www.devbhumidwarka.in/blog/dwarka-photography-guide"
+   ],
+   "check": null,
+   "conflict_note": "Extends R-019 (licensed media only). Human must confirm per temple."
+  },
+  {
+   "id": "G-020",
+   "part_ids": [],
+   "name": "Calm treatment for deity (murti) images",
+   "layer": "style",
+   "when": "Any frame where a deity / murti / sacred symbol is the subject",
+   "action": "Only static hold or a slow push-in (≤ G-002 range). No zoom-punch, shake, glitch, whip, spin, mirror, warp, speed-ramp, flash, emoji, comic SFX or meme pop words on these frames. Cut or soft dissolve only.",
+   "why": "Images that may offend religious groups need special care (BBC); devotees see the murti as sacred, and flashy effects read as mockery.",
+   "frequency": "Every deity frame",
+   "evidence": "🟠",
+   "evidence_note": "BBC Editorial Guidelines stills guidance + HAF guidance give the principle (care, no degrading modification). The specific effect list is our inference — get a devotee/human check.",
+   "sources": [
+    "https://www.bbc.co.uk/editorialguidelines/guidance/stills",
+    "https://www.hinduamerican.org/projects/commercial-use-hindu-images-guide"
+   ],
+   "check": {
+    "kind": "forbidden_effects_on_tag",
+    "tag": "deity",
+    "value": [
+     "punch_in",
+     "shake",
+     "glitch",
+     "whip",
+     "spin",
+     "flash",
+     "speed_ramp",
+     "emoji"
+    ]
+   },
+   "conflict_note": "Overrides R-200/R-296/R-145 (punch-ins), R-428 (emphasis zoom) and R-422 (motion accents) on deity-tagged beats. In ORDER.md this should sit at Kahani level (offence = story failure)."
+  },
+  {
+   "id": "G-021",
+   "part_ids": [],
+   "name": "Never cover or alter the murti",
+   "layer": "style",
+   "when": "Text/graphics near a deity image",
+   "action": "No caption, pop word, sticker, logo or arrow over the deity's face or body; place text in empty areas or use a different crop. Do not recolour, cut out, parallax-separate or composite the deity.",
+   "why": "HAF lists \"significant material modification of a Deity\" as likely to offend; covering the face is the visual version of that.",
+   "frequency": "Every deity frame",
+   "evidence": "🟠",
+   "evidence_note": "HAF guidance (principle) — the screen-layout rule is our adaptation.",
+   "sources": [
+    "https://www.hinduamerican.org/projects/commercial-use-hindu-images-guide",
+    "https://www.bbc.co.uk/editorialguidelines/guidance/stills"
+   ],
+   "check": {
+    "kind": "no_overlap",
+    "what": "text/graphic boxes vs deity bbox"
+   },
+   "conflict_note": "Like R-246 (cards never on a face) but for the murti. Blocks G-008 parallax on deity images."
+  },
+  {
+   "id": "G-022",
+   "part_ids": [],
+   "name": "Pilgrims are people, not props",
+   "layer": "samajh",
+   "when": "Identifiable worshippers, priests, bathers at ghats",
+   "action": "Do not zoom in on identifiable people praying or bathing unless they agreed. Prefer wide or from-behind shots; blur faces of people who did not agree. No pop words or jokes over people at prayer.",
+   "why": "An image in a public place can still be private (BBC); many pilgrims are there for private vows.",
+   "frequency": "Every frame with worshippers",
+   "evidence": "🟡",
+   "evidence_note": "BBC stills guidance (privacy in public places) + local guide (ask first, blur unwilling faces).",
+   "sources": [
+    "https://www.bbc.co.uk/editorialguidelines/guidance/stills",
+    "https://www.devbhumidwarka.in/blog/dwarka-photography-guide"
+   ],
+   "check": null,
+   "conflict_note": "New."
+  },
+  {
+   "id": "G-023",
+   "part_ids": [],
+   "name": "Devotional words: accurate and calm",
+   "layer": "kahani",
+   "when": "Titles, cards and pop words in temple/darshan sections",
+   "action": "Use correct names (Dwarkadhish, Jagat Mandir) from the glossary (G-016). Avoid hype or slang pop words (\"CRAZY\", \"OMG\") on rituals; prefer factual or devotional words (darshan, aarti, dhwaja). Captions must state facts correctly.",
+   "why": "BBC: captions that accompany images must be factually correct and images must not reinforce stereotypes; wrong names offend devotees.",
+   "frequency": "Every temple section",
+   "evidence": "🟠",
+   "evidence_note": "Principle from BBC stills guidance; word choices are our inference.",
+   "sources": [
+    "https://www.bbc.co.uk/editorialguidelines/guidance/stills"
+   ],
+   "check": null,
+   "conflict_note": "Narrows R-121 (power words) for devotional beats."
+  },
+  {
+   "id": "G-024",
+   "part_ids": [],
+   "name": "Map only when it helps",
+   "layer": "samajh",
+   "when": "A new destination, a leg of travel, or a distance/time number is spoken",
+   "action": "Show a map at the first mention of a new place or leg, or when a distance/travel time is said. Not for every place name. One map beat per chapter plus an optional route recap at the end.",
+   "why": "A map tells the viewer where they are and what comes next; too many maps become filler.",
+   "frequency": "Per chapter",
+   "evidence": "🟠",
+   "evidence_note": "Craft/vendor guides (ClickPop, Animaps). No official source.",
+   "sources": [
+    "https://clickpop.ai/guides/animated-map-route-videos",
+    "https://animaps.ai/blog/curved-vs-straight-route-lines"
+   ],
+   "check": {
+    "kind": "max_count_per_chapter",
+    "what": "map_beat",
+    "value": 1
+   },
+   "conflict_note": "Applies R-089 (graphic only when it explains) and R-364 (route must be clear) to maps."
+  },
+  {
+   "id": "G-025",
+   "part_ids": [],
+   "name": "Route draw timing",
+   "layer": "rhythm",
+   "when": "Animated route line",
+   "action": "Optional whole-route overview 1.5–2 s. Each leg draws in 1.5–3 s (longer legs a bit longer; never > 8 s). On arrival: ~0.5 s still, then the label. The line should finish as the narration names the destination. End recap 2–3 s.",
+   "why": "Fast enough to feel like travel, slow enough to follow; finishing on the spoken name locks picture to words.",
+   "frequency": "Every map leg",
+   "evidence": "🟠",
+   "evidence_note": "ClickPop guide gives the leg/arrival/ending numbers; Animaps agrees on holds. Vendor guides — starting values.",
+   "sources": [
+    "https://clickpop.ai/guides/animated-map-route-videos",
+    "https://animaps.ai/blog/curved-vs-straight-route-lines"
+   ],
+   "check": {
+    "kind": "duration_range_s",
+    "what": "map_leg_draw",
+    "min": 1.5,
+    "max": 8
+   },
+   "conflict_note": "Fits R-199 (animation payoff lands on the spoken word)."
+  },
+  {
+   "id": "G-026",
+   "part_ids": [],
+   "name": "Map holds for reading",
+   "layer": "rhythm",
+   "when": "After any map camera move or label reveal",
+   "action": "Hold ≥ 2 s after each camera move, ~1 s extra per short label (1–3 words), 2–3 s for a 6–10 word line, 3–4 s on the final full view. On Reels cut stops, not pauses.",
+   "why": "If the map moves on before people finish reading, the label is wasted.",
+   "frequency": "Every map",
+   "evidence": "🟠",
+   "evidence_note": "Animaps guide (vendor). Consistent with BBC 0.3 s/word.",
+   "sources": [
+    "https://animaps.ai/blog/curved-vs-straight-route-lines",
+    "https://www.bbc.co.uk/accessibility/forproducts/guides/subtitles/"
+   ],
+   "check": {
+    "kind": "min_gap_s",
+    "what": "map_hold_after_move",
+    "value": 2
+   },
+   "conflict_note": "Map-specific version of R-091."
+  },
+  {
+   "id": "G-027",
+   "part_ids": [],
+   "name": "Phone-readable map design",
+   "layer": "style",
+   "when": "Designing any map frame",
+   "action": "Max 4 labels visible; current stop biggest. Route line ~10–16 px on a 1080-wide canvas, one bright colour with a dark outline. Muted 2–3 tone base map. One camera move per leg (no constant spin). Labels flat and facing the viewer. In 9:16 keep the route inside the middle 60% and the G-010 box.",
+   "why": "Maps are dense; phones need fewer, bigger things.",
+   "frequency": "Every map",
+   "evidence": "🟠",
+   "evidence_note": "ClickPop guide (vendor).",
+   "sources": [
+    "https://clickpop.ai/guides/animated-map-route-videos"
+   ],
+   "check": {
+    "kind": "max_count",
+    "what": "map_labels_visible",
+    "value": 4
+   },
+   "conflict_note": "Consistent with R-252 (2 accents) and R-318 (max two demands per frame)."
+  },
+  {
+   "id": "G-028",
+   "part_ids": [],
+   "name": "Real map data, credited",
+   "layer": "kahani",
+   "when": "Building any map",
+   "action": "Build maps from real data you may use (e.g. OpenStreetMap with its attribution) — never let a generator invent roads or coastlines. Put the attribution in the description or end card. For India, show official boundaries; if unsure, flag for human check.",
+   "why": "Invented geography is a factual error; open data licences require attribution.",
+   "frequency": "Every map",
+   "evidence": "🟠",
+   "evidence_note": "ClickPop guide says open data like OSM needs attribution and warns against generated maps. India-boundary point is our caution, not researched here.",
+   "sources": [
+    "https://clickpop.ai/guides/animated-map-route-videos"
+   ],
+   "check": null,
+   "conflict_note": "Extends R-018 (no invented facts) and R-019 (licensed media)."
+  },
+  {
+   "id": "G-029",
+   "part_ids": [],
+   "name": "Platform length limits (verified)",
+   "layer": "rhythm",
+   "when": "Cutting a Short/Reel from the long video",
+   "action": "YouTube Shorts: up to 3:00 if vertical or square (uploads after 15 Oct 2024). Instagram Reels: up to 3 min can be recommended to non-followers (announced Jan 2025, US first). A Short over 1:00 with any active Content ID claim is blocked worldwide — so any Short > 60 s must have fully cleared/own audio.",
+   "why": "Hard platform facts; the 60 s Content ID rule can silently kill a Short.",
+   "frequency": "Every short-form export",
+   "evidence": "🟢",
+   "evidence_note": "YouTube Help 15424877 and Instagram Creators blog (official).",
+   "sources": [
+    "https://support.google.com/youtube/answer/15424877?hl=en",
+    "https://creators.instagram.com/blog/the-latest-with-instagram"
+   ],
+   "check": {
+    "kind": "duration_range_s",
+    "what": "short_form_export",
+    "min": 1,
+    "max": 180
+   },
+   "conflict_note": "CORRECTS R-172 (\"max recommended 60 s\" for Reels is outdated as a limit) and widens R-026/R-073 windows as limits (their 20–60 s remain good targets). Audio note is for the later audio phase."
+  },
+  {
+   "id": "G-030",
+   "part_ids": [],
+   "name": "Re-frame stills for 9:16, don't centre-crop",
+   "layer": "style",
+   "when": "Making Reels from 16:9 stills/clips",
+   "action": "Re-set each Ken Burns start/end window on the 9:16 crop so the subject stays inside the G-010 box for the whole move. Never auto centre-crop a 16:9 timeline. If the subject cannot fit, use a different photo.",
+   "why": "Platforms crop/scale vertical video and UI covers top and bottom; a centred crop often cuts the temple spire or the face.",
+   "frequency": "Every Reel",
+   "evidence": "🟡",
+   "evidence_note": "Google Ads vertical-video help (cropping behaviour) + Meta safe zone (official); the method is our adaptation.",
+   "sources": [
+    "https://support.google.com/google-ads/answer/9128498?hl=en",
+    "https://www.facebook.com/business/ads-guide/update/video/instagram-reels"
+   ],
+   "check": {
+    "kind": "subject_in_box_all_frames",
+    "what": "subject_bbox",
+    "box": "G-010"
+   },
+   "conflict_note": "Builds on R-218 (reframe on subject) and R-255 (re-layout first)."
+  },
+  {
+   "id": "G-031",
+   "part_ids": [],
+   "name": "Short hook: first second",
+   "layer": "kahani",
+   "when": "First frame of every Reel/Short",
+   "action": "Frame 1 must already show the strongest image + a short on-screen hook (≤ 7 words, inside G-010). No logo, no greeting, no fade-in from black.",
+   "why": "Shorts viewers swipe within about a second (creator view published on the official YouTube blog).",
+   "frequency": "Every Short",
+   "evidence": "🟡",
+   "evidence_note": "YouTube official blog quoting a top Shorts creator — an informed opinion, not data.",
+   "sources": [
+    "https://blog.youtube/creator-and-artist-stories/youtube-shorts-deep-dive"
+   ],
+   "check": {
+    "kind": "hook_within_s",
+    "value": 1
+   },
+   "conflict_note": "Duplicates R-111 (1-second rule), R-001, R-005 (hook ≤7 words), R-044. Only adds the \"no fade from black\" item."
+  },
+  {
+   "id": "G-032",
+   "part_ids": [],
+   "name": "Chapters and end screen (verified)",
+   "layer": "kahani",
+   "when": "Long-form YouTube upload",
+   "action": "Chapters: first at 00:00, at least 3, ascending, each ≥ 10 s; use glossary spellings (G-016). End screen: last 5–20 s, video ≥ 25 s, up to 4 elements on 16:9; keep that area free of key text.",
+   "why": "Official YouTube rules.",
+   "frequency": "Every long-form video",
+   "evidence": "🟢",
+   "evidence_note": "YouTube Help 9884579 and 6388789 (official), opened 2026-11-06.",
+   "sources": [
+    "https://support.google.com/youtube/answer/9884579?hl=en",
+    "https://support.google.com/youtube/answer/6388789?hl=en"
+   ],
+   "check": {
+    "kind": "min_chapter_duration_s",
+    "value": 10
+   },
+   "conflict_note": "Exact duplicate of R-087 and R-016 — use to upgrade both to 🟢, then drop this rule."
+  },
+  {
+   "id": "G-033",
+   "part_ids": [],
+   "name": "Motion duration bands (UI scale)",
+   "layer": "rhythm",
+   "when": "Text card / label / pop-word entrances and exits",
+   "action": "Small elements 150–300 ms, medium moves 250–400 ms, large/full-screen 450–600 ms, ambient up to 1000 ms. Exits shorter than entrances.",
+   "why": "Published design-system durations; keeps motion consistent across all cards.",
+   "frequency": "Every text animation",
+   "evidence": "🟢",
+   "evidence_note": "Material Design 3 duration tokens (official Google design system).",
+   "sources": [
+    "https://m3.material.io/styles/motion/easing-and-duration/tokens-specs"
+   ],
+   "check": {
+    "kind": "duration_range_s",
+    "what": "text_element_entrance",
+    "min": 0.15,
+    "max": 1.0
+   },
+   "conflict_note": "Corroborates R-202 (0.35–0.6 s), R-299 (0.4–1.2 s), R-353 (UI 0.3–0.5 s) and R-315 (exit faster). R-299 upper 1.2 s is above Material's 1.0 s extra-long max — suggest capping at 1.0 s."
+  },
+  {
+   "id": "S-001",
+   "name": "Text card = key words, not the narrated sentence",
+   "layer": "samajh",
+   "when": "Any on-screen text, label or card shown while narration plays",
+   "action": "Show only what the voice can't hold: names, numbers, place names, key terms (a few words). Never print the full sentence being spoken as a separate text card. Long explanation goes in the voice, not in on-screen text.",
+   "why": "Duplicate on-screen text next to narration plus a picture hurts learning; key terms pulled from the narration help more than verbatim text.",
+   "frequency": "Every text card / label",
+   "evidence": "🟢",
+   "evidence_note": "Mayer 2008 redundancy d=0.72 (5/5 tests), modality d=1.02 (17/17); Adesope & Nesbit 2012 meta-analysis (57 studies): key terms extracted from narration beat verbatim text; spoken+written beats spoken-only only for picture-free material. Lab learning studies, mostly students; not vlog retention.",
+   "sources": [
+    "https://jgregorymcverry.com/readings/mayerprinciplesofmultimedialearning2008.pdf",
+    "https://psycnet.apa.org/journals/edu/104/1/250.html",
+    "https://journals.sagepub.com/doi/10.3102/00346543211052329"
+   ],
+   "relation_to_existing": "MODIFIES R-089 (sharpens 'text = jo bola nahi gaya' with the key-terms evidence). Does NOT apply to the bottom caption track — see S-002."
+  },
+  {
+   "id": "S-002",
+   "name": "Same-language captions stay on for Hindi/Hinglish videos",
+   "layer": "samajh",
+   "when": "Every long-form and reel with Hindi/Hinglish narration",
+   "action": "Keep a full same-language caption track (Devanagari or the script the audience reads), timed to the voice, in the bottom band. Treat it as a separate layer from text cards; don't add a second verbatim text block in the middle of the frame.",
+   "why": "In India, same-language subtitles on Hindi TV songs were read by viewers and linked to literacy gains; captions strongly help viewers who are not fully fluent in the spoken language.",
+   "frequency": "Whole video",
+   "evidence": "🟡",
+   "evidence_note": "Kothari & Bandyopadhyay 2014, ITID (n=7,409, 5 Hindi states, 2002-2007): SLS viewers showed greater literacy gains (quasi-experimental, self-selected viewers). Montero Perez 2013 captions for second-language video g=0.99 (via Noetel 2022). Outcome is literacy/comprehension, not YouTube retention. Conflicts on its face with Mayer redundancy; the two are about different layers.",
+   "sources": [
+    "https://itidjournal.org/index.php/itid/article/view/1307.html",
+    "https://journals.sagepub.com/doi/10.3102/00346543211052329"
+   ],
+   "relation_to_existing": "SUPPORTS R-115 (captions hamesha) with real evidence for this audience; resolves tension with R-089/S-001."
+  },
+  {
+   "id": "S-003",
+   "name": "Hindi caption reading speed: up to 22 characters per second",
+   "layer": "samajh",
+   "when": "Every Hindi/Devanagari caption event",
+   "action": "Keep each caption at or below 22 characters per second (count spaces and punctuation), max 42 characters per line, max 2 lines, prefer one line. For children's content use 18 cps.",
+   "why": "This is the industry limit Netflix sets for Hindi; English limits (20 or 17 cps) are stricter than needed for Hindi.",
+   "frequency": "Every caption event",
+   "evidence": "🟡",
+   "evidence_note": "Netflix Hindi Timed Text Style Guide: 42 chars/line, 2 lines max, adult up to 22 cps, children up to 18 cps (SDH 25/20). Netflix counts spaces and punctuation. Industry spec for subtitles, not a study.",
+   "sources": [
+    "https://partnerhelp.netflixstudios.com/hc/en-us/articles/115003196707-Hindi-Timed-Text-Style-Guide"
+   ],
+   "check": {
+    "kind": "max_cps",
+    "what": "caption_event_hindi",
+    "value": 22
+   },
+   "relation_to_existing": "MODIFIES R-092 (20 cps English -> 22 cps for Hindi) and R-131 (~17 cps is too strict for Hindi). New check kind 'max_cps' needed in engine."
+  },
+  {
+   "id": "S-004",
+   "name": "Caption event duration 0.83 s to 7 s",
+   "layer": "samajh",
+   "when": "Every caption event",
+   "action": "No caption shorter than 5/6 s (20 frames at 24 fps) or longer than 7 s; split longer ones.",
+   "why": "Too short can't be read; too long goes stale and blocks the frame.",
+   "frequency": "Every caption event",
+   "evidence": "🟡",
+   "evidence_note": "Netflix Timed Text Style Guide General Requirements: minimum 5/6 s per event, maximum 7 s. Platform spec.",
+   "sources": [
+    "https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617-Timed-Text-Style-Guide-General-Requirements"
+   ],
+   "check": {
+    "kind": "duration_range_s",
+    "what": "caption_event",
+    "min": 0.83,
+    "max": 7
+   },
+   "relation_to_existing": "DUPLICATES part of R-092 / R-131 (adds a machine check for both ends)."
+  },
+  {
+   "id": "S-005",
+   "name": "Don't slow or trim captions below the speech",
+   "layer": "samajh",
+   "when": "Choosing caption wording and speed",
+   "action": "Keep captions verbatim and in sync with the voice. Only condense when a line would go above the cps limit (S-003). Don't stretch or simplify captions just to make them 'slow'.",
+   "why": "Viewers keep up with fast subtitles; slow subtitles cause re-reading and less enjoyment; the best subtitle speed is the speech speed.",
+   "frequency": "Every caption track",
+   "evidence": "🟡",
+   "evidence_note": "Szarkowska & Gerber-Moron 2018, PLOS One (n=74, eye-tracking, 12/16/20 cps): viewers coped with fast subtitles; slow subtitles triggered re-reading and frustration. BBC R&D 2015: best subtitle speed = speech speed; verbatim preferred. Interlingual subtitles, European viewers; not Hindi same-language captions.",
+   "sources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6007935/",
+    "https://www.bbc.co.uk/rd/blog/2015-09-how-fast-should-subtitles-be"
+   ],
+   "relation_to_existing": "MODIFIES R-091 (that formula is for text cards; don't apply it to captions) and R-131."
+  },
+  {
+   "id": "S-006",
+   "name": "Vertical reels: about 25 characters per caption line",
+   "layer": "samajh",
+   "when": "Captions on 9:16 reels/shorts",
+   "action": "Keep caption lines to about 25 characters (BBC's equivalent of 37 characters on 16:9) so text stays big on a phone.",
+   "why": "Same physical text size on a narrow frame fits fewer characters.",
+   "frequency": "Every reel caption line",
+   "evidence": "🟡",
+   "evidence_note": "BBC Subtitle Guidelines: 37 characters in a 75%-width 16:9 region ~= 25 characters in a 90%-width 9:16 region (stated 'as a guide'). Broadcaster guideline.",
+   "sources": [
+    "https://www.bbc.co.uk/accessibility/forproducts/guides/subtitles/"
+   ],
+   "check": {
+    "kind": "max_chars",
+    "what": "caption_line_vertical",
+    "value": 25
+   },
+   "relation_to_existing": "COMPATIBLE with R-247 (max 3 words) and R-259; gives a character ceiling for Devanagari/Hinglish where word counts vary."
+  },
+  {
+   "id": "S-007",
+   "name": "Picture on screen while its words are spoken",
+   "layer": "samajh",
+   "when": "A photo, map highlight, clip or card that illustrates a spoken phrase",
+   "action": "Show the visual during the phrase that names it, not well before or after. If a photo of 'Dwarkadhish mandir' exists, it should be on screen while that name is spoken.",
+   "why": "Words and matching pictures presented at the same time are learned far better than when one follows the other.",
+   "frequency": "Every illustrated phrase",
+   "evidence": "🟢",
+   "evidence_note": "Mayer 2008 temporal contiguity d=1.31 (8/8); Ginns 2006 g=0.78 (via Noetel 2022). Studies compare simultaneous vs successive whole segments; the 1.0 s tolerance in the check is an editorial threshold (🟠), not from the studies.",
+   "sources": [
+    "https://jgregorymcverry.com/readings/mayerprinciplesofmultimedialearning2008.pdf",
+    "https://journals.sagepub.com/doi/10.3102/00346543211052329"
+   ],
+   "check": {
+    "kind": "max_delay_s",
+    "what": "visual_onset_after_spoken_mention",
+    "value": 1.0
+   },
+   "relation_to_existing": "MODIFIES R-088 (replaces its weak coherence citation with the right principle) and RELATED to R-098, R-462."
+  },
+  {
+   "id": "S-008",
+   "name": "Map labels sit on the map, next to the place",
+   "layer": "samajh",
+   "when": "Route maps, location maps, annotated photos",
+   "action": "Put each label right next to the point or object it names (on the map), not in a side legend or a separate card. Keep the narrated place and its label together.",
+   "why": "Learners do much better when words are placed near the part of the graphic they describe.",
+   "frequency": "Every map/annotated graphic",
+   "evidence": "🟢",
+   "evidence_note": "Mayer 2008 spatial contiguity d=1.12 (5/5); Schroeder & Cenkci 2018 g=0.63 (k=58), backed by eye-tracking (via Noetel 2022). Static diagrams/lessons; maps inferred to be similar.",
+   "sources": [
+    "https://jgregorymcverry.com/readings/mayerprinciplesofmultimedialearning2008.pdf",
+    "https://journals.sagepub.com/doi/10.3102/00346543211052329"
+   ],
+   "relation_to_existing": "NEW (no existing rule on label placement on maps)."
+  },
+  {
+   "id": "S-009",
+   "name": "Signal the one thing being talked about",
+   "layer": "samajh",
+   "when": "Map or photo with several possible points of interest while narration names one",
+   "action": "Add a cue on the named point at the moment it is named: highlight, pulse, arrow, or a short move toward it. One cue at a time. Use section title cards to signal structure.",
+   "why": "Cues that point attention to the relevant part improve learning, more so for viewers new to the topic and with moving (dynamic) cues.",
+   "frequency": "Each time narration names one of several visible things",
+   "evidence": "🟢",
+   "evidence_note": "Schneider et al. 2018 meta-analysis g=0.43 (k=209); Alpizar et al. 2020 d=0.38, stronger for multimedia, low prior knowledge and dynamic signals (both as reported in Noetel 2022). Mayer 2008 signaling d=0.52 (6/6).",
+   "sources": [
+    "https://journals.sagepub.com/doi/10.3102/00346543211052329",
+    "https://jgregorymcverry.com/readings/mayerprinciplesofmultimedialearning2008.pdf"
+   ],
+   "relation_to_existing": "MODIFIES R-126 (gives it measured support for graphics/stills) and RELATED to R-378 (caption word highlight)."
+  },
+  {
+   "id": "S-010",
+   "name": "Cut decorative elements, especially ones that stay on screen",
+   "layer": "style",
+   "when": "Stickers, looping background animations, decorative borders, logo bugs, ornamental text",
+   "action": "Remove any visual that doesn't carry the story or the place. If something decorative must stay, don't keep it on screen for long; brief is less harmful than persistent.",
+   "why": "Irrelevant 'seductive' details lower learning, mostly when they stay on screen.",
+   "frequency": "Every overlay decision",
+   "evidence": "🟢",
+   "evidence_note": "Sundararajan & Adesope 2020: removing seductive details g=0.33 (k=68); persistent on-screen details g=0.43 vs transient g=0.12 (CI crosses zero) (via Noetel 2022). Mayer 2008 coherence d=0.97 (13/14).",
+   "sources": [
+    "https://journals.sagepub.com/doi/10.3102/00346543211052329",
+    "https://jgregorymcverry.com/readings/mayerprinciplesofmultimedialearning2008.pdf"
+   ],
+   "relation_to_existing": "MODIFIES R-089 / R-312; REPLACES the attention reason of R-231 (Cutting 2018 found clutter unimportant for moment-to-moment attention)."
+  },
+  {
+   "id": "S-011",
+   "name": "Big breaks only at event boundaries",
+   "layer": "kahani",
+   "when": "Placing chapter cards, section titles, music stops/changes, long transitions, ad-like pauses",
+   "action": "Put every big break exactly where the event changes (new goal, new action, new place with a stated purpose). Never place a big break in the middle of an event.",
+   "why": "Breaks at event boundaries improve recall; breaks inside events hurt memory.",
+   "frequency": "Every chapter/section break",
+   "evidence": "🟢",
+   "evidence_note": "Schwan, Garsoffky & Hesse 2000 (n=40): cuts at breakpoints led to more detailed recall. Boltz (reported in Zacks et al. 2007 review): commercials at boundaries improved recall, at non-boundaries impaired it. Zacks 2010: boundaries track situation changes. Feature-film/everyday-activity clips.",
+   "sources": [
+    "https://link.springer.com/article/10.3758/BF03213801",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC2852534/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC2955413/"
+   ],
+   "check": {
+    "kind": "must_align",
+    "what": "chapter_or_title_card",
+    "to": "scene_boundary",
+    "tolerance_s": 1.0
+   },
+   "relation_to_existing": "MODIFIES R-177 and R-178 (moves the evidence from 'any cut' to 'big breaks'); SUPPORTS R-057 and R-087. New check kind 'must_align'; tolerance is editorial."
+  },
+  {
+   "id": "S-012",
+   "name": "A new section must change the goal, not just the place",
+   "layer": "kahani",
+   "when": "Starting a new section / chapter",
+   "action": "Make the new goal or action clear in narration or a card ('ab hum X ki taraf chalte hain', 'yahan darshan ka samay'). A place change alone is a weak boundary. More changes at once make a stronger boundary; save several-at-once for chapter starts.",
+   "why": "Viewers mark new events mostly when action/goal changes; space or time jumps alone matter little; the chance of a boundary rises with the number of changes.",
+   "frequency": "Every section start",
+   "evidence": "🟢",
+   "evidence_note": "Magliano & Zacks 2011: action discontinuities had the biggest effect; space/time 'minor effects'. Zacks 2010: probability of segmenting rose with the number of situation changes. Narrative-film studies.",
+   "sources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC3208769/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC2955413/"
+   ],
+   "relation_to_existing": "MODIFIES R-055 and R-056 (corrects which change matters most)."
+  },
+  {
+   "id": "S-013",
+   "name": "Many photo changes inside one event are fine",
+   "layer": "rhythm",
+   "when": "Several stills/clips cover the same moment (same place, same goal)",
+   "action": "You may change pictures often within one event; keep them visually continuous (same place, similar tone). Don't treat every photo change as a 'new event' or a jolt. Save boundary signals (cards, music change) for real event changes (S-011).",
+   "why": "A cut by itself does not create a new event for the viewer; continuity cuts inside a scene often go unnoticed.",
+   "frequency": "Within each event",
+   "evidence": "🟡",
+   "evidence_note": "Zacks 2010: 'Cuts in and of themselves did not produce increases in segmentation.' Schwan 2000: segmentation 'largely unaffected by the occurrence of cuts'. Smith & Henderson 2008: 25.1% of within-scene and 32.4% of match-action cuts were missed vs 9.4% between-scene. All live-action film; applying to stills is inference.",
+   "sources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC2955413/",
+    "https://link.springer.com/article/10.3758/BF03213801",
+    "https://bop.unibe.ch/JEMR/article/download/2264/3460"
+   ],
+   "relation_to_existing": "CORRECTS R-178 (its 'jolt/error' claim is not supported) and R-177's 'invisible cut' reason."
+  },
+  {
+   "id": "S-014",
+   "name": "Slow the cutting at emotional peaks",
+   "layer": "rhythm",
+   "when": "Emotionally intense beats (darshan, aarti, arrival, a personal moment)",
+   "action": "Don't stack fast cutting on top of an already intense moment. Hold shots longer and let the content carry the arousal.",
+   "why": "Fast pace plus arousing content overloads viewers and lowers what they recognise and recall.",
+   "frequency": "At beats tagged as emotional peaks",
+   "evidence": "🟡",
+   "evidence_note": "Lang, Bolls, Potter & Kawahara 1999, J. Broadcasting & Electronic Media: fast pace + arousing content -> less recognition and cued recall (TV messages, lab). No numeric shot length given; threshold left to profiles.",
+   "sources": [
+    "https://www.tandfonline.com/doi/abs/10.1080/08838159909364504"
+   ],
+   "relation_to_existing": "SUPPORTS R-176 (speed ceiling) with peer-reviewed evidence; complements R-175 (shots lengthen at the end of the climax)."
+  },
+  {
+   "id": "S-015",
+   "name": "Film shot length is a reference, not a target, for stills",
+   "layer": "rhythm",
+   "when": "Setting shot-length targets for long-form stills/maps/cards",
+   "action": "Use about 4 s (modern Hollywood mean) only as a talking point. Calibrate real targets on our own format (e.g. R-394 travel reference) per profile; don't fail a stills video for being above 3-6 s.",
+   "why": "Hollywood ASL fell from about 10 s to under 4 s, but those shots carry motion, and short modern shots carry the most motion; stills have none.",
+   "frequency": "Benchmark only",
+   "evidence": "🟡",
+   "evidence_note": "Cutting et al. 2011: ASL ~10 s (1930s-40s) -> below 4 s after 2000 (160 films); shorter shots have proportionately more motion in modern films. Cutting et al. 2018: ~10 s (1950) -> ~4 s (2010). Cutting 2010: 1/f slope did not correlate with IMDb ratings (r=-.089 n.s.). Number is 🟢; using it for stills is inference.",
+   "sources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC3485803/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5849648/",
+    "https://jordandelong.com/pubs/2010/AttentionEvolution.pdf"
+   ],
+   "relation_to_existing": "CORRECTS R-135 (~4-5 s -> ~4 s, below 4 s after 2000) and MODIFIES R-173 (should not be a hard check for long-form stills; conflicts with R-394)."
+  },
+  {
+   "id": "S-016",
+   "name": "Move the still toward what the voice names",
+   "layer": "style",
+   "when": "Adding a slow zoom/pan to a still photo or map",
+   "action": "Make the move purposeful: push or pan toward the detail the narration is naming at that moment, and end on it. Avoid random decorative drift with no link to the words.",
+   "why": "Motion that matches the narration guides eyes to the named detail and helped story recall; moving scenes coordinate viewers' gaze more than static ones.",
+   "frequency": "Every still that gets motion",
+   "evidence": "🟡",
+   "evidence_note": "No direct adult study of Ken Burns moves was found. Closest: Takacs & Bus 2016 (children n=39): motion matched to narration -> more fixation on named detail, better recall. Smith & Henderson 2010 (VSS conference abstract): gaze clustered more in dynamic than static versions of the same scene (15% vs 20% of screen). Kumar et al. 2026 ISR: more background motion raised view-rate on children's YouTube videos (A/B). Children-only or abstract-level evidence.",
+   "sources": [
+    "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2016.01591/full",
+    "https://ualresearchonline.arts.ac.uk/id/eprint/21095/",
+    "https://pubsonline.informs.org/doi/abs/10.1287/isre.2023.0718"
+   ],
+   "relation_to_existing": "MODIFIES R-205, R-220, R-329, R-357 (gives a purpose rule; their % numbers stay 🟠)."
+  },
+  {
+   "id": "S-017",
+   "name": "Key subject near centre when a new still or card appears",
+   "layer": "style",
+   "when": "First second after a new photo, map or text card",
+   "action": "Place the key subject or key words near the screen centre at entry (or start the move from centre toward it). Don't put the only important detail in a far corner at the cut.",
+   "why": "Right after a new image appears, viewers look at the screen centre for about a second before exploring.",
+   "frequency": "Every new still/card",
+   "evidence": "🟡",
+   "evidence_note": "Smith & Henderson 2010 (VSS abstract): scenes began with ~1200 ms of high synchrony as all viewers attended to screen centre. Mital et al. 2011 report a central tendency after cuts.",
+   "sources": [
+    "https://ualresearchonline.arts.ac.uk/id/eprint/21095/",
+    "http://jhenderson.org/vclab/PDF_Pubs/MitalSmithHillHenderson_CC2011.pdf"
+   ],
+   "relation_to_existing": "SIMPLIFIES R-232 (eye-trace landing) for stills; R-232 itself should be 🟡."
+  },
+  {
+   "id": "S-018",
+   "name": "First 30 seconds match the title and thumbnail",
+   "layer": "kahani",
+   "when": "Opening of every long-form video",
+   "action": "Make sure what the title/thumbnail promise is seen or heard inside the first 30 s, and review the 'Intro' number in YouTube Analytics after release.",
+   "why": "YouTube's own retention report defines 'Intro' as % still watching after 30 s and advises matching title/thumbnail and reworking the first 30 s.",
+   "frequency": "Every long-form video",
+   "evidence": "🟡",
+   "evidence_note": "YouTube Help 'Measure key moments for audience retention' (official platform guidance). YouTube gives 30 s; it does not state a 5 s rule.",
+   "sources": [
+    "https://support.google.com/youtube/answer/9314415"
+   ],
+   "check": {
+    "kind": "hook_within_s",
+    "value": 30
+   },
+   "relation_to_existing": "DUPLICATES R-001 / R-061 (confirms with the official source; the 5 s value in R-001 stays creator data)."
+  },
+  {
+   "id": "S-019",
+   "name": "Explain in short segments with clear breaks",
+   "layer": "samajh",
+   "when": "Dense explanation (temple history, legend, route logistics)",
+   "action": "Break it into short segments, each with one idea, separated by a visible or spoken break, and mirror long ones as YouTube chapters so viewers can jump.",
+   "why": "Segmented material is learned better than one continuous block; the original effect is for learner-paced segments, which chapters partly give.",
+   "frequency": "Every explanation longer than one idea",
+   "evidence": "🟢",
+   "evidence_note": "Segmenting: Mayer 2008 d=0.98 (3/3, learner-paced); Rey et al. 2019 g=0.32 retention / 0.36 transfer (via Noetel 2022). Guo et al. 2014: median engagement at most 6 min regardless of video length (edX). YouTube chapters: 00:00 start, >=3 timestamps, >=10 s each.",
+   "sources": [
+    "https://jgregorymcverry.com/readings/mayerprinciplesofmultimedialearning2008.pdf",
+    "https://journals.sagepub.com/doi/10.3102/00346543211052329",
+    "https://up.csail.mit.edu/other-pubs/las2014-pguo-engagement.pdf",
+    "https://support.google.com/youtube/answer/9884579"
+   ],
+   "check": {
+    "kind": "min_chapter_duration_s",
+    "value": 10
+   },
+   "relation_to_existing": "SUPPORTS R-153 and R-087 (duplicate check); adds the learning evidence."
+  },
+  {
+   "id": "S-020",
+   "name": "Introduce key names before the dense part",
+   "layer": "samajh",
+   "when": "A section that will use many names (deities, places, people)",
+   "action": "Before the dense part, introduce each key name once with its picture and a short label, then use it.",
+   "why": "Knowing the names and look of key parts first makes the later explanation easier to learn.",
+   "frequency": "Once per dense section",
+   "evidence": "🟢",
+   "evidence_note": "Mayer 2008 pretraining d=0.85 (5/5). Lab lessons; for devotional/travel this is an inference about names, not mechanisms.",
+   "sources": [
+    "https://jgregorymcverry.com/readings/mayerprinciplesofmultimedialearning2008.pdf"
+   ],
+   "relation_to_existing": "NEW."
+  },
+  {
+   "id": "S-021",
+   "name": "Hindi narration speed: warn outside 115-230 wpm, don't fail at English bands",
+   "layer": "rhythm",
+   "when": "Checking narration speed",
+   "action": "Use 115-230 wpm as hard outer limits and treat 160-195 (R-163) as a soft English-derived guide only. For Hindi/Hinglish, judge pace by ear and by caption cps (S-003) before cutting words.",
+   "why": "Viewers rated about 175 wpm as right, about 230 too fast and about 115 too slow; word-length differences make English wpm bands unreliable for Hindi.",
+   "frequency": "Whole narration",
+   "evidence": "🟡",
+   "evidence_note": "BBC R&D 2015 (English news-style clips, hearing and hearing-impaired viewers): ~230 wpm 'too fast', ~115 'too slow', ~175 'about right'. Applying to Hindi is inference; Dwarika measured 200.1 wpm, inside these limits.",
+   "sources": [
+    "https://www.bbc.co.uk/rd/blog/2015-09-how-fast-should-subtitles-be"
+   ],
+   "check": {
+    "kind": "wpm_range",
+    "what": "narration_hard_limits",
+    "min": 115,
+    "max": 230
+   },
+   "relation_to_existing": "MODIFIES R-163 (keeps it as a warning band, adds evidence-based outer limits)."
+  },
+  {
+   "id": "S-022",
+   "name": "Captions move away from on-screen text",
+   "layer": "style",
+   "when": "Captions would overlap a text card, map label or title",
+   "action": "Move captions (e.g. to the top) or time them so they never cover on-screen text; when both can't fit, show the more story-relevant one.",
+   "why": "Overlapping text can't be read; the platform spec requires avoiding overlap.",
+   "frequency": "Every caption over a graphic",
+   "evidence": "🟡",
+   "evidence_note": "Netflix TTSG General Requirements: position subtitles to avoid overlap with on-screen text; if unavoidable, place where easier to read. Netflix Hindi TTSG: give precedence to the most plot-pertinent message. Platform spec.",
+   "sources": [
+    "https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617-Timed-Text-Style-Guide-General-Requirements",
+    "https://partnerhelp.netflixstudios.com/hc/en-us/articles/115003196707-Hindi-Timed-Text-Style-Guide"
+   ],
+   "relation_to_existing": "RELATED to R-376 (title zones) and R-095 (safe zones)."
+  },
+  {
+   "id": "Q-001",
+   "name": "Narrated piece: cut every 4-6 s, no shot over ~7 s",
+   "layer": "rhythm",
+   "when": "Narration-led long-form",
+   "action": "Plan shots of 4-6 s; flag any single shot longer than ~7 s (cards/maps that are read are exempt, they follow reading time).",
+   "why": "Keeps the eye fed while the voice carries the story.",
+   "frequency": "",
+   "evidence": "🟠",
+   "evidence_note": "Qwen-MM-Plugins video-edit skill (Apache-2.0), craft guidance, not measured. Own words.",
+   "sources": [
+    "https://github.com/QwenLM/Qwen-MM-Plugins/blob/main/src/capabilities/video-edit/skill/craft/pacing-rhythm.md"
+   ],
+   "check": {
+    "kind": "max_shot_s_kang",
+    "value": 7,
+    "exempt": [
+     "graphic"
+    ]
+   },
+   "relation_to_existing": "Close to G-004 (3-10 s); stricter upper end. Use 7 s as WARN, 10 s as FAIL."
+  },
+  {
+   "id": "Q-002",
+   "name": "Same shot length never 3 times in a row",
+   "layer": "rhythm",
+   "when": "Any sequence",
+   "action": "Vary shot lengths; three equal lengths in a row reads as a metronome.",
+   "why": "Rhythm needs variation.",
+   "frequency": "",
+   "evidence": "🟠",
+   "evidence_note": "Qwen-MM-Plugins video-edit skill (Apache-2.0), craft guidance, not measured. Own words.",
+   "sources": [
+    "https://github.com/QwenLM/Qwen-MM-Plugins/blob/main/src/capabilities/video-edit/skill/craft/pacing-rhythm.md"
+   ],
+   "check": {
+    "kind": "same_length_run_kang",
+    "value": 3,
+    "tolerance_s": 0.25
+   },
+   "relation_to_existing": "Same idea already in Creative Office proposal."
+  },
+  {
+   "id": "Q-003",
+   "name": "Camera-move comfort budget",
+   "layer": "style",
+   "when": "Ken Burns / parallax / punch-in",
+   "action": "At least ~2.6 s between camera changes, at most ~6 moves per minute (calm pieces 4).",
+   "why": "Too many moves tire the viewer.",
+   "frequency": "",
+   "evidence": "🟠",
+   "evidence_note": "Qwen-MM-Plugins video-edit skill (Apache-2.0), craft guidance, not measured. Own words.",
+   "sources": [
+    "https://github.com/QwenLM/Qwen-MM-Plugins/blob/main/src/capabilities/video-edit/skill/craft/pacing-rhythm.md"
+   ],
+   "check": null,
+   "relation_to_existing": "Devotional = calm piece -> 4/min advisory. Advisory: Qwen counts camera changes, not one continuous Ken Burns per shot; not machine-checked."
+  },
+  {
+   "id": "Q-004",
+   "name": "Every push-in ends on a nameable anchor",
+   "layer": "style",
+   "when": "Any push-in",
+   "action": "If you cannot name the noun the move ends on (a face, a spire, a number), don't move.",
+   "why": "Motion must answer a viewer question.",
+   "frequency": "",
+   "evidence": "🟠",
+   "evidence_note": "Qwen-MM-Plugins video-edit skill (Apache-2.0), craft guidance, not measured. Own words.",
+   "sources": [
+    "https://github.com/QwenLM/Qwen-MM-Plugins/blob/main/src/capabilities/video-edit/skill/craft/pacing-rhythm.md"
+   ],
+   "check": null,
+   "relation_to_existing": "Same as G-001 / S-016."
+  },
+  {
+   "id": "Q-005",
+   "name": "Zoom range for stills",
+   "layer": "style",
+   "when": "Ken Burns on photos",
+   "action": "Moves under ~1.06x are only for an opening micro push; above ~2.3x pixels break.",
+   "why": "Below that no one notices, above that quality falls.",
+   "frequency": "",
+   "evidence": "🟠",
+   "evidence_note": "Qwen-MM-Plugins video-edit skill (Apache-2.0), craft guidance, not measured. Own words.",
+   "sources": [
+    "https://github.com/QwenLM/Qwen-MM-Plugins/blob/main/src/capabilities/video-edit/skill/craft/pacing-rhythm.md"
+   ],
+   "check": null,
+   "relation_to_existing": "Pairs with G-003 resolution headroom."
+  },
+  {
+   "id": "Q-006",
+   "name": "Accent budget",
+   "layer": "style",
+   "when": "Entrance effects on cuts",
+   "action": "Entrance accent on at most ~1 of every 3-4 cuts, on section changes; never fade-pop opacity at a hard-cut entrance; travel/premium settles with gentle ease, overshoot <=1.08x.",
+   "why": "Accents only register against plain cuts.",
+   "frequency": "",
+   "evidence": "🟠",
+   "evidence_note": "Qwen-MM-Plugins video-edit skill (Apache-2.0), craft guidance, not measured. Own words.",
+   "sources": [
+    "https://github.com/QwenLM/Qwen-MM-Plugins/blob/main/src/capabilities/video-edit/skill/craft/pacing-rhythm.md"
+   ],
+   "check": null,
+   "relation_to_existing": "Fits one-transition-style rule."
+  },
+  {
+   "id": "Q-007",
+   "name": "Two shots per narration beat",
+   "layer": "kahani",
+   "when": "Narration beat ~8-10 s",
+   "action": "Wide establishing shot (can carry the headline) + detail cut-in; voice runs on, picture cuts mid-sentence.",
+   "why": "Wide-detail pairing gives place and focus.",
+   "frequency": "",
+   "evidence": "🟠",
+   "evidence_note": "Qwen-MM-Plugins video-edit skill (Apache-2.0), craft guidance, not measured. Own words.",
+   "sources": [
+    "https://github.com/QwenLM/Qwen-MM-Plugins/blob/main/src/capabilities/video-edit/skill/craft/pacing-rhythm.md"
+   ],
+   "check": null,
+   "relation_to_existing": "Same as G-007 / R-397."
+  },
+  {
+   "id": "Q-008",
+   "name": "Shape of the piece",
+   "layer": "kahani",
+   "when": "Planning",
+   "action": "Fast teaser open, slower narrative middle, faster recap ending; end on a settled wide frame held >=0.8 s, never mid-push.",
+   "why": "Energy shape holds attention and closes cleanly.",
+   "frequency": "",
+   "evidence": "🟠",
+   "evidence_note": "Qwen-MM-Plugins video-edit skill (Apache-2.0), craft guidance, not measured. Own words.",
+   "sources": [
+    "https://github.com/QwenLM/Qwen-MM-Plugins/blob/main/src/capabilities/video-edit/skill/craft/pacing-rhythm.md"
+   ],
+   "check": null,
+   "relation_to_existing": "Supports cold open + bookends in Creative Office."
+  },
+  {
+   "id": "T-001",
+   "part_ids": [],
+   "name": "Finished graphic holds at least 2 s before it leaves",
+   "layer": "rhythm",
+   "when": "Any card, label, lower third or pop graphic that animates in and then out",
+   "action": "After the entrance settles, keep the graphic fully still and readable for at least 2 s before its exit starts. Entrance 0.3–0.6 s ease-out, exit 0.2–0.4 s ease-in (exit shorter).",
+   "why": "A graphic that starts leaving as soon as it lands is never read; the hold is what the viewer actually uses.",
+   "frequency": "Every animated graphic",
+   "evidence": "🟠",
+   "evidence_note": "One tool's motion-graphics skill (FableCut) states these as house defaults; no measured study.",
+   "sources": [
+    "https://github.com/ronak-create/FableCut"
+   ],
+   "source_files": [
+    "skills/motion-graphics/SKILL.md"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": {
+    "kind": "duration_min_s",
+    "what": "graphic_static_hold",
+    "min": 2.0
+   },
+   "confirms": [
+    "R-202",
+    "G-033",
+    "R-305"
+   ],
+   "conflict_note": "Entrance/exit bands only confirm R-202/G-033. The new part is the ≥2 s settled hold. For reading-heavy cards G-012/G-026 (word-count holds) are stricter and win."
+  },
+  {
+   "id": "T-002",
+   "part_ids": [],
+   "name": "Exposure check on every rendered still/scene: median luma 0.35–0.50",
+   "layer": "style",
+   "when": "QC pass on the rendered video (one sampled frame per beat/scene)",
+   "action": "Measure luma (Rec.709, 0–1) on a mid-scene frame. Flag: median outside 0.35–0.50 (unless the scene is meant to be night/dark), more than ~1% of pixels at pure white (clipped highlights), more than ~2% at pure black (crushed shadows). Flag only — do not auto-correct.",
+   "why": "Gives KANG a numeric exposure guard for mixed stock/phone/AI stills that today pass unchecked; the numbers are cheap to compute with FFmpeg signalstats.",
+   "frequency": "Every beat (sampled frame)",
+   "evidence": "🟠",
+   "evidence_note": "Thresholds are the reading guide of FableCut's built-in scopes tool, not a broadcast standard. Treat as starting values; dark temple interiors and night shots need an exemption tag.",
+   "sources": [
+    "https://github.com/ronak-create/FableCut"
+   ],
+   "source_files": [
+    "CLAUDE.md#Color"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": {
+    "kind": "luma_stats",
+    "what": "median_luma",
+    "min": 0.35,
+    "max": 0.5,
+    "white_clip_pct_max": 1.0,
+    "black_crush_pct_max": 2.0
+   },
+   "confirms": [
+    "R-213",
+    "R-267"
+   ],
+   "conflict_note": "R-213/R-267 say set exposure with scopes and match to a hero shot but give no numbers; T-002 supplies them."
+  },
+  {
+   "id": "T-003",
+   "part_ids": [],
+   "name": "Colour-cast check on neutral scenes (cast strength ≤ 0.03)",
+   "layer": "style",
+   "when": "QC pass on scenes that should look neutral (white walls, overcast sky, marble)",
+   "action": "Compute the midtone colour cast (mean chroma direction of mid-luma pixels). If its strength is above ~0.03 on a scene tagged neutral, flag it and suggest moving temperature against the cast (orange/yellow → cooler, blue/cyan → warmer) and tint against green/magenta. Leave skin-led and golden-hour scenes warm on purpose.",
+   "why": "Mixed sources (phone, stock, AI) arrive with different white balance; a cast jump between consecutive stills reads as a continuity error.",
+   "frequency": "Every scene tagged neutral",
+   "evidence": "🟠",
+   "evidence_note": "FableCut gives the 0.03 cast threshold; samuelgursky's pre-balance tool gives the 'leave midtones warm' caution. Both tool docs, no study.",
+   "sources": [
+    "https://github.com/ronak-create/FableCut",
+    "https://github.com/samuelgursky/davinci-resolve-mcp"
+   ],
+   "source_files": [
+    "FableCut CLAUDE.md#Color",
+    "davinci-resolve-mcp docs/SKILL.md (plan_prebalance)"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": {
+    "kind": "max_value",
+    "what": "midtone_cast_strength",
+    "max": 0.03
+   },
+   "confirms": [
+    "R-213",
+    "R-454"
+   ],
+   "conflict_note": "Keep T-012 (midtones warm) in mind: do not neutralise skin or sunset beats."
+  },
+  {
+   "id": "T-004",
+   "part_ids": [],
+   "name": "Caption tail ≈ 0.25 s, never into the next caption; new block at a ≥0.6 s pause",
+   "layer": "comprehension",
+   "when": "Building caption cues from word timings (captions_hindi.srt and pop words)",
+   "action": "Start a new caption block when: a pause of ≥0.6 s occurs, a sentence ends, or a comma appears after the block already has ≥3 words, or the block would exceed its line/second limit. Let each caption stay ~0.25 s after its last spoken word, but end it before the next cue starts; snap starts and ends to whole frames. Re-make captions after the cut is final (a later cut shortens a cue without re-timing its words).",
+   "why": "A small tail lets slow readers finish; snapping and no-overlap avoid one-frame flashes; regenerating after the cut keeps words in sync.",
+   "frequency": "Every caption cue",
+   "evidence": "🟠",
+   "evidence_note": "FableCut caption generator defaults (documented behaviour). No reading study behind the 0.25 s / 0.6 s numbers.",
+   "sources": [
+    "https://github.com/ronak-create/FableCut"
+   ],
+   "source_files": [
+    "CLAUDE.md#Captions"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": {
+    "kind": "caption_tail_s",
+    "what": "caption_end_minus_last_word",
+    "min": 0.0,
+    "max": 0.35
+   },
+   "confirms": [
+    "G-014",
+    "R-379",
+    "R-093"
+   ],
+   "conflict_note": "R-247 breaks a word-level subtitle line at a 0.7 s pause; T-004 uses 0.6 s for phrase captions. Suggest 0.6 s for long-form phrase captions, keep R-247's 0.7 s for word-by-word reels. G-014 (min duration / 2-frame gap) still wins when the tail would create a <2-frame gap."
+  },
+  {
+   "id": "T-005",
+   "part_ids": [],
+   "name": "Music duck starts before the voice and bridges short gaps",
+   "layer": "rhythm",
+   "when": "Music bed under narration",
+   "action": "Begin the duck ~0.3 s before each spoken phrase, hold it through the phrase, release over ~0.6 s after. Treat speech gaps shorter than ~0.5–1 s as still speaking so the music does not pump up between words. Typical depth −10 to −12 dB; detect speech above about −40 dBFS.",
+   "why": "Ducking that reacts after the first syllable makes the first word fight the music; un-bridged gaps cause audible pumping.",
+   "frequency": "Every music bed under voice",
+   "evidence": "🟠",
+   "evidence_note": "Two tool defaults agree on depth (FableCut −10/−12 dB; VectCut 7.5–10 dB). Pre-roll and gap bridging are tool behaviour, not studies.",
+   "sources": [
+    "https://github.com/ronak-create/FableCut",
+    "https://github.com/sun-guannan/VectCutAPI"
+   ],
+   "source_files": [
+    "FableCut CLAUDE.md#Audio mix",
+    "VectCutAPI .agents/skills/capcut-director/SKILL.md"
+   ],
+   "licence": "MIT (FableCut) / Apache-2.0 (VectCutAPI repo; its skill folder MIT)",
+   "idea_only": false,
+   "check": {
+    "kind": "duck_preroll_s",
+    "what": "music_duck_start_before_speech",
+    "min": 0.1,
+    "max": 0.5
+   },
+   "confirms": [
+    "R-103"
+   ],
+   "conflict_note": "R-103 gives 10–50 ms attack; that is the compressor's attack once triggered. T-005 is about *when* the duck starts (look-ahead) — both can hold."
+  },
+  {
+   "id": "T-006",
+   "part_ids": [],
+   "name": "Long-form YouTube master: H.264 CRF ~18, keyframe every 0.5 s, AAC 384 kbps 48 kHz",
+   "layer": "style",
+   "when": "Final 16:9 YouTube export from the FFmpeg renderer",
+   "action": "Encode 1920×1080 H.264 at CRF ~18 (constant quality, not a fixed low bitrate), force a keyframe at least every 0.5 s, audio AAC-LC 384 kbps at 48 kHz. For 9:16 reels: CRF ~19 with a maxrate cap of ~20–25 Mb/s, AAC 256 kbps; warn when a reel exceeds the platform's length.",
+   "why": "YouTube re-encodes everything; a high-quality, seek-friendly upload with dense keyframes keeps the re-encode clean and makes chapter seeking fast.",
+   "frequency": "Every final render",
+   "evidence": "🟠",
+   "evidence_note": "Tool export-preset table (FableCut). YouTube's own published upload guidance should be checked before treating as 🟡.",
+   "sources": [
+    "https://github.com/ronak-create/FableCut"
+   ],
+   "source_files": [
+    "CLAUDE.md#Delivery presets"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": {
+    "kind": "export_profile",
+    "what": "youtube_master",
+    "crf_max": 20,
+    "gop_max_s": 0.5,
+    "audio_kbps_min": 320,
+    "audio_hz": 48000
+   },
+   "confirms": [
+    "R-272"
+   ],
+   "conflict_note": "R-272 gives VBR 2-pass bitrate bands (10–24 Mbps 1080p). Either is fine; CRF 18 usually lands inside that band for travel footage. Pick one method per profile, not both."
+  },
+  {
+   "id": "T-007",
+   "part_ids": [],
+   "name": "One entrance family per video; ≤2 fonts, ≤3 transition types, 1–2 highlight colours",
+   "layer": "style",
+   "when": "Planning text animations, fonts, transitions and caption accent colours for a whole video",
+   "action": "Choose one entrance style for titles and one for small pop graphics and keep them for the whole video. Use at most 2 typefaces, at most 3 transition types, and 1–2 accent/highlight colours used consistently (a colour may map to a meaning, e.g. one per time of day).",
+   "why": "A different animation, font or colour on every element is the clearest 'auto-generated' signal and makes the video feel noisy.",
+   "frequency": "Whole video",
+   "evidence": "🟠",
+   "evidence_note": "Three tool skills agree (FableCut presets advice, cli-anything-capcut anti-slop list, cutcli TikTok rules). Opinion, not measured.",
+   "sources": [
+    "https://github.com/ronak-create/FableCut",
+    "https://github.com/juliang8507/cli-anything-capcut",
+    "https://github.com/xuliang2024/cutcli-cookbook"
+   ],
+   "source_files": [
+    "FableCut skills/motion-graphics/SKILL.md",
+    "cli-anything-capcut claude-skill/references/anti-slop-video.md",
+    "cutcli-cookbook docs/cookbook/tiktok-style.md"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": {
+    "kind": "max_count",
+    "what": "distinct_fonts_per_video",
+    "max": 2
+   },
+   "confirms": [
+    "R-252",
+    "R-422"
+   ],
+   "conflict_note": "FableCut's edit-video skill also says 'vary the font per title' to avoid a machine look — that contradicts its own motion-graphics advice and the other two sources. Propose: max 2 fonts (one display, one caption), variety comes from size/weight, not new typefaces."
+  },
+  {
+   "id": "T-008",
+   "part_ids": [],
+   "name": "Lower-third build order: plate → text → accent line",
+   "layer": "style",
+   "when": "Place-name or person lower third",
+   "action": "Animate in layers: the backing bar grows to full width in ~0.5 s ease-out; the text rises in ~0.2 s after the bar starts; a thin accent rule draws on from ~0.3 s to ~1.0 s. Exit everything together with a ~0.4 s fade. Use 2–3 colours: one accent, one neutral, one translucent backing (~60–65% opaque).",
+   "why": "Layered entrance reads as designed; text appearing before its plate looks broken.",
+   "frequency": "Every lower third",
+   "evidence": "🟠",
+   "evidence_note": "Worked example in FableCut's motion-graphics skill; numbers are that example's, not a standard.",
+   "sources": [
+    "https://github.com/ronak-create/FableCut"
+   ],
+   "source_files": [
+    "skills/motion-graphics/SKILL.md"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": null,
+   "confirms": [
+    "R-385",
+    "R-100"
+   ],
+   "conflict_note": "R-385 gives a ~12-frame slide-in for the whole lower third; T-008 adds the inner order and offsets."
+  },
+  {
+   "id": "T-009",
+   "part_ids": [],
+   "name": "Motion blur only on fast moves; off on slow Ken Burns drifts",
+   "layer": "style",
+   "when": "Deciding motion blur for moving elements (renderer or AE/Premiere package)",
+   "action": "Add motion blur (shutter ~180°, ~8 samples; 12–16 only for very fast spins; 360° for a deliberate smear) to whip moves, fly-ins and fast spins. Leave it off on slow drifts and Ken Burns moves where it is invisible but costs render time.",
+   "why": "On an i5 CPU render, blur on every layer multiplies render time for no visible gain.",
+   "frequency": "Every moving element",
+   "evidence": "🟠",
+   "evidence_note": "FableCut motion-graphics skill.",
+   "sources": [
+    "https://github.com/ronak-create/FableCut"
+   ],
+   "source_files": [
+    "skills/motion-graphics/SKILL.md"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": null,
+   "confirms": [
+    "R-304"
+   ],
+   "conflict_note": "CONFLICT with R-304 (blur ON on every moving layer). Proposed resolution for KANG: R-304 for fast moves, T-009 exemption for slow drifts (<~2% frame width per frame), because of CPU budget."
+  },
+  {
+   "id": "T-010",
+   "part_ids": [],
+   "name": "Transition ≤ 1/3 of the shorter neighbouring clip, hard cap 2 s",
+   "layer": "rhythm",
+   "when": "Any dissolve, wipe or other transition between two clips/stills",
+   "action": "Default length ~0.5 s. Never longer than one third of the shorter of the two clips it joins, and never over 2 s. The clips must abut (no gap) and have enough handle media under the transition (see T-011).",
+   "why": "A long transition on a short clip means the viewer never sees the clip clean; gaps break transitions in NLE import.",
+   "frequency": "Every transition",
+   "evidence": "🟠",
+   "evidence_note": "cutcli cookbook (1/3 rule), editly default 0.5 s, and the Premiere guidance that premiere-pro-mcp quotes from adb-mcp (≤2 s, no gaps). Tool conventions.",
+   "sources": [
+    "https://github.com/xuliang2024/cutcli-cookbook",
+    "https://github.com/mifi/editly",
+    "https://github.com/leancoderkavy/premiere-pro-mcp"
+   ],
+   "source_files": [
+    "cutcli-cookbook examples/02-image-slideshow-bgm/README.md",
+    "editly README",
+    "premiere-pro-mcp RESEARCH.md"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": {
+    "kind": "ratio_max",
+    "what": "transition_len_over_shorter_clip",
+    "max": 0.333,
+    "abs_max_s": 2.0
+   },
+   "confirms": [
+    "R-251",
+    "R-354"
+   ],
+   "conflict_note": "R-354 allows transitions 0.5–1.5 s; T-010 adds the per-clip ratio cap, which binds first on short beats."
+  },
+  {
+   "id": "T-011",
+   "part_ids": [],
+   "name": "Leave handles: ≥8 frames picture, ≥48 frames audio beyond every used range",
+   "layer": "style",
+   "when": "Writing source in/out points into the Premiere xmeml package",
+   "action": "When a clip is trimmed from longer media, check there are at least 8 frames of unused picture and 48 frames of unused audio past each in/out point. Report (do not block) any join that lacks them, because a dissolve, slip, audio crossfade or room-tone fill there will fail or need a freeze.",
+   "why": "Audio needs far more handle than picture because crossfades and ambience reach past the picture cut; the editor finds missing handles too late otherwise.",
+   "frequency": "Every trimmed clip in the package",
+   "evidence": "🟠",
+   "evidence_note": "Handle floors from a Resolve turnover/handle-report tool; industry convention, not a study.",
+   "sources": [
+    "https://github.com/samuelgursky/davinci-resolve-mcp"
+   ],
+   "source_files": [
+    "docs/SKILL.md (plan_turnover, handle_report)"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": {
+    "kind": "handle_frames_min",
+    "what": "source_handles",
+    "video_min": 8,
+    "audio_min": 48
+   },
+   "confirms": [
+    "R-292"
+   ],
+   "conflict_note": null
+  },
+  {
+   "id": "T-012",
+   "part_ids": [],
+   "name": "Neutral balance first; midtones stay warm; flag clipping, never auto-fix",
+   "layer": "style",
+   "when": "Automatic colour pre-balance of mixed stills/clips",
+   "action": "Balance black point first, then white point, per channel, from a mid-scene frame; group shots by setup/source and pick a hero per group. Do not neutralise midtones (skin should stay on the warm skin line). Automatic steps may only do this neutral balance — no curves, vignettes, saturation pushes or secondaries. Clipped highlights or crushed shadows are flagged for the human, not 'fixed'.",
+   "why": "Neutralising midtones turns faces grey; an automatic step that also stylises cannot know a dark shot was dark on purpose.",
+   "frequency": "Any auto-grade step",
+   "evidence": "🟠",
+   "evidence_note": "Assistant-colourist practice as encoded in a Resolve MCP tool; not measured.",
+   "sources": [
+    "https://github.com/samuelgursky/davinci-resolve-mcp"
+   ],
+   "source_files": [
+    "docs/SKILL.md (plan_prebalance)"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": null,
+   "confirms": [
+    "R-213",
+    "R-266",
+    "R-454"
+   ],
+   "conflict_note": "Fits ORDER.md (engine flags, human decides)."
+  },
+  {
+   "id": "T-013",
+   "part_ids": [],
+   "name": "At most ~2.5 competing sound streams",
+   "layer": "rhythm",
+   "when": "Mixing voice, music, ambience and SFX at any moment",
+   "action": "Count as competing any stream within 12 dB of the loudest one at that moment; streams further down are a bed/texture. Flag moments with more than 2–3 competing streams (e.g. voice + loud SFX + music not ducked).",
+   "why": "Listeners follow about two and a half sound streams; beyond that everything becomes mush and the narration is lost.",
+   "frequency": "Every audio window (e.g. 1 s steps)",
+   "evidence": "🟠",
+   "evidence_note": "Murch's long-standing 'two-and-a-half' observation as implemented by a Resolve audit; the tool itself says it is an observation, not a measured constant.",
+   "sources": [
+    "https://github.com/samuelgursky/davinci-resolve-mcp"
+   ],
+   "source_files": [
+    "docs/SKILL.md (sound_density_audit)"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": {
+    "kind": "max_count",
+    "what": "competing_streams_within_12db",
+    "max": 2.5
+   },
+   "confirms": [],
+   "conflict_note": "Complements R-212/R-222 (SFX budget) and R-449 (scenic audio policy)."
+  },
+  {
+   "id": "T-014",
+   "part_ids": [],
+   "name": "Flag a timeline with zero split edits",
+   "layer": "rhythm",
+   "when": "QC of the assembled package (narration + visuals) at scene changes",
+   "action": "Classify each scene join as J-cut (next sound early), L-cut (previous sound lingers), straight, or unpaired (picture cut with continuous sound). If every join is straight, flag it. No target ratio — just require that place changes use at least some split edits (ambience lead-ins).",
+   "why": "An all-straight timeline is usually one nobody has listened to; sound leading picture makes place changes feel natural.",
+   "frequency": "Per video",
+   "evidence": "🟠",
+   "evidence_note": "Resolve MCP split-edit audit; craft convention.",
+   "sources": [
+    "https://github.com/samuelgursky/davinci-resolve-mcp"
+   ],
+   "source_files": [
+    "docs/SKILL.md (split_edit_audit)"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": {
+    "kind": "min_count",
+    "what": "split_edits_at_scene_changes",
+    "min": 1
+   },
+   "confirms": [
+    "R-262"
+   ],
+   "conflict_note": "R-262 sets the 6–12 frame offset; T-014 is only the 'not zero' audit."
+  },
+  {
+   "id": "T-015",
+   "part_ids": [],
+   "name": "Critic reports what it cannot see; no single composite score",
+   "layer": "meta",
+   "when": "Designing the rules-engine critic output (step_4 engine report)",
+   "action": "Always list emotion and story as NOT_ASSESSED (Murch's Rule of Six weights them ~51% and ~23%), list unimplemented checks as NOT_IMPLEMENTED (never as passes), and state coverage ('n of 6 criteria, covering x% of the decision'). Order findings by scope (whole video → scene → moment) and weight, not by count. Avoid publishing one averaged percentage as if it described the cut.",
+   "why": "A single score built only from the measurable ~26% looks like a quality verdict it cannot give.",
+   "frequency": "Every engine report",
+   "evidence": "🟠",
+   "evidence_note": "Design stance of the Resolve MCP 'rule_of_six_audit'; weights are Murch's (already in package science files).",
+   "sources": [
+    "https://github.com/samuelgursky/davinci-resolve-mcp"
+   ],
+   "source_files": [
+    "docs/SKILL.md (rule_of_six_audit)"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": null,
+   "confirms": [
+    "ORDER.md emotion decision"
+   ],
+   "conflict_note": "PLAN-RELEVANT: step_4 engine currently prints one % score (e.g. Dwarika 36.4%). Proposal: keep per-layer pass/fail + coverage line, drop or demote the single %."
+  },
+  {
+   "id": "T-016",
+   "part_ids": [],
+   "name": "Cutaways sit inside one beat, never straddle two",
+   "layer": "comprehension",
+   "when": "Placing B-roll/stock/stills against narration beats (visuals_beats CSV)",
+   "action": "Every inserted visual starts and ends inside a single narration beat; a beat marked protected (e.g. on-camera moment, deity frame) is never covered; if a visual has an explicit beat index, place it there or not at all — never silently move it to another beat.",
+   "why": "A cutaway that crosses a beat boundary illustrates two ideas at once and breaks S-007 timing.",
+   "frequency": "Every inserted visual",
+   "evidence": "🟠",
+   "evidence_note": "Placement contract of the Resolve MCP B-roll planner.",
+   "sources": [
+    "https://github.com/samuelgursky/davinci-resolve-mcp"
+   ],
+   "source_files": [
+    "docs/SKILL.md (plan_broll)"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": {
+    "kind": "boolean",
+    "what": "visual_crosses_beat_boundary",
+    "must_be": false
+   },
+   "confirms": [
+    "S-007",
+    "R-088"
+   ],
+   "conflict_note": null
+  },
+  {
+   "id": "T-017",
+   "part_ids": [],
+   "name": "Music-cut montage: cut on phrases by default, every 2 beats when retiming",
+   "layer": "rhythm",
+   "when": "Montage sections without narration (intro/outro, travel montage, reels)",
+   "action": "Default cut points = musical phrase boundaries; for a faster section use bars, every beat only for a deliberate 'relentless' moment. When retiming shots to the beat: 2 beats per shot as default, 1 for fast reels, 4 for calm sections. Shots under ~0.6 s read as flashes. If all cuts feel one beat early, check the downbeat offset (pickup bar).",
+   "why": "Cuts that resolve with the music feel inevitable rather than merely synced.",
+   "frequency": "Montage sections",
+   "evidence": "🟠",
+   "evidence_note": "Two tool docs (Resolve MCP beat-cut planner; FableCut beats/retime).",
+   "sources": [
+    "https://github.com/samuelgursky/davinci-resolve-mcp",
+    "https://github.com/ronak-create/FableCut"
+   ],
+   "source_files": [
+    "davinci-resolve-mcp docs/SKILL.md (plan_beat_cuts)",
+    "FableCut skills/remake-reel/SKILL.md"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": {
+    "kind": "duration_min_s",
+    "what": "montage_shot",
+    "min": 0.6
+   },
+   "confirms": [
+    "R-414",
+    "R-418"
+   ],
+   "conflict_note": "Long-form narrated sections follow Q-001/Q-003 instead."
+  },
+  {
+   "id": "T-018",
+   "part_ids": [],
+   "name": "Don't place cuts on raw Whisper word times",
+   "layer": "comprehension",
+   "when": "Cutting or syncing narration/captions from ASR word timestamps",
+   "action": "Use ASR word times to know *which* words exist, but not *where* to cut: they can be off by about ±0.3 s and pad word ends. Refine edges to the waveform/speech onset before cutting. Treat a silence ≥0.25 s inside a sentence as a possible restart. Gaps <0.6 s between blocks of one thought may be joined into one clip.",
+   "why": "Cutting on padded ASR times leaves breaths and clipped syllables.",
+   "frequency": "Every narration cut",
+   "evidence": "🟠",
+   "evidence_note": "Idea and numbers from AdamGarceau/resolve-toolkit (no LICENSE file); written fully in own words, no text/code copied.",
+   "sources": [
+    "https://github.com/AdamGarceau/resolve-toolkit"
+   ],
+   "source_files": [
+    "skills/perfect-cuts/SKILL.md"
+   ],
+   "licence": "NO LICENCE → IDEA_ONLY",
+   "idea_only": true,
+   "check": null,
+   "confirms": [
+    "R-195",
+    "R-403"
+   ],
+   "conflict_note": "AdamGarceau also uses zero in-pad for tight talking-head cuts; that conflicts with R-346 (0.25 s pre-pad) and is NOT proposed for KANG narration."
+  },
+  {
+   "id": "T-019",
+   "part_ids": [],
+   "name": "Presenter/talking clips: min 1.5 s per framing, re-frame by 10 s",
+   "layer": "rhythm",
+   "when": "Clips of a person talking (presenter, local guide) where KANG adds punch-in/out framing",
+   "action": "16:9: no framing change faster than 1.5 s (anti-flicker); force a new framing or cutaway by ~10 s. 9:16: min 1.0 s, max ~5 s. For calm personal stories hold each framing ≥4 s. A new shot needs ~3–5 s to be taken in.",
+   "why": "Switching too fast feels dizzy; holding a static framing too long loses attention.",
+   "frequency": "Talking clips",
+   "evidence": "🟠",
+   "evidence_note": "Numbers from a podcast punch-in skill (AdamGarceau/resolve-toolkit, no licence). Own words only.",
+   "sources": [
+    "https://github.com/AdamGarceau/resolve-toolkit"
+   ],
+   "source_files": [
+    "skills/podcast-punch-in/SKILL.md",
+    "skills/dr-tighten/SKILL.md"
+   ],
+   "licence": "NO LICENCE → IDEA_ONLY",
+   "idea_only": true,
+   "check": {
+    "kind": "duration_range_s",
+    "what": "presenter_framing_hold",
+    "min": 1.5,
+    "max": 10
+   },
+   "confirms": [
+    "R-145"
+   ],
+   "conflict_note": "Q-001 (no shot over ~7 s in narrated pieces) is stricter for narration-over-visuals; T-019 is only for on-camera talking clips."
+  },
+  {
+   "id": "T-020",
+   "part_ids": [],
+   "name": "Noise/voice isolation at 30–50%, not full strength",
+   "layer": "style",
+   "when": "Cleaning location audio or noisy narration",
+   "action": "Apply AI voice isolation / noise reduction at roughly 30–50% wet; full strength creates watery artefacts. Then level and limit (VO peak target per R-451).",
+   "why": "Partial isolation removes room noise while keeping a natural voice.",
+   "frequency": "Noisy voice clips",
+   "evidence": "🟠",
+   "evidence_note": "Resolve Fairlight chain notes in AdamGarceau/resolve-toolkit; own words.",
+   "sources": [
+    "https://github.com/AdamGarceau/resolve-toolkit"
+   ],
+   "source_files": [
+    "skills/resolve-vo-finish/references/fairlight-native-chain.md"
+   ],
+   "licence": "NO LICENCE → IDEA_ONLY",
+   "idea_only": true,
+   "check": {
+    "kind": "percent_range",
+    "what": "voice_isolation_amount",
+    "min": 30,
+    "max": 50
+   },
+   "confirms": [
+    "R-438"
+   ],
+   "conflict_note": "R-438 uses 80% dry/wet for manual NR — different tool, different scale; keep both as starting points per tool."
+  },
+  {
+   "id": "T-021",
+   "part_ids": [],
+   "name": "Humanise TTS narration: room tone ≈ −45 dB, varied pauses 300–600 ms",
+   "layer": "rhythm",
+   "when": "Any synthetic (TTS) narration",
+   "action": "Lay a very low room-tone bed (~−45 dB) under TTS, vary the gaps between sentences inside ~300–600 ms instead of a fixed pause, and soften the top end slightly (high shelf about −2 dB).",
+   "why": "Dead-silent gaps and identical pauses are a recognisable synthetic-voice signature.",
+   "frequency": "Every TTS narration",
+   "evidence": "🟠",
+   "evidence_note": "Anti-'AI slop' checklist in cli-anything-capcut (Korean); opinion.",
+   "sources": [
+    "https://github.com/juliang8507/cli-anything-capcut"
+   ],
+   "source_files": [
+    "claude-skill/references/anti-slop-video.md"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": {
+    "kind": "duration_range_s",
+    "what": "tts_sentence_gap",
+    "min": 0.3,
+    "max": 0.6
+   },
+   "confirms": [
+    "R-106",
+    "R-344"
+   ],
+   "conflict_note": "Only applies if KANG narration is TTS; recorded human narration follows R-106."
+  },
+  {
+   "id": "T-022",
+   "part_ids": [],
+   "name": "Dissolves are rare: keep them for time/place change",
+   "layer": "rhythm",
+   "when": "Choosing transitions across a video",
+   "action": "Do not put a dissolve on every cut. Reserve dissolves for real time or place changes; vary cut lengths around the average shot length by roughly ±30% instead of equal lengths; plan 1–2 deliberate 2–3 s quiet/still moments per video for breath and emphasis.",
+   "why": "Dissolve-on-everything, equal cut lengths and zero silence are typical auto-edit fingerprints.",
+   "frequency": "Whole video",
+   "evidence": "🟠",
+   "evidence_note": "Anti-slop checklist (cli-anything-capcut); it caps dissolves at ≤5% of transitions — opinion.",
+   "sources": [
+    "https://github.com/juliang8507/cli-anything-capcut"
+   ],
+   "source_files": [
+    "claude-skill/references/anti-slop-video.md"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": {
+    "kind": "percent_max",
+    "what": "dissolve_share_of_transitions",
+    "max": 30
+   },
+   "confirms": [
+    "R-214",
+    "R-174",
+    "Q-002"
+   ],
+   "conflict_note": "CONFLICT on the number: source says ≤5% dissolves; R-422 (travel/POV) allows 15–30% 'physical bridge or short dissolve'. Proposed: keep R-422's 30% ceiling for travel, adopt only the 'time/place change only' purpose test and the ±30% length variation."
+  },
+  {
+   "id": "T-023",
+   "part_ids": [],
+   "name": "Grade intensity caps: LUT/filter 30–50%, saturation boost ≤ +30%",
+   "layer": "style",
+   "when": "Applying a look/filter or saturation push",
+   "action": "Run creative LUTs/filters at 30–50% intensity, cap any saturation boost at about +30% (beyond that reds turn hot pink, a problem for saffron flags and temple paint), keep film grain light, and use vignettes only on dramatic scenes, not every shot.",
+   "why": "Full-strength looks crush colour and are a template signature.",
+   "frequency": "Every look/filter",
+   "evidence": "🟠",
+   "evidence_note": "CapCut-oriented anti-slop list + mood recipes; opinion, CapCut −1..+1 scale.",
+   "sources": [
+    "https://github.com/juliang8507/cli-anything-capcut"
+   ],
+   "source_files": [
+    "claude-skill/references/anti-slop-video.md",
+    "claude-skill/references/video-design.md"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": {
+    "kind": "percent_max",
+    "what": "saturation_boost",
+    "max": 30
+   },
+   "confirms": [
+    "R-250",
+    "R-331"
+   ],
+   "conflict_note": "R-266 says LUT intensity 50–70% (blend ≤55% on Rec709). Overlap is ~50%; propose 40–55% for KANG as the common band."
+  },
+  {
+   "id": "T-024",
+   "part_ids": [],
+   "name": "Golden-hour / warm travel look as a named starting preset",
+   "layer": "style",
+   "when": "Sunset, ghat, beach or evening temple beats",
+   "action": "Starting point (CapCut-style −1..+1 sliders, translate to FFmpeg eq/colortemperature): temperature about +0.25, highlights −0.20, shadows +0.15, contrast +0.12, saturation +0.10, brightness +0.08; optionally warm highlights / cool shadows split. A softer 'warm/café' variant: temp +0.20, contrast +0.10, sat +0.05.",
+   "why": "Gives the renderer a reproducible warm look instead of ad-hoc tweaks; keeps scenes in a family.",
+   "frequency": "Opt-in per scene tag",
+   "evidence": "🟠",
+   "evidence_note": "Mood recipe table in cli-anything-capcut video-design.md. Slider scale is CapCut's; mapping to FFmpeg values must be calibrated on KANG test frames.",
+   "sources": [
+    "https://github.com/juliang8507/cli-anything-capcut"
+   ],
+   "source_files": [
+    "claude-skill/references/video-design.md"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": null,
+   "confirms": [
+    "R-213"
+   ],
+   "conflict_note": "Subject to T-002/T-003 checks and T-023 caps."
+  },
+  {
+   "id": "T-025",
+   "part_ids": [],
+   "name": "Pull-out reveal may travel further than a push-in",
+   "layer": "style",
+   "when": "Choosing Ken Burns amplitude by direction",
+   "action": "Push-in on dwell/payoff stills: about 1.0→1.2 over the whole slot. Pull-out to open an act or reveal a place: start tighter (up to ~1.5) and end at 1.0 — a reveal needs more travel than an emphasis push. Let the move finish at the cut. Always within the pixel limit (G-003) and the Q-005 range.",
+   "why": "A reveal reads only if enough of the frame is newly uncovered; a matching small amplitude looks like a mistake.",
+   "frequency": "Ken Burns stills",
+   "evidence": "🟠",
+   "evidence_note": "capcut-cli examples (zoom recipe) and cutcli cookbook (1.0→1.3 over 5 s). Tool recipes.",
+   "sources": [
+    "https://github.com/renezander030/capcut-cli",
+    "https://github.com/xuliang2024/cutcli-cookbook"
+   ],
+   "source_files": [
+    "capcut-cli examples/keyframe-zoom.md",
+    "cutcli-cookbook examples/05-keyframe-zoom-in/README.md"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": null,
+   "confirms": [
+    "G-001",
+    "G-004"
+   ],
+   "conflict_note": "CONFLICT 1: amplitudes exceed G-002 (10–20%). Proposed: G-002 stays default for push-ins; allow pull-out reveals up to 1.35–1.5 only on act/chapter openers. CONFLICT 2: both sources use LINEAR interpolation (cutcli: 'linear feels most natural for Ken Burns'); G-005 says ease every move. Keep G-005 (ease) but note linear is acceptable for very slow full-slot drifts."
+  },
+  {
+   "id": "T-026",
+   "part_ids": [],
+   "name": "'Unfinished pan' on the last 1–2 stills",
+   "layer": "style",
+   "when": "Epilogue/closing stills before the end card",
+   "action": "Scale the still to ~1.2 for headroom and pan horizontally about 13% of frame width, timed so the pan would finish ~1.6× the slot length — the cut arrives while the frame is still moving. Use only on the last 1–2 stills; not on hooks, not on clips under ~2 s, not on faces/action, never combined with a zoom on the same still.",
+   "why": "Cutting mid-motion leaves the viewer with a 'still travelling' feeling at the end of a travel story.",
+   "frequency": "1–2 per video",
+   "evidence": "🟠",
+   "evidence_note": "Recipe from capcut-cli examples (keyframe-pan); craft trick, not tested.",
+   "sources": [
+    "https://github.com/renezander030/capcut-cli"
+   ],
+   "source_files": [
+    "examples/keyframe-pan.md"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": {
+    "kind": "max_count",
+    "what": "unfinished_pan_stills",
+    "max": 2
+   },
+   "confirms": [],
+   "conflict_note": "Breaks G-005 'ease every move' on purpose (linear constant pan). Also check R-435 (ending: slow zoom-out + fade) — use one or the other on the last still, not both."
+  },
+  {
+   "id": "T-027",
+   "part_ids": [],
+   "name": "Segment entrance length by intent",
+   "layer": "style",
+   "when": "Choosing an intro/outro animation for a still or clip",
+   "action": "Fade in/out ≈ 0.5 s (default); bright flash-in ≈ 0.4 s only for reveal beats; scroll/translate-up ≈ 1.2 s for location reveals; slow zoom-out ≈ 2 s for a contextual pull-back; breathing/pulsing zoom ≈ 3 s for establishing shots; dreamy blur-out ≈ 1 s exit. Never stack two animations of the same type (two intros) on one segment, and never longer than the segment.",
+   "why": "Matching animation length to purpose keeps reveals readable and avoids effect pile-ups.",
+   "frequency": "Per animated segment",
+   "evidence": "🟠",
+   "evidence_note": "capcut-cli animation catalogue defaults.",
+   "sources": [
+    "https://github.com/renezander030/capcut-cli"
+   ],
+   "source_files": [
+    "skills/capcut-edit/references/workflows.md"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": {
+    "kind": "boolean",
+    "what": "two_intros_on_one_segment",
+    "must_be": false
+   },
+   "confirms": [
+    "R-354"
+   ],
+   "conflict_note": "Flash-in must respect G-011 (≤3 flashes/s) and G-020 (no flash on deity frames)."
+  },
+  {
+   "id": "T-028",
+   "part_ids": [],
+   "name": "Time-of-day labels for day-structured vlogs",
+   "layer": "comprehension",
+   "when": "Travel day vlog sections that follow a clock (morning darshan, noon, evening aarti)",
+   "action": "Open each part of the day with a short label 'time · activity' (e.g. 'सुबह 6:00 · मंगला आरती'), give each part its own accent colour (e.g. morning yellow, noon orange, evening pink) used consistently, start the first scene with a Ken Burns so the opening is not static, and prefer wipes over dissolves between the day parts (reads like turning a page).",
+   "why": "Clock labels give the viewer a timeline map for free and make day-structured travel easy to follow.",
+   "frequency": "Once per day-part",
+   "evidence": "🟠",
+   "evidence_note": "cutcli cookbook 'make a vlog' template; opinion.",
+   "sources": [
+    "https://github.com/xuliang2024/cutcli-cookbook"
+   ],
+   "source_files": [
+    "docs/cookbook/make-a-vlog.md"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": null,
+   "confirms": [
+    "R-422"
+   ],
+   "conflict_note": "Wipes are a 'motion accent' under R-422's budget; keep them to the day-part boundaries only."
+  },
+  {
+   "id": "T-029",
+   "part_ids": [],
+   "name": "Caption backing plate over busy footage",
+   "layer": "comprehension",
+   "when": "Captions or labels over busy or bright backgrounds",
+   "action": "Use a semi-transparent dark rounded plate behind the text (black at ~35–55% opacity, small corner radius, ~16 px padding at 1080p) or a soft drop shadow (offset ~4–6 px, near-opaque). Choose plate for long caption lines, shadow for short pop words.",
+   "why": "Plain text on variable footage fails contrast on some frames even when it passes on others.",
+   "frequency": "Captions/labels over non-uniform backgrounds",
+   "evidence": "🟠",
+   "evidence_note": "Two tool recipes (cutcli knowledge-card, VectCut capcut-director).",
+   "sources": [
+    "https://github.com/xuliang2024/cutcli-cookbook",
+    "https://github.com/sun-guannan/VectCutAPI"
+   ],
+   "source_files": [
+    "cutcli docs/cookbook/knowledge-card.md",
+    "VectCutAPI .agents/skills/capcut-director/SKILL.md"
+   ],
+   "licence": "MIT / Apache-2.0",
+   "idea_only": false,
+   "check": {
+    "kind": "percent_range",
+    "what": "caption_plate_opacity",
+    "min": 35,
+    "max": 55
+   },
+   "confirms": [
+    "R-096",
+    "G-018",
+    "R-094"
+   ],
+   "conflict_note": "G-018 contrast ratio remains the pass/fail test; the plate is the default way to meet it."
+  },
+  {
+   "id": "T-030",
+   "part_ids": [],
+   "name": "9:16 type scale and line spacing",
+   "layer": "comprehension",
+   "when": "Text sizes for 1080×1920 reels",
+   "action": "Hero/hook title ~80–135 px cap height-equivalent (pt in FFmpeg drawtext), secondary lines ~68–85, subtitles 56–64 (minimum for comfortable phone reading), micro labels 42–48 only for metadata. Multi-line text: line spacing ~0.25–0.32 em (not a tight default); separate independent text blocks by ≥115–140 px vertically.",
+   "why": "Desktop-size defaults are unreadable on phones; tight leading makes Devanagari matras collide.",
+   "frequency": "Every reel text element",
+   "evidence": "🟠",
+   "evidence_note": "VectCutAPI capcut-director skill typography table.",
+   "sources": [
+    "https://github.com/sun-guannan/VectCutAPI"
+   ],
+   "source_files": [
+    ".agents/skills/capcut-director/SKILL.md"
+   ],
+   "licence": "Apache-2.0 repo (skill folder MIT)",
+   "idea_only": false,
+   "check": {
+    "kind": "min_value",
+    "what": "reel_subtitle_font_px",
+    "min": 56
+   },
+   "confirms": [
+    "R-096"
+   ],
+   "conflict_note": "Devanagari needs the upper end of the line-spacing band (matras/conjuncts)."
+  },
+  {
+   "id": "T-031",
+   "part_ids": [],
+   "name": "Check text on a still at every scene boundary before delivery",
+   "layer": "comprehension",
+   "when": "Final QC of a render",
+   "action": "Extract one frame just after every scene boundary (and mid-sentence for captions) and inspect centring, safe zone and legibility before calling the render done.",
+   "why": "Text collisions and off-safe-area labels show up at boundaries where elements overlap.",
+   "frequency": "Every scene boundary",
+   "evidence": "🟠",
+   "evidence_note": "Two tool workflows recommend it.",
+   "sources": [
+    "https://github.com/sun-guannan/VectCutAPI",
+    "https://github.com/ronak-create/FableCut"
+   ],
+   "source_files": [
+    "VectCutAPI capcut-director SKILL.md",
+    "FableCut skills/edit-video/SKILL.md"
+   ],
+   "licence": "Apache-2.0 / MIT",
+   "idea_only": false,
+   "check": null,
+   "confirms": [
+    "R-133",
+    "R-380"
+   ],
+   "conflict_note": null
+  },
+  {
+   "id": "T-032",
+   "part_ids": [],
+   "name": "Ease the transition itself, not only the motion",
+   "layer": "style",
+   "when": "FFmpeg xfade transitions in the KANG renderer",
+   "action": "FFmpeg's xfade progresses linearly by default. Apply an easing curve to transition progress (e.g. cubic or sine in-out) — possible on stock FFmpeg through custom expressions. Avoid back/elastic easings on xfade (their overshoot is clipped or swaps the inputs).",
+   "why": "Linear transitions start and stop abruptly; eased progress makes a dissolve or wipe feel smooth.",
+   "frequency": "Every non-cut transition",
+   "evidence": "🟠",
+   "evidence_note": "xfade-easing README (documented behaviour of FFmpeg xfade).",
+   "sources": [
+    "https://github.com/scriptituk/xfade-easing"
+   ],
+   "source_files": [
+    "README.md"
+   ],
+   "licence": "MIT",
+   "idea_only": false,
+   "check": null,
+   "confirms": [
+    "G-005",
+    "R-261"
+   ],
+   "conflict_note": "G-005/R-261 talk about moves and reveals; T-032 extends easing to transitions."
+  },
+  {
+   "id": "T-033",
+   "part_ids": [],
+   "name": "Music fade-out at the end: 0.8–1.2 s for reels, ~3 s for long-form",
+   "layer": "rhythm",
+   "when": "Ending of the music bed",
+   "action": "Reels: smooth fade of about 0.8–1.2 s. Long-form endings: ~3 s fade with an exponential/natural curve on the final music tail.",
+   "why": "An abrupt music stop sounds like a render error.",
+   "frequency": "Every video end",
+   "evidence": "🟠",
+   "evidence_note": "Two tool defaults.",
+   "sources": [
+    "https://github.com/sun-guannan/VectCutAPI",
+    "https://github.com/ronak-create/FableCut"
+   ],
+   "source_files": [
+    "VectCutAPI capcut-director SKILL.md",
+    "FableCut CLAUDE.md#Recipes"
+   ],
+   "licence": "Apache-2.0 / MIT",
+   "idea_only": false,
+   "check": {
+    "kind": "duration_range_s",
+    "what": "music_end_fade",
+    "min": 0.8,
+    "max": 4.0
+   },
+   "confirms": [
+    "R-435"
+   ],
+   "conflict_note": null
+  }
+ ],
+ "missed_source": {
+  "QwenLM/Qwen-MM-Plugins video-edit": "Apache-2.0. Added as Q-001..Q-008 (2026-11-06, own words)."
+ },
+ "sources_added": {
+  "editor_tool_repos_2026-11-06": "notes/creative_research/editor_tool_repos.md (46 repos; T-001..T-033, all 🟠)"
+ }
+}

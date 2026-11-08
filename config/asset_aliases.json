@@ -1,0 +1,20 @@
+{
+ "_note": "Hindi/Hinglish/ASR-variant word -> English asset tag. Used by asset-search and match. Editable.",
+ "aliases": {
+  "द्वारिकाधीश": "dwarkadhish", "द्वारकाधीश": "dwarkadhish", "द्वारिकाधिश": "dwarkadhish", "dwarikadhish": "dwarkadhish",
+  "मंदिरों": "temple", "मंदिरो": "temple", "दमंदीर": "temple",
+  "गोमती": "gomti", "नदी": "river", "सागर": "sea", "अरब": "arabian", "संगम": "confluence", "स्नान": "bath",
+  "railway": "railway", "station": "station", "स्टेशन": "station", "ट्रेन": "train", "रेल": "railway",
+  "होटल": "hotel", "धर्मशाला": "dharamshala",
+  "ऑटो": "auto", "auto": "auto", "स्कूटी": "scooter", "स्कूटर": "scooter", "scooty": "scooter",
+  "ध्वजा": "dhwaja", "झंडा": "flag", "शिखर": "shikhar", "मंजिला": "storey",
+  "विष्णु": "vishnu", "सिद्धेश्वर": "siddheshwar", "भोलेनाथ": "shiva", "शिवजी": "shiva",
+  "भड़केश्वर": "bhadkeshwar", "भडकेश्वर": "bhadkeshwar",
+  "ज्योतिर्लिंग": "jyotirlinga", "jyotirling": "jyotirlinga", "प्रतिमा": "statue", "मूर्ति": "statue",
+  "गोपियाँ": "gopi", "गोपियों": "gopi", "टापू": "island",
+  "सोनी": "golden", "सोने": "golden", "सुदर्शन": "sudarshan", "सेतु": "bridge", "सेट्टू": "bridge", "ब्रिज": "bridge",
+  "शिवराजपुर": "shivrajpur", "बोट": "boat", "फेरी": "boat", "जेटी": "jetty",
+  "शाम": "dusk", "सनसेट": "sunset", "लाइटहाउस": "lighthouse", "समुद्रनारायण": "samudra",
+  "नक्काशी": "carving", "कारीगरी": "carving", "मथुरा": "mathura"
+ }
+}

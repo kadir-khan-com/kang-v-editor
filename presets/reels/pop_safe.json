@@ -1,0 +1,4 @@
+{"style": "pop_safe", "engine": "pycaps",
+ "template_dir": "presets/reels/pycaps_pop_safe", "font_file": "fonts/Montserrat-Black.ttf",
+ "note": "Optional engine: pycaps (francozanardi, MIT) PictexSubtitleRenderer, per-word zoom pop. Install only if wanted: pip install https://github.com/francozanardi/pycaps/archive/e2d36edfa08e3307d65b15bb20f17399dc2c9b40.zip html2pic",
+ "text_bottom_ratio": 0.73, "max_width_ratio": 0.80, "max_lines": 2}

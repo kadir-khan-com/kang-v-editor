@@ -1,0 +1,269 @@
+{
+ "_note": "Human-flag topics ke Hindi/Hinglish sanket-shabd — engine.py ka language pass (build_human_flags) inhe beat ke TEXT se match karta hai. Har topic ke chaar roop: devanagari (mool), roman (Hinglish), variants (aam spelling badlav), english (usi topic ke English sanket — purane structural flags ke saath-saath). Lists jaan-boojh kar chhoti aur kaam-ki rakhi hain: har shabd asal narration me us topic ka saket hona chahiye, warna jhoote flags lagenge.",
+ "topics": {
+  "cta_retention": {
+   "devanagari": [
+    "ध्यान से",
+    "ध्यान से सुनो",
+    "अंत तक",
+    "आख़िर तक",
+    "रुको",
+    "सुनो",
+    "ज़रूर देखें",
+    "सब्सक्राइब",
+    "शेयर करें",
+    "लाइक",
+    "कमेंट में बताओ",
+    "बेल आइकन",
+    "मिस मत करना",
+    "स्किप मत करना",
+    "नोट कर लो"
+   ],
+   "english": [
+    "watch till the end",
+    "don't skip",
+    "listen carefully",
+    "pay attention",
+    "subscribe now",
+    "comment below"
+   ],
+   "label": "CTA / retention — dhyaan kheenchne wala pal",
+   "layer": "rhythm",
+   "roman": [
+    "dhyaan se",
+    "dhyaan se suno",
+    "ant tak",
+    "aakhir tak",
+    "ruko",
+    "suno",
+    "zaroor dekho",
+    "subscribe",
+    "share karo",
+    "like karo",
+    "comment me batao",
+    "bell icon",
+    "miss mat karna",
+    "skip mat karna",
+    "note kar lo"
+   ],
+   "variants": [
+    "dhyan se",
+    "ज़रूर देखना",
+    "aakhir tak dekho"
+   ]
+  },
+  "dharmik_context": {
+   "devanagari": [
+    "कहा जाता है",
+    "मान्यता है",
+    "मान्यताओं के अनुसार",
+    "कथा",
+    "पौराणिक",
+    "दर्शन",
+    "भगवान",
+    "मंदिर",
+    "ज्योतिर्लिंग",
+    "पावन",
+    "पवित्र",
+    "आशीर्वाद",
+    "आरती",
+    "प्रसाद",
+    "अलौकिक",
+    "दिव्य",
+    "शास्त्रों में"
+   ],
+   "english": [
+    "it is believed",
+    "according to legend",
+    "sacred place",
+    "pilgrimage",
+    "devotees believe"
+   ],
+   "label": "dharmik context / katha-manyata",
+   "layer": "kahani",
+   "roman": [
+    "kaha jata hai",
+    "manyata hai",
+    "manyataon ke anusar",
+    "katha",
+    "pauranik",
+    "darshan",
+    "bhagwan",
+    "mandir",
+    "jyotirling",
+    "paawan",
+    "pavitra",
+    "aashirwad",
+    "aarti",
+    "prasad",
+    "alaukik",
+    "divya",
+    "shastron me"
+   ],
+   "variants": [
+    "darsan",
+    "aashirvaad",
+    "दर्शनों",
+    "कथाएँ"
+   ]
+  },
+  "emotion": {
+   "devanagari": [
+    "दिल",
+    "दिल को छू",
+    "दिल खुश हो गया",
+    "भावुक",
+    "आँसू",
+    "आँखें भर आईं",
+    "खुशी",
+    "दुख",
+    "आश्चर्य",
+    "शांति",
+    "सुकून",
+    "गर्व",
+    "मन भर आया",
+    "रोंगटे खड़े",
+    "प्यार",
+    "दर्द"
+   ],
+   "english": [
+    "heart-touching",
+    "emotional moment",
+    "tears in eyes",
+    "goosebumps",
+    "heartwarming"
+   ],
+   "label": "emotion / jazbaati pal",
+   "layer": "kahani",
+   "roman": [
+    "dil",
+    "dil ko chhu",
+    "dil khush ho gaya",
+    "bhavuk",
+    "aansoo",
+    "aankhein bhar aayi",
+    "khushi",
+    "dukh",
+    "shanti",
+    "sukoon",
+    "garv",
+    "mann bhar aaya",
+    "rongte khade",
+    "pyaar",
+    "dard"
+   ],
+   "variants": [
+    "aansu",
+    "khusi",
+    "santi",
+    "sukun",
+    "bhavukta"
+   ]
+  },
+  "open_loop_sawaal": {
+   "devanagari": [
+    "क्या हुआ",
+    "फिर क्या हुआ",
+    "क्या होने वाला है",
+    "आगे क्या होगा",
+    "सोचो ज़रा",
+    "कल्पना करो",
+    "जानते हो",
+    "जानते हैं",
+    "सवाल ये है",
+    "सवाल है कि",
+    "आगे जानेंगे",
+    "क्या कारण है",
+    "क्यों होता है",
+    "कैसे संभव है",
+    "इसके बाद क्या"
+   ],
+   "english": [
+    "what happened next",
+    "what happens next",
+    "imagine this",
+    "do you know",
+    "the question is",
+    "why does this happen"
+   ],
+   "label": "open loop / sawaal wala pal",
+   "layer": "kahani",
+   "roman": [
+    "kya hua",
+    "phir kya hua",
+    "kya hone wala hai",
+    "aage kya hoga",
+    "socho zara",
+    "kalpana karo",
+    "jante ho",
+    "jaante hain",
+    "sawaal ye hai",
+    "sawaal hai ki",
+    "aage jaanenge",
+    "kya kaaran hai",
+    "kyun hota hai",
+    "kaise sambhav hai",
+    "iske baad kya"
+   ],
+   "variants": [
+    "sawaal",
+    "sawal",
+    "सोचो",
+    "socho"
+   ]
+  },
+  "payoff_bada_pal": {
+   "devanagari": [
+    "सबसे खास बात",
+    "सबसे बड़ी बात",
+    "सबसे अहम बात",
+    "असली बात ये है",
+    "असली राज़",
+    "रहस्य",
+    "चमत्कार",
+    "आख़िरकार",
+    "सबसे बड़ा पल",
+    "हैरान रह जाएँगे",
+    "होश उड़ जाएँगे",
+    "यक़ीन नहीं होगा",
+    "चौंक जाएँगे",
+    "सबसे काम की बात",
+    "असली सच"
+   ],
+   "english": [
+    "biggest secret",
+    "the real truth",
+    "you won't believe",
+    "most important thing",
+    "biggest reveal",
+    "finally revealed"
+   ],
+   "label": "payoff / sabse bada pal",
+   "layer": "kahani",
+   "roman": [
+    "sabse khaas baat",
+    "sabse badi baat",
+    "sabse ahem baat",
+    "asli baat ye hai",
+    "asli raaz",
+    "rahasya",
+    "chamatkar",
+    "aakhirkaar",
+    "sabse bada pal",
+    "hairaan reh jaoge",
+    "hosh ud jayenge",
+    "yakeen nahi hoga",
+    "chauk jaoge",
+    "sabse kaam ki baat",
+    "asli sach"
+   ],
+   "variants": [
+    "aakhirkar",
+    "आखिरकार",
+    "sabse khash baat",
+    "चमत्कारिक",
+    "raaz"
+   ]
+  }
+ }
+}

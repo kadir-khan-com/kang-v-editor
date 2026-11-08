@@ -1,0 +1,2 @@
+# Kaggle CLI for tools/kaggle_* (kgl.py patches a private function; tested with this version only)
+kaggle==2.2.5

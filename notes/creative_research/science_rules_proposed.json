@@ -1,0 +1,407 @@
+{
+ "meta": {
+  "created": "2026-11-06",
+  "by": "science verification pass",
+  "schema": "same as step_2_rules/rules.json + relation_to_existing; part_ids/conflict_note omitted (not part of the merge)",
+  "new_check_kinds": [
+   "max_cps",
+   "must_align"
+  ],
+  "count": 22
+ },
+ "rules": [
+  {
+   "id": "S-001",
+   "name": "Text card = key words, not the narrated sentence",
+   "layer": "samajh",
+   "when": "Any on-screen text, label or card shown while narration plays",
+   "action": "Show only what the voice can't hold: names, numbers, place names, key terms (a few words). Never print the full sentence being spoken as a separate text card. Long explanation goes in the voice, not in on-screen text.",
+   "why": "Duplicate on-screen text next to narration plus a picture hurts learning; key terms pulled from the narration help more than verbatim text.",
+   "frequency": "Every text card / label",
+   "evidence": "🟢",
+   "evidence_note": "Mayer 2008 redundancy d=0.72 (5/5 tests), modality d=1.02 (17/17); Adesope & Nesbit 2012 meta-analysis (57 studies): key terms extracted from narration beat verbatim text; spoken+written beats spoken-only only for picture-free material. Lab learning studies, mostly students; not vlog retention.",
+   "sources": [
+    "https://jgregorymcverry.com/readings/mayerprinciplesofmultimedialearning2008.pdf",
+    "https://psycnet.apa.org/journals/edu/104/1/250.html",
+    "https://journals.sagepub.com/doi/10.3102/00346543211052329"
+   ],
+   "relation_to_existing": "MODIFIES R-089 (sharpens 'text = jo bola nahi gaya' with the key-terms evidence). Does NOT apply to the bottom caption track — see S-002."
+  },
+  {
+   "id": "S-002",
+   "name": "Same-language captions stay on for Hindi/Hinglish videos",
+   "layer": "samajh",
+   "when": "Every long-form and reel with Hindi/Hinglish narration",
+   "action": "Keep a full same-language caption track (Devanagari or the script the audience reads), timed to the voice, in the bottom band. Treat it as a separate layer from text cards; don't add a second verbatim text block in the middle of the frame.",
+   "why": "In India, same-language subtitles on Hindi TV songs were read by viewers and linked to literacy gains; captions strongly help viewers who are not fully fluent in the spoken language.",
+   "frequency": "Whole video",
+   "evidence": "🟡",
+   "evidence_note": "Kothari & Bandyopadhyay 2014, ITID (n=7,409, 5 Hindi states, 2002-2007): SLS viewers showed greater literacy gains (quasi-experimental, self-selected viewers). Montero Perez 2013 captions for second-language video g=0.99 (via Noetel 2022). Outcome is literacy/comprehension, not YouTube retention. Conflicts on its face with Mayer redundancy; the two are about different layers.",
+   "sources": [
+    "https://itidjournal.org/index.php/itid/article/view/1307.html",
+    "https://journals.sagepub.com/doi/10.3102/00346543211052329"
+   ],
+   "relation_to_existing": "SUPPORTS R-115 (captions hamesha) with real evidence for this audience; resolves tension with R-089/S-001."
+  },
+  {
+   "id": "S-003",
+   "name": "Hindi caption reading speed: up to 22 characters per second",
+   "layer": "samajh",
+   "when": "Every Hindi/Devanagari caption event",
+   "action": "Keep each caption at or below 22 characters per second (count spaces and punctuation), max 42 characters per line, max 2 lines, prefer one line. For children's content use 18 cps.",
+   "why": "This is the industry limit Netflix sets for Hindi; English limits (20 or 17 cps) are stricter than needed for Hindi.",
+   "frequency": "Every caption event",
+   "evidence": "🟡",
+   "evidence_note": "Netflix Hindi Timed Text Style Guide: 42 chars/line, 2 lines max, adult up to 22 cps, children up to 18 cps (SDH 25/20). Netflix counts spaces and punctuation. Industry spec for subtitles, not a study.",
+   "sources": [
+    "https://partnerhelp.netflixstudios.com/hc/en-us/articles/115003196707-Hindi-Timed-Text-Style-Guide"
+   ],
+   "check": {
+    "kind": "max_cps",
+    "what": "caption_event_hindi",
+    "value": 22
+   },
+   "relation_to_existing": "MODIFIES R-092 (20 cps English -> 22 cps for Hindi) and R-131 (~17 cps is too strict for Hindi). New check kind 'max_cps' needed in engine."
+  },
+  {
+   "id": "S-004",
+   "name": "Caption event duration 0.83 s to 7 s",
+   "layer": "samajh",
+   "when": "Every caption event",
+   "action": "No caption shorter than 5/6 s (20 frames at 24 fps) or longer than 7 s; split longer ones.",
+   "why": "Too short can't be read; too long goes stale and blocks the frame.",
+   "frequency": "Every caption event",
+   "evidence": "🟡",
+   "evidence_note": "Netflix Timed Text Style Guide General Requirements: minimum 5/6 s per event, maximum 7 s. Platform spec.",
+   "sources": [
+    "https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617-Timed-Text-Style-Guide-General-Requirements"
+   ],
+   "check": {
+    "kind": "duration_range_s",
+    "what": "caption_event",
+    "min": 0.83,
+    "max": 7
+   },
+   "relation_to_existing": "DUPLICATES part of R-092 / R-131 (adds a machine check for both ends)."
+  },
+  {
+   "id": "S-005",
+   "name": "Don't slow or trim captions below the speech",
+   "layer": "samajh",
+   "when": "Choosing caption wording and speed",
+   "action": "Keep captions verbatim and in sync with the voice. Only condense when a line would go above the cps limit (S-003). Don't stretch or simplify captions just to make them 'slow'.",
+   "why": "Viewers keep up with fast subtitles; slow subtitles cause re-reading and less enjoyment; the best subtitle speed is the speech speed.",
+   "frequency": "Every caption track",
+   "evidence": "🟡",
+   "evidence_note": "Szarkowska & Gerber-Moron 2018, PLOS One (n=74, eye-tracking, 12/16/20 cps): viewers coped with fast subtitles; slow subtitles triggered re-reading and frustration. BBC R&D 2015: best subtitle speed = speech speed; verbatim preferred. Interlingual subtitles, European viewers; not Hindi same-language captions.",
+   "sources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6007935/",
+    "https://www.bbc.co.uk/rd/blog/2015-09-how-fast-should-subtitles-be"
+   ],
+   "relation_to_existing": "MODIFIES R-091 (that formula is for text cards; don't apply it to captions) and R-131."
+  },
+  {
+   "id": "S-006",
+   "name": "Vertical reels: about 25 characters per caption line",
+   "layer": "samajh",
+   "when": "Captions on 9:16 reels/shorts",
+   "action": "Keep caption lines to about 25 characters (BBC's equivalent of 37 characters on 16:9) so text stays big on a phone.",
+   "why": "Same physical text size on a narrow frame fits fewer characters.",
+   "frequency": "Every reel caption line",
+   "evidence": "🟡",
+   "evidence_note": "BBC Subtitle Guidelines: 37 characters in a 75%-width 16:9 region ~= 25 characters in a 90%-width 9:16 region (stated 'as a guide'). Broadcaster guideline.",
+   "sources": [
+    "https://www.bbc.co.uk/accessibility/forproducts/guides/subtitles/"
+   ],
+   "check": {
+    "kind": "max_chars",
+    "what": "caption_line_vertical",
+    "value": 25
+   },
+   "relation_to_existing": "COMPATIBLE with R-247 (max 3 words) and R-259; gives a character ceiling for Devanagari/Hinglish where word counts vary."
+  },
+  {
+   "id": "S-007",
+   "name": "Picture on screen while its words are spoken",
+   "layer": "samajh",
+   "when": "A photo, map highlight, clip or card that illustrates a spoken phrase",
+   "action": "Show the visual during the phrase that names it, not well before or after. If a photo of 'Dwarkadhish mandir' exists, it should be on screen while that name is spoken.",
+   "why": "Words and matching pictures presented at the same time are learned far better than when one follows the other.",
+   "frequency": "Every illustrated phrase",
+   "evidence": "🟢",
+   "evidence_note": "Mayer 2008 temporal contiguity d=1.31 (8/8); Ginns 2006 g=0.78 (via Noetel 2022). Studies compare simultaneous vs successive whole segments; the 1.0 s tolerance in the check is an editorial threshold (🟠), not from the studies.",
+   "sources": [
+    "https://jgregorymcverry.com/readings/mayerprinciplesofmultimedialearning2008.pdf",
+    "https://journals.sagepub.com/doi/10.3102/00346543211052329"
+   ],
+   "check": {
+    "kind": "max_delay_s",
+    "what": "visual_onset_after_spoken_mention",
+    "value": 1.0
+   },
+   "relation_to_existing": "MODIFIES R-088 (replaces its weak coherence citation with the right principle) and RELATED to R-098, R-462."
+  },
+  {
+   "id": "S-008",
+   "name": "Map labels sit on the map, next to the place",
+   "layer": "samajh",
+   "when": "Route maps, location maps, annotated photos",
+   "action": "Put each label right next to the point or object it names (on the map), not in a side legend or a separate card. Keep the narrated place and its label together.",
+   "why": "Learners do much better when words are placed near the part of the graphic they describe.",
+   "frequency": "Every map/annotated graphic",
+   "evidence": "🟢",
+   "evidence_note": "Mayer 2008 spatial contiguity d=1.12 (5/5); Schroeder & Cenkci 2018 g=0.63 (k=58), backed by eye-tracking (via Noetel 2022). Static diagrams/lessons; maps inferred to be similar.",
+   "sources": [
+    "https://jgregorymcverry.com/readings/mayerprinciplesofmultimedialearning2008.pdf",
+    "https://journals.sagepub.com/doi/10.3102/00346543211052329"
+   ],
+   "relation_to_existing": "NEW (no existing rule on label placement on maps)."
+  },
+  {
+   "id": "S-009",
+   "name": "Signal the one thing being talked about",
+   "layer": "samajh",
+   "when": "Map or photo with several possible points of interest while narration names one",
+   "action": "Add a cue on the named point at the moment it is named: highlight, pulse, arrow, or a short move toward it. One cue at a time. Use section title cards to signal structure.",
+   "why": "Cues that point attention to the relevant part improve learning, more so for viewers new to the topic and with moving (dynamic) cues.",
+   "frequency": "Each time narration names one of several visible things",
+   "evidence": "🟢",
+   "evidence_note": "Schneider et al. 2018 meta-analysis g=0.43 (k=209); Alpizar et al. 2020 d=0.38, stronger for multimedia, low prior knowledge and dynamic signals (both as reported in Noetel 2022). Mayer 2008 signaling d=0.52 (6/6).",
+   "sources": [
+    "https://journals.sagepub.com/doi/10.3102/00346543211052329",
+    "https://jgregorymcverry.com/readings/mayerprinciplesofmultimedialearning2008.pdf"
+   ],
+   "relation_to_existing": "MODIFIES R-126 (gives it measured support for graphics/stills) and RELATED to R-378 (caption word highlight)."
+  },
+  {
+   "id": "S-010",
+   "name": "Cut decorative elements, especially ones that stay on screen",
+   "layer": "style",
+   "when": "Stickers, looping background animations, decorative borders, logo bugs, ornamental text",
+   "action": "Remove any visual that doesn't carry the story or the place. If something decorative must stay, don't keep it on screen for long; brief is less harmful than persistent.",
+   "why": "Irrelevant 'seductive' details lower learning, mostly when they stay on screen.",
+   "frequency": "Every overlay decision",
+   "evidence": "🟢",
+   "evidence_note": "Sundararajan & Adesope 2020: removing seductive details g=0.33 (k=68); persistent on-screen details g=0.43 vs transient g=0.12 (CI crosses zero) (via Noetel 2022). Mayer 2008 coherence d=0.97 (13/14).",
+   "sources": [
+    "https://journals.sagepub.com/doi/10.3102/00346543211052329",
+    "https://jgregorymcverry.com/readings/mayerprinciplesofmultimedialearning2008.pdf"
+   ],
+   "relation_to_existing": "MODIFIES R-089 / R-312; REPLACES the attention reason of R-231 (Cutting 2018 found clutter unimportant for moment-to-moment attention)."
+  },
+  {
+   "id": "S-011",
+   "name": "Big breaks only at event boundaries",
+   "layer": "kahani",
+   "when": "Placing chapter cards, section titles, music stops/changes, long transitions, ad-like pauses",
+   "action": "Put every big break exactly where the event changes (new goal, new action, new place with a stated purpose). Never place a big break in the middle of an event.",
+   "why": "Breaks at event boundaries improve recall; breaks inside events hurt memory.",
+   "frequency": "Every chapter/section break",
+   "evidence": "🟢",
+   "evidence_note": "Schwan, Garsoffky & Hesse 2000 (n=40): cuts at breakpoints led to more detailed recall. Boltz (reported in Zacks et al. 2007 review): commercials at boundaries improved recall, at non-boundaries impaired it. Zacks 2010: boundaries track situation changes. Feature-film/everyday-activity clips.",
+   "sources": [
+    "https://link.springer.com/article/10.3758/BF03213801",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC2852534/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC2955413/"
+   ],
+   "check": {
+    "kind": "must_align",
+    "what": "chapter_or_title_card",
+    "to": "scene_boundary",
+    "tolerance_s": 1.0
+   },
+   "relation_to_existing": "MODIFIES R-177 and R-178 (moves the evidence from 'any cut' to 'big breaks'); SUPPORTS R-057 and R-087. New check kind 'must_align'; tolerance is editorial."
+  },
+  {
+   "id": "S-012",
+   "name": "A new section must change the goal, not just the place",
+   "layer": "kahani",
+   "when": "Starting a new section / chapter",
+   "action": "Make the new goal or action clear in narration or a card ('ab hum X ki taraf chalte hain', 'yahan darshan ka samay'). A place change alone is a weak boundary. More changes at once make a stronger boundary; save several-at-once for chapter starts.",
+   "why": "Viewers mark new events mostly when action/goal changes; space or time jumps alone matter little; the chance of a boundary rises with the number of changes.",
+   "frequency": "Every section start",
+   "evidence": "🟢",
+   "evidence_note": "Magliano & Zacks 2011: action discontinuities had the biggest effect; space/time 'minor effects'. Zacks 2010: probability of segmenting rose with the number of situation changes. Narrative-film studies.",
+   "sources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC3208769/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC2955413/"
+   ],
+   "relation_to_existing": "MODIFIES R-055 and R-056 (corrects which change matters most)."
+  },
+  {
+   "id": "S-013",
+   "name": "Many photo changes inside one event are fine",
+   "layer": "rhythm",
+   "when": "Several stills/clips cover the same moment (same place, same goal)",
+   "action": "You may change pictures often within one event; keep them visually continuous (same place, similar tone). Don't treat every photo change as a 'new event' or a jolt. Save boundary signals (cards, music change) for real event changes (S-011).",
+   "why": "A cut by itself does not create a new event for the viewer; continuity cuts inside a scene often go unnoticed.",
+   "frequency": "Within each event",
+   "evidence": "🟡",
+   "evidence_note": "Zacks 2010: 'Cuts in and of themselves did not produce increases in segmentation.' Schwan 2000: segmentation 'largely unaffected by the occurrence of cuts'. Smith & Henderson 2008: 25.1% of within-scene and 32.4% of match-action cuts were missed vs 9.4% between-scene. All live-action film; applying to stills is inference.",
+   "sources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC2955413/",
+    "https://link.springer.com/article/10.3758/BF03213801",
+    "https://bop.unibe.ch/JEMR/article/download/2264/3460"
+   ],
+   "relation_to_existing": "CORRECTS R-178 (its 'jolt/error' claim is not supported) and R-177's 'invisible cut' reason."
+  },
+  {
+   "id": "S-014",
+   "name": "Slow the cutting at emotional peaks",
+   "layer": "rhythm",
+   "when": "Emotionally intense beats (darshan, aarti, arrival, a personal moment)",
+   "action": "Don't stack fast cutting on top of an already intense moment. Hold shots longer and let the content carry the arousal.",
+   "why": "Fast pace plus arousing content overloads viewers and lowers what they recognise and recall.",
+   "frequency": "At beats tagged as emotional peaks",
+   "evidence": "🟡",
+   "evidence_note": "Lang, Bolls, Potter & Kawahara 1999, J. Broadcasting & Electronic Media: fast pace + arousing content -> less recognition and cued recall (TV messages, lab). No numeric shot length given; threshold left to profiles.",
+   "sources": [
+    "https://www.tandfonline.com/doi/abs/10.1080/08838159909364504"
+   ],
+   "relation_to_existing": "SUPPORTS R-176 (speed ceiling) with peer-reviewed evidence; complements R-175 (shots lengthen at the end of the climax)."
+  },
+  {
+   "id": "S-015",
+   "name": "Film shot length is a reference, not a target, for stills",
+   "layer": "rhythm",
+   "when": "Setting shot-length targets for long-form stills/maps/cards",
+   "action": "Use about 4 s (modern Hollywood mean) only as a talking point. Calibrate real targets on our own format (e.g. R-394 travel reference) per profile; don't fail a stills video for being above 3-6 s.",
+   "why": "Hollywood ASL fell from about 10 s to under 4 s, but those shots carry motion, and short modern shots carry the most motion; stills have none.",
+   "frequency": "Benchmark only",
+   "evidence": "🟡",
+   "evidence_note": "Cutting et al. 2011: ASL ~10 s (1930s-40s) -> below 4 s after 2000 (160 films); shorter shots have proportionately more motion in modern films. Cutting et al. 2018: ~10 s (1950) -> ~4 s (2010). Cutting 2010: 1/f slope did not correlate with IMDb ratings (r=-.089 n.s.). Number is 🟢; using it for stills is inference.",
+   "sources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC3485803/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5849648/",
+    "https://jordandelong.com/pubs/2010/AttentionEvolution.pdf"
+   ],
+   "relation_to_existing": "CORRECTS R-135 (~4-5 s -> ~4 s, below 4 s after 2000) and MODIFIES R-173 (should not be a hard check for long-form stills; conflicts with R-394)."
+  },
+  {
+   "id": "S-016",
+   "name": "Move the still toward what the voice names",
+   "layer": "style",
+   "when": "Adding a slow zoom/pan to a still photo or map",
+   "action": "Make the move purposeful: push or pan toward the detail the narration is naming at that moment, and end on it. Avoid random decorative drift with no link to the words.",
+   "why": "Motion that matches the narration guides eyes to the named detail and helped story recall; moving scenes coordinate viewers' gaze more than static ones.",
+   "frequency": "Every still that gets motion",
+   "evidence": "🟡",
+   "evidence_note": "No direct adult study of Ken Burns moves was found. Closest: Takacs & Bus 2016 (children n=39): motion matched to narration -> more fixation on named detail, better recall. Smith & Henderson 2010 (VSS conference abstract): gaze clustered more in dynamic than static versions of the same scene (15% vs 20% of screen). Kumar et al. 2026 ISR: more background motion raised view-rate on children's YouTube videos (A/B). Children-only or abstract-level evidence.",
+   "sources": [
+    "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2016.01591/full",
+    "https://ualresearchonline.arts.ac.uk/id/eprint/21095/",
+    "https://pubsonline.informs.org/doi/abs/10.1287/isre.2023.0718"
+   ],
+   "relation_to_existing": "MODIFIES R-205, R-220, R-329, R-357 (gives a purpose rule; their % numbers stay 🟠)."
+  },
+  {
+   "id": "S-017",
+   "name": "Key subject near centre when a new still or card appears",
+   "layer": "style",
+   "when": "First second after a new photo, map or text card",
+   "action": "Place the key subject or key words near the screen centre at entry (or start the move from centre toward it). Don't put the only important detail in a far corner at the cut.",
+   "why": "Right after a new image appears, viewers look at the screen centre for about a second before exploring.",
+   "frequency": "Every new still/card",
+   "evidence": "🟡",
+   "evidence_note": "Smith & Henderson 2010 (VSS abstract): scenes began with ~1200 ms of high synchrony as all viewers attended to screen centre. Mital et al. 2011 report a central tendency after cuts.",
+   "sources": [
+    "https://ualresearchonline.arts.ac.uk/id/eprint/21095/",
+    "http://jhenderson.org/vclab/PDF_Pubs/MitalSmithHillHenderson_CC2011.pdf"
+   ],
+   "relation_to_existing": "SIMPLIFIES R-232 (eye-trace landing) for stills; R-232 itself should be 🟡."
+  },
+  {
+   "id": "S-018",
+   "name": "First 30 seconds match the title and thumbnail",
+   "layer": "kahani",
+   "when": "Opening of every long-form video",
+   "action": "Make sure what the title/thumbnail promise is seen or heard inside the first 30 s, and review the 'Intro' number in YouTube Analytics after release.",
+   "why": "YouTube's own retention report defines 'Intro' as % still watching after 30 s and advises matching title/thumbnail and reworking the first 30 s.",
+   "frequency": "Every long-form video",
+   "evidence": "🟡",
+   "evidence_note": "YouTube Help 'Measure key moments for audience retention' (official platform guidance). YouTube gives 30 s; it does not state a 5 s rule.",
+   "sources": [
+    "https://support.google.com/youtube/answer/9314415"
+   ],
+   "check": {
+    "kind": "hook_within_s",
+    "value": 30
+   },
+   "relation_to_existing": "DUPLICATES R-001 / R-061 (confirms with the official source; the 5 s value in R-001 stays creator data)."
+  },
+  {
+   "id": "S-019",
+   "name": "Explain in short segments with clear breaks",
+   "layer": "samajh",
+   "when": "Dense explanation (temple history, legend, route logistics)",
+   "action": "Break it into short segments, each with one idea, separated by a visible or spoken break, and mirror long ones as YouTube chapters so viewers can jump.",
+   "why": "Segmented material is learned better than one continuous block; the original effect is for learner-paced segments, which chapters partly give.",
+   "frequency": "Every explanation longer than one idea",
+   "evidence": "🟢",
+   "evidence_note": "Segmenting: Mayer 2008 d=0.98 (3/3, learner-paced); Rey et al. 2019 g=0.32 retention / 0.36 transfer (via Noetel 2022). Guo et al. 2014: median engagement at most 6 min regardless of video length (edX). YouTube chapters: 00:00 start, >=3 timestamps, >=10 s each.",
+   "sources": [
+    "https://jgregorymcverry.com/readings/mayerprinciplesofmultimedialearning2008.pdf",
+    "https://journals.sagepub.com/doi/10.3102/00346543211052329",
+    "https://up.csail.mit.edu/other-pubs/las2014-pguo-engagement.pdf",
+    "https://support.google.com/youtube/answer/9884579"
+   ],
+   "check": {
+    "kind": "min_chapter_duration_s",
+    "value": 10
+   },
+   "relation_to_existing": "SUPPORTS R-153 and R-087 (duplicate check); adds the learning evidence."
+  },
+  {
+   "id": "S-020",
+   "name": "Introduce key names before the dense part",
+   "layer": "samajh",
+   "when": "A section that will use many names (deities, places, people)",
+   "action": "Before the dense part, introduce each key name once with its picture and a short label, then use it.",
+   "why": "Knowing the names and look of key parts first makes the later explanation easier to learn.",
+   "frequency": "Once per dense section",
+   "evidence": "🟢",
+   "evidence_note": "Mayer 2008 pretraining d=0.85 (5/5). Lab lessons; for devotional/travel this is an inference about names, not mechanisms.",
+   "sources": [
+    "https://jgregorymcverry.com/readings/mayerprinciplesofmultimedialearning2008.pdf"
+   ],
+   "relation_to_existing": "NEW."
+  },
+  {
+   "id": "S-021",
+   "name": "Hindi narration speed: warn outside 115-230 wpm, don't fail at English bands",
+   "layer": "rhythm",
+   "when": "Checking narration speed",
+   "action": "Use 115-230 wpm as hard outer limits and treat 160-195 (R-163) as a soft English-derived guide only. For Hindi/Hinglish, judge pace by ear and by caption cps (S-003) before cutting words.",
+   "why": "Viewers rated about 175 wpm as right, about 230 too fast and about 115 too slow; word-length differences make English wpm bands unreliable for Hindi.",
+   "frequency": "Whole narration",
+   "evidence": "🟡",
+   "evidence_note": "BBC R&D 2015 (English news-style clips, hearing and hearing-impaired viewers): ~230 wpm 'too fast', ~115 'too slow', ~175 'about right'. Applying to Hindi is inference; Dwarika measured 200.1 wpm, inside these limits.",
+   "sources": [
+    "https://www.bbc.co.uk/rd/blog/2015-09-how-fast-should-subtitles-be"
+   ],
+   "check": {
+    "kind": "wpm_range",
+    "what": "narration_hard_limits",
+    "min": 115,
+    "max": 230
+   },
+   "relation_to_existing": "MODIFIES R-163 (keeps it as a warning band, adds evidence-based outer limits)."
+  },
+  {
+   "id": "S-022",
+   "name": "Captions move away from on-screen text",
+   "layer": "style",
+   "when": "Captions would overlap a text card, map label or title",
+   "action": "Move captions (e.g. to the top) or time them so they never cover on-screen text; when both can't fit, show the more story-relevant one.",
+   "why": "Overlapping text can't be read; the platform spec requires avoiding overlap.",
+   "frequency": "Every caption over a graphic",
+   "evidence": "🟡",
+   "evidence_note": "Netflix TTSG General Requirements: position subtitles to avoid overlap with on-screen text; if unavoidable, place where easier to read. Netflix Hindi TTSG: give precedence to the most plot-pertinent message. Platform spec.",
+   "sources": [
+    "https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617-Timed-Text-Style-Guide-General-Requirements",
+    "https://partnerhelp.netflixstudios.com/hc/en-us/articles/115003196707-Hindi-Timed-Text-Style-Guide"
+   ],
+   "relation_to_existing": "RELATED to R-376 (title zones) and R-095 (safe zones)."
+  }
+ ]
+}

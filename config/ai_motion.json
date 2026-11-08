@@ -1,0 +1,255 @@
+{
+ "_doc": "v17 AI motion (image-to-video) on REAL Dwarka photos: subtle natural motion only (water, waves, clouds, flags, light). Model + licence: config/model_licenses.json -> ai_motion_i2v. Used by core/ai_motion.py (kang.py ai-motion-plan / ai-motion-apply) and tools/kaggle_ai_motion/ai_motion_run.py.",
+ "model": {
+  "id": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+  "revision": "b8fff7315c768468a5333511427288870b2e9635",
+  "name": "Wan2.2-TI2V-5B",
+  "licence": "Apache-2.0",
+  "licence_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+  "width": 1024,
+  "height": 576,
+  "fps": 24,
+  "steps": 30,
+  "guidance": 5.0,
+  "seed": 42,
+  "min_frames": 49,
+  "max_frames": 81,
+  "max_slow": 2.0,
+  "offload": "group_block",
+  "_size_doc": "v17 KANG_017: 1024x576 (exact 16:9, multiple of 32; 576 tokens per latent frame vs 880 at 1280x704) + transformer group offload (block level) on T4; 1280x704 / max_frames 121 / max_slow 1.75 OOMed on T4 (KANG_016). 960x544 not used: 544 rows > the 540 rows of a 960-wide 16:9 frame (centre-band composite needs mh <= mw*9/16). Upscale to 1920x1080 happens only inside the composite mask (core/ai_motion.py).",
+  "seed_overrides": {
+   "S12_b01": 20261104,
+   "S11_b06": 20261104
+  },
+  "_seed_doc": "seed_overrides: v17 attempt 2 (KANG_021) new seed for the two clips eye-rejected in attempt 1 (S12_b01 fake bird, S11_b06 shoreline warp); other jobs keep seed 42."
+ },
+ "select": {
+  "min_hold_s": 3.0,
+  "max_hold_s": 8.5,
+  "matches": [
+   "exact",
+   "representative"
+  ],
+  "still_ext": [
+   ".jpg",
+   ".jpeg",
+   ".png",
+   ".webp"
+  ],
+  "min_width": 1280,
+  "max_clips": 13,
+  "skip_crop_reuse": true,
+  "kinds_only": [
+   "sea",
+   "boat",
+   "water",
+   "sea_flag",
+   "flag"
+  ]
+ },
+ "keywords": {
+  "sea": [
+   "beach",
+   "sea",
+   "coast",
+   "ocean",
+   "shore",
+   "shivrajpur",
+   "sun_se",
+   "arabian"
+  ],
+  "water": [
+   "gomti",
+   "gomati",
+   "river",
+   "ghat",
+   "sangam",
+   "lake",
+   "talav",
+   "water",
+   "pond"
+  ],
+  "boat": [
+   "boat",
+   "ferry",
+   "jetty",
+   "okha"
+  ],
+  "sky": [
+   "sunset",
+   "dusk",
+   "sunrise",
+   "sky",
+   "lighthouse",
+   "evening",
+   "clouds"
+  ],
+  "flag": [
+   "dwarkadhish",
+   "dwarakadheesh",
+   "dwarakadhish",
+   "dwarkadheesh",
+   "jagat_mandir",
+   "dwarka_krishna_temple",
+   "dwaja",
+   "dhwaja",
+   "flag"
+  ],
+  "sea_flag": []
+ },
+ "prompts": {
+  "sea": "Static camera, locked-off tripod shot of a real photograph. Gentle sea waves roll softly onto the shore, water shimmers, clouds drift very slowly. Buildings, rocks and land stay completely still. No camera movement.",
+  "water": "Static camera, locked-off tripod shot of a real photograph. The river water ripples gently and shimmers in the light, clouds drift very slowly. Buildings, steps and people stay completely still. No camera movement.",
+  "boat": "Static camera, locked-off tripod shot of a real photograph. Gentle ripples on the sea water, the boats bob very slightly on the water, clouds drift slowly. The shore and buildings stay completely still. No camera movement.",
+  "flag": "Static camera, locked-off tripod shot of a real photograph. The flag on top of the temple waves gently in the wind, clouds drift slowly across the sky. The temple stone and buildings stay completely still. No camera movement.",
+  "sky": "Static camera, locked-off tripod shot of a real photograph. Clouds drift slowly across the sky, the light shimmers softly. Buildings and land stay completely still. No camera movement.",
+  "sea_flag": "Static camera, locked-off tripod shot of a real photograph. Gentle sea waves move softly around the temple, the flag on top of the temple waves gently in the wind, clouds drift slowly. The temple and buildings stay completely still. No camera movement."
+ },
+ "negative": "camera movement, zoom, pan, tilt, dolly, shaking, handheld, new buildings, new people, new objects, morphing, warping, distortion, melting, text, subtitles, watermark, logo, fast motion, flicker, cartoon, painting, oversaturated, blurry, low quality, JPEG artifacts, people walking, crowd",
+ "kind_order": [
+  "sea",
+  "boat",
+  "water",
+  "sea_flag",
+  "flag",
+  "sky"
+ ],
+ "gate": {
+  "work_w": 640,
+  "ssim_first_pass": 0.8,
+  "ssim_first_fail": 0.7,
+  "flicker_pass": 2.0,
+  "flicker_fail": 4.0,
+  "cell_flicker_fail": 10.0,
+  "cell_flicker_fluid_fail": 16.0,
+  "_cell_flicker_doc": "cell_flicker_fail applies to RIGID cells (>=50 % non-sky/water/flag pixels); cell_flicker_fluid_fail to mostly sky/water/flag cells, where a passing flag or breaking wave legitimately moves the cell mean. Calibrated 2026-11-04 KANG_018 on the first real Wan2.2 clips: the only cell-flicker failures (S16_b06 10.2, S11_b06 10.5) were inside the motion mask, outside-mask cells <= 1.8.",
+  "edge_f_min": 0.5,
+  "warp_cells_fail_frac": 0.06,
+  "warp_cells_fail_min": 2,
+  "drift_px_fail": 2.5,
+  "drift_px_warn": 1.2,
+  "motion_min": 0.6,
+  "mask_std": 2.5,
+  "mask_area_fail": 0.75,
+  "composite_ssim_first_min": 0.95,
+  "flag_h_hi": 22,
+  "flag_h_lo": 160,
+  "flag_s_min": 100,
+  "flag_v_min": 50,
+  "flag_min_px": 12,
+  "flag_max_area": 0.03,
+  "flag_move_frac": 0.2,
+  "flag_dilate": 4,
+  "ghost_frac_fail": 0.0002,
+  "blob_med_k": 21,
+  "blob_contrast": 40,
+  "blob_rise": 28,
+  "blob_min_px": 6,
+  "blob_max_frac": 0.01,
+  "blob_max_aspect": 4.0,
+  "blob_dark_aspect": 2.5,
+  "blob_erode": 3,
+  "blob_samples": 16,
+  "blob_min_frames": 2,
+  "sea_needs_limits": true,
+  "_flag_blob_doc": "v17 attempt 2 (KANG_021): flag_* = flag colour core (union of saffron/red pixels over the photo + every AI frame, moving components only, dilated) -> 100 % AI inside, ghost_frac_fail = max share of frame pixels flag-coloured in the composite but not in the AI frame. blob_* = new bright / compact dark blobs inside the water/sky mask vs frame 0 (core/ai_motion.new_blobs) -> FAIL. sea_needs_limits: a beach (kind sea) clip FAILs without an eye-set mask_keep (open water + sky only, shoreline / wet sand = photo).",
+  "ghost_mask_max": 0.9,
+  "flag_photo_min": 0.0004,
+  "flag_sky_min": 0.02
+ },
+ "onscreen_label": {
+  "text": "AI animated",
+  "enabled": true,
+  "font": "fonts/Mukta-ExtraBold.ttf",
+  "size": 26,
+  "opacity": 0.55,
+  "margin": 54
+ },
+ "test_beats": [
+  "S11_b06",
+  "S16_b06",
+  "S12_b01"
+ ],
+ "eye_rejects_plan": {
+  "S01_b02": "crowded street, people",
+  "S01_b03": "crowd in the foreground",
+  "S03_b02": "crowd on the ghat",
+  "S03_b06": "person walking on the pier (person would stay frozen / be animated)",
+  "S04_b05": "carving close-up, no sky/water/flag",
+  "S05_b06": "carving close-up, no sky/water/flag",
+  "S07_b02": "carving close-up, no sky",
+  "S08_b06": "carving close-up, flag not visible",
+  "S06_b01": "people in a lane",
+  "S07_b05": "spire with plain sky, no flag/water",
+  "S07_b01": "flag tangled with a wire + tree, risky",
+  "S16_b01": "night illumination, no natural motion element",
+  "S16_b02": "several flags + tree, cluttered",
+  "S15_b01": "a person's leg/feet in frame",
+  "S18_b01": "many people on the beach",
+  "S22_b01": "people on the ghat",
+  "S22_b02": "people wading (silhouettes)",
+  "S22_b03": "people walking on the pier",
+  "S03_b01": "near-duplicate framing of S03_b03 (same scene), keep one",
+  "S01_b01": "crowd"
+ },
+ "eye_kind": {
+  "S12_b01": "boat",
+  "S20_b01": "sea_flag",
+  "S11_b07": "sea",
+  "S11_b05": "sea",
+  "S16_b06": "flag",
+  "S16_b05": "flag",
+  "S02_b05": "flag",
+  "S08_b01": "flag",
+  "S11_b08": "sea",
+  "S03_b03": "water",
+  "S06_b04": "water"
+ },
+ "eye_pass": [
+  "S16_b06"
+ ],
+ "eye_rejects": {
+  "S20_b01": "gate PASS but people on the temple platform move / morph between frames (AI pixels on small figures + facade spots in the motion heat map); flag tiny",
+  "S12_b01": "gate FAIL (new blobs in water); eye: telecom towers on the skyline wobble/bend in the sky mask, ripple blobs",
+  "S11_b06": "gate FAIL (new blob = a breaker forming in the thin open-water band at the left edge); raw: heavy surf over the excluded shoreline, open-water band too thin to carry the shot",
+  "S18_b05": "gate FAIL: no usable motion in sky + open-sea band (mask 0.003) and slow-down 2.42 > 2.0 (8.12 s beat, 81 raw frames)",
+  "S11_b04": "gate FAIL: composite first-frame SSIM 0.948 < 0.95; raw: tetrapods (rigid) shimmer in the heat map",
+  "S11_b05": "gate FAIL: new blob at the lighthouse radar/railing (structure inside the sky mask changes)",
+  "S11_b08": "gate FAIL: no usable motion above the shoreline limit (mask 0.009)",
+  "S06_b04": "gate FAIL: composite first-frame SSIM 0.931; raw: whole frame incl. rocks and ghat buildings shimmers",
+  "S16_b05": "gate FAIL: fluid-cell flicker 18.5; raw: a large NEW flag enters from the top edge (fake object) and the shikhara texture shimmers"
+ },
+ "eye_plan_note": "Agent eye check of the plan candidates 2026-11-04 (contact sheet of 34 keyword candidates); sky-only candidates (keyword-less, 'sky' by sky share) are not used in v17: max_clips 13 from the keyword kinds.",
+ "eye_note_v17": "2026-11-04 attempt 1 (kernel v3, 1024x576, group offload): 3/3 rendered, gate 2 PASS / 1 FAIL, agent eye 0 PASS -> fewer than 2 clips passed, batch + v17 package not started (task rule).",
+ "negative_extra": "birds, people, boats moving, new objects, text, camera motion",
+ "negative_extra_beats": [],
+ "_negative_extra_doc": "v17 attempt 2 (KANG_021): appended to the negative prompt of every job (empty negative_extra_beats = all); user asked it for S12_b01 + S11_b06, applied to all as the same fake-object risk exists on every water/sky shot.",
+ "mask_keep": {
+  "S11_b06": {
+   "y_max": 0.52,
+   "why": "horizon ~0.50, first breakers from ~0.53: sky + the thin open-water band only"
+  },
+  "S18_b05": {
+   "y_max": 0.79,
+   "why": "open sea 0.74-0.79, shore break ~0.80-0.82, dry sand below"
+  },
+  "S11_b04": {
+   "y_max": 0.62,
+   "why": "open turquoise sea 0.27-0.60; tetrapods (rigid, already outside the mask) and splash below"
+  },
+  "S11_b05": {
+   "y_max": 0.84,
+   "why": "sky + haze only; island shoreline from ~0.85 and the rocky water strip at the bottom stay the photo"
+  },
+  "S11_b08": {
+   "y_max": 0.74,
+   "why": "storm sky + open sea to ~0.74; breakers and wet sand from ~0.75"
+  },
+  "S20_b01": {
+   "y_max": 0.8,
+   "why": "sky, flag and open sea left of the temple to ~0.80; waves breaking on the platform wall below stay the photo"
+  }
+ },
+ "_mask_keep_doc": "v17 attempt 2 (KANG_021): agent eye-set row limits (fraction of frame height) per beach/sea shot, from a row-grid view of the model inputs: AI pixels only above y_max (open water + sky), shoreline / breakers / wet sand = the photo. A sea or sea_flag clip without an entry FAILs the gate (gate.sea_needs_limits).",
+ "eye_note_v17_attempt2": "2026-11-04 attempt 2 (KANG_021 plan, kernel v4 9 clips 88.9 min, KANG_026 apply incl. S16_b06 re-composite): gate 2 PASS / 8 FAIL, agent eye 1 PASS (S16_b06) -> fewer than 2 clips passed, v17 package not built (task rule); AI motion = WARN/blocked, v16 stays current."
+}

@@ -1,0 +1,1 @@
+{"id":"ironindiarat/kang-whisper-ab","title":"kang-whisper-ab","code_file":"kang_ab_run.py","language":"python","kernel_type":"script","is_private":true,"enable_gpu":true,"enable_internet":true,"dataset_sources":["ironindiarat/kang-project"],"competition_sources":[],"kernel_sources":[],"machine_shape":"NvidiaTeslaT4"}

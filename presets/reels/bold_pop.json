@@ -1,0 +1,6 @@
+{"style": "bold_pop", "engine": "karaoke-subs",
+ "font": "Montserrat Black", "font_size": 110, "base_color": "#FFFFFF", "highlight_color": "#FFD400",
+ "outline_color": "#000000", "outline": 7, "shadow": 3, "bold": true,
+ "alignment": 5, "margin_v": 0, "margin_h": 90,
+ "max_words": 2, "max_chars": 14, "max_gap": 0.5, "max_duration": 1.8, "uppercase": true,
+ "note": "v0: active word changes colour; per-word scale 'pop' animation is not in karaoke-subs (would be a small patch)"}

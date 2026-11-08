@@ -1,0 +1,1696 @@
+{
+  "summary": {
+    "profile": "shorts",
+    "platform": "youtube",
+    "duration_s": 24.0,
+    "total_rules": 463,
+    "machine_checkable": 153,
+    "human_review_rules": 309,
+    "evaluated": 39,
+    "passed": 34,
+    "failed": 5,
+    "skipped": 115,
+    "findings_count": 5,
+    "resolutions_count": 0,
+    "human_flags_count": 33,
+    "overall_score_pct": 87.2,
+    "layer_scores": {
+      "kahani": {
+        "evaluated": 13,
+        "passed": 11,
+        "score_pct": 84.6
+      },
+      "samajh": {
+        "evaluated": 7,
+        "passed": 5,
+        "score_pct": 71.4
+      },
+      "rhythm": {
+        "evaluated": 11,
+        "passed": 11,
+        "score_pct": 100.0
+      },
+      "style": {
+        "evaluated": 8,
+        "passed": 7,
+        "score_pct": 87.5
+      }
+    }
+  },
+  "rule_results": [
+    {
+      "rule_id": "R-001",
+      "name": "Vaada sabse pehle",
+      "layer": "kahani",
+      "evidence": "🟡",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-004",
+      "name": "Hook formula se, score 7+ ka gate",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "meta.hook_score nahi — data nahi (score insaan/tool dega)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-005",
+      "name": "On-screen hook chhota aur alag",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "on-screen hook (graphic/overlay) nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-011",
+      "name": "Proof 8 second ke andar",
+      "layer": "kahani",
+      "evidence": "🟡",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-026",
+      "name": "Clip standalone banao (long se short)",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "clip_duration_s nahi — ye rule source clip par hai, data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-028",
+      "name": "Title/thumbnail ka vaada video me sach me pura karo",
+      "layer": "kahani",
+      "evidence": "🟡",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-030",
+      "name": "Filled hook 12 shabdon se chhota rakho",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "fail",
+      "note": "",
+      "findings": [
+        {
+          "rule_id": "R-030",
+          "beat_id": "s1",
+          "detail": "bhara hua hook 13 shabd — 12 se KAM hona chahiye (ORDER #17, sakht)",
+          "layer": "kahani"
+        }
+      ]
+    },
+    {
+      "rule_id": "R-031",
+      "name": "First-5-seconds checklist pass karo",
+      "layer": "kahani",
+      "evidence": "🟡",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-032",
+      "name": "Cold open = hook, branding baad me",
+      "layer": "kahani",
+      "evidence": "🟡",
+      "status": "skip",
+      "note": "cold-open band sirf long-form par (ORDER #2)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-034",
+      "name": "Har waqt ≥1 open loop zinda rakho",
+      "layer": "kahani",
+      "evidence": "🟡",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-035",
+      "name": "Payoff ko aakhri 15–25% me rakho",
+      "layer": "kahani",
+      "evidence": "🟡",
+      "status": "pass",
+      "note": "short-form: payoff 18s par — seconds band 15-25s (ORDER #22)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-036",
+      "name": "Callback close + tez exit",
+      "layer": "kahani",
+      "evidence": "🟡",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-037",
+      "name": "Sponsor/tangent ko container me rakho (20–33%)",
+      "layer": "kahani",
+      "evidence": "🟡",
+      "status": "skip",
+      "note": "sponsor beat nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-038",
+      "name": "Sponsor read pehle payoff ke baad hi",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "sponsor beat nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-053",
+      "name": "Direct-to-camera question hook",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-054",
+      "name": "'If…' scenario hook",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-061",
+      "name": "Pehle 30 second ki beat structure",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "ye long-form opening ka rule hai — is profile par lagu nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-064",
+      "name": "Cold-open payoff tease — result pehle, setup baad me",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "tease flag wala hook nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-066",
+      "name": "Promised artifact 20 second ke andar screen par",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "hook ne koi artifact ka vaada nahi kiya — rule lagu nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-068",
+      "name": "Har beat: mini-hook + delivery + bridge (loop zinda)",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-072",
+      "name": "Shorts spoken hook 12 shabdon se kam",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "fail",
+      "note": "",
+      "findings": [
+        {
+          "rule_id": "R-072",
+          "beat_id": "s1",
+          "detail": "spoken hook 13 shabd — hadd 12",
+          "layer": "kahani"
+        }
+      ]
+    },
+    {
+      "rule_id": "R-073",
+      "name": "Short ke liye self-contained 20-55s moment",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "clip_duration_s nahi — ye rule source clip par hai, data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-074",
+      "name": "Paach-beat spine (demo/launch videos)",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "sirf demo/launch video par lagu",
+      "findings": []
+    },
+    {
+      "rule_id": "R-087",
+      "name": "Chapters ke platform niyam",
+      "layer": "samajh",
+      "evidence": "🟡",
+      "status": "skip",
+      "note": "chapters ka data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-090",
+      "name": "Graphic kabhi khaali nahi, word se bandha ho",
+      "layer": "samajh",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "graphic lead_s (word se kitna pehle aaya) ka data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-091",
+      "name": "On-screen text ka reading-time formula",
+      "layer": "samajh",
+      "evidence": "🟡",
+      "status": "skip",
+      "note": "text wala graphic beat nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-092",
+      "name": "Captions ke standard specs",
+      "layer": "samajh",
+      "evidence": "🟡",
+      "status": "fail",
+      "note": "",
+      "findings": [
+        {
+          "rule_id": "R-092",
+          "beat_id": "s2",
+          "detail": "caption 40 chars — hadd 32 chars/line (profile: shorts, ORDER #13)",
+          "layer": "samajh"
+        }
+      ]
+    },
+    {
+      "rule_id": "R-095",
+      "name": "Safe zones: text platform UI se bahar",
+      "layer": "samajh",
+      "evidence": "🟡",
+      "status": "skip",
+      "note": "overlay position/safe-zone data beats me nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-096",
+      "name": "Phone par padhai: size aur contrast",
+      "layer": "samajh",
+      "evidence": "🟡",
+      "status": "skip",
+      "note": "font size ka data meta me nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-099",
+      "name": "Tutorial chapter cards aur edge badge",
+      "layer": "samajh",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "title_card flag wala beat nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-102",
+      "name": "Music awaaz se 18-25 dB neeche",
+      "layer": "samajh",
+      "evidence": "🟠",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-105",
+      "name": "Master loudness destination ke hisaab se",
+      "layer": "samajh",
+      "evidence": "🟡",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-110",
+      "name": "Join fades: cut par click na aaye",
+      "layer": "samajh",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "duration_range_s what='join_fade' beats schema me nahi (edit-level data)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-111",
+      "name": "Pehla frame bina awaaz ke kaam kare (1-second rule)",
+      "layer": "samajh",
+      "evidence": "🟠",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-112",
+      "name": "Text overlay jaldi + har number/naam screen par",
+      "layer": "samajh",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "koi overlay/graphic beat nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-119",
+      "name": "Thumbnail: ek subject, tez contrast, shabd kam se kam",
+      "layer": "samajh",
+      "evidence": "🟠",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-121",
+      "name": "Power words pehle 3 second / title / overlay me",
+      "layer": "samajh",
+      "evidence": "🟠",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-123",
+      "name": "Refresh trigger: retention 20%+ gire to restructure/replace",
+      "layer": "samajh",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "retention analytics nahi — publish ke baad ka data hai",
+      "findings": []
+    },
+    {
+      "rule_id": "R-131",
+      "name": "Captions ke reading niyam (phrase captions)",
+      "layer": "samajh",
+      "evidence": "🟠",
+      "status": "fail",
+      "note": "",
+      "findings": [
+        {
+          "rule_id": "R-131",
+          "beat_id": "s2",
+          "detail": "caption 40 chars — hadd 32 chars/line (profile: shorts, ORDER #13)",
+          "layer": "samajh"
+        }
+      ]
+    },
+    {
+      "rule_id": "R-134",
+      "name": "Visual change ki cadence (short-form)",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-138",
+      "name": "Phrases ke beech ka gap",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "pause beats nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-145",
+      "name": "Punch ki hadd: lambaai, doori, ginti",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "punch_in field kisi beat me nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-155",
+      "name": "Pattern interrupt har 15–30s (CraigHewitt wala cadence)",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "rehook/interrupt flag wala beat nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-156",
+      "name": "Pacing FLAT rakho, interrupt ~1 per act (slopstudio wala cadence)",
+      "layer": "rhythm",
+      "evidence": "🟡",
+      "status": "skip",
+      "note": "act/interrupt data nahi — skip",
+      "findings": []
+    },
+    {
+      "rule_id": "R-157",
+      "name": "Visual floor = perceived motion, cut count nahi",
+      "layer": "rhythm",
+      "evidence": "🟡",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-158",
+      "name": "Hook/fast sections me visual change har 3–5s",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "fast section / pehle 30s ka stretch nahi mila",
+      "findings": []
+    },
+    {
+      "rule_id": "R-159",
+      "name": "Measured cold-open density: pehle 30s me 2–7 cuts",
+      "layer": "rhythm",
+      "evidence": "🟡",
+      "status": "skip",
+      "note": "cold-open band sirf long-form par (ORDER #2)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-160",
+      "name": "Section ke hisaab se pace badlo",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-162",
+      "name": "Dead air aur filler beherahmi se kato",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "koi pause beat nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-163",
+      "name": "Narration 160–195 WPM band me rakho",
+      "layer": "rhythm",
+      "evidence": "🟡",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-164",
+      "name": "Shorts cadence: cut har 2–4s, VVSA target 70–90%",
+      "layer": "rhythm",
+      "evidence": "🟡",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-165",
+      "name": "Long-form APV target 40–55%",
+      "layer": "rhythm",
+      "evidence": "🟡",
+      "status": "skip",
+      "note": "APV analytics data nahi — publish ke baad ka data hai",
+      "findings": []
+    },
+    {
+      "rule_id": "R-166",
+      "name": "Long-form B-roll/screen-share cadence (CraigHewitt)",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "B-roll/screen-share beats 2 se kam — cadence ka data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-167",
+      "name": "Marketing video me B-roll har 5–10s (Classicchins)",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "B-roll/screen-share beats 2 se kam — cadence ka data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-170",
+      "name": "CTA/Outro ghatao: CTA segment aakhri 5–10s",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "cta flag wala beat nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-171",
+      "name": "End screen tab rakho jab retention 70–80% ho",
+      "layer": "rhythm",
+      "evidence": "🟡",
+      "status": "skip",
+      "note": "end-screen retention analytics data nahi — publish ke baad ka data hai",
+      "findings": []
+    },
+    {
+      "rule_id": "R-172",
+      "name": "Platform duration windows (Reels/TikTok)",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-173",
+      "name": "ASL modern band me rakho",
+      "layer": "rhythm",
+      "evidence": "🟡",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-180",
+      "name": "Hook ki lambai 9-24 shabd",
+      "layer": "rhythm",
+      "evidence": "🟡",
+      "status": "skip",
+      "note": "ORDER #17: short-form hook <12 shabd wala rule chalega, 9-24 band nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-181",
+      "name": "Pattern interrupt har 90-120 second",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "rehook/interrupt flag wala beat nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-184",
+      "name": "Dead air trim — gap beech se, saansein bacha kar",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "pause beats nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-191",
+      "name": "Har pause ka 0.2-0.3s bacha kar rakho",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "pause beats nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-193",
+      "name": "Panel rhythm — 2-8 second per panel",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "duration_range_s what='panel' beats schema me nahi (edit-level data)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-194",
+      "name": "Har segment boundary par 30ms audio fade",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "not_evaluable: segment boundary par audio fade (ms) — edit-level data, beats schema me nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-196",
+      "name": "Cut edge padding 30-200ms ki window",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "not_evaluable: cut edge padding / jumla-saans (ms) — edit-level data, beats schema me nahi (A2)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-197",
+      "name": "Silence ke cut thresholds (400 / 150 / 150)",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "pause beats nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-198",
+      "name": "Speaker handoff me 400-600ms hawa",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "speaker handoff ka data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-200",
+      "name": "Punch-in sirf motivated, hadd ke andar",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "punch-in beats 2 se kam — spacing ka data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-215",
+      "name": "Thumbnail ke niyam",
+      "layer": "style",
+      "evidence": "🟡",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-216",
+      "name": "Title ki lambai (≤100 chars) aur front-loading",
+      "layer": "style",
+      "evidence": "🟡",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-217",
+      "name": "Cover frame / title card",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "cover_words nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-220",
+      "name": "Zoom in = zor, zoom out = naya topic",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "punch_in/zoom field kisi beat me nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-221",
+      "name": "Jump cut: dead air hatao, pace tez karo",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "fast section / pehle 30s ka stretch nahi mila",
+      "findings": []
+    },
+    {
+      "rule_id": "R-222",
+      "name": "SFX kam rakho: poori video me 3–5 max",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "sfx field kisi beat me nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-225",
+      "name": "Music awaaz ke neeche, levels me koi jhatka nahi",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "meta.background_music_db nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-227",
+      "name": "Opening visual pattern interrupt ke 4 roop",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-236",
+      "name": "Shorts overlay — dusra hook, 5-7 shabd",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "target beat nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-240",
+      "name": "Thumbnail text — target 3 shabd, title se alag",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-242",
+      "name": "Description — pehle 150 characters hi hook",
+      "layer": "style",
+      "evidence": "🟡",
+      "status": "skip",
+      "note": "description_chars nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-247",
+      "name": "Word-level subtitles — line me zyada se zyada 3 shabd",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "caption_words kisi beat me nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-248",
+      "name": "Loudness −14 LUFS (social standard)",
+      "layer": "style",
+      "evidence": "🟡",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-251",
+      "name": "Transitions me sakhti — hard cut default",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "duration_range_s what='crossfade' beats schema me nahi (edit-level data)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-259",
+      "name": "Subtitle chunking ke do tested style",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "caption_words kisi beat me nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-260",
+      "name": "Animation ki muddatein (cards/diagrams/accents)",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "explanation_card flag wala beat nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-262",
+      "name": "Split edit default — audio/video ek point par na kaato",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "split_edit_share_pct ka data beats/meta me nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-266",
+      "name": "Grade ka kram aur LUT ki matra",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "lut_intensity_pct ka data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-268",
+      "name": "Dialogue cleanup ka kram aur numbers",
+      "layer": "samajh",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "meta.dialogue_peak_dbfs nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-270",
+      "name": "Mix levels ki seedhi (dBFS)",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "meta.music_under_dialogue_dbfs nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-271",
+      "name": "Broadcast/Netflix loudness ke naye band",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "ye loudness band broadcast/netflix destination ke liye hai (ADDENDUM A7)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-273",
+      "name": "Cut ke dono taraf kam se kam 60 ms asli khamoshi",
+      "layer": "samajh",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "edge_silence_ms kisi beat me nahi — edit-level ms data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-274",
+      "name": "Pause-removal ki perceptual floor — 250 ms",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "ye editor ke pass ka threshold hai — meta.pause_removal_threshold_s mile to check hoga (A1: floor 250ms)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-275",
+      "name": "Lead/trail margins — ASR drift ko soak karo",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "not_evaluable: cut edge padding / jumla-saans (ms) — edit-level data, beats schema me nahi (A2)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-277",
+      "name": "Comedy incident ki 4-act ghadi",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "'comedy_incident_total' wala beat nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-278",
+      "name": "Reaction ko bachao — punchline ke baad kam se kam 1.5 s",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "punchline/payoff ke baad reaction ka data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-279",
+      "name": "Ek incident = ek hi lagatar cut; lambi scene me climax window",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "'comedy_single_cut' wala beat nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-281",
+      "name": "Climax par music ko −12 dB tak duck karo",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "meta.music_climax_duck_db nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-282",
+      "name": "1 second ya lambi khamoshi hamesha kategi",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "smart-cut >1s threshold sirf AUTO pehle pass ke liye hai (ADDENDUM A1) — haath ke pass me 400ms model chalega",
+      "findings": []
+    },
+    {
+      "rule_id": "R-286",
+      "name": "Follow-through — child elements ko 2–5 frames peeche rakho",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "animation frame data beats me nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-287",
+      "name": "Exaggeration — asal se 20–50% aage",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "overshoot ki ye pankti 'character' context ke liye hai — is video ka motion_class 'brand' hai (A5)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-295",
+      "name": "Silence cutting ka house DNA — −35 dB, 0.28 s, padding 0.08 s",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "ye editor ke pass ka threshold hai — meta.min_silence_cut_s mile to check hoga (A1: floor 250ms)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-296",
+      "name": "Punch-in alternating — har dusre cut par 100% ↔ 112%",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "alternating punch-in sirf fast talking-head profile me hai (A4) — baaki jagah motivated-only (R-200) chalega",
+      "findings": []
+    },
+    {
+      "rule_id": "R-298",
+      "name": "House mix offsets — SFX −9 dB, music bed −20 dB",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "meta.music_bed_db_under_voice nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-299",
+      "name": "Element entrance ki ghadi — 0.4–1.2 s",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "duration_range_s what='element_entrance' beats schema me nahi (edit-level data)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-305",
+      "name": "Stagger — 2–5 frames ki lay, padhne ki disha me",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "animation frame data beats me nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-306",
+      "name": "Motion piece = beats ki shrinkhala, ek lambi animation nahi",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "'motion_sequence' wala beat nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-307",
+      "name": "Attack tez, settle lamba — 2–4 frame attacks",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "animation frame data beats me nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-310",
+      "name": "Motion piece me nirnayak transition har 1.5–3 s",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "ye motion-piece ka cadence rule hai — aam video par lagu nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-313",
+      "name": "Premium UI/product overshoot — sirf 1.5–3%",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "overshoot ki ye pankti 'premium' context ke liye hai — is video ka motion_class 'brand' hai (A5)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-315",
+      "name": "Exit hamesha entrance se tez — 0.6–0.8 guna",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "exit_entrance_ratio_pct ka data beats/meta me nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-316",
+      "name": "Timing table 30 fps par — kaunsi harkat kitni lambi",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "'scene_transition' wala beat nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-319",
+      "name": "Glow/bloom ka hisaab — stack aur frame ka hissa",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "bloom_coverage_pct ka data beats/meta me nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-321",
+      "name": "Anticipation — main action ka 20–30%",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "anticipation_pct ka data beats/meta me nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-322",
+      "name": "Follow-through overshoot — move-distance ka 10–20%",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "follow_through_overshoot_pct ka data beats/meta me nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-326",
+      "name": "Pop ka snap — 0 se 110%, phir 100%",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "duration_range_s what='pop_total' beats schema me nahi (edit-level data)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-329",
+      "name": "Camera move ki matra — push-in 2–6%, drift seemit",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "push_in_pct ka data beats/meta me nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-331",
+      "name": "Finish ki parat — halka grain, near-black background",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "grain_pct ka data beats/meta me nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-334",
+      "name": "Generated SFX ko pehle normalize karo — I=−16 LUFS",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "asset-level check hai (generated SFX) — meta.sfx_lufs nahi; master LUFS ispar lagu nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-336",
+      "name": "Shot ki lambai beat ke prakar se — film/teaser ghadi",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "'talking_head_shot' wala beat nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-337",
+      "name": "Sabse bade pal ko sabse lambi ghadi do",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "'climax_shot' wala beat nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-338",
+      "name": "Lambai ka ratio — sabse lamba shot sabse chhote ka 2–4 guna",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-346",
+      "name": "Jumla-cut ki padding — 0.25 s pehle, 0.35 s baad",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "not_evaluable: cut edge padding / jumla-saans (ms) — edit-level data, beats schema me nahi (A2)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-347",
+      "name": "30 ms ke andar speech = CLIPPED (shabd kata mana jayega)",
+      "layer": "samajh",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "speech_cut_distance_ms kisi beat me nahi — edit-level ms data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-348",
+      "name": "Room tone ka jump 6 dB se zyada = defect",
+      "layer": "samajh",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "meta.room_tone_jump_db nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-349",
+      "name": "0.5 s se chhota tukda = SLIVER — mat rakho",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-353",
+      "name": "Chhote elements ki ghadi — UI 0.3–0.5 s, text reveal 0.8–1.2 s",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "'text_reveal' wala beat nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-354",
+      "name": "Bade pieces ki ghadi — logo 1–3 s, title card 3–5 s, loop 2–4 s",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "title_card flag wala beat nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-359",
+      "name": "Opening: 40s me vaada, 60s me saboot",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-365",
+      "name": "Ending nayi state par, 3–6s thehrao ke saath",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "duration_range_s what='ending aftertaste hold' beats schema me nahi (edit-level data)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-374",
+      "name": "Screencast: shuru 15–30s 'kya aur kyun', aakhir me uplabdhi",
+      "layer": "kahani",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "screencast video nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-377",
+      "name": "Bina-voiceover film me captions hi kahani",
+      "layer": "samajh",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "ye rule bina-voiceover film ke liye hai — VO hai ya maloom nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-378",
+      "name": "Caption highlight: line me sirf 1–3 shabd",
+      "layer": "samajh",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "highlighted_words kisi caption beat me nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-396",
+      "name": "Har bade chapter me kam se kam ek saans-wala shot",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "chapter boundaries nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-398",
+      "name": "Visual change gap 3s se zyada (short-form) = pattern interrupt",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-400",
+      "name": "Hook me dead air = retention ki maut",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-416",
+      "name": "BGM variety: 35% unique, 6 cues me repeat nahi",
+      "layer": "rhythm",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "BGM cues 20 se kam — variety rule (≥20 cues par) lagu nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-422",
+      "name": "Transition mix ka budget (travel/POV)",
+      "layer": "style",
+      "evidence": "🟡",
+      "status": "skip",
+      "note": "accent_transition_pct ka data beats/meta me nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-423",
+      "name": "Motion accent ki 4 shartein, warna downgrade",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "duration_range_s what='motion accent ke baad stable landing' beats schema me nahi (edit-level data)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-426",
+      "name": "Cadence: sajawati runs 4 se kam, koi style raja nahi",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "transition beats nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-427",
+      "name": "Effects ki haden (CapCut director)",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "transition beats nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-428",
+      "name": "Emphasis zoom: 105–110%, 6–15 frames, ease-out",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "zoom_scale_pct ka data beats/meta me nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-429",
+      "name": "Ek video, zyada se zyada 2 visual styles",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "visual styles ka data nahi (meta.visual_styles ya beat style fields)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-432",
+      "name": "B-roll grammar: wide → medium → close-up; hold 1.2–3.0s",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "fail",
+      "note": "",
+      "findings": [
+        {
+          "rule_id": "R-432",
+          "beat_id": "s3",
+          "detail": "B-roll hold: beat 5s — band 1.2-3.0s (beats ko shot proxy mana gaya)",
+          "layer": "style"
+        }
+      ]
+    },
+    {
+      "rule_id": "R-436",
+      "name": "Ek hi hero title, asli footage par, 6–12s ke andar",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "hero_title flag wala beat nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-437",
+      "name": "Cover/hero-title formula: 1–5 shabd, pehchan wali background",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "cover title words ka data nahi (meta.cover_title_words)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-439",
+      "name": "Dialogue EQ/de-hum/gate ke starting numbers",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "meta.dehum_db nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-440",
+      "name": "Ducker: shuruaat 2.7 dB, 5 dB se zyada = amateur",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "meta.ducker_depth_db nahi — data nahi (A8: default band profile me hai, 2.7-5 dB)",
+      "findings": []
+    },
+    {
+      "rule_id": "R-441",
+      "name": "Podcast loudness verify: −16..−20 LUFS, peaks −9..−3 dBFS",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "ye loudness band podcast dialogue ke liye hai",
+      "findings": []
+    },
+    {
+      "rule_id": "R-442",
+      "name": "Short-form dialogue: −14..−16 LUFS, true peak <−1 dBTP",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    },
+    {
+      "rule_id": "R-444",
+      "name": "Music bed narration ke neeche: −24..−18 LUFS relative",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "music bed relative level ka data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-445",
+      "name": "SFX volume ki seedhi (hierarchy)",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "meta.voice_above_music_db nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-446",
+      "name": "SFX ki haden: 3 stack, duration-match, comedy sirf meme/viral",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "sfx_stack ka data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-452",
+      "name": "Quiet sections ko haath se +3..+6 dB boost",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "manual_boost_db kisi beat me nahi — data nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-454",
+      "name": "Skin saturation ~60, 70+ kabhi nahi",
+      "layer": "style",
+      "evidence": "🟠",
+      "status": "skip",
+      "note": "skin_saturation_pct ka data beats/meta me nahi",
+      "findings": []
+    },
+    {
+      "rule_id": "R-457",
+      "name": "Delivery verify bahari meter se; platform exports tay",
+      "layer": "style",
+      "evidence": "🟡",
+      "status": "pass",
+      "note": "",
+      "findings": []
+    }
+  ],
+  "findings": [
+    {
+      "rule_id": "R-030",
+      "beat_id": "s1",
+      "detail": "bhara hua hook 13 shabd — 12 se KAM hona chahiye (ORDER #17, sakht)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-072",
+      "beat_id": "s1",
+      "detail": "spoken hook 13 shabd — hadd 12",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-092",
+      "beat_id": "s2",
+      "detail": "caption 40 chars — hadd 32 chars/line (profile: shorts, ORDER #13)",
+      "layer": "samajh"
+    },
+    {
+      "rule_id": "R-131",
+      "beat_id": "s2",
+      "detail": "caption 40 chars — hadd 32 chars/line (profile: shorts, ORDER #13)",
+      "layer": "samajh"
+    },
+    {
+      "rule_id": "R-432",
+      "beat_id": "s3",
+      "detail": "B-roll hold: beat 5s — band 1.2-3.0s (beats ko shot proxy mana gaya)",
+      "layer": "style"
+    }
+  ],
+  "resolutions": [],
+  "human_flags": [
+    {
+      "rule_id": "R-002",
+      "beat_id": "s1",
+      "reason": "hook wala pal — rule 'Intro, greeting, logo — hook se pehle kuch nahi' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-006",
+      "beat_id": "s1",
+      "reason": "open loop khulne wala pal — rule 'Open loop kholo, aakhir se pehle band mat karo' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-007",
+      "beat_id": "s1",
+      "reason": "hook wala pal — rule 'Re-hook 40-60% par' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-010",
+      "beat_id": "s1",
+      "reason": "hook wala pal — rule 'Object 0 second par, hook me specific' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-015",
+      "beat_id": "s1",
+      "reason": "hook wala pal — rule 'Hook khule, sirf ek baar repeat ho' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-029",
+      "beat_id": "s1",
+      "reason": "hook wala pal — rule 'Hook ke 3 variants — category mix karke' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-033",
+      "beat_id": "s5",
+      "reason": "payoff wala pal — rule 'Promise line jaldi bolo, payoff par verbatim dohrayo' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-038",
+      "beat_id": "s5",
+      "reason": "payoff wala pal — rule 'Sponsor read pehle payoff ke baad hi' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-042",
+      "beat_id": "s5",
+      "reason": "payoff wala pal — rule 'Short-form: ek idea, payoff jaldi, loop wala end' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-043",
+      "beat_id": "s5",
+      "reason": "payoff wala pal — rule 'Shorts me reverse structure: payoff pehle' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-046",
+      "beat_id": "s1",
+      "reason": "hook wala pal — rule 'Foreshadowing hook: pehle second me result ka ishara' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-047",
+      "beat_id": "s5",
+      "reason": "emotion wala pal — rule 'End sabse tez emotion par rakho' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-052",
+      "beat_id": "s5",
+      "reason": "emotion wala pal — rule 'Short infotainment ka emotional arc (0–30s)' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-058",
+      "beat_id": "s5",
+      "reason": "emotion wala pal — rule 'Murch 1 — Emotion sabse upar (51%)' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-062",
+      "beat_id": "s1",
+      "reason": "hook wala pal — rule 'Hook ko score karo — weakest property fix karo' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-063",
+      "beat_id": "s1",
+      "reason": "hook wala pal — rule 'Hook variants banao, test karke chuno' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-065",
+      "beat_id": "s1",
+      "reason": "hook wala pal — rule 'Vaada imandari — title/hook ka promise pehle 30s me cash ho' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-067",
+      "beat_id": "s1",
+      "reason": "hook wala pal — rule 'Turn (0:15-0:45) — ek sentence me plan' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-070",
+      "beat_id": "s5",
+      "reason": "payoff wala pal — rule 'Payoff over-deliver karo — bonus insight lazmi' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-077",
+      "beat_id": "s5",
+      "reason": "payoff wala pal — rule 'Setups aur payoffs ka audit' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-081",
+      "beat_id": "s1",
+      "reason": "hook wala pal — rule 'Community posts — pehli line hook, ek hi ask' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-175",
+      "beat_id": "s5",
+      "reason": "payoff wala pal — rule 'Climax par shots chhote, payoff ke baad lambe' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "rhythm"
+    },
+    {
+      "rule_id": "R-182",
+      "beat_id": "s1",
+      "reason": "hook wala pal — rule 'Har section break par re-hook' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "rhythm"
+    },
+    {
+      "rule_id": "R-199",
+      "beat_id": "s5",
+      "reason": "payoff wala pal — rule 'Animation ka payoff bolne wale shabd par land kare' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "rhythm"
+    },
+    {
+      "rule_id": "R-209",
+      "beat_id": "s1",
+      "reason": "hook wala pal — rule 'Hook ka visual ek mini-story ho' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "style"
+    },
+    {
+      "rule_id": "R-210",
+      "beat_id": "s5",
+      "reason": "emotion wala pal — rule 'Music bed emotion se chuno, dohrao mat' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "style"
+    },
+    {
+      "rule_id": "R-211",
+      "beat_id": "s5",
+      "reason": "payoff wala pal — rule 'Music ka offset payoff par land karana' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "style"
+    },
+    {
+      "rule_id": "R-212",
+      "beat_id": "s5",
+      "reason": "payoff wala pal — rule 'Movement shor nahi, sirf payoff hits' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "style"
+    },
+    {
+      "rule_id": "R-239",
+      "beat_id": "s5",
+      "reason": "emotion wala pal — rule 'Thumbnail core — ek focal point, sachhi emotion, 120px test' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "style"
+    },
+    {
+      "rule_id": "R-294",
+      "beat_id": "s1",
+      "reason": "hook wala pal — rule 'House pacing ka udaharan — Hook ASL 1.6 s, Body ASL 2.8 s' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "rhythm"
+    },
+    {
+      "rule_id": "R-360",
+      "beat_id": "s5",
+      "reason": "payoff wala pal — rule 'Pehle 3 minute: arrival aur texture, payoff se pehle' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-363",
+      "beat_id": "s5",
+      "reason": "payoff wala pal — rule 'Payoff-se-payoff jump = slideshow' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "kahani"
+    },
+    {
+      "rule_id": "R-382",
+      "beat_id": "s5",
+      "reason": "emotion wala pal — rule 'Bolne wala dikhe; B-roll emotion ko na dhake' is pal par lagu hai; faisla insaan ka (ORDER §3)",
+      "layer": "samajh"
+    }
+  ]
+}

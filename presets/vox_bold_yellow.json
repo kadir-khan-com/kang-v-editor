@@ -1,0 +1,18 @@
+{
+  "font_role": "hindi",
+  "outline_px": 6,
+  "shadow_px": 2,
+  "uppercase": false,
+  "max_chars": 32,
+  "max_words": 4,
+  "min_words": 2,
+  "max_dur": 2.0,
+  "pause_break": 0.35,
+  "highlight": "kf",
+  "position": "bottom",
+  "bold": true,
+  "box": false,
+  "description": "Talking-head reels: bold white, yellow karaoke highlight",
+  "size_pct": 4.6,
+  "name": "vox_bold_yellow"
+}

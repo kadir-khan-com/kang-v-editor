@@ -1,0 +1,1046 @@
+# koptsev63/premiere-claude-bridge — Premiere Pro assistant-editor bridge (film-editing skill extracted)
+- Repo: koptsev63/premiere-claude-bridge
+- Link: https://github.com/koptsev63/premiere-claude-bridge
+- Licence: MIT License (MIT) — verified on repo page + LICENSE file in clone
+- Popularity: 2 stars, 84 commits, 9 releases (repo page, 2026-11-06)
+- Last commit (from local clone git log): 2026-11-05
+- Extracted: 2026-11-06, Editor-specific harvest round Part 1 (After Effects + Premiere Pro) — clone --depth 1, technique files verbatim below (numbers/thresholds/checklists intact).
+- Notes: The repo is an MCP + CEP assistant-editor bridge for Premiere Pro (and Resolve) — the bridge machinery is a tool and is NOT extracted. Extracted here are its skill files, which carry the editorial method: skills/film-editing/SKILL.md (Walter Murch's Rule of Six, blink theory, misdirection and eye-trace encoded as concrete cut-decision rules for Premiere work — the craft core), skills/dailies-prep/ (SKILL.md + ABOUT.md — footage logging/dailies workflow), skills/nle-handoff/ (SKILL.md + ABOUT.md — handing a cut between NLEs), skills/trailer-bridge/SKILL.md (trailer assembly workflow). NOT extracted: skills/watch/ (vendored from bradautomates/claude-video, MIT with its own ATTRIBUTION.md — a video-watching utility, not editing craft), skills/addons-installer/ (install operations), and film-editing's tools/*.jsx helpers (build_sequence.jsx, verify_timeline.jsx — implementations).
+
+---
+
+## 📄 SOURCE FILE: `skills/film-editing/SKILL.md` (verbatim)
+
+---
+name: film-editing
+description: Editing principles for Premiere Pro work via the Claude Bridge. Encodes Walter Murch's "In the Blink of an Eye" — the Rule of Six, the blink theory, misdirection, eye trace, dreaming in pairs — as concrete decision rules Claude must apply when cutting a sequence. Trigger this skill whenever editing video — whether building a teaser, a trailer, a documentary cut, a reel, a short, or a feature assembly — and when reviewing or critiquing an existing edit. Pair with `mcp__premiere__*` tools.
+---
+
+# Film Editing — Murch's Operating System
+
+Encodes the canonical principles of film editing as a hierarchy Claude follows when making cut decisions inside Premiere via the bridge. Source: Walter Murch, *In the Blink of an Eye: A Perspective on Film Editing* (1995, expanded 2001) — the most-cited text in editing pedagogy. Murch edited *Apocalypse Now*, *The Conversation*, *The English Patient* (Oscars for both editing and sound).
+
+## When to invoke
+
+- Building any sequence on a Premiere timeline (teaser, trailer, scene, reel)
+- Choosing in/out points or clip durations
+- Deciding cut order
+- Reviewing an existing cut and proposing changes
+- Anytime Vladimir says: смонтируй, перемонтируй, нарежь, склей, тизер, трейлер, монтаж, сцена, ритм, темп, edit, recut, cut, pacing
+
+Always paired with the `mcp__premiere__*` tools (pr_eval_jsx, pr_get_active_sequence, pr_list_timeline, pr_set_playhead, pr_add_marker, pr_export_ame).
+
+---
+
+## I. The Rule of Six — the priority stack
+
+Murch's hierarchy for evaluating any cut. **Read top-down: an upper rule outranks every rule below it.** Allocations are Murch's own (lecture, Sydney 1988):
+
+| # | Criterion | Weight | What it means in practice |
+|---|---|---|---|
+| 1 | **Emotion** | 51% | Does the cut feel right for the audience's emotional state at that beat? "If you're true to the emotion of the moment, the audience will forgive technical problems." |
+| 2 | **Story** | 23% | Does the cut advance the story? Is information delivered when the audience needs it? |
+| 3 | **Rhythm** | 10% | Does the cut land at the right musical/breathing moment? Editing is "visual music." |
+| 4 | **Eye trace** | 7% | Where is the viewer's eye at the cut point — and where does the new shot place the next focus? |
+| 5 | **2D plane (planarity)** | 5% | Compositional continuity within the frame: does the new shot's composition flow from the old? |
+| 6 | **3D space (continuity)** | 4% | The 180° rule, screen direction, spatial geometry. |
+
+**Operational consequence — when criteria conflict, sacrifice from the bottom:**
+- Sacrifice 3D continuity to preserve eye trace.
+- Sacrifice eye trace to preserve rhythm.
+- Sacrifice rhythm to preserve story.
+- Sacrifice story to preserve emotion.
+- **Never sacrifice emotion.**
+
+Murch's exact line: "An ideal cut satisfies all six criteria at once. If you can't have all six, get the top four. If you can't have the top four, get the top three. The top three is most important — preferably the top two, and most of all the top one."
+
+---
+
+## II. The Blink Theory
+
+Murch's central insight: humans blink at moments of mental punctuation — when one thought completes and another begins. Cuts work because the audience already does this internally; a good cut aligns with where the audience would naturally blink.
+
+**Rules:**
+1. **Cut at the end of a thought, not in the middle of one.** Every shot should end at a moment of completion (the end of a gesture, the end of a sentence, the end of a beat).
+2. **The cut is the visual equivalent of the audience's blink** — make it land where the audience is mentally ready to receive a new image.
+3. **Watch the actor's eyes** — performers blink at the same moments the audience does. If your subject blinks at frame X, X is a candidate cut point.
+
+---
+
+## III. The Idea Cut vs the Continuity Cut
+
+Murch distinguishes two paradigms:
+- **Continuity editing** — the invisible cut, hides the join (Hollywood classical).
+- **Idea editing** — uses the discontinuity itself as a meaning-maker (Eisenstein, Resnais, Godard).
+
+**For documentaries, teasers, and montage sequences (like Grave Stakes):** lean toward idea cuts. The juxtaposition between two shots produces a third meaning that exists in neither shot alone. Example: the *НОВОСИБИРСКИЙ КРЕМАТОРИЙ* T-shirt + a guy intensely digging a grave = the absurdist joke.
+
+---
+
+## IV. Misdirection
+
+Borrowed from stagecraft: distract the viewer's attention away from the cut so the cut is invisible. Tools:
+- A sudden movement on one side of the frame masks a cut on the other side.
+- A character's quick gesture or look can hide a transition.
+- An on-screen sound spike (door slam, gunshot, hand clap) at the cut point.
+
+Use when continuity matters and you must hide the seam. Skip in idea-cut sequences where the seam IS the point.
+
+---
+
+## V. Eye Trace — concrete protocol
+
+Before each cut, ask: **where is the viewer's eye in the outgoing frame?** Then ensure the incoming shot's primary subject lands at or near that same screen position.
+
+**Practical protocol when working in Premiere via the bridge:**
+1. `pr_set_playhead` to the last frame of the outgoing clip.
+2. Identify the focal point (face, action, contrast peak).
+3. `pr_set_playhead` to the first frame of the incoming clip.
+4. If the new focal point lands near the old position → cut works for eye trace.
+5. If not — either re-frame (motion effect / Position kf), or reorder the cut, or accept the eye-trace cost (allowed if the upper four rules win).
+
+---
+
+## VI. Dreaming in Pairs
+
+A cut is never about one shot — always about two. Always evaluate the **A→B relationship**, not A or B in isolation.
+- Two cuts that work individually may not work together (rhythm collision).
+- Two cuts that look weak alone may sing as a pair.
+
+When selecting clips for a sequence: **storyboard the pairs, not the singles.**
+
+---
+
+## VII. Pacing rules of thumb (Murch + standard practice)
+
+These are starting points, not absolutes. Override per Rule of Six.
+
+| Beat type | Typical duration | Why |
+|---|---|---|
+| **Establishing / breath shot** | 5–8 sec | Audience needs time to orient |
+| **Hook / opening reveal** | 4–6 sec | Long enough to register, short enough to provoke |
+| **Comedy beat** | 4–5 sec | Joke needs time to read; cut on the audience's mental "punchline received" |
+| **Rhythmic action montage** | 2–4 sec each | Cumulative energy; no single shot dominates |
+| **Cinematic / emotional center** | 6–8 sec | The shot the trailer is built around — let it land |
+| **Interview / talking head** | 5–7 sec minimum | Below 5s the speech feels truncated |
+| **Title card** | 3–5 sec | Long enough to read aloud + 1 sec |
+| **End title** | 6–10 sec | Closure beat |
+| **Climax / payoff reveal** | 6–10 sec | The "moneyshot" — overrides all rhythm rules |
+
+**Ratio rule**: the longest shot in a teaser should be 2–4× the shortest. More than that and the sequence breaks rhythm; less and it feels monotone.
+
+---
+
+## VIII. Process — the editor's workflow Murch advocates
+
+1. **First viewing — DON'T touch tools.** Just watch all the rushes. Make notes by hand.
+2. **Mark "selects"** — the moments that are alive, the gold.
+3. **First assembly is always too long.** The teaser will be 2–3× its target length on first pass.
+4. **Cut by feel, then justify.** If a cut feels wrong but you can't say why — trust the feel, find the why later.
+5. **Watch a cut, walk away, watch again.** Distance reveals what's hidden when too close.
+6. **Show to one person you trust before locking.** Their gut reaction is data.
+
+---
+
+## IX. The Decisive Moment
+
+Borrowed from Cartier-Bresson: the single frame in any take where everything aligns — gesture, expression, light, composition. **For every clip going into a sequence, identify its decisive moment** and ensure the cut either lands ON or LEADS TO that frame.
+
+When using `pi.setInPoint(ss, 4)` and `pi.setOutPoint(ss + dur, 4)` via the bridge, the **out-point** of each clip should ideally fall at or just past the decisive moment — never before it.
+
+---
+
+## X. Concrete operational checklist for Premiere via the bridge
+
+Before placing a clip on the timeline:
+- [ ] Have I identified the decisive moment? (If not — `pr_set_playhead` and scrub via `pr_eval_jsx` to find it.)
+- [ ] Does this clip serve emotion FIRST?
+- [ ] Does it advance story?
+- [ ] Is its duration appropriate to its beat type (table above)?
+- [ ] Does its first frame eye-trace from the previous shot's last frame?
+- [ ] Does its last frame complete a thought?
+- [ ] If breaking 3D continuity — am I doing it deliberately?
+
+After laying down a sequence:
+- [ ] Pull `pr_list_timeline` and audit the duration distribution. Is the longest shot 2–4× the shortest?
+- [ ] Are the 3 most important emotional beats the 3 longest shots?
+- [ ] Is there variety — are no 4 consecutive shots the same length?
+- [ ] Mark suspect cuts with `pr_add_marker` for human review.
+
+---
+
+## XI. Russian terminology mapping
+
+When Vladimir uses Russian terms, map to Murch concepts:
+
+| Russian | Murch |
+|---|---|
+| склейка | cut |
+| монтажная фраза | montage sequence |
+| ритм / темп | rhythm |
+| эмоциональный центр | emotional center / decisive moment |
+| внутрикадровый монтаж | intra-shot continuity |
+| 8-ка / правило восьмёрки | 180° rule (3D continuity) |
+| перебивка | cutaway / reaction shot |
+| монтажный аттракцион | idea cut / Eisensteinian montage |
+| стык по движению | motion-matched cut (eye-trace tool) |
+| на эмоции | "cut on the emotion" |
+| дать вздохнуть | "let it breathe" (extend a shot) |
+| дожать | tighten, trim further |
+
+---
+
+## XII. Bridge tool reference (one-liners)
+
+| Tool | Use during editing |
+|---|---|
+| `mcp__premiere__pr_status` | Sanity check before any session |
+| `mcp__premiere__pr_get_project_info` | Inspect bins, find clips by name/nodeId |
+| `mcp__premiere__pr_get_active_sequence` | Get sequence specs (fps, dimensions, tracks) |
+| `mcp__premiere__pr_list_timeline` | Audit current cuts (durations, in/out, order) |
+| `mcp__premiere__pr_get_playhead` / `pr_set_playhead` | Scrub to specific timecode |
+| `mcp__premiere__pr_add_marker` | Mark decisive moments, problem cuts, notes |
+| `mcp__premiere__pr_export_ame` | Send to Adobe Media Encoder for output |
+| `mcp__premiere__pr_eval_jsx` | Escape hatch for any custom ExtendScript (set in/out, insertClip, motion params, color) |
+| `pr_make_sequence` / `pr_build_sequences` (0.6) | Sequences from clip ranges with NO dialog (never `createNewSequence` with a preset id: it opens "Создать эпизод" and hangs the bridge) |
+| `pr_import_media` / `pr_probe_media` | Codec gate first: AV1/VP9 import as sound only; get the H.264 copy command for just the range; nothing under 2 GB free |
+| `pr_set_motion` / `pr_set_motion_keyframes` | Scale/Position in pixels; `hold: true` between shots (interpolation 4; 5 is Bezier and slides). Keys live in media time (inPoint + t), the tool converts; verify with a frame export, `getValueAtTime` cannot tell |
+| `pr_add_markers` / `pr_get_inout` | Markers in bulk; the clip borders after the editor's manual trim, for a render from his borders |
+| `pr_dialog_check` | A tool timed out? Ask this before touching the keyboard: it names the modal window and the button |
+| `pr_journal_snapshot` / `pr_journal_report`, `pk.js journal` (0.7) | The editor's journal: his decisions (trims in frames, razors, moves, J/L cuts, tempo) from live snapshots or his Auto-Save folder. With his consent; structure only. Feed the numbers into §III rules |
+
+---
+
+## XIII. Analysis pipeline — making the LLM "see" motion
+
+**Hard truth:** by default the LLM sees stop-frames, not motion. Murch's Rule of Six leans on perceiving how a gesture begins and completes — impossible from one frame. The pipeline below partially closes that gap.
+
+### Tool: `tools/analyze_clips.py`
+
+```bash
+# needs the OpenCV venv for shake + horizon (.venv/bin/python):
+.venv/bin/python skills/film-editing/tools/analyze_clips.py \
+  /path/to/raw_footage \
+  /path/to/output_log [--whisper] [--desc descriptions.json]
+```
+
+Per clip, two layers. **Machine layer** (measured by the program):
+
+| Output | What it captures | LLM use |
+|---|---|---|
+| `_thumb.jpg` | mid-clip frame, 480w | identify content (faces, objects, location) |
+| `_strip.jpg` | **6 evenly-spaced frames hstacked** | approximate motion: see how subject moves across the clip |
+| `motion_score` | scene-change frequency | distinguish action clips from static b-roll |
+| `audio_peak_db` + `audio_peak_time_sec` | loudness peak + when | find applause, gasps, dialogue moments — these are emotional anchors |
+| `audio_mean_db` | average loudness | identify speech-bearing vs ambient-only clips |
+| `horizon_tilt_deg` + `horizon_correction_filter` | level check (OpenCV) | flag/level tilted shots — **unreliable on vertical video, do not auto-rotate portrait** |
+| `shake_score` + `needs_stabilization` | camera-shake (OpenCV, 24 samples) | rank jitter; feeds `core.value` |
+| `speech_text` (with `--whisper`) | transcript first 300 chars | exact dialogue + timing |
+
+**Meaning layer** (written by a person or by Claude looking at the thumbs, fed back via `--desc descriptions.json`, keyed by clip name):
+
+| Field | What it is | Why it exists |
+|---|---|---|
+| `desc_ru` | one line: what is actually in the shot, plain Russian | a metrics dump is not a usable log; the picture's *content* is the thing you cut on |
+| `tags` | keywords (дед, сарай, руки, природа, монолог…) | search/group; the cut is built from these, not from loudness |
+| `keep` | `true` = part of the story, `false` = junk to drop | the program cannot know a clip is "not from this story" — only eyes can |
+
+Output bundle: `report.json` (machine-readable, UTF-8) + `report.html` (contact
+sheet with desc/tags + a green **в историю** / red **лишнее** badge). Both are
+rewritten **after every clip**, so the table is viewable while the run goes.
+
+### Mandatory editorial protocol with this data
+
+The metrics rank by loudness and movement. They have **no eyes and no
+meaning** — left alone they produce a chaotic dump that glues a market, a cow
+and a stranger together because all three read "loud + moving". Meaning is the
+agent's job, and it comes first.
+
+1. **Run the pipeline** on the source folder (`.venv/bin/python`, ~15 min for
+   60 clips incl. shake/horizon). It writes the table after every clip.
+2. **SEE every clip.** Build contact sheets from the thumbs (ffmpeg
+   `tile=7x3`) and `Read` them. One mid-frame can lie (see Grave Stakes
+   below) — for anything ambiguous read its `_strip.jpg` or `/watch` it.
+3. **Classify: keep or drop.** Write `desc_ru` + `tags` + `keep` per clip and
+   feed back via `--desc`. Mark `keep:false` for anything **not in this
+   story** — the author's later life, another place/date, a stranger. (Дед:
+   8 of 63 were a husky, a European city, a café, a child — dropped.)
+4. **For talking footage, get the words, then order by meaning.** Loudness
+   never tells you *what he says*. Transcribe the talkers (`--whisper`, or the
+   `/watch` local backend, real `--language` + `--word_timestamps`), **read the
+   transcripts yourself**, and sequence the spoken beats by content/arc — that
+   is what "сложить по смыслу" means. Picture serves the words: market talk →
+   show the market; hard-labour talk → his hands, the shed.
+5. **Only now use the metrics** — for in/out and ranking *within* a kept,
+   meaningful group: `audio_peak_time_sec` as a candidate IN-anchor,
+   `shake`/`horizon` to flag fixes, `core.value` to order energy inside a beat.
+6. **Cross-reference rankings against your gut** — a clip that ranks high but
+   reads wrong usually has the wrong in-point; look at its strip again.
+
+### Lessons from Grave Stakes case study
+
+- **Don't trust a single thumbnail.** The clip `00172.MTS` looked like a static "wooden frame on grass" from one mid-frame. The strip revealed: first half static, **second half a tight digger close-up at ss≈15+**. Almost dropped a strong clip.
+- **Audio peak ≠ visual peak.** For documentary footage, audio peaks (a clap, a shout, a tool strike) often mark the moment that ought to be in the cut. Use `audio_peak_time_sec` as a candidate IN-anchor.
+- **Whisper `tiny` model fails on noisy field audio in non-English languages.** For real dialogue extraction use `--model medium --language XX`. Plan for ~15 sec/min of audio per Whisper pass.
+
+### Lessons from the Дед case study
+
+63 phone clips of an old man in a Russian village (Aug 2019), lots of talk and
+dead air. A value-ranked auto-cut on this was rejected outright — twice — and
+the reasons are the rules above:
+
+- **A loudness/motion auto-cut on talking footage is a chaotic dump.** It had
+  no editorial logic and it glued in clips that were *not the story*. The
+  metric layer is blind; do not ship its order as a cut.
+- **The agent must SEE and CLASSIFY before cutting.** Contact sheets of all 63
+  revealed 8 clips that belonged to the author's later life (a husky in a flat,
+  a European street, a café, a child) — invisible to motion/audio, obvious to
+  eyes. Drop them via `keep:false`.
+- **"Сложить по смыслу" = transcribe, read, then sequence by content.** The
+  monologues were about repression, prisons, hard peasant labour, the market.
+  Only the transcript reveals that; loudness ranked the silent action clips on
+  top instead. Picture follows the words.
+- **The table must be COMPLETE.** A 12-clip subset is not a log of a 63-clip
+  shoot. Run all of it; every clip gets `desc_ru` + `tags` + `keep`.
+- **The horizon detector lies on vertical video.** One portrait clip read
+  −29.67°; auto-rotating it would have wrecked the frame. Trust horizon on
+  landscape only; never auto-rotate portrait.
+
+### Roadmap for the analysis pipeline
+
+| Capability | Status | How |
+|---|---|---|
+| Motion-score | ✅ shipped | ffmpeg scene detect |
+| Audio peaks | ✅ shipped | ffmpeg astats + ametadata parse |
+| 6-frame motion strip | ✅ shipped | ffmpeg hstack |
+| HTML contact sheet | ✅ shipped | inline jinja-style template |
+| Horizon tilt + filter | ✅ shipped | OpenCV (`.venv`), unreliable on portrait |
+| Shake score | ✅ shipped | OpenCV phase-correlation, 24 samples |
+| Russian desc + tags + keep/drop | ✅ shipped | `--desc` file, written by agent/person |
+| Story-by-meaning | ✅ process | transcribe → read → sequence (not metrics) |
+| Speech-to-text | ⚠️ use `small`/`medium` + `--language` | Whisper (`tiny`/`base` garble dialect+mat) |
+| OCR (signage, T-shirts) | 🚧 planned | tesseract on motion-strip frames |
+| Auto silent-trim (kill dead air) | ✅ shipped | `core.silence` — ffmpeg silencedetect → speech segments; `tighten_cutlist` repacks. Дед: 38-51% of a talking take was dead air |
+| Optical flow direction | 🚧 planned | ffmpeg mestimate filter for match-cut |
+| Multicam sync | 🚧 planned | audio waveform xcorr |
+| Face recognition | ⛔ out of scope | privacy boundary — search by *what's said*, not faces |
+
+---
+
+## XIV. Real video perception via the bundled `/watch` skill
+
+The honest limitation called out in §XIII — "the LLM sees stop-frames, not motion" — is **partially closed** by vendoring [bradautomates/claude-video](https://github.com/bradautomates/claude-video) into `skills/watch/`. See `skills/watch/ATTRIBUTION.md` for the full credit.
+
+`/watch` does what our 6-frame motion strip can't:
+- Pulls **30–100 frames** per clip (auto-scaled to duration), not 6
+- Pulls a **timestamped transcript** — native captions if available, Whisper API (Groq or OpenAI) as fallback
+- Lets Claude `Read` every frame as a multimodal image and align to the transcript
+
+### When to use `/watch` from inside an editing session
+
+| Editing task | Without `/watch` | With `/watch` |
+|---|---|---|
+| Verify a candidate cut | one mid-frame thumbnail | `--start ss --end ss+dur` → ~30 frames + transcript over the cut window |
+| Find the decisive moment in a clip | guess from one frame + `audio_peak_time_sec` | scan ~60 frames, hear what's said, pick precisely |
+| Read interview content | broken `tiny` Whisper (see §XIII) | `--whisper groq` runs `whisper-large-v3` (handles Hungarian, Russian, etc.) |
+| Study a reference trailer | n/a | `/watch <youtube-url> "what's the structure?"` |
+
+### Concrete recipes
+
+**Find decisive moment in a clip before placing it:**
+```bash
+python3 skills/watch/scripts/watch.py "/path/to/clip.MTS" --start 28 --end 35
+```
+Then in the editing thread: read the frames, pick the in/out, call `pi.setInPoint(...)` via the bridge.
+
+**Get a real transcript of the interview clip used in Grave Stakes (Hungarian) — three backends, no key needed if you have local whisper:**
+
+```bash
+# 1. Local backend (no API key, runs offline). Recommended for non-English:
+python3 skills/watch/scripts/watch.py "/path/to/Videos/00195.MTS" \
+    --whisper local --language Hungarian
+
+# 2. Groq cloud (faster, ~$0.0002/min, needs key in ~/.config/watch/.env):
+python3 skills/watch/scripts/watch.py "/path/to/Videos/00195.MTS" --whisper groq
+
+# 3. OpenAI cloud (slower, ~$0.006/min, needs key):
+python3 skills/watch/scripts/watch.py "/path/to/Videos/00195.MTS" --whisper openai
+
+# Default (no --whisper flag): tries Groq → OpenAI → local in order.
+```
+
+The transcript appears in the markdown report. Use the timestamped lines to pick which 6-second slice of the interview lands on the timeline.
+
+**Local backend setup (one-time, zero ongoing cost):**
+
+```bash
+pip install -U openai-whisper
+# Default model is "medium" (~1.5GB, downloaded on first run).
+# Override with: WATCH_LOCAL_WHISPER_MODEL=small  (244MB, faster, decent quality)
+#                WATCH_LOCAL_WHISPER_MODEL=large-v3  (3GB, best, slower)
+```
+
+For Grave Stakes' noisy field-recorded Hungarian, `small --language Hungarian` was tested and produces usable transcripts in ~30s on M-series Mac. `medium` and `large-v3` improve accuracy further but take 2-5× longer.
+
+**Reference-driven cutdown:**
+```bash
+# Vladimir wants the new teaser to feel like the Sundance trailer for Anora
+python3 skills/watch/scripts/watch.py "https://youtu.be/<anora-trailer>" "describe the cut structure beat by beat with timestamps"
+```
+Claude will return a beat sheet you can encode as a recipe in `skills/trailer-bridge/`.
+
+### Setup (one-time)
+
+```bash
+# macOS — auto-installs ffmpeg + yt-dlp via brew
+python3 skills/watch/scripts/setup.py
+
+# Pick ONE Whisper backend:
+
+# (a) Free, offline, no key — recommended default. Handles any language well:
+pip install -U openai-whisper
+
+# (b) Cloud (faster for short clips), Groq (cheap) or OpenAI:
+echo 'GROQ_API_KEY=gsk_...' > ~/.config/watch/.env
+chmod 600 ~/.config/watch/.env
+```
+
+After that the editing skill can call `/watch` on any clip in the project bin.
+
+### Cost discipline
+
+- Each `/watch` call burns ~30–100 image tokens. On a 108-clip raw folder, watching all of them = ~5 000 frames = significant context pressure.
+- **Don't watch everything.** Use `analyze_clips.py` first (motion + audio + horizon) to rank, then `/watch` only the top 10–15 candidates.
+- For long clips, always use `--start`/`--end` once you know roughly where the action is.
+
+---
+
+## XVI. The automated pipeline (`core/`)
+
+The editing decision is **NLE-agnostic**: produce one `Cutlist`, a backend
+renders it. The full chain, in order, with the module that owns each step.
+See [`core/README.md`](../../core/README.md), epics
+[#6](https://github.com/koptsev63/premiere-claude-bridge/issues/6) (core) and
+[#7](https://github.com/koptsev63/premiere-claude-bridge/issues/7) (roadmap:
+color, variant board, voice-directed turnkey).
+
+| # | Step | Module | What it gives you |
+|---|---|---|---|
+| 1 | Analyze | `skills/film-editing/tools/analyze_clips.py` | `report.json`: motion, audio_peak(+time), horizon tilt+filter, **shake_score**, duration |
+| 2 | Value ("meat") | `core.value.ValuePool` | composite rank + explicit `meat_tag`; `protected()` is never dropped; `anchors()` reserved for PIT/PAYOFF |
+| 3 | Variants | `core.variants.build_variants` | **DRIVE + BREATH** — two contrasting cuts, both `is_clean` by construction, length-aware. Two, because the director picks the feel |
+| 4 | Conform | `core.conform` | bare clip names → real media on this machine (+ proxy) |
+| 5 | Cleanup | `core.cleanup.corrections_for_cutlist` | horizon leveled whenever flagged; stabilization for **relative outliers only** |
+| 6 | Render | `core.render` | anamorphic-safe geometry (un-squish) + horizon rotate; **never** ffmpeg deshake |
+| 7 | Stabilize | `ResolveAdapter.apply_corrections()` → `TimelineItem.Stabilize()` | Resolve's **own** pro stabilizer (Similarity/Perspective), live in DaVinci |
+| 8 | Backend | `core.probe.select_adapter` / `core.adapters` | Premiere (ExtendScript via bridge) / Resolve (Python API, Studio) / FCPXML (round-trip) |
+| 9 | Review loop | `core.review_loop` | `analyze_cutlist` (deterministic Murch) → `CutlistPatch` → re-render, with `history`/`diff()` |
+| 10 | **QC gate** | `core.qc` | mandatory: geometry no-squish + residual-shake; **fail-closed** |
+| 11 | **Colour gate** | `core.colorgate` | mandatory before showing a grade: burnt (clipping / oversat / skin) **and** invisible (mean ΔE, floor 5.0); `assert_ok()` **fail-closed** |
+| 12 | **Round trip** | `core.prproj` | reads the editor's saved `.prproj` back — his cues, his razors, his cut points — so subtitles and grade conform to *his* version |
+| 13 | **Loudness gate** | `core.loudness` | shots levelled against each other, then static gain + true-peak limiter; `check_delivery()` gates LUFS, true peak and shot-to-shot spread, **fail-closed** |
+| 14 | **Delivery integrity** | `core.qc.qc_delivery` | the file decodes clean end to end, has the promised size and rate, and has sound |
+
+Discovery + finishing modules (not strictly sequential):
+
+| Step | Module | What it gives you |
+|---|---|---|
+| Library | `core.library.MediaLibrary` | tag + search the footage by speech/tags/name, `find_lines()` a character's dialogue, and `to_cutlist()` pulls matches into a NEW sequence (Denis's "split by character / don't lose it"). NO face recognition — by what's said. |
+| Subtitles | `core.subtitles` | transcript → **SRT** (deliverable, e.g. DUALITY SUB/SRT) + styled **ASS** karaoke (2-word UPPERCASE, MarginV 90 safe-zone); `burn()` via ffmpeg. Word-level karaoke needs Whisper `--word_timestamps` (now on in `skills/watch`). **Auto-align:** `timeline_transcript(cutlist, transcripts)` maps per-clip transcripts onto the assembled — or dead-air-tightened — cut, so subtitles follow the edit; `parse_srt` reuses an existing SRT as the source. |
+| Overlays | `core.overlays` | lower-thirds / title / brand (lime #C8FF00) via ffmpeg `drawtext`; `from_markers(cutlist)` auto-titles from the edit's own beats. |
+| Screen insert | `core.screen_comp` | a clip inside a phone / monitor / TV in the plate: ECC camera track, quad or mask, optional glass/CRT look, colour-exact Rec.709 I/O; the gate proves the plate outside the screen came back unchanged. Affine track only - no parallax, no occlusion. |
+| Eyes + hatch | `core.adapters.resolve_run`, `mcp-server/pk.js` | composited timeline frames from Resolve (`still`, `grab`), clip dump with `gaps()`, and a script runner on each side for what the typed tools do not cover. |
+| Dead air | `core.silence` | detect silence (ffmpeg `silencedetect`) → keep speech-dense regions; `tighten_cutlist` removes pauses inside takes so a rambling talking head goes tight. Loudness-gated, not semantic — pair with the meaning pass. |
+
+Progress is measured, not vibed: `examples/grave-stakes-teaser/benchmark/`
+scores every version with `analyze_cutlist` (v3 not-clean → v4 clean → v5
+two clean variants).
+
+### The review loop (operationalizes §VIII)
+
+Assemble → **perceive** (`ReviewLoop.watch_plan()` + `/watch`, §XIV — this is
+where taste lives, yours) → **measure** (`analyze_cutlist`: §VII 2-4× ratio,
+§X monotony, beat-pacing — objective inputs, not a substitute for taste) →
+**patch** (`CutlistPatch`, immutable, validated) → re-render to any backend.
+Repeat until `is_clean()` **and** the emotion (Rule 1) is right — emotion is
+never decided by the analyzer.
+
+```bash
+python -m core.cutlist validate examples/grave-stakes-teaser/cutlist_v3.json
+python -m core.probe                       # which NLE is reachable now
+python -m core.tests                       # full core suite (must be green)
+```
+
+---
+
+## XVII. Hard rules (non-negotiable — learned from real defects)
+
+These were paid for in shipped mistakes. Do not relearn them.
+
+1. **Anamorphic is the default trap.** Source `.MTS` is 1440×1080 **SAR
+   4:3** — it must display 1920×1080. A naive `scale=1920:1080` squishes
+   faces while the container DAR still reads 16:9, so a thumbnail check
+   misses it. `core.render` applies pixel aspect *before* fit, always.
+   `core.qc.qc_geometry` exists solely to catch a regression here.
+2. **ffmpeg `deshake` is banned.** It crawls/jitters — worse than the
+   untouched handheld. Real stabilization is Resolve's
+   `TimelineItem.Stabilize()`. A standalone stabilized MP4 needs libvidstab
+   (2-pass vidstab) — a tracked follow-up; **never fake it with deshake**.
+3. **Stabilize relative outliers only**, never blanket. Handheld
+   documentary energy is intentional; over-smoothing kills it (Rule 1/3 >
+   technical polish). `core.cleanup` uses median + k·MAD.
+4. **Self-verification is mandatory and fail-closed.** Run `core.qc` with
+   the OpenCV venv before saying "done"; "can't verify" ≠ pass. *Also* read
+   a **full-resolution** frame yourself — a tiled thumbnail sheet hid the
+   squish once. The QC gate has already caught my own measurement bugs;
+   trust it over a clean-looking metric.
+5. **Two variants, not one.** DRIVE/BREATH — the director chooses the feel.
+   Taste is never the system's call.
+6. **Interpreter map.** Resolve `fusionscript` binds CPython 3.9–3.13 (not
+   3.14); otio file-IO needs 3.12/3.13; shake/qc need the analysis venv
+   (OpenCV). Wrong interpreter = false "can't verify", not a real verdict.
+7. **Report verified vs pending.** Never claim a fix you did not measure.
+8. **ASR is a draft, not a subtitle.** Whisper on dialect/field audio misreads
+   words and drops particles — a lost «не» flips the meaning. After
+   transcription the agent must **read the text and fix it for sense** before
+   it becomes subtitles (Дед: «Скотт»→«скот, скотина»; restored a dropped «не»
+   that had reversed «тогда не болели» into «тогда болели»). Build subs from
+   word timestamps (`readable_chunks`) so a sentence split by dead-air removal
+   is never duplicated.
+9. **A talking cut is never silent.** `core.render(audio=True)` is the default;
+   only a b-roll/teaser that gets music laid under it renders `audio=False`.
+   After rendering, confirm the file actually carries an audio stream
+   (`ffprobe ... stream=codec_type`) — a silent sync cut is a defect.
+10. **Deliver a project, not a file.** An .mp4 is a preview; the delivery is
+    sequences inside the editor's *own open project*, so he can drag a cut
+    himself. Check what is open (`pr_get_project_info`) before building
+    anything, build into that project, and never touch a sequence he has
+    edited — his version wins by default. Titles go on a real caption track
+    he can retype, not burned into the picture. When he saves, read his
+    version back with `core.prproj.conform_captions()` and conform the
+    renders to it.
+11. **Colour is gated, both ways** (`core.colorgate`). Every grade runs
+    `check_grade(base, graded)` before it is shown: clipping, oversaturation
+    and skin against the ungraded base *and* mean ΔE against it. A burnt
+    grade fails; so does an invisible one — the floor is ΔE 5.0, set by a
+    director who did not notice a 3.23 grade at all. Inspect frames large
+    (≥400px plus a face crop), never an 8-up thumbnail sheet: small previews
+    are exactly how blown highlights shipped once already.
+12. **Two grading traps.** *Never auto-white-balance on whole-frame
+    statistics* — a frame that is mostly wall pulls the wall neutral and
+    drags skin orange; correct exposure at half strength (clamp 0.9–1.15)
+    and leave balance to an eye. *Film-emulation LUTs (Kodak 2383, Fuji
+    3513) expect Cineon Log input* — the .cube header says so; fed Rec709
+    they blow the highlights. On Rec709 blend them at ≤55% and let the gate
+    walk the strength down, or build the look by hand (S-curve, teal in the
+    shadows, warmth in the highlights).
+13. **End cards go after the fade, on black.** A title over the last frame
+    lands on the speaker's face. Fade the picture, pad ~2.5s of black, put
+    the card there — it also gives a clean still to screenshot.
+14. **Two off-by-ones that hide on short tests.** Resolve's
+    `AppendToTimeline` takes `endFrame` **exclusive** (one frame lost per
+    clip: 13 clips = 0.43s and drifted subtitles). And a stock `brew ffmpeg`
+    can ship without `libass`/`drawtext`/`lut3d` — check `-filters` before
+    trusting a burn, use a full build if missing, feed labelled graphs
+    through `-filter_complex`, and keep filter paths free of spaces.
+
+15. **`panel not connected` is usually a port race, not a dead bridge.** Each
+    Claude session starts its own MCP server; only one holds port 9876 and the
+    panel. Since 0.5.0 the calling session takes it over by itself; an error
+    naming a pid means an older bridge sits on the port (restart that
+    session). Before telling anyone Premiere is unreachable, run
+    `node mcp-server/pk.js info` - it goes through the panel's debug port and
+    works from every session. Resolve has no such race:
+    `python -m core.adapters.resolve_run exec script.py`.
+16. **Never clear a queue you did not fill.** A frame grab that calls
+    `DeleteAllRenderJobs()` deletes the editor's own queued renders.
+    `resolve_run.grab` starts and deletes only its own job ids; do the same
+    in any script you write. `grab` leaves the render format on PNG - reload
+    the delivery preset before the real render.
+17. **Level the shots first, then normalise** (`core.loudness`). One
+    normalise pass over a cut made of several takes moves the average and
+    keeps every jump. Change the gain *at the join* and hold it for the shot;
+    easing back to unity at the edges puts the jump right on the cut. Static
+    gain plus a true-peak limiter, not a dynamic normaliser, for a single
+    voice. `check_delivery(out, cuts).assert_ok()` before the file leaves:
+    ±1 LU of the target, true peak under the ceiling, ≤ 2 dB between shots.
+18. **State the colour matrix on every pipe** (`core.screen_comp`). Decoding
+    a Rec.709 file through a default path and encoding the composite back
+    shifts the whole plate, and the shot no longer cuts with its neighbours.
+    Matrix and range go in explicitly on the way in *and* out; tags go on the
+    frames with `setparams` (the `-color_primaries` / `-color_trc` output
+    options alone are ignored for raw RGB input on current ffmpeg - check
+    with ffprobe, not by eye). The gate compares the plate outside the
+    screen before and after; it passes mechanics, not taste, so look at the
+    corners of a tracked insert yourself.
+
+19. **Master out of Resolve as ProRes; make the H.264 with ffmpeg.** On one
+    job Resolve's built-in H.264 export damaged occasional frames. Render
+    the master to ProRes, encode the delivery with libx264 (rule: never a
+    hardware encoder, see `core.render`), then run `core.qc.qc_delivery` -
+    a full decode with nothing on the error channel - on the file that is
+    actually sent.
+
+20. **Caption tracks are invisible to the ExtendScript API and do not
+    ripple.** `razor` + `TrackItem.move()` shift video and audio only; a
+    caption track in the base sequence stays put, so after the first insert
+    every one of its cues sits on the wrong shot, and `exportAsMediaDirect`
+    burns every VISIBLE caption track regardless of the preset. Before
+    cloning a sequence that carries someone else's captions, hide that track
+    (the eye icon on its header); the clone inherits the hidden state and
+    the burn stops. Six variants shipped with foreign subtitles before this
+    was understood (06.10.2026). Your own captions go in as a fresh SRT
+    track remapped by `core.ripple.remap_cues`.
+21. **Deletions by native `extract`, never by moving clips left.**
+    `qe.project.getActiveSequence().setInOutPoints(a,b); extract()` ripples
+    all tracks; `TrackItem.move()` to the left leaves black frames at the
+    old place. And run ALL deletions before ANY insert: an inserted clip
+    that later passes through `extract` can make the whole sequence
+    un-exportable ("low-level exception").
+22. **An AAC-in-mp4 music sliver shorter than 0.3 s kills Premiere's audio
+    renderer** ("could not create audio renderer" on every export). The
+    builder drops such slivers at every cut; the cure is relinking the song's
+    project item to a PCM `.mov` (`projectItem.changeMediaPath`).
+23. **Clips imported from another project may arrive with a Rec.709
+    colour-space override and look grey.** Copy the colour space of a native
+    clip: `item.setOverrideColorSpace(ref.getColorSpace())`. Measured: mean
+    saturation 28 against 68 on the master before the fix. But override ONLY
+    the items whose camera actually shot log: the same blanket fix applied to
+    a Rec.709 drone clip (DJI) turned it yellow and oversaturated, and the
+    director caught it, not the gate. Filter by camera prefix, then read back
+    `getColorSpace().name` per item.
+24. **Inserted AI shots are not "hooks", they are a block with a frame and a
+    music track.** The viewer needs a card that says why the fight is there;
+    the song under the block is cut on its beat grid (tempo from onset
+    autocorrelation, bars of four, the drop on the strongest visual hit);
+    the inserts go in as video-only files and their own synthetic sound is
+    gone, with two or three accents mixed into the music file at -10..-14 dB.
+    A black card gets room tone under it, never silence.
+25. **Handing a cut to a Resolve editor: XML per timeline, media into the
+    pool first, stills fixed.** Export FCP7 XML from a proxy-linked copy of
+    the project (new project + `importSequences`, relink, never the
+    director's own project), run `core/xml_handoff.py` (`remap_paths`,
+    `fix_stills`), and tell the editor: drag the media folder into the
+    Media Pool, then import the XML with "automatically import source
+    clips" OFF. With it on, foreign paths make the import fail outright.
+    A 3840-px title at Scale 50 arrives half size in Resolve (it fits the
+    still and applies the scale on top): ship 1080 twins, 50 -> 100, no
+    filter -> 200, any other value stays.
+26. **Before you say "it opens in Resolve", open it in Resolve.** External
+    scripting works: launch hidden, create a throwaway project, import
+    media one file per call (two numbered stills in one call become an
+    image sequence), import the timeline, compare duration to the frame
+    and count items without media, export title frames with
+    `ExportCurrentFrameAsStill` and put them next to the Premiere render.
+    Then load nothing, delete the throwaway project, quit. Seven timelines
+    took five minutes; the half-size titles were invisible in every count
+    and obvious in the first exported frame.
+27. **A grading pull from an editor's `.drt` is audited clip by clip
+    before the render, and neither file is the truth.** Import, relink to
+    the camera originals with `ReplaceClip(realpath)` (a relink by name
+    keeps the proxy's properties), reset the grades, then
+    `core/drt_audit.py`: the `.drt` In against the NLE's LeftOffset for
+    every clip. Any disagreement stops the render and becomes one question
+    to the editor: source timecode and file name for that shot. One clip
+    of 79 went out wrong three times on a teaser: Resolve put a crowd shot
+    there (LeftOffset -1885), the `.drt` In (191) gave a close-up, the
+    editor's 17:48:20:17 was frame 1884. Frame count and a contact sheet
+    were clean every time. `AppendToTimeline` endFrame is exclusive.
+28. **A replacement shot for the editor is cut by the editor's timecode
+    from the original, and shown before it is sent.** ffmpeg `-ss` on the
+    original, ProRes with `-timecode` set, PSNR of the first frame against
+    that source frame (56 dB on the hit, 32 dB one frame off). Never send
+    your own guess about which part of a clip the editor meant.
+29. **Resolve's H.264 encoder is not a master.** On the same job it
+    corrupted frames in the mp4. Render ProRes from Resolve, make the mp4
+    from that with ffmpeg.
+30. **Caption files go in one at a time: `pr_import_captions`.**
+    `importFiles([several .srt], suppressUI=true, ...)` hung Premiere on
+    "Импорт файлов..." for good (20.10.2026). One file per call with the UI
+    allowed, then `createCaptionTrack(item, 0, CAPTION_FORMAT_SUBTITLE)`.
+31. **Effects by the name Premiere shows, verified: `pr_add_video_effect`.**
+    In a Russian UI `getVideoEffectByName("Black & White")` returns an
+    object and `addVideoEffect` adds nothing, with no error; the name is
+    "Черное и белое". Count `components.numItems` before and after.
+32. **Never export a sequence with an ingest/proxy preset.**
+    `IngestPresets/Proxy/02_H.264 MP4.epr` squashed a 1080x1920 vertical
+    into 1280x720. Use a Match Source preset and read the output size with
+    ffprobe before the file leaves.
+33. **Two projects open = check whose sequence is active.** On 21.10.2026
+    `app.project` was a test copy while `app.project.activeSequence` was the
+    director's Grave Stakes sequence. The bridge's caption and effect tools
+    refuse that; in your own scripts compare `activeSequence.sequenceID`
+    with `app.project.sequences` before writing.
+34. **A YouTube download is AV1 until proven otherwise.** yt-dlp picks AV1;
+    Premiere 26 then imports the audio only and the timeline gets an empty
+    V1 (24.10.2026, ten podcast shorts). Before import:
+    `python -m core.media_gate FILE --start S --end E` and cut an H.264
+    copy of the needed range only; a full hour is ~10 GB. Or download H.264
+    in the first place: `yt-dlp -S vcodec:h264`.
+
+## XVIII. Phone-HDR jobs and the order of work (August 2026, five failures in one job)
+
+The order is not negotiable: **assemble on the raw source -> the director says
+"locked" -> subtitles generated from the sequence -> colour.** Subtitles built
+before the lock drift when he moves a cut; colour built before the lock is
+redone. His words: "we lock the edit on the raw source, and only then work on
+colour".
+
+1. **Probe before any decision.** `ffprobe -show_entries
+   "stream=codec_name,profile,pix_fmt,width,height,color_primaries,color_transfer,
+   r_frame_rate:stream_side_data=rotation"`. Working dimensions are those of the
+   *decoded* frame, never the coded ones - a clip that reports 1920x1080 with
+   `rotation=-90` is a 1080x1920 vertical. Reading frames without honouring
+   rotation produced a stretched picture, a false "his head is wider than a 9:16
+   frame" conclusion, and a crop that cut his face off.
+2. **A green picture in Premiere means the codec did not decode.** iPhone HEVC
+   Main 10 HLG (`color_transfer=arib-std-b67`, `bt2020`) does this. Two quick
+   fixes first (Preferences > Media > disable hardware HEVC decoding, clear the
+   media cache), 5 minutes maximum, then cut a mezzanine.
+3. **A mezzanine never grades.** It may change container, codec, chroma
+   subsampling, baked rotation and frame timing - nothing else. Keep the source
+   tags: `-color_trc arib-std-b67 -color_primaries bt2020 -colorspace bt2020nc
+   -movflags +write_colr`, and no colour filter at all: no `tonemap`, no
+   `zscale` transfer conversion, no `lut3d`/`eq`/`curves`/`colorbalance`.
+   Transcoding through `tonemap=hable` and handing that file to the director got
+   the verdict "you brought me a yellow source, that is wrong".
+   Neutrality gate, all four required: tags match the original; PSNR against the
+   original Y >= 50 dB (`-lavfi psnr -frames:v 300`); |YAVG delta| <= 0.5;
+   duration within one frame. A fast tell that a cast crept in: the skin share
+   of the frame (`colorgate.FrameStats.skin_share`) jumping above ~85% means the
+   wall itself drifted into flesh tones.
+4. **Assemble in frames and ticks only.** Accumulated float seconds leave
+   one-frame holes between clips - the director had to close them by hand and
+   called them "микропропуски". The next clip goes at the *actual* `seq.end` in
+   ticks, read back from the sequence, never at a number you added up yourself.
+   Safer still: lay the whole clip down and razor with ripple, where a hole is
+   structurally impossible. Tools: [`tools/build_sequence.jsx`](tools/build_sequence.jsx),
+   [`tools/verify_timeline.jsx`](tools/verify_timeline.jsx).
+5. **Gate every assembly before a human sees it.** Strict equality
+   `V1[i].end.ticks == V1[i+1].start.ticks` (zero tolerance), V1 clip count ==
+   A1 clip count, zero offline. `ok:false` means it is not ready.
+6. **Verify through the NLE's own picture, not through ffmpeg.** An API that
+   returns "ok" says nothing about what is on screen. After import and after
+   assembly, export one frame from the sequence
+   (`seq.exportAsMediaDirect(png, ".../PNG Sequence (Match Source).epr", 1)`)
+   and look at it. A green or black frame stops the job.
+7. **Colour lives in his sequence** - Lumetri on one adjustment layer per
+   variant - or, when he asks for something simpler, as ready-made LUTs plus a
+   labelled contact sheet built on *his* frame. Curate LUTs with the colour gate
+   and a pairwise ΔE >= 4.5 so no two options are the same look twice.
+8. **Rhythm beats polish.** A rough cut in his project by minute 10, then an
+   artefact or a status with an ETA every 15 minutes. Ninety minutes of silent
+   perfectionism was the worst failure of that day, ahead of every technical one.
+
+---
+
+## XV. Reference
+
+- Walter Murch, *In the Blink of an Eye: A Perspective on Film Editing*, 2nd ed., Silman-James Press, 2001 (Russian: «В мгновение ока», аудиокнига Кирилла Никитенко 2024)
+- Murch's Sydney lecture (1988) — origin of the Rule of Six
+- StudioBinder, "Walter Murch's The Rule of Six" — modern annotation with examples (*Godfather*, *Eternal Sunshine*, *Bonnie and Clyde*, *Fight Club*, *Mad Max: Fury Road*, *The Shining*, *Inception*)
+
+---
+
+**Last updated:** 2026-10-06 (§XVI steps 13-14 and two finishing modules;
+§XVII hard rules 15-19: the port race and the direct path, never clearing a
+render queue you did not fill, shots levelled before normalising, the
+colour matrix stated on every pipe, and ProRes out of Resolve with the H.264
+made by ffmpeg.) Earlier: 2026-08-17 (§XVI pipeline steps 11-12: `core.colorgate`
+two-sided colour gate and `core.prproj` round trip; §XVII hard rules 10–14:
+deliver a project rather than a file, gate every grade both ways, the
+auto-WB and Cineon-Log LUT traps, end cards after the fade on black, and the
+two off-by-ones — Resolve's exclusive `endFrame` and ffmpeg builds without
+libass/lut3d. All from a vertical announcement reel cut, conformed, graded
+and delivered end to end in August 2026.) Earlier: 2026-05-22 (§XIII meaning layer: `analyze_clips --desc`
+adds Russian `desc_ru` + `tags` + `keep/drop` and shake/horizon to a complete
+per-clip table written incrementally; editorial protocol rewritten meaning-first
+— see → classify → transcribe → sequence by content, metrics last; Дед case
+study: why a loudness/motion auto-cut on talking footage is a dump and how the
+agent fixes it). Earlier: 2026-05-18 §XVI automated pipeline + §XVII hard rules
+(anamorphic un-squish, Resolve-native Stabilize over banned ffmpeg deshake,
+relative-outlier stabilization, mandatory fail-closed QC, two-variant pick).
+Maintained as part of the `premiere-claude-bridge` open-source release.
+
+---
+
+## 📄 SOURCE FILE: `skills/dailies-prep/SKILL.md` (verbatim)
+
+---
+name: dailies-prep
+description: Подготовка материала съёмочного дня к монтажу в DaVinci Resolve через мост - синхронизация звука рекордера с камерой, возврат каждому клипу его звука, ступенчатая проверка кадров. Запускай, когда просят синхронизировать звук, собрать дубли по хлопушке и таймкоду, вернуть звук в таймлайн, проверить картинку монтажа, или говорят про takes.json, MXF-рекордер, дейлиз.
+---
+
+# Подготовка дня: синхронизация, звук, проверка кадров
+
+Три инструмента одной цепочки. Результат синхронизации (`takes.json`) читают остальные.
+
+Нужно: Python 3.13 с `numpy`, `av` (PyAV), `Pillow`; для работы в Resolve - Resolve Studio с внешними скриптами в режиме Local и раннер `core.adapters.resolve_run`.
+
+## 1. Синхронизация звука `core/dailies_sync.py`
+
+```bash
+python -m core.dailies_sync scan /путь/к/звуку /путь/к/камерам --out meta.json
+python -m core.dailies_sync sync meta.json --out takes.json [--scenes 1-18,1-19]
+```
+
+- Рекордер: MXF OP-Atom, по файлу на канал; сцена, дубль и имена каналов (`TRK1`...) берутся из комментариев заголовка. Камера: клип плюс `<имя>_A01.mxf` рядом (или звук внутри клипа).
+- Дубли собираются по таймкоду, камеры подбираются по пересечению (не меньше 2 с). Затем смещение уточняется корреляцией черновой дорожки камеры с бумом (PHAT-взвешенная, окно ±2 с).
+- Смещение в кадрах: `offset_frames` больше нуля означает, что картинка камеры опаздывает относительно своего таймкода. Кадр камеры `s` показывает момент `s + f0 - offset_frames` на таймкоде звука.
+- `sharp` - резкость пика. Ниже 8: `trusted: false`. Слабая связь (ниже 10) с прыжком больше 2 кадров заменяется медианой того же ролика камеры и получает `fixed_by_roll: true`.
+- Камеры, не попавшие ни в один дубль, - съёмка без рекордера: `unmatched_cameras()`.
+
+Как читать результат: сначала сколько связей `trusted`, затем все `fixed_by_roll` и `trusted: false` - их смотреть глазами и ухом, а не верить. Остаток после округления до кадра (миллисекунды) считает `residual_ms()`.
+
+## 2. Возврат звука в таймлайн `core/adapters/resolve_restore_sound.py`
+
+```bash
+RESTORE_SRC="Монтаж" RESTORE_TAKES=takes.json RESTORE_CAMERA=keep \
+  python -m core.adapters.resolve_run exec core/adapters/resolve_restore_sound.py
+```
+
+- Копирует таймлайн (исходный не трогает), убирает звук копии и под каждый клип кладёт каналы рекордера его дубля со сдвигом: по моно-дорожке на канал (Boom1, Boom2 выше остальных), клип и звуки связаны.
+- Звук камеры: `RESTORE_CAMERA=keep` (по умолчанию, дорожки включены), `mute` (есть, выключены), `omit` (не кладётся). Камера и рекордер расходятся на миллисекунды, поэтому вместе они могут звучать как флэнджер: решай под проект.
+- Клипы без дубля остаются только со звуком камеры. Если рекордер кончился раньше клипа, в отчёте строка, звук не дорисовывается.
+- `RESTORE_PROJECT=ИМЯ` - защита от запуска не в том проекте.
+- Файлы рекордера должны лежать в медиапуле.
+
+## 3. Ступенчатая проверка кадров `core/framecheck.py`
+
+Идти от дешёвого к дорогому. Подробные кадры вокруг склеек - только для бесшовного монтажа: у дробного (монтажная нарезка, прыжки, перебивки) они ничего не скажут.
+
+| ступень | что | сколько |
+|---|---|---|
+| 0 | числа без просмотра: где картинка меняется (`motion_profile`) | шаг 0,5 с |
+| 1 | обзор каждой камеры каждого дубля (`overview_sheets`) | 8 кадров на дубль |
+| 2 | края плана (`edge_sheet`) | вход, вход+1 с, выход-0,5 с |
+| 3 | вокруг склейки (`cut_sheets`, только бесшовный) | секунда до и секунда после, по 4 кадра, шаг треть секунды |
+| 4 | внутри плана - только где ступень 0 нашла движение | кадр раз в полсекунды |
+| 5 | журнал непрерывности: в каждом плане кто где в начале и в конце; сравнить склейки и историю | по планам |
+| 6 | один кадр в полном размере для спорного места | точечно |
+
+```bash
+python -m core.framecheck overview takes.json out/
+python -m core.framecheck cuts takes.json edl.json out/ --seamless   # без --seamless листов нет
+```
+
+- Сначала спроси или прочитай из задания, бесшовный ли монтаж. Переключатель `--seamless` по умолчанию выключен.
+- Даже в бесшовном монтаже плотные листы строятся только на склейках, которые должны совпасть: две камеры одного дубля или продолжающееся действие. Вставки из другого дубля пропускаются, там разрыв задуман.
+- Строки EDL: `[звук_дубль, от_с, до_с, картинка_дубль, камера, картинка_от_с или null, заметка]`.
+- Докладывая о проверке, называй, какие ступени запускались. Реальные промахи бывали не от редких кадров, а оттого, что дубль не смотрели вовсе или не сравнили положение людей между планами.
+
+---
+
+## 📄 SOURCE FILE: `skills/dailies-prep/ABOUT.md` (verbatim)
+
+# dailies-prep: подготовка съёмочного дня к монтажу
+
+## Что это в двух словах
+Помощник, который берёт сырой материал дня (камеры отдельно, звук рекордера отдельно) и подготавливает его к монтажу в DaVinci Resolve: выравнивает звук по картинке, возвращает каждому клипу его звук и подсказывает, где стоит посмотреть картинку глазами.
+
+## Как это работает, по частям
+
+**1. Синхронизация звука.**
+На площадке звук пишется на отдельный рекордер, а камера пишет свою картинку и тихий «черновой» звук. Чтобы звук рекордера лёг точно под картинку, нужно знать сдвиг. Помощник делает это так: читает из файлов, какая это сцена и какой дубль, находит, какие камеры снимали в то же время (по таймкоду), а потом сравнивает черновой звук камеры со звуком рекордера и находит, на сколько кадров надо подвинуть. Для каждой связи он пишет, насколько в ней уверен. Неуверенные помечает, чтобы вы их проверили сами. Результат - файл `takes.json`, на нём держатся остальные части.
+
+**2. Возврат звука в таймлайн.**
+Если в смонтированном таймлайне Resolve у клипов звук пропал или стоит не тот, помощник делает копию таймлайна и под каждый клип кладёт звук его дубля, уже со сдвигом. Каждый канал рекордера идёт на свою дорожку (первыми - Boom1 и Boom2). Видео и звук связаны. Звук самой камеры можно положить включённым, положить выключенным или не класть совсем - это ваш выбор при запуске. Камера и рекордер расходятся на миллисекунды, поэтому вместе они могут звучать как флэнджер.
+
+**3. Ступенчатая проверка кадров.**
+Смотреть всё подряд густо слишком дорого, поэтому проверка идёт ступенями от дешёвой к дорогой: сначала числа без просмотра (где картинка меняется), потом по 8 кадров на каждый дубль каждой камеры, потом края планов. Подробные кадры вокруг склеек (секунда до и секунда после, три кадра в секунду) строятся только если монтаж бесшовный. Если монтаж дробный (нарезка, перебивки), такие кадры ничего не скажут, и помощник их не делает.
+
+## Когда он включается
+Когда вы просите: синхронизировать звук, собрать дубли, вернуть звук в таймлайн, проверить картинку монтажа, или называете `takes.json`, дейлиз, MXF рекордера.
+
+## Что он читает и что пишет
+- Читает: файлы MXF камер и рекордера (только чтение, ничего в них не меняет).
+- Пишет: `meta.json`, `takes.json` и картинки-листы в папку, которую вы укажете.
+- В Resolve создаёт НОВЫЙ таймлайн-копию. Исходный таймлайн не трогает, ничего не удаляет.
+
+## Что нужно, чтобы работало
+Python 3.13 с пакетами `numpy`, `av`, `Pillow`; для части про Resolve - Resolve Studio с включёнными внешними скриптами (режим Local); звук и камеры в формате MXF с сценой и дублем в заголовках.
+
+## Чего он не умеет и где может ошибиться
+- Сдвиг подбирается по звуку. Если связь помечена ненадёжной, ей нельзя верить без проверки на слух.
+- Работает с MXF рекордера в формате Avid OP-Atom (по файлу на канал). С другими форматами не проверялся.
+- Часть про Resolve перенесена из рабочего скрипта и после переноса в Resolve не запускалась. Первый запуск проведите на копии проекта.
+
+## Как убрать
+Удалить папку `dailies-prep` из `~/.claude/skills/`. Файлы с результатами остаются там, куда вы их сохранили.
+
+---
+
+## 📄 SOURCE FILE: `skills/nle-handoff/SKILL.md` (verbatim)
+
+---
+name: nle-handoff
+description: Передача монтажа из DaVinci Resolve в Premiere Pro и Avid Media Composer - сборка проекта Premiere (.prproj) из открытого проекта Resolve, сборка бина Avid (.avb) с мастерами, sync- и group-клипами и отдельного файла настроек проекта (.avp), проверка AAF и XML с вписыванием имён тейпов. Запускай на задачи экспорта для монтажёра, бин для Авида, проект для Премьера, AAF не открывается, проверить XML.
+---
+
+# Передача монтажа: Premiere, Avid, AAF/XML
+
+Ни один из выходных файлов не открывался в целевой программе при написании: проверялись структура, ссылки и сверка с исходником. Скажи об этом получателю.
+
+## Проект Premiere
+
+```bash
+PRPROJ_OUT=out.prproj PRPROJ_TEMPLATE=свой_проект.prproj [PRPROJ_TIMELINES="Монтаж A|Монтаж B"] \
+  python -m core.adapters.resolve_run exec core/adapters/resolve_prproj_job.py
+```
+
+- Resolve читается только на чтение. Шаблон - любой реальный `.prproj`, сохранённый самым СТАРЫМ Premiere, в котором результат должен открыться (новый проект старый Premiere не откроет, старый новый откроет). Из шаблона берутся настройки проекта; содержимое отбрасывается.
+- Переносится: корзины по папкам медиапула, медиа (видео, звук, видео+звук, моно/стерео, стоп-кадры), секвенции с дорожками, клипы (позиция, in/out, скорость), Motion (позиция, масштаб, поворот), связь видео и звука, скрытые видеодорожки и заглушённые звуковые, громкость клипа (читается из XML Resolve, пишется как Volume Level `10^((дБ-15)/20)`, выше +15 дБ обрезается).
+- НЕ переносится и попадает в отчёт: грейд и эффекты Resolve (клип получает цветовую метку), ключи громкости, затухания, кроссфейды, переходы, маркеры, прозрачность, отражение, кроп, режимы наложения, составные клипы, титры без файла, одиночные выключенные клипы. Цвет метки клипа из Resolve не переносится.
+- Статус дорожек (скрыта/заглушена) Resolve отдаёт только для открытого таймлайна. Для остальных все дорожки остаются включёнными, в отчёте предупреждение.
+- Описание формата: `docs/prproj-format.md`.
+
+## Бин Avid и настройки проекта
+
+```bash
+python -m core.avb_build takes.json day.avb --hdr headers.json \
+  --project "Имя проекта" --avp-template их_проект.avp --settings-template их_проект_Settings.xml --preset hd-1080p24
+```
+
+- Нужно: `pip install pyavb`, PyAV, `takes.json` из `dailies-prep`, диск с MXF (заголовки читаются с него и кэшируются в `--hdr`). Дубли, чьих заголовков нет, пропускаются и перечислены в отчёте.
+- В бине: звуковой мастер на дубль с колонками из заголовка MXF (Scene, Take, TapeID, TRKn...), камерные мастера, `...a.sync.01` (картинка камеры и все дорожки звука со сдвигом; если камера началась раньше звука, лишняя голова картинки обрезается), `...Grp.01` (селекторы по камерам и скрытая композиция).
+- Бин - сам проект, `.avp` - его настройки, они отдельные файлы. `.avp` пишется правками на месте без смещения байтов: новый GUID, штамп времени и целочисленные параметры формата. Список бинов внутри `.avp` остаётся как в шаблоне (Avid покажет их как отсутствующие). Известен один пресет формата, `hd-1080p24`; другие частоты и размеры требуют образца такого проекта.
+- Не сделано: вид бина (колонки, сортировка, шрифты), `_ORG_BIN`.
+- Файл `.avp` для проверки разбирается `core.avp_build.read_attrs`.
+
+## Проверка AAF и XML
+
+```bash
+python -m core.handoff_check aaf файл.aaf
+python -m core.handoff_check name-tapes файл.aaf исправленный.aaf --hdr headers.json
+python -m core.handoff_check xml файл.xml
+```
+
+- AAF: счёт объектов, частоты, дескрипторы, тейпы без имени, висячие ссылки, медиа на диске. Resolve пишет все тейпы с пустым именем; `name-tapes` вписывает имя ролика из заголовка MXF (или имя файла). Что именно пустые имена тейпов не пускают AAF в конкретный Avid, НЕ подтверждено: это проверка и лучшее исправление, а не гарантия. Если не открывается и после, нужен текст ошибки Avid и частота проекта Avid (AAF здесь целиком в 24 кадрах).
+- XML: клипы, выключенные клипы (Resolve при импорте их пропускает), клипы с позицией `-1` у переходов, пути к файлам, повторные id.
+
+---
+
+## 📄 SOURCE FILE: `skills/nle-handoff/ABOUT.md` (verbatim)
+
+# nle-handoff: передача монтажа в Premiere и Avid
+
+## Что это в двух словах
+Помощник, который превращает ваш проект в DaVinci Resolve в файлы, которые можно открыть в Premiere Pro или Avid Media Composer, и проверяет такие файлы перед отправкой монтажёру.
+
+## Как это работает, по частям
+
+**1. Проект для Premiere.**
+Помощник читает открытый проект Resolve (только читает) и собирает файл `.prproj`: папки с клипами, все таймлайны, дорожки, клипы с их местом, началом и концом, скоростью, положением и масштабом кадра, громкостью. Основа берётся из вашего настоящего проекта Premiere, который вы укажете как шаблон: его настройки сохраняются, а содержимое заменяется вашим. Цвет и эффекты Resolve в Premiere не создаются: такой клип помечается цветом, а в итоговом отчёте написано, что было и что не перенесено.
+
+**2. Бин и настройки проекта для Avid.**
+Бин (`.avb`) - это сам проект с материалом: звуковые клипы дублей с колонками (сцена, дубль, названия каналов), клипы камер, «sync»-клипы (камера со звуком, уже совмещённые) и «group»-клипы (выбор между камерами). Настройки проекта - отдельный файл `.avp` (и `Settings.xml`): частота кадров, размер, цветовое пространство. Их помощник готовит из вашего настоящего проекта Avid: меняет только номер проекта, время и параметры формата.
+
+**3. Проверка AAF и XML.**
+Перед отправкой помощник проверяет файл: сколько в нём объектов, одинаковая ли частота кадров, нет ли ссылок в пустоту, лежат ли файлы на диске. Resolve записывает в AAF все катушки (тейпы) без названия; помощник умеет вписать названия из файлов.
+
+## Когда он включается
+Когда вы просите: проект для Premiere, бин для Avid, настройки проекта Avid, проверить или исправить AAF или XML, или говорите, что файл у монтажёра не открывается.
+
+## Что он читает и что пишет
+- Читает: открытый проект Resolve (только чтение), MXF-файлы для сборки бина, ваши шаблоны проектов.
+- Пишет: новые файлы `.prproj`, `.avb`, `.avp`, `Settings.xml`, исправленную копию AAF. Исходные файлы и ваши шаблоны не изменяются.
+
+## Что нужно, чтобы работало
+Python 3.13; пакеты `pyaaf2` (AAF), `pyavb` (бины Avid), `av` (чтение заголовков MXF); Resolve Studio для проекта Premiere; ваши шаблоны: настоящий `.prproj` (сохранённый самым старым Premiere, в котором нужен результат) и настоящий Avid-проект.
+
+## Чего он не умеет и где может ошибиться
+- Ни один из выходных файлов не открывался в целевой программе: проверялись структура, ссылки и сверка с исходником. Первый открытый файл у монтажёра - настоящая проверка.
+- В Premiere не переносятся: грейд и эффекты Resolve, затухания и кроссфейды громкости, переходы, маркеры, прозрачность, составные клипы, титры.
+- В `.avp` список бинов остаётся из шаблона, Avid покажет их как отсутствующие. Известен один готовый формат (1080p, 24 кадра), для других нужен образец такого проекта.
+- Исправление названий тейпов в AAF - лучшая попытка, а не гарантия, что Avid откроет файл.
+
+## Как убрать
+Удалить папку `nle-handoff` из `~/.claude/skills/`. Созданные файлы остаются там, куда вы их сохранили.
+
+---
+
+## 📄 SOURCE FILE: `skills/trailer-bridge/SKILL.md` (verbatim)
+
+---
+name: trailer-bridge
+description: Genre-specific trailer/teaser editing recipes for Premiere via the Claude Bridge. Encodes pacing, structure, and emotional beat patterns for action, drama, comedy, horror, documentary, thriller, and romance trailers. Each recipe is a parameterized cutlist generator that takes selects + length and outputs a Premiere-ready sequence with markers. Pair with `mcp__premiere__*` tools and the base `film-editing` skill. PAID PACK ($19) — see MONETIZATION.md.
+---
+
+# trailer-bridge — paid skill pack
+
+> **Status:** scaffold — first 2 recipes shipping with v0.2.
+
+This pack extends the free `film-editing` skill with **genre-specific trailer recipes**. Each recipe knows the pacing, structural beats, and emotional arc that audiences expect from a particular genre, and emits a parameterized cutlist Claude can drop straight into Premiere.
+
+## Why a paid pack
+
+The free skill encodes universal principles (Murch's Rule of Six). This pack encodes **specific working knowledge** that takes years to acquire:
+- Pacing math per genre (action averages 1.8s/cut, drama 5.2s/cut)
+- Standard 60/90/120-sec trailer structures
+- Color grade presets (LUTs) that match festival expectations
+- Genre-specific opening-hook patterns
+
+## Recipes
+
+| Recipe | Use for | Example structure |
+|---|---|---|
+| `action-trailer.md` | Genre features, sports, conflict-driven docs | Hook → Stakes → Build → 1st climax → False resolution → 2nd climax → Title |
+| `drama-trailer.md` | Character pieces, art-house | Quote → Conflict → Reveal → Reaction → Title |
+| `comedy-trailer.md` | Comedies, satire | Setup joke → Punchline → Bigger setup → Bigger punchline → Title |
+| `horror-trailer.md` | Horror, thriller-with-genre-elements | Calm → Disturbance → False jump → Reveal → Title sting |
+| `documentary-teaser.md` | Doc shorts, festival pieces | Question → Voices → World → Stakes → Open question → Title |
+| `thriller-trailer.md` | Thrillers, neo-noir | Hook → Riddle → Tension build → Cliffhanger → Title |
+| `romance-trailer.md` | Romance, coming-of-age | Meet → Connect → Conflict → Choice → Title |
+
+## Tools
+
+- `tools/trailer_assembly.py` — input: folder of selects + recipe name + target length → output: ready Premiere sequence cutlist (JSON) + JSX commands to apply.
+- `tools/beat_detector.py` — analyzes audio for "trailer beats" (drops, swells, stings) — auto-aligns cuts to musical beats.
+
+## Color presets (LUTs)
+
+Three classic festival/streamer trailer looks:
+- `teal_orange.cube` — modern blockbuster
+- `desaturated_high_contrast.cube` — A24-style indie
+- `golden_warm.cube` — character drama / romance
+
+## How a user uses it
+
+```
+You:    "Use trailer-bridge for a 75-sec action trailer from these 24 selects.
+        Apply teal_orange LUT. Skip the false-resolution beat — too short."
+
+Claude: ✓ Loaded action-trailer recipe (Hook→Stakes→Build→Climax→Title, 75s mode)
+        ✓ Mapped selects to beats by motion + audio peak rankings
+        ✓ Built sequence Trailer_v1_action_75s in your project
+        ✓ Applied teal_orange.cube LUT to all clips on V1
+        ✓ Placed 8 markers at structural beats
+        Open in Premiere.
+```
+
+## Install
+
+```bash
+# After purchase, you receive a download link to:
+trailer-bridge-v0.2.zip
+
+# Extract into your bridge:
+unzip trailer-bridge-v0.2.zip -d ~/Dev/premiere-claude-bridge/skills/
+
+# Skill auto-registers on next Claude session.
+```
+
+## Refund policy
+
+30-day no-questions-back via Gumroad.
+
+## Roadmap (pack v0.3+)
+
+- Multicam-aware recipes (interview-style trailers)
+- Vertical/9:16 export presets for Reels/TikTok promo
+- Music-sync mode: import MP3 → recipe auto-aligns cuts to beat detection
+- AME export presets per festival (Sundance, Berlinale, Cannes deliverables)
+
+---
+
+**This is a SCAFFOLD.** Full recipes shipping with v0.2 release (week 2 of monetization roadmap — see MONETIZATION.md).

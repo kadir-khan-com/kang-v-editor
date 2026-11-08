@@ -1,0 +1,94 @@
+{
+ "_note": "Editable. entities: named places/deities; when a scene mentions several, assets of a minor (non-primary) entity are down-weighted. profiles: prefer-tags used ONLY when a scene has no specific keyword match (low/none confidence); candidates stay hints, user approves.",
+ "entities": [
+  "dwarkadhish",
+  "nageshwar",
+  "bhadkeshwar",
+  "rukmini",
+  "gopi",
+  "shivrajpur",
+  "sudama",
+  "hanuman",
+  "samudra",
+  "narayan",
+  "gomti",
+  "bet",
+  "siddheshwar",
+  "sudarshan",
+  "okha"
+ ],
+ "secondary_entity_factor": 0.55,
+ "profile_weight": 0.6,
+ "profiles": [
+  {
+   "name": "intro",
+   "position": "first",
+   "any": [
+    "हेलो",
+    "स्वागत",
+    "राधे",
+    "नगरी"
+   ],
+   "prefer": [
+    "dwarkadhish",
+    "gomti",
+    "panorama",
+    "temple"
+   ]
+  },
+  {
+   "name": "outro",
+   "position": "last",
+   "any": [
+    "सब्सक्राइब",
+    "लाइक",
+    "कमेंट",
+    "शेयर"
+   ],
+   "prefer": [
+    "sunset",
+    "dusk",
+    "lighthouse",
+    "sea",
+    "night"
+   ]
+  },
+  {
+   "name": "season_timing",
+   "any": [
+    "समय",
+    "मौसम",
+    "नवंबर",
+    "अप्रैल",
+    "महीने",
+    "season",
+    "टाइम"
+   ],
+   "prefer": [
+    "dwarkadhish",
+    "shikhar",
+    "dhwaja",
+    "daytime",
+    "panorama"
+   ]
+  },
+  {
+   "name": "planning",
+   "any": [
+    "प्लान",
+    "प्लानिंग",
+    "पहुँचेंगे",
+    "पहुंचेंगे",
+    "जानकारी",
+    "इंफॉर्मेशन"
+   ],
+   "prefer": [
+    "welcome",
+    "gate",
+    "board",
+    "panorama",
+    "town"
+   ]
+  }
+ ]
+}

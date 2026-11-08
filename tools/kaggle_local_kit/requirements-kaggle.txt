@@ -1,0 +1,12 @@
+# Kang project ki requirements.txt ke barabar (Docker image ke liye). Kaggle ke exact versions ke liye:
+# Kaggle notebook me ek baar `!pip freeze > /kaggle/working/kaggle_freeze.txt` chalao aur yahan pin karo.
+numpy>=1.24
+pydantic>=2.5,<3
+pillow>=10.0
+fonttools>=4.40
+faster-whisper>=1.0
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.27,<1.0
+python-multipart>=0.0.9
+auto-editor>=26.0
+pytest>=7.4

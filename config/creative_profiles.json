@@ -1,0 +1,10 @@
+{
+ "_note": "KANG creative profiles. Merged over vendor profiles.json (extends = vendor profile name). PROVISIONAL numbers marked; research 2026-11-06 may update.",
+ "travel_vlog_hi": {
+  "extends": "hindi_hinglish",
+  "label": "KANG travel/devotional vlog, Hindi narration, Hinglish captions, stills+maps+cards (long-form YouTube)",
+  "wpm_range": null,
+  "wpm_note": "Hindi delivery band unknown; vendor [185,215] came from this same Dwarika video (circular). WPM check skipped until measured on 3+ Hindi videos.",
+  "note": "PROVISIONAL. Audio rules deferred (config/creative_audio_deferred.json). Caption limits still English-based until Hinglish CPS research lands."
+ }
+}

@@ -1,0 +1,5 @@
+{"style": "karaoke_yellow", "engine": "karaoke-subs",
+ "font": "Montserrat Black", "font_size": 96, "base_color": "#FFFFFF", "highlight_color": "#FFD400",
+ "outline_color": "#000000", "outline": 6, "shadow": 2, "bold": true,
+ "alignment": 2, "margin_v": 520, "margin_h": 90,
+ "max_words": 3, "max_chars": 20, "max_gap": 0.6, "max_duration": 2.5, "uppercase": false}
