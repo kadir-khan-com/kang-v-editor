@@ -31,6 +31,8 @@ cloudflared-linux-amd64
 # Kang run outputs & generated evidence (regenerate with `python build_and_check.py`)
 runs/
 out/
+assets/
+*.zip
 _kaggle_sandbox/
 build_report.json
 build_out.txt
